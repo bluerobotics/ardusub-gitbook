@@ -54,13 +54,14 @@ To add a new motor configuration, you will need to add your custom motor setup t
 
 The behavior of each motor will be defined by its assigned contributions to each of the 6 degrees of freedom in AP_Motors6DOF.cpp. You can use the other frame configurations as a reference guide to defining your own custom configuration. Here is the BlueROV1 frame configuration as an example:
 
-|Motor #|Roll Factor|Pitch Factor|Yaw Factor|Throttle Factor|Forward Factor|Lateral Factor|
-|1      |0          |0           |-1.0      |0              |1.0           |0             |
-|2      |0          |0           |1.0       |0              |1.0           |0             |  
-|3      |-0.5       |0.5         |0         |0.45           |0             |0             |    
-|4      |0.5        |0.5         |0         |0.45           |0             |0             |     
-|5      |0          |-1.0        |0         |1.0            |0             |0             |      
-|6      |-0.25      |0           |0         |0              |0             |1.0           |
+| Motor # | Roll Factor | Pitch Factor | Yaw Factor | Throttle Factor | Forward Factor | Lateral Factor |
+| ------- | ----------- | ------------ | ---------- | --------------- | -------------- | -------------- |
+| 1       | 0           | 0            | -1.0       | 0               | 1.0            | 0              |
+| 2       | 0           | 0            | 1.0        | 0               | 1.0            | 0              |
+| 3       | -0.5        | 0.5          | 0          | 0.45            | 0              | 0              |
+| 4       | 0.5         | 0.5          | 0          | 0.45            | 0              | 0              |
+| 5       | 0           | -1.0         | 0          | 1.0             | 0              | 0              |
+| 6       | -0.25       | 0            | 0          | 0               | 0              | 1.0            |
 
 <img src="/images/bluerov-frame.png" class="img-responsive img-center" style="max-height:250px;">
 
@@ -69,7 +70,7 @@ The behavior of each motor will be defined by its assigned contributions to each
 To be completed.
 
 <p style="font-size:10px; text-align:center">
-Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.
+Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
 <a href="https://github.com/bluerobotics/ardusub-docs/issues/">Submit a Documentation GitHub Issue here</a> to report any errors, suggestions, or missing information in this documentation.<br />
 <a href="https://github.com/bluerobotics/ardusub/issues/">Submit an ArduSub GitHub Issue here</a> to report issues with the ArduSub software.
 </p>
