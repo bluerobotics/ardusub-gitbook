@@ -16,6 +16,10 @@
             "tip": {
                 "alert": "success",
                 "picto": "fa-thumbs-o-up"
+            },
+            "aerial": {
+                "alert": "warning",
+                "picto": "fa-plane"
             }
         },
         "favicon": "favicon.ico",
