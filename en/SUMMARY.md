@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-* [Introduction](Introduction/introduction.md)
+* [Introduction](introduction/introduction.md)
     * [Overview](Introduction/introduction.md#overview)
     * [Key Features](Introduction/introduction.md#key-features)
     * [What You'll Need](Introduction/introduction.md#what-youll-need)
@@ -14,14 +14,15 @@
 * [Raspberry Pi](pages/raspberry-pi-setup.md)
 * [First Dive](pages/first-dive.md)
 
-## Operator's Manual
+## Operator's Manual(#)
 
-* [Configuring](pages/configuring.md)
-    * [Full Parameter List](parameters/full-parameter-list.md)
-    * [Failsafes](pages/configuring.md#failsafes)
-* [Flight Modes](pages/flight-modes.md)
-* [Logging](pages/logging.md)
-* [Troubleshooting](pages/troubleshooting.md)
+* [Arming Checks](operators-manual/arming-checks.md)
+* [Flight Modes](operators-manual/flight-modes.md)
+* [Failsafes](operators-manual/failsafes.md)
+* [Logging](operators-manual/logging.md)
+* [Parameters](operators-manual/parameters.md)
+* [Full Parameter List](operators-manual/full-parameter-list.md)
+* [Troubleshooting](operators-manual/troubleshooting.md)
 
 ## Developers
 

@@ -4,7 +4,7 @@ ArduSub supports several different flight modes, some of which are only availabl
 
 ## Manual
 
-*Manual* mode passes the pilot inputs directly to the motors, with no stabilization. ArduSub (version 3.5+) always starts up in Manual mode. 
+*Manual* mode passes the pilot inputs directly to the motors, with no stabilization. ArduSub (version 3.5+) always starts up in Manual mode. Manual mode asdfasdfasdf Manual Mode asdfasdfasdf manual mode.
 
 ## Stabilize
 
