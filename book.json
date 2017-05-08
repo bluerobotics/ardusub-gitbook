@@ -20,6 +20,14 @@
             "aerial": {
                 "alert": "warning",
                 "picto": "fa-plane"
+            },
+            "gps": {
+                "alert": "info",
+                "picto": "fa-map-marker"
+            },
+            "version": {
+                "alert": "info",
+                "picto": "fa fa-refresh fa-spin fa-3x fa-fw"
             }
         },
         "favicon": "favicon.ico",

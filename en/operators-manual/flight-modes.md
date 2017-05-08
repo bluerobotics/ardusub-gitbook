@@ -16,7 +16,7 @@ ArduSub supports several different flight modes, some of which are only availabl
 
 # Position Enabled Modes
 
-These modes require an external source of positioning information. A GPS will not work underwater.
+> **GPS** These modes require an [under water positioning system](http://www.bluerobotics.com/store/electronics/underwater-gps/aps-wl-11001/). A GPS antenna will not work under water.
 
 ## Position Hold
 
