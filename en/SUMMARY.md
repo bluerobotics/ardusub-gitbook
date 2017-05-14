@@ -14,7 +14,7 @@
 * [Raspberry Pi](pages/raspberry-pi-setup.md)
 * [First Dive](pages/first-dive.md)
 
-## Operator's Manual(#)
+## Operator's Manual
 
 * [Arming Checks](operators-manual/arming-checks.md)
 * [Flight Modes](operators-manual/flight-modes.md)

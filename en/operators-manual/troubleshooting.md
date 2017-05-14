@@ -1,12 +1,3 @@
----
-layout: default
-title: "Troubleshooting"
-permalink: /troubleshooting/
-nav:
-- Troubleshooting: troubleshooting
-- Issue Reporting: issue-reporting
----
-
 # Troubleshooting
 
 This page shares issues that users have run into and how they were resolved. Hopefully this will help to solves issues for others.
