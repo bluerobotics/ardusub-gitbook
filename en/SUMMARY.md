@@ -4,6 +4,12 @@
 
 * [Overview](README.md)
 
+## Introduction
+
+* [ArduSub and the ArduPilot Project](introduction/project.md)
+* [Features](introduction/features.md)
+* [Applications](introduction/applications.md)
+
 ## Getting Started
 
 * [Introduction](introduction/introduction.md)
