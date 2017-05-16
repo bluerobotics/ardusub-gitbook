@@ -30,14 +30,6 @@ These videos show ArduSub in use on the Blue Robotics BlueROV1 and BlueROV2. Kee
 - A [suitable ROV or AUV](http://bluerobotics.com) for use with the software
 - Many other useful additions: depth sensors, tether communications, cameras, and other sensors and actuators
 
-## More Info
-
-- Continue to the [Introduction](/introduction/) section of this page.
-- Visit [DIYDrones.com](http://diydrones.com), a large community of enthusiasts largely clustered around the ArduPilot family of autopilots.
-- Use the [BlueRobotics Forums](http://discuss.bluerobotics.com/) to ask support questions and advice.
-- Join the [Gitter developer chat room](https://gitter.im/bluerobotics/ardusub) to get quick support and contribute to development.
-
-
 > **Note** This guide is an active work in progress. The information provided should be correct, but you may find missing information or incomplete pages.
 
 <p style="font-size:10px; text-align:center">

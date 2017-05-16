@@ -1,4 +1,4 @@
-# Introduction
+# The ArduPilot Project
 
 ArduSub is a part of the ArduPilot project. ArduSub is a complete open-source controller solution for subsea vehicles, offering both remotely operated control (via a number of intelligent dive modes) and execution of fully autonomous missions.
 

@@ -1,11 +1,8 @@
 # Summary
 
-## Overview
-
-* [Overview](README.md)
-
 ## Introduction
 
+* [Overview](README.md)
 * [ArduSub and the ArduPilot Project](introduction/project.md)
 * [Features](introduction/features.md)
 * [Applications](introduction/applications.md)
