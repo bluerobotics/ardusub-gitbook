@@ -12,13 +12,9 @@
 
 ## Getting Started
 
-* [Introduction](introduction/introduction.md)
-    * [Overview](Introduction/introduction.md#overview)
-    * [Key Features](Introduction/introduction.md#key-features)
-    * [What You'll Need](Introduction/introduction.md#what-youll-need)
-* [Initial Setup](pages/initial-setup.md)
-* [Raspberry Pi](pages/raspberry-pi-setup.md)
-* [First Dive](pages/first-dive.md)
+* [Initial Setup](getting-started/initial-setup.md)
+* [Installation](getting-started/raspberry-pi-setup.md)
+* [First Dive](getting-started/first-dive.md)
 
 ## Operator's Manual
 
@@ -28,14 +24,13 @@
 * [Logging](operators-manual/logging.md)
 * [Parameters](operators-manual/parameters.md)
 * [Full Parameter List](operators-manual/full-parameter-list.md)
-* [Troubleshooting](operators-manual/troubleshooting.md)
+* [Troubleshooting](troubleshooting/troubleshooting.md)
 
 ## Developers
 
-* [Developers](pages/developers.md)
-* [Building Docs](pages/building-docs.md)
+* [Build ArduSub](developers/developers.md)
+* [Build this Documentation](developers/building-docs.md)
 
 ## Resources
 
-* [Downloads](pages/downloads.md)
-* [Firmware](pages/firmware.md)
+* [Downloads](resources/resources.md)

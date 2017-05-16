@@ -1,20 +1,24 @@
 # Features
 
-ArduSub is a complete open-source controller solution for subsea vehicles, offering both remotely operated control (via a number of intelligent dive modes) and execution of fully autonomous missions.
+ArduSub was developed on top of the ArduPilot project because many features were already in place:
+- Attitude and Heading Reference System
+- Variety of supporting hardware
+- Inertial Navigation Filter: EKF
+- Extensive User Configurable Parameter system
+- Well Developed Supporting client side software and UI environment
+    We have added support for QGroundControl.
+- Developer Tools
+    scripts
+    SITL
+    Build Systems
+        make, waf
+    APIs
+        ROS, MAVProxy, DroneKit
+- Protocol
+- Logging
 
-As part of the [DroneCode Software Platform](https://www.dronecode.org/dronecode-software-platform) it works seamlessly with Ground Control Station software that can monitor vehicle telemetry and perform powerful mission planning activities. It also benefits from other parts of the DroneCode platform, including simulators, log analysis tools, and higher level APIs for vehicle management and control.
 
-ArduSub is on the cutting edge of marine robotics and intended for those people who want to try advanced technology, cutting edge software, and new capabilities. It can be used on many different types of subsea vehicles including several configurations of ROVs.
 
-<img src="/images/ardusub-overview-diagram.png" class="img-responsive" />
-
-## Key Features
-
-- **Feedback control and stability:** Based on a multicopter autopilot system, the ArduSub controller has accurate feedback control to actively maintain orientation.
-- **Depth hold:** Using pressure-based depth sensors, the ArduSub controller can maintain depth within a few centimeters.
-- **Heading hold:** By default, the ArduSub automatically maintains its heading when not commanded to turn.
-- **Camera Tilt:** Camera tilt control with servo or gimbal motors through the joystick or gamepad controller.
-- **Light Control:** Control of subsea lighting through the joystick or gamepad controller.
 - **No Programming Required:** The ArduSub controller works for a variety of ROV configurations without the need for any custom programming. Most parameters can be changed easily through the ground control station.
 
 ## Supported Frames
@@ -50,6 +54,26 @@ ArduSub includes a high-level motor library that can configure motors in any con
 As of ArduSub 3.5, the frame is configured at boot according to the FRAME_CONFIG parameter. Common frames can be selected using the Frame Setup menu in QGC (3.1 or later). Other frames (like custom) can be selected directly from the parameter editor. If you change your frame, you will need to reboot for changes to take effect.
 
 [Please see here](/developers/#making-a-custom-configuration) if you would like to add your own configuration.
+
+## Supported Hardware
+
+The ArduPilot project has support for a great variety of hardware platforms. ArduSub firmware is provided for many of these platforms, but **only the Pixhawk 1 is fully tested and supported**.
+
+These are platforms that have been reported to work with ArduSub:
+
+- Pixhawk
+- Pixhawk 2
+- Pixhawk Mini
+
+Please let us know if you have tested ArduSub on another platform!
+
+## Capabilities
+
+- **Feedback control and stability:** Based on a multicopter autopilot system, the ArduSub controller has accurate feedback control to actively maintain orientation.
+- **Depth hold:** Using pressure-based depth sensors, the ArduSub controller can maintain depth within a few centimeters.
+- **Heading hold:** By default, the ArduSub automatically maintains its heading when not commanded to turn.
+- **Camera Tilt:** Camera tilt control with servo or gimbal motors through the joystick or gamepad controller.
+- **Light Control:** Control of subsea lighting through the joystick or gamepad controller.
 
 ## Extensibility
 

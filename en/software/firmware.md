@@ -1,30 +1,26 @@
----
-layout: default
-title: "Downloads"
-permalink: /downloads/
-nav:
-- Downloads: downloads
----
+# Firmware
 
-# Downloads
+## Overview
 
-## Firmware Files
+There are three different types of firmware:
 
-Compiled firmware is now available and can be downloaded from [firmware.ardusub.com](http://firmware.ardusub.com). See here for [instructions on how to flash the Pixhawk](/initial-setup/#loading-firmware-on-pixhawk). Firmware is available for the following hardware:
+ - Stable (3.4): The recommended build for most users.
+ - Beta (3.5-rc1): A pre-release of a stable build, used for testing and bugfixes before officially labeling a build as stable. The versions for the these builds are suffixed with *-rcx*, where rc stands for release candidate, and x is a number that is incremented as the beta is updated.
+ - Development (3.6-dev): Development build, updated frequently. This build should only be used in practice by developers and advanced users. The versions for these builds are suffixed with *-dev*.
 
-#### Pixhawk (px4-v2)
+The latest stable release of ArduSub is 3.4, and it is recommended to use QGroundControl stable release 3.1.3 with version of ArduSub. Versions of ArduSub later after 3.4 require a recent daily build of QGroundControl to operate.
 
-**Stable Release:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub V3.4](http://firmware.ardusub.com/Sub/stable/v3.4/)
+## What Version is Installed?
 
-The stable release is the recommended download for most users.
+To find out what firmware version is installed on your autopilot, [refresh your parameters](/configuring/#parameters). When the parameters are refreshed, the autopilot sends its software version information via STATUSTEXT messages. You can view these messages by clicking the *Messages* icon in QGroundControl. The *Messages* icon looks like a megaphone, or a warning sign if there are pending warnings. Here, you can see that the ArduSub version is *V3.5-rc1*.
 
-**Current Beta:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub V3.5-rc1](http://firmware.us.ardupilot.org/Sub/beta/PX4/ArduSub-v2.px4)
+<img src="/images/firmware/statustext-version.png" class="img-responsive img-center" style="max-height:600px;">
 
-The beta is for testing, and is not recommended for most users.
+## Updating
 
-**Latest Build:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub V3.6-dev](http://firmware.us.ardupilot.org/Sub/latest/PX4/ArduSub-v2.px4)
+It is **highly recommended** to [save your parameters](/configuring/#saving-and-loading) to a file before updating your firmware. To update your firmware using QGroundControl, go to the *Vehicle Setup Page* and click the *Firmware* tab, then plug your autopilot into the computer with a USB cable. Click ArduPilot flight stack, and choose your desired version to load. Beta and Development options are available after clicking the *Advanced settings* checkbox. *Stable* is not yet available through QGC for ArduSub. After you have selected your desired version, click *Ok* and wait for the upload to complete.
 
-This is the latest build of the developmental master branch. This build should only be used by developers and advanced users.
+<img src="/images/firmware/qgc-upgrade.png" class="img-responsive img-center" style="max-height:600px;">
 
 ## Release History
 
@@ -109,14 +105,8 @@ ArduSub v3.4 is the first official stable release of ArduSub. After nearly a yea
 **Important Note for ArduSub-3.4:** Many unused and inapplicable parameters that ArduSub inherited from ArduCopter have been removed. As a consequence, after upgrading to V3.4 and later, all of the parameters will be erased, and the default parameters will be loaded. **You should save your parameters before flashing this firmware.** After upgrading the firmware, you can load your saved parameter file through QGroundControl. When loading your old parameter file through QGroundControl, you will see many errors about parameters that have been removed, this is okay. After you load your parameter file, you need to change the SYSID_SW_MREV parameter to 1 before rebooting in order to prevent the default parameters from being reloaded. This procedure will only have to be done when upgrading from firmware version 3.4-dev. Subsequent releases will keep the same parameter format, so this will only have to be done once. If you are using a BlueROV2, it is recommended that you load the [Standard ArduSub Parameters](http://firmware.ardusub.com/parameters/latest/bluerov2.params) after upgrading. The upgrade process is demonstrated in the video below.
 
 <div align="center">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/siJoON6hgq4" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/siJoON6hgq4" frameborder="0" allowfullscreen></iframe>
 </div>
-
-# Images
-
-A fully set up image for the Raspberry Pi is available here. This image is used to set up the Raspberry Pi 3 computer as a *companion computer* for the Pixhawk autopilot. See here for [instructions on how to flash the image to the SD card](/raspi-setup/#easy-setup-with-disk-image).
-
-<i class="fa fa-download" aria-hidden="true"></i> [Latest Ardusub-Raspbian Image](http://img.ardusub.com/2017-01-12-ardusub-raspbian.img.zip) *(1.6 GB, Updated 2017-01-12)*
 
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
