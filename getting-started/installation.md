@@ -9,7 +9,6 @@ Download and install QGroundControl using one of the links below.
 * Linux
   * [AppImage](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.AppImage)
   * [Compressed Archive](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.tar.bz2)
-* [Android](https://play.google.com/store/apps/details?id=org.mavlink.qgroundcontrolbeta&rdid=org.mavlink.qgroundcontrolbeta)
 
 ## ArduSub
 

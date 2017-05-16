@@ -25,15 +25,6 @@ These videos show ArduSub in use on the Blue Robotics BlueROV1 and BlueROV2. Kee
         <!--<iframe width="300" height="225" src="https://www.youtube.com/embed/qVMpD-v-dfY" frameborder="0" allowfullscreen></iframe>-->
 </div>
 
-## System Components
-
-- A PixHawk or other DroneCode-compatible autopilot loaded with the latest version of the [ArduSub firmware](/firmware/).
-- [QGroundControl software](http://qgroundcontrol.org) for setup, configuration, and operation of the vehicle.
-- A [suitable ROV or AUV](http://bluerobotics.com) for use with the software
-- Many other useful additions: depth sensors, tether communications, cameras, and other sensors and actuators
-
-
-
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.
 <a href="https://github.com/bluerobotics/ardusub-docs/issues/">Submit a Documentation GitHub Issue here</a> to report any errors, suggestions, or missing information in this documentation.<br />

@@ -4,7 +4,7 @@ After the software is installed on the electronics, the electronics need to be w
 
 ## Wiring and Connections
 
-The exact wiring configuration depends on the vehicle configuration and the hardware used. The following are the standard channel assignments. Please see the [frame configurations](/introduction/#supported-frames) for standard thruster numbering.
+The exact wiring configuration depends on the vehicle configuration and the hardware used. The following are the standard channel assignments. Please see the [frame configurations](/introduction/features.md#supported-frames) for standard thruster numbering.
 
 | PWM Channel | Connection  |
 |------------:|:------------|
@@ -63,8 +63,6 @@ If using a serial port, simply connect the port to the computer and open QGC. Th
 ### Ethernet Connection with Companion Computer
 
 If an Ethernet connection is used, then a *companion computer* must be used to relay communications between the Pixhawk autopilot and the surface computer. The Pixhawk is connected to the *companion computer* via USB.
-
-Please see the [Raspberry Pi Setup](/raspi-setup/) page for more details on setting up the *companion computer*.
 
 ### Ethernet Connection with Linux Autopilot (Navio, BBBmini, etc.)
 

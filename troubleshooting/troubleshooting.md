@@ -6,7 +6,7 @@ This page shares issues that users have run into and how they were resolved. Hop
 
 **Vehicle flips itself over**
 
-Check that the motor directions are [configured correctly](/initial-setup/#configuring-motor-directions). Also check that the motors are connected to the correct motor outputs on the flight controller, according to the [supported frame diagrams](/introduction/#supported-frames).
+Check that the motor directions are [configured correctly](/getting-started/initial-setup.md#configuring-motor-directions). Also check that the motors are connected to the correct motor outputs on the flight controller, according to the [supported frame diagrams](/introduction/features.md#supported-frames).
 
 **Vehicle turns or moves even when not controlled to do so.**
 
@@ -19,8 +19,6 @@ Make sure that the vehicle is in *Manual* mode.
 The flight controller attempts to stabilize the vehicle's attitude so that it is perfectly level. If the vehicle's attitude is off from level, even a fraction of a degree, the flight controller will spin the motors in an attempt to correct the error. If the vehicle is sitting on land, the error will not change, and the flight controller will spin the motors faster and faster as it tries harder and harder to correct the error. Testing the vehicle on land should be done in MANUAL mode, which just passes pilot inputs to the motors with no stabilization.
 
 ## No Telemetry (No Pixhawk Connection)
-
-Install the latest [stable version](http://qgroundcontrol.com/downloads/) of QGroundControl.
 
 Make sure the companion computer is powered with a supply that is capable of delivering at least 2A.
 
@@ -115,9 +113,9 @@ Then the camera isn't working. Double check the camera ribbon cable, and try run
 
 The output servo rail on the Pixhawk requires a separate 5V power supply. The power module and USB power inputs on the Pixhawk will not power the servo rail. Make sure you have a 5V input on the servo rail via an ESC BEC or standalone BEC.
 
-Check that input/output channels are [configured for camera tilt](/initial-setup/#camera-tilt-setup-if-used).
+Check that input/output channels are [configured for camera tilt](/getting-started/initial-setup.md#camera-tilt-setup-if-used).
 
-Check that joystick buttons [have been assigned](/initial-setup/#button-setup) to camera tilt functions.
+Check that joystick buttons [have been assigned](/getting-started/initial-setup.md#button-setup) to camera tilt functions.
 
 ### "No io thread heartbeat" message constantly appears.
 

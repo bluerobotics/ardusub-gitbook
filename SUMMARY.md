@@ -14,7 +14,6 @@
     * [ArduSub](getting-started/installation.md#ardusub)
     * [Raspberry Pi](getting-started/installation.md#raspberry-pi)
 * [Initial Setup](getting-started/initial-setup.md)
-* [First Dive](getting-started/first-dive.md)
 
 ## Operator's Manual
 
@@ -25,6 +24,10 @@
 * [Parameters](operators-manual/parameters.md)
 * [Full Parameter List](operators-manual/full-parameter-list.md)
 * [Troubleshooting](troubleshooting/troubleshooting.md)
+
+## Software
+
+* [ArduSub Firmware](software/firmware.md)
 
 ## Developers
 

@@ -41,10 +41,6 @@ ArduSub includes a high-level motor library that can configure motors in any con
 	</tr>
 </table>
 
-As of ArduSub 3.5, the frame is configured at boot according to the FRAME_CONFIG parameter. Common frames can be selected using the Frame Setup menu in QGC (3.1 or later). Other frames (like custom) can be selected directly from the parameter editor. If you change your frame, you will need to reboot for changes to take effect.
-
-[Please see here](/developers/#making-a-custom-configuration) if you would like to add your own configuration.
-
 ## Supported Hardware
 
 The ArduPilot project has support for a great variety of hardware platforms. ArduSub firmware is provided for many of these platforms, but **only the Pixhawk 1 is fully tested and supported**.

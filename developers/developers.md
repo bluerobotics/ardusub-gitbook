@@ -22,19 +22,25 @@ For example, to build for the Pixhawk 1:
 
 The available board types can be seen by entering `make` with no arguments.
 
-## Uploading
+## Uploading Locally
 
 To upload the code to a PixHawk or similar controller, add `-upload` to the build command. For example:
 
 	make px4-v2-upload
 
-This only works with a direct USB connection to the Pixhawk. If you're using a companion computer and an Ethernet tether connection, you can upload the code through the companion computer. Please see the [Flashing Pixhawk Through SSH](/raspi-setup/#flashing-pixhawk-through-ssh) for instructions on how to do that.
+This only works with a direct USB connection to the Pixhawk.
+
+## Uploading Remotely
+
+With an Ethernet tether and companion computer, it is possible to flash the Pixhawk firmware through the companion computer - no need to directly access the Pixhawk.
+
+#### Flashing With a .px4 File
+
+	ssh pi@192.168.2.2 "/home/pi/companion/RPI2/Raspbian/flash_px4.py --stdin" < ArduSub-v2.px4
 
 ## Running
 
 The code begins running immediately once uploaded. For Linux-based autopilots, it must be launched or started with launch script. Please see the documentation for your respective autopilot.
-
-The companion computer is also set up to start automatically and connect to the autopilot. Please see the [companion computer page](/raspi-setup/) for more setup details.
 
 ## Making a Custom Configuration
 
@@ -62,10 +68,6 @@ The behavior of each motor will be defined by its assigned contributions to each
 | 6       | -0.25       | 0            | 0          | 0               | 0              | 1.0            |
 
 <img src="/images/bluerov-frame.png" class="img-responsive img-center" style="max-height:250px;">
-
-## Adding Features
-
-To be completed.
 
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
