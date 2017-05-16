@@ -12,8 +12,11 @@
 
 ## Getting Started
 
+* [Installation](getting-started/installation.md)
+    * [QGroundControl](getting-started/installation.md#qgroundcontrol)
+    * [ArduSub](getting-started/installation.md#ardusub)
+    * [Raspberry Pi](getting-started/installation.md#raspberry-pi)
 * [Initial Setup](getting-started/initial-setup.md)
-* [Installation](getting-started/raspberry-pi-setup.md)
 * [First Dive](getting-started/first-dive.md)
 
 ## Operator's Manual

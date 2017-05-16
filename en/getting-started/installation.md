@@ -2,21 +2,32 @@
 
 ## QGroundControl
 
-Download QGroundControl
+Download and install QGroundControl using one of the links below.
+
+* [Windows](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl-installer.exe)
+* [OS X](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.dmg)
+* Linux
+  * [AppImage](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.AppImage)
+  * [Compressed Archive](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.tar.bz2)
+* [Android](https://play.google.com/store/apps/details?id=org.mavlink.qgroundcontrolbeta&rdid=org.mavlink.qgroundcontrolbeta)
 
 ## ArduSub
 
-Connect the Pixhawk to your computer with a USB cable.
+Open QGroundControl and navigate to the *Firmware* tab of the *Vehicle Setup* page.
+
+<img src="/images/qgc/firmware-1.png" class="img-responsive img-center" />
+
+Plug in the Pixhawk to the computer's USB port. Once detected, QGroundControl will show a firmware selection box on the right. Choose "ArduPilot Flight Stack", then select ArduSub from the dropdown list.
+
+<img src="/images/qgc/firmware-2.png" class="img-responsive img-center" />
+
+Press "OK" at the top right. The firmware will upload the Pixhawk and you'll see the following printout and success message.
+
+<img src="/images/qgc/firmware-3.png" class="img-responsive img-center" />
 
 ## Raspberry Pi
 
-With the simple method, you restore a `.img` file to the Raspberry Pi SD Card. This provides the operating system and everything already set up for running ArduSub. You can download the most recent disk image here:
-
-<i class="fa fa-download" aria-hidden="true"></i> [Latest Ardusub-Raspbian Image](http://img.ardusub.com/2017-01-12-ardusub-raspbian.img.zip) *(1.6 GB, Updated 2017-01-12)*
-
-*(Raspbian Jessie Lite 2016-11-25 w/ ArduSub Companion Computer Setup)*
-
-To load the image to your SD card, use the following instructions.
+The Raspberry Pi operating system and supporting software is installed by restoring a pre-configured `.img` file to the Raspberry Pi SD Card. Download the image file [here](http://img.ardusub.com/2017-01-12-ardusub-raspbian.img.zip), then transfer the image to your SD card using the instructions below.
 
 ### Windows
 
@@ -47,9 +58,5 @@ On Linux (add ?* to unmount all partitions):
 To write the disk image to the SD card, use the following command. On Mac, change `/dev/diskX` to `/dev/rdiskX` for faster transfers. On Linux, replace `bs=1m` with `bs=1M`. Make sure that the identifier after `of=` is your SD card!:
 
     sudo dd bs=1m if=~/Downloads/ardusub-raspbian.img of=/dev/rdiskX
-
-If the image is still compressed, you can combine the decompression and writing in one command:
-
-    gunzip --stdout ardusub-raspbian.img.gz | sudo dd bs=1m of=/dev/rdiskX
 
 Note that the location and name of `ardusub-raspbian.img` might be slightly different depending on where you downloaded it. Once complete, you can eject the SD card and install it on the Raspberry Pi. That's it!

@@ -28,9 +28,7 @@ The hardware also has other input/output ports including I<sup>2</sup>C and seri
 | USB Serial Port         | Companion computer (if used)           |
 | Power Port              | Power Module                           |
 
-## Install QGroundControl
 
-Download the latest stable version of [QGroundControl](http://qgroundcontrol.com/downloads/).
 
 ## Setup Raspberry Pi
 
@@ -38,45 +36,12 @@ If using the *Advanced Electronics Package*, a Raspberry Pi computer is used as 
 
 For information on how to set up the Raspberry Pi for use with ArduSub, see the [Raspberry Pi Setup Page](/raspi-setup/).
 
-## Loading Firmware on Pixhawk
-
-Compiled firmware is now available and can be downloaded from [firmware.ardusub.com](http://firmware.ardusub.com/Sub/stable/v3.4/). Firmware is only available for the following hardware right now:
-
-* Pixhawk (px-v2)
-
-Please see the [Developer section](/developers/) for instructions on how to compile from source.
-
-### Loading Through Raspberry Pi
-
-If you're using the Raspberry Pi companion computer and an Ethernet tether, it's usually most convenient to flash the *ArduSub* firmware to the Pixhawk through the Raspberry Pi. Please note that the [Raspberry Pi must be already set up](#setup-raspberry-pi) and then you can follow the [instructions to flash through Raspberry Pi](/raspi-setup/#flashing-pixhawk-through-ssh).
-
-### Loading Through QGroundControl
-
-Install the most recent daily build of [QGroundControl](#install-qgroundcontrol) and navigate to the *Firmware* tab of the settings page.
-
-<img src="/images/qgc/firmware-1.png" class="img-responsive img-center" />
-
-Plug in the Pixhawk to the computer's USB port. Once detected, QGroundControl will show a firmware selection box on the right. Choose "ArduPilot Flight Stack" and then check the "Advanced Settings" checkbox. From the dropdown box that appears, choose "Custom firmware file...".
-
-<img src="/images/qgc/firmware-2.png" class="img-responsive img-center" />
-
-Press "OK" at the top right and you will be prompted to select the firmware file (which will probably be named "ArduSub-v2.px4"). Make sure you download the most recent [stable firmware](http://firmware.ardusub.com/Sub/stable/v3.4/) and choose it here.
-
-The firmware will upload the Pixhawk and you'll see the following printout and success message.
-
-<img src="/images/qgc/firmware-3.png" class="img-responsive img-center" />
 
 ## Host Computer Setup
 
 Just a few small setup items are required on the host computer. Please see the details here depending on which tether interface is being used.
 
-### Install FTDI Drivers (Serial/Fathom-S Tether Interface Only)
-
-Mac and Linux computers usually have the FTDI drivers installed already. For Windows computers, the driver will probably have to be installed. [Sparkfun has a great tutorial](https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/all) on installing the drivers properly.
-
-Once installed, the Fathom-S Tether Interface will appear as a serial port on the computer.
-
-### Set Up Internet Sharing (Ethernet/Fathom-X Tether Interface Only)
+### Set Up Static IP
 
 In an Ethernet-based setup, the Raspberry Pi defaults to the IP address of 192.168.2.2. The **host computer must be set up with an IP address of 192.168.2.1** in order to receive communications and video. See instructions below:
 
@@ -127,20 +92,6 @@ Once the controller is connected to QGC for the first time, we must calibrate th
 4. Click on *Compass* and follow the instructions.
 5. When completed, the *Sensors* tab will no longer be red.
 
-## Important Parameters to Set
-
-There are a few parameters that must be set before the Pixhawk will output to the thrusters, lights, and servos. We'll also disable the failsafes. These will be enabled in the future but are currently not suited for *ArduSub*.
-
-Find the Parameters tab on the settings page and change the following settings:
-
-| Parameter         | Value to Set         |
-|------------------:|:---------------------|
-| ARMING_CHECK      | Disabled             |
-| BRD_SAFETYENABLE  | Disabled             |
-
-
-You **have to power cycle the system** after setting these parameters to get them to work.
-
 ## Joystick/Gamepad Calibration
 
 The first time you use a new joystick or gamepad in QGroundControl, you will be asked to calibrate it. This allows QGC to detect which axis is which and what the range of each axis is.
@@ -149,10 +100,6 @@ The first time you use a new joystick or gamepad in QGroundControl, you will be 
 
 1. Click "Calibrate" on the joystick page, then click "Next".
 2. **We want to calibrate the joysticks in the opposite way that QGC asks us to do it**. When asked to move each axis, move the following sticks:
-- Throttle: right stick up/down
-- Yaw: right stick right/left
-- Roll: left stick right/left
-- Pitch: left stick up/down
 
 ## Button Setup
 
