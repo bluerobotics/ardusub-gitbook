@@ -1,4 +1,4 @@
-> **Note** The information in this guide applies to ArduSub V3.5 and up. If you are running an older version, you should update.
+> **Note** The information in this guide applies to ArduSub V3.5 and up. If you are running an older version, you should [update](/getting-started/installation.md#ardusub).
 
 ## What is ArduSub?
 
