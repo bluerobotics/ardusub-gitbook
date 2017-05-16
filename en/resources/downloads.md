@@ -1,26 +1,29 @@
-# Resources
+# Downloads
 
-## Downloads
+## QGroundControl
 
-### ArduSub Firmware Files
+* [Windows](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl-installer.exe)
+* [OS X](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.dmg)
+* Linux
+  * [AppImage](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.AppImage)
+  * [Compressed Archive](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.tar.bz2)
+* [Android](https://play.google.com/store/apps/details?id=org.mavlink.qgroundcontrolbeta&rdid=org.mavlink.qgroundcontrolbeta)
 
-Compiled firmware is now available and can be downloaded from [firmware.ardusub.com](http://firmware.ardusub.com). See here for [instructions on how to flash the Pixhawk](/initial-setup/#loading-firmware-on-pixhawk). Firmware is available for the following hardware:
+## ArduSub Firmware Files
 
-#### Pixhawk (px4-v2)
+Compiled firmware can be downloaded from [firmware.ardupilot.com](http://firmware.ardupilot.com). See here for [instructions on how to flash the Pixhawk](/initial-setup/#loading-firmware-on-pixhawk). 
 
-**Stable Release:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub V3.4](http://firmware.ardusub.com/Sub/stable/v3.4/)
+#### Pixhawk (px4-v2) Downloads
+
+**Stable Release:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub V3.5](http://firmware.ardupilot.com/Sub/stable/PX4/ArduSub-v2.px4)
 
 The stable release is the recommended download for most users.
-
-**Current Beta:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub V3.5-rc1](http://firmware.us.ardupilot.org/Sub/beta/PX4/ArduSub-v2.px4)
-
-The beta is for testing, and is not recommended for most users.
 
 **Latest Build:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub V3.6-dev](http://firmware.us.ardupilot.org/Sub/latest/PX4/ArduSub-v2.px4)
 
 This is the latest build of the developmental master branch. This build should only be used by developers and advanced users.
 
-### Raspberry Pi Images
+## Raspberry Pi Images
 
 A fully set up image for the Raspberry Pi is available here. This image is used to set up the Raspberry Pi 3 computer as a *companion computer* for the Pixhawk autopilot. See here for [instructions on how to flash the image to the SD card](/raspi-setup/#easy-setup-with-disk-image).
 
