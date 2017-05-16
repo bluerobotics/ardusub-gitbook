@@ -2,11 +2,9 @@
 
 ## How to Get the Code
 
-The ArduSub code is maintained in a *git* repository. The best way to get the code is to clone that repository.
+ArduSub is hosted and maintained on [github](https://github.com/ardupilot/ardupilot.git). You can clone the repository or download the source code as a zip file from [github](https://github.com/ardupilot/ardupilot.git).
 
-	git clone https://github.com/bluerobotics/ardusub.git
-
-You can also download the code as a zip file from the right sidebar of the <a href="https://github.com/bluerobotics/ardusub.git">Github website</a>.
+	git clone https://github.com/ardupilot/ardupilot.git
 
 ## Compiling
 
