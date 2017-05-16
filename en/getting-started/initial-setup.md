@@ -1,6 +1,6 @@
 # Initial Setup
 
-First-time setup of the autopilot includes downloading and installing the QGroundControl, mounting the controller to the vehicle, connecting it to the tether, power, and motors, and then performing initial configuration and calibration.
+After the software is installed on the electronics, the electronics need to be wired and the software needs to be configured. mounting the controller to the vehicle, connecting it to the tether, power, and motors, and then performing initial configuration and calibration.
 
 ## Wiring and Connections
 
@@ -24,18 +24,8 @@ The hardware also has other input/output ports including I<sup>2</sup>C and seri
 | Port                    | Connection                             |
 |------------------------:|:---------------------------------------|
 | I<sup>2</sup>C          | Pressure sensor (MS58XX)               |
-| Telem1 Serial Port      | Tether (if using serial)               |
 | USB Serial Port         | Companion computer (if used)           |
 | Power Port              | Power Module                           |
-
-
-
-## Setup Raspberry Pi
-
-If using the *Advanced Electronics Package*, a Raspberry Pi computer is used as a *companion computer* with the Pixhawk. The computer handles video streaming and relaying communications to the surface through an Ethernet connection.
-
-For information on how to set up the Raspberry Pi for use with ArduSub, see the [Raspberry Pi Setup Page](/raspi-setup/).
-
 
 ## Host Computer Setup
 
@@ -62,9 +52,9 @@ To be completed
 1. From System Prefrences, go to Network Settings and set IP for Ethernet to Manual, the address to 192.168.2.1, and the subnet mask to 255.255.255.0.
 2. From System Prefrences, go to Sharing and click "Internet Sharing". Choose "Wi-Fi" for the source and your Ethernet port or adapter for the destination.
 
-## Connect QGC to Controller
+## Connect QGC to Autopilot
 
-The controller can be connected to QGC through several different methods depending on the hardware used.
+The autopilot can be connected to QGC through several different methods depending on the hardware used.
 
 ### Serial Port Connection
 
@@ -80,9 +70,15 @@ Please see the [Raspberry Pi Setup](/raspi-setup/) page for more details on sett
 
 For Linux based autopilots, the network connection is launched when the ArduSub code is started. For examples, please see the documentation for your respective autopilot.
 
+## Frame Configuration
+
+The vehicle frame is selected in the *Frame* tab of the *Vehicle Setup* page. Choose your desired frame, then reboot the autopilot.
+
+If you have compiled ArduSub with a custom frame configuration, you may select your custom frame by setting the *FRAME_CONFIG* parameter to *Custom*.
+
 ## Sensor Calibration
 
-Once the controller is connected to QGC for the first time, we must calibrate the accelerometers, compass, and joystick.
+Once the autopilot is connected to QGC for the first time, we must calibrate the accelerometers, compass, and joystick.
 
 1. Go to the settings tab in QGC and select the red *Sensors* tab on the left sidebar.
 2. Choose your autopilot orientation:
@@ -94,24 +90,20 @@ Once the controller is connected to QGC for the first time, we must calibrate th
 
 ## Joystick/Gamepad Calibration
 
-The first time you use a new joystick or gamepad in QGroundControl, you will be asked to calibrate it. This allows QGC to detect which axis is which and what the range of each axis is.
-
-**Important *ArduSub*-specific Instructions:** The calibration process is a little confusing for *ArduSub*. This will be fixed in upcoming versions of QGC, but for now, you must follow this process.
+Some joysticks require calibration before they can be used with QGroundControl. This allows QGC to detect which axis is which and what the range of each axis is.
 
 1. Click "Calibrate" on the joystick page, then click "Next".
-2. **We want to calibrate the joysticks in the opposite way that QGC asks us to do it**. When asked to move each axis, move the following sticks:
+2. Follow the instructions printed on the screen, and the diagram showing how to move the sticks for each step of the calibration.
 
 ## Button Setup
 
-*ArduSub* provides a number of parameters to map controller buttons to various functions. This setup is required as there are no defaults configured.
-
-We recommend the button assignments shown in the image below:
+*ArduSub* provides the capability to map different joystick buttons to different functions. The default button configuration is shown in the image below:
 
 <img src="/images/controller.png" class="img-responsive img-center" />
 
 Each button can be assigned to one primary function and one alternate "shift" function. If the "shift" functions are used, then a "shift" button must be assigned. This works like the shift key on your keyboard, altering the functionality of other buttons while pressed.
 
-You can assign the buttons to various functions on the *Joystick* settings tab. Pressing each button will light up the button number and then the desired function can be chosen. See the image below for an example set (on a Mac). Note that the button numbering is different between controllers and operating systems so this won't necessarily be the same as your setup.
+You can customize the button functions in the *Joystick* tab of the *Vehicle Setup* page. Pressing each button will light up the button number and then the desired function can be chosen. See the image below for an example setup:
 
 <img src="/images/qgc/button-setup-1.png" class="img-responsive img-center" />
 
@@ -123,14 +115,6 @@ On the *Power* tab choose the appropriate setup. If using the standard 3DR Power
 
 <img src="/images/qgc/power-setup-1.png" class="img-responsive img-center" />
 
-## Flight Mode Setup
-
-There are several flight modes available: *Manual*, *Stabilize*, and *DepthHold*. On the *Flight Modes* tab, set the first flight mode (the default) to *Manual* and set the second and third to *Stabilize* and *DepthHold*. The remaining flight modes can be left on *Stabilize* or any other setting.
-
-<img src="/images/qgc/flight-mode-setup-1.png" class="img-responsive img-center" />
-
-Remember, when you set up the joystick above, you added buttons to change flight modes. These flight modes can be entered by pressing one of those buttons or by selecting the desired mode from the toolbar in QGroundControl.
-
 ## Camera Tilt Setup (if used)
 
 Select the *Camera* tab. The "Gimbal Tilt" settings are used for the camera tilt. Choose whichever channel the servo is plugged into for "Output channel" and *RC8* for "Input channel". Valid output channels are any of the unused motor outputs (RC1-RC8), and Aux outputs 1-4 (RC9-RC12). Select *Servo* for the "Type" under "Gimbal Settings" on the right.
@@ -141,26 +125,22 @@ Is desired, you can check the *Stabilize* box, which will enable auto-stabilizat
 
 ## Lights Setup
 
-The lights feature is currently setup to support lights that use a standard servo PWM signal for control. This is done by connecting the *RCIN9* input, which contains the light control signal, to the appropriate output. To do this, please find the parameter `RCx_FUNCTION`, where `x` is the output channel that corresponds to the lights, and set it to `RCIN9`.
+The output channel for the lights is configured in the *Lights* tab of the *Vehicle Setup* page. Select the output channel that you have plugged your lights into, as shown below.
 
-For example, if the lights are connected to output channel 7, then set `RC7_FUNCTION` to `RCIN9` as shown below.
+> **Info** This setup only works with lights that are controllable with a servo PWM pulse, such as the Blue Robotics [*Lumen* Lights](http://www.bluerobotics.com/store/electronics/lumen-light-r1/).
 
-<img src="/images/qgc/lights-setup-1.png" class="img-responsive img-center" />
-
-Note, this setup only works with lights that are controllable with a servo PWM pulse, such as the Blue Robotics *Lumen* Lights.
+<img src="/images/qgc/lights-setup.png" class="img-responsive img-center" />
 
 ## Configuring Motor Directions
 
-Due to clockwise and counterclockwise propellers, as well as wiring, the motor directions will have to be tested and corrected during initial setup. *ArduSub* includes a set of parameters for this purpose. The parameters are called `MOT_1_DIRECTION` for motors 1-8 and valid values are *normal* or *reverse*.
+Due to clockwise and counterclockwise propellers, as well as wiring, the motor directions will have to be tested and corrected during initial setup. *ArduSub* includes a set of parameters for this purpose. The parameters are called *MOT_n_DIRECTION* where *n* is the output number, and valid values are *normal* or *reverse*.
 
-Make sure you complete all above steps before completing this step. We generally follow this process to check motor rotation directions:
+We generally follow this process to check motor rotation directions:
 
 1. Set the flight mode to "Manual"
 2. Arm vehicle
 3. Move the "forward" joystick forward and verify that the thrusters that produce some forward thrust are operating in the correct direction and blowing out the back of the vehicle
 4. Move the "vertical" joystick upwards and verify that the thrusters that produce some vertical thrust are operating in the correct direction and blowing air downwards
-
-Provided that the correct frame configuration was chosen during compilation, you should not need to perform any more validation than that.
 
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
