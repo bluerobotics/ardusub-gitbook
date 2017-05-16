@@ -1,3 +1,5 @@
+> **Note** The information in this guide applies to ArduSub V3.5 and up. If you are running an older version, you should update.
+
 ## What is ArduSub?
 
 The *ArduSub* project is a fully-featured, open-source controller for remotely operated underwater vehicles (ROVs) and autonomous underwater vehicles (AUVs). Based on the popular *ArduCopter* code, the *ArduSub* code has extensive capabilities out of the box including feedback stability control, depth and heading hold, and autonomous position control if provided with position feedback.
@@ -30,7 +32,7 @@ These videos show ArduSub in use on the Blue Robotics BlueROV1 and BlueROV2. Kee
 - A [suitable ROV or AUV](http://bluerobotics.com) for use with the software
 - Many other useful additions: depth sensors, tether communications, cameras, and other sensors and actuators
 
-> **Note** This guide is an active work in progress. The information provided should be correct, but you may find missing information or incomplete pages.
+
 
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.
