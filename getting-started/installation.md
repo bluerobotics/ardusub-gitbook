@@ -54,7 +54,7 @@ On Linux (add ?* to unmount all partitions):
 
     umount /dev/sdX?*
 
-To write the disk image to the SD card, use the following command. On Mac, change `/dev/diskX` to `/dev/rdiskX` for faster transfers. On Linux, replace `bs=1m` with `bs=1M`. Make sure that the identifier after `of=` is your SD card!:
+To write the disk image to the SD card, use the following command. On Mac, change `/dev/diskX` to `/dev/rdiskX` for faster transfers. On Linux, replace `bs=1m` with `bs=1M`. This transfer will take 5-10 minutes. If you are on a Mac, you can press ctrl+T to check the progress of the transfer. Make sure that the identifier after `of=` is your SD card!:
 
     sudo dd bs=1m if=~/Downloads/ardusub-raspbian.img of=/dev/rdiskX
 
