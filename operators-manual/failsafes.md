@@ -24,23 +24,23 @@ Triggered when a HEARTBEAT from the ground control station matching *SYSID_MYGCS
 
 *Note* If the system id of the companion computer is a match with *SYSID_MYGCS* , then the heartebeats originating from a process (ie MAVProxy) on the companion computer may prevent this failsafe from triggering when expected.
 
-#### Pilot Input (ArduSub 3.5+)
+#### Pilot Input
 
 Triggered when pilot manual control input has not been received since the amount of time specified by the *FS_PILOT_TIMEOUT* parameter.
 
-#### Sensors (ArduSub 3.5+)
+#### Sensors
 
 Triggered when a sensor failure prevents the current flight mode to proceed. This occurs if the depth sensor fails while in depth hold mode. The autopilot will switch into *MANUAL* mode when triggered. This failsafe is always enabled, and is not configurable.
 
-#### Battery (ArduSub 3.5+)
+#### Battery
 
 Triggered when the battery voltage drops below the voltage specified by the *FS_BATT_VOLTAGE* parameter, or if the remaining capacity drops below the capacity specified by the *FS_BATT_MAH* parameter.
 
-#### EKF (ArduSub 3.5+)
+#### EKF
 
 Triggered when the EKF compass or velocity variances exceed the threshold set by the *FS_EKF_THRESH* parameter.
 
-#### Crash (ArduSub 3.5+)
+#### Crash
 
 Triggered when the angle error exceeds 30 degrees for more than 2 seconds. This is never triggered in *Manual* or *Acro* flight modes.
 
