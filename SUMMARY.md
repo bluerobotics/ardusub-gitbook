@@ -17,6 +17,7 @@
 
 ## Operator's Manual
 
+* [Joystick Button Functions](operators-manual/button-functions.md)
 * [Arming Checks](operators-manual/arming-checks.md)
 * [Flight Modes](operators-manual/flight-modes.md)
 * [Failsafes](operators-manual/failsafes.md)

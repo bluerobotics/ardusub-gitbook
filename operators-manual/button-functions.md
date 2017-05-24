@@ -1,138 +1,101 @@
----
-layout: default
-title: "Joystick"
-permalink: /joystick/
-nav:
-- Joystick: joystick
-- Overview: overview
-- Axis Setup: axis-setup
-- Button Functions: button-functions
-- Behind the Scenes: behind-the-scenes
----
+# Joystick Button Functions
 
-# Failsafes
+Joystick buttons can be configured to perform different functions. Each button may be assigned a regular function and a shift function. To use shift functions, a button must be assigned the special *shift* function. The shift button will then act like a shift key on a keyboard; when held, it modifies the other buttons to execute their assigned shift functions. The available button functions are described below.
 
-## Button Functions
+### General
 
-### mode_
+- none: Do nothing, button is disabled
+- shift: When held, act as a shift modifier for other buttons
+- arm_toggle: Toggle the armed state of the vehicle
+- arm: Arm the vehicle
+- disarm: Disarm the vehicle
+- gain_toggle: Toggle between minimum and maximum pilot input gain sensitivity
+- gain_inc: Increase pilot input gain/sensitivity
+- gain_dec: Decrease pilot input gain/sensitivity
+- trim_roll_inc: Trim level target roll to the right
+- trim_roll_dec: Trim level target roll to the left
+- trim_pitch_inc: Trim level target pitch forward
+- trim_pitch_dec: Trim level target pitch backward
+- input_hold_toggle: Toggle holding current joystick axis inputs (cruise control on/off)
+- roll_pitch_toggle: Toggle between roll/pitch and forward/lateral control on joystick input
 
-Push to switch to the cooresponding flight mode
+### Mode Selection
 
-### Camera Tilt
+These button functions will command a switch to the corresponding flight mode. Please note that the advanced modes are in development and are not recommended for general use.
 
-### Lights
+** Standard Modes **
+- mode_manual
+- mode_stabilize
+- mode_depth_hold
 
-### Relay
+** Advanced Modes **
+- mode_poshold
+- mode_auto
+- mode_circle
+- mode_guided
+- mode_acro
 
-### Servo
+### Camera Control
 
-### Trim
+- mount_center: Sets RC Input channel 8 pwm to the value configured by the *CAM_TILT_CENTER* parameter
+- mount_tilt_up: Increase RC Input channel 8 pwm by the amount configured by the *JS_CAM_TILT_STEP* parameter
+- mount_tilt_down: Decrease RC Input channel 8 pwm by the amount configured by the *JS_CAM_TILT_STEP* parameter
+- camera_trigger: Trigger cameras shutter **NOT IMPLEMENTED**
+- camera_source_toggle: Toggle video source, toggles RC Input channel 10 between 1100 and 1900 pwm
+- mount_pan_right: Pan mount right **NOT IMPLEMENTED**
+- mount_pan_left: Pan mount left **NOT IMPLEMENTED**
 
-        k_none                  = 0,            ///< disabled
-        k_shift                 = 1,            ///< "shift" buttons to allow more functions
-        k_arm_toggle            = 2,            ///< arm/disarm vehicle toggle
-        k_arm                   = 3,            ///< arm vehicle
-        k_disarm                = 4,            ///< disarm vehicle
+### Lights Control
 
-        k_mode_manual           = 5,            ///< enter enter manual mode
-        k_mode_stabilize        = 6,            ///< enter stabilize mode
-        k_mode_depth_hold       = 7,            ///< enter depth hold mode
-        k_mode_poshold          = 8,            ///< enter poshold mode
-        k_mode_auto             = 9,            ///< enter auto mode
-        k_mode_circle           = 10,           ///< enter circle mode
-        k_mode_guided           = 11,           ///< enter guided mode
-        k_mode_acro             = 12,           ///< enter acro mode
+- lights1_cycle: Increase or decrease RC Input channel 9 pwm by the amount configured by the *JS_LIGHTS_STEP* parameter, switches between increasing and increasing when output limits are reached
+- lights1_brighter: Increase RC Input channel 9 pwm by the amount configured by the *JS_LIGHTS_STEP* parameter
+- lights1_dimmer: Decrease RC Input channel 9 pwm by the amount configured by the *JS_LIGHTS_STEP* parameter
 
-        // 12-20 reserved for future mode functions
-        k_mount_center          = 21,           ///< move mount to center
-        k_mount_tilt_up         = 22,           ///< tilt mount up
-        k_mount_tilt_down       = 23,           ///< tilt mount down
-        k_camera_trigger        = 24,           ///< trigger camera shutter
-        k_camera_source_toggle  = 25,           ///< toggle camera source
-        k_mount_pan_right       = 26,           ///< pan mount right
-        k_mount_pan_left        = 27,           ///< pan mount left
-        // 26-30 reserved for future camera functions
-        k_lights1_cycle         = 31,           ///< lights 1 cycle
-        k_lights1_brighter      = 32,           ///< lights 1 up
-        k_lights1_dimmer        = 33,           ///< lights 1 down
-        k_lights2_cycle         = 34,           ///< lights 2 cycle
-        k_lights2_brighter      = 35,           ///< lights 2 up
-        k_lights2_dimmer        = 36,           ///< lights 2 down
-        // 37-40 reserved for future light functions
-        k_gain_toggle           = 41,           ///< toggle different gain settings
-        k_gain_inc              = 42,           ///< increase control gain
-        k_gain_dec              = 43,           ///< decrease control gain
-        k_trim_roll_inc         = 44,           ///< increase roll trim
-        k_trim_roll_dec         = 45,           ///< decrease roll trim
-        k_trim_pitch_inc        = 46,           ///< increase pitch trim
-        k_trim_pitch_dec        = 47,           ///< decrease pitch trim
-        k_input_hold_toggle     = 48,           ///< toggle input hold (trim to current controls)
-        k_roll_pitch_toggle     = 49,           ///< adjust roll/pitch input instead of forward/lateral
+- lights2_cycle: Increase or decrease RC Input channel 10 pwm by the amount configured by the *JS_LIGHTS_STEP* parameter, switches between increasing and increasing when output limits are reached
+- lights2_brighter: Increase RC Input channel 10 pwm by the amount configured by the *JS_LIGHTS_STEP* parameter
+- lights2_dimmer: Decrease RC Input channel 10 pwm by the amount configured by the *JS_LIGHTS_STEP* parameter
 
-        // 50 reserved for future function
+### Relay Control
 
-        k_relay_1_on            = 51,           ///< trigger relay on
-        k_relay_1_off           = 52,           ///< trigger relay off
-        k_relay_1_toggle        = 53,           ///< trigger relay toggle
-        k_relay_2_on            = 54,           ///< trigger relay on
-        k_relay_2_off           = 55,           ///< trigger relay off
-        k_relay_2_toggle        = 56,           ///< trigger relay toggle
+- relay_1_on: Sets the pin configured by the *RELAY_PIN* parameter to output HIGH
+- relay_1_off: Sets the pin configured by the *RELAY_PIN* parameter to output LOW
+- relay_1_toggle: Toggles the state of the pin configured by the *RELAY_PIN* parameter
 
-### Servo
+- relay_1_on: Sets the pin configured by the *RELAY_PIN2* parameter to output HIGH
+- relay_1_off: Sets the pin configured by the *RELAY_PIN2* parameter to output LOW
+- relay_1_toggle: Toggles the state of the pin configured by the *RELAY_PIN2* parameter
 
-#### increase
+### Servo Control
 
-Increase servo output by 50 pwm.
+- servo_1_inc: Increase *Aux1* servo output by 50 pwm
+- servo_1_dec: Decrease *Aux1* servo output by 50 pwm
+- servo_1_min: Set *Aux1* servo output to the configured minimum pwm according to SERVO9_MIN
+- servo_1_max: Set *Aux1* servo output to the configured maximum pwm according to SERVO9_MAX
+- servo_1_center: Set *Aux1* servo output to the configured center according to SERVO9_TRIM
 
-#### decrease
+- servo_2_inc: Increase *Aux2* servo output by 50 pwm
+- servo_2_dec: Decrease *Aux2* servo output by 50 pwm
+- servo_2_min: Set *Aux2* servo output to the configured minimum pwm according to SERVO10_MIN
+- servo_2_max: Set *Aux2* servo output to the configured maximum pwm according to SERVO10_MAX
+- servo_2_center: Set *Aux2* servo output to the configured center according to SERVO10_TRIM
 
-Decrease servo output by 50 pwm.
+- servo_3_inc: Increase *Aux3* servo output by 50 pwm
+- servo_3_dec: Decrease *Aux3* servo output by 50 pwm
+- servo_3_min: Set *Aux3* servo output to the configured minimum pwm according to SERVO11_MIN
+- servo_3_max: Set *Aux3* servo output to the configured maximum pwm according to SERVO11_MAX
+- servo_3_center: Set *Aux3* servo output to the configured center according to SERVO11_TRIM
 
-#### min
-
-Set servo output to the configured minimum pwm according to SERVO**N**_MIN.
-
-#### max
-
-Set servo output to the configured maximum pwm according to SERVO**N**_MAX
-
-#### center
-
-Set servo output to the configured center according to SERVO**N**_TRIM
 
 ### Custom
 
-These are reserved for developer use, and do not do anything by default.
+These are reserved for developer use, and do not do anything by default
 
-## Internal Temperature
-
-This is triggered when the internal temperature of the water tight enclosure (WTE) exceeds the threshold set in the FS_TEMP_MAX parameter.
-
-## Leak
-
-This is triggered when a configured *Leak Detector* detects a leak.
-
-## Ground Control Station HEARTBEAT
-
-Triggered when a heartbeat from the ground control station hasn't been received for more than 
-
-## Pilot Input (ArduSub 3.5 and later)
-
-Triggered when pilot manual control input has not been received since the amount of time specified by the FS_PILOT_TIMEOUT parameter.
-
-## Sensors (ArduSub 3.5 and later)
-
-Triggered when a sensor failure prevents the current flight mode to proceed. The autopilot will switch into *MANUAL* mode when triggered. This failsafe is not configurable.
-
-## Battery (ArduSub 3.5 and later)
-
-Triggered when the battery voltage drops below XXX or the remaining capacity drops below xxx.
-
-## EKF (ArduSub 3.5 and later)
-
-
-## Crash (ArduSub 3.5 and later)
-
+- custom_1
+- custom_2
+- custom_3
+- custom_4
+- custom_5
+- custom_6
 
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
