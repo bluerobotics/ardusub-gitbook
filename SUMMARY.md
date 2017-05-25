@@ -6,6 +6,10 @@
 * [Features](introduction/features.md)
 * [Applications](introduction/applications.md)
 
+## Hardware
+
+* [Components](hardware/components.md)
+
 ## Software
 
 * [Components](software/components.md)
