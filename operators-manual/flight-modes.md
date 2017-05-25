@@ -1,10 +1,10 @@
 # Flight Modes
 
-ArduSub supports several different flight modes, some of which are only available when certain sensors are present. ArduSub always operates in exactly one flight mode at any given time. ArduSub always boots in *MANUAL* mode.
+ArduSub supports several different flight modes, some of which are only available when certain sensors are present. ArduSub always operates in exactly one flight mode at any given time. ArduSub always boots in *Manual* mode.
 
 ## Manual
 
-*Manual* mode passes the pilot inputs directly to the motors, with no stabilization. ArduSub (version 3.5+) always starts up in Manual mode. Manual mode asdfasdfasdf Manual Mode asdfasdfasdf manual mode.
+*Manual* mode passes the pilot inputs directly to the motors, with no stabilization. ArduSub always boots in *Manual* mode.
 
 ## Stabilize
 
