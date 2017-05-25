@@ -30,6 +30,9 @@
 ## Software
 
 * [ArduSub Firmware](software/firmware.md)
+    * [Release History](software/firmware.md#release-history)
+    * [What Version is Installed?](software/firmware.md#what-version-is-installed)
+    * [Updating](software/firmware.md#updating)
 
 ## Developers
 
