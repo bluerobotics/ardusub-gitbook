@@ -6,6 +6,15 @@
 * [Features](introduction/features.md)
 * [Applications](introduction/applications.md)
 
+## Software
+
+* [Components](software/components.md)
+* [ArduSub Firmware](software/ardusub-firmware.md)
+    * [Versioning](software/ardusub-firmware.md#versioning)
+    * [Release History](software/ardusub-firmware.md#release-history)
+    * [What Version is Installed?](software/ardusub-firmware.md#what-version-is-installed)
+    * [Updating](software/ardusub-firmware.md#updating)
+
 ## Getting Started
 
 * [Installation](getting-started/installation.md)
@@ -27,13 +36,6 @@
 * [RC Input and Output](operators-manual/rc-input-and-output.md)
 * [Recording Video](operators-manual/recording-video.md)
 
-## Software
-
-* [ArduSub Firmware](software/firmware.md)
-    * [Release History](software/firmware.md#release-history)
-    * [What Version is Installed?](software/firmware.md#what-version-is-installed)
-    * [Updating](software/firmware.md#updating)
-
 ## Developers
 
 * [Build ArduSub](developers/developers.md)
@@ -46,4 +48,3 @@
     * [QGroundControl](resources/downloads.md#qgroundcontrol)
     * [ArduSub Firmware](resources/downloads.md#ardusub-firmware-files)
     * [Raspberry Pi Image](resources/downloads.md#raspberry-pi-images)
-
