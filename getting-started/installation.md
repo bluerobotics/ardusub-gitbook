@@ -26,7 +26,7 @@ Press "OK" at the top right. The firmware will upload the Pixhawk and you'll see
 
 ## Raspberry Pi
 
-The Raspberry Pi operating system and supporting software is installed by restoring a pre-configured `.img` file to the Raspberry Pi SD Card. Download the image file [here](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/ardusub-raspbian.img.zip), then transfer the image to your SD card using the instructions below.
+The Raspberry Pi operating system and supporting software is installed by restoring a pre-configured `.img` file to the Raspberry Pi SD Card. Download the image file [here](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/stable/ardusub-raspbian.img.zip), then transfer the image to your SD card using the instructions below.
 
 ### Windows
 
