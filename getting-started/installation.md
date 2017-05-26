@@ -26,36 +26,11 @@ Press "OK" at the top right. The firmware will upload the Pixhawk and you'll see
 
 ## Raspberry Pi
 
-The Raspberry Pi operating system and supporting software is installed by restoring a pre-configured `.img` file to the Raspberry Pi SD Card. Download the image file [here](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/stable/ardusub-raspbian.img.zip), then transfer the image to your SD card using the instructions below.
+The Raspberry Pi operating system and supporting software is installed by restoring a pre-configured `.img` file to the Raspberry Pi SD Card.
 
-### Windows
-
-Follow the instructions provided on [raspberrypi.org](https://www.raspberrypi.org/documentation/installation/installing-images/windows.md)
-
-### Mac and Linux
-
-Insert the SD card in a card reader, open a terminal, and run the following command to find the disk identifier of the SD card.
-
-On Mac:
-
-    diskutil list
-
-On Linux:
-
-    sudo fdisk -l
-
-You can find the disk identifier in the output. It will look something like `/dev/disk2` on Mac and `/dev/sdb` or `/dev/mmcblk0` on Linux. Verify the disk identifier of the SD card by checking the disk size listed. If you are still unsure, try running the command with and without the SD card connected to the computer to see which disk identifier appears and disappears in the output. You need to start by unmounting all partitions on that disk. Run the following command using the top level disk identifier for your SD card, *not* an identifier for one of the partitions on the SD card. (Partition identifiers look like `/dev/disk1s1` on Mac or `/dev/sdb1`, `/dev/mmcblk0p1` on Linux)
-
-On Mac:
-
-    diskutil unmountDisk /dev/diskX
-
-On Linux (add ?* to unmount all partitions):
-
-    umount /dev/sdX?*
-
-To write the disk image to the SD card, use the following command. On Mac, change `/dev/diskX` to `/dev/rdiskX` for faster transfers. On Linux, replace `bs=1m` with `bs=1M`. This transfer will take 5-10 minutes. If you are on a Mac, you can press ctrl+T to check the progress of the transfer. Make sure that the identifier after `of=` is your SD card!:
-
-    sudo dd bs=1m if=~/Downloads/ardusub-raspbian.img of=/dev/rdiskX
-
-Note that the location and name of `ardusub-raspbian.img` might be slightly different depending on where you downloaded it. Once complete, you can eject the SD card and install it on the Raspberry Pi. That's it!
+1. Insert a microSD card with at least 4GB capacity into your computer with a card reader
+1. Download the Raspberry Pi image [here](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/stable/ardusub-raspbian.img.zip)
+1. While the Raspberry Pi image downloads, download and install [Etcher](https://etcher.io/). Make sure you select the correct download for your Operating System!
+1. Open Etcher, select the Raspberry Pi image file (no need to extract beforehand) and your SD card, click 'Flash' and wait for it to complete.
+<img src="/images/etcher.png" width="690" height="351">
+1. Eject the SD card, and place it back into the Raspberry Pi.
