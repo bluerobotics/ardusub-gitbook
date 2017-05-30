@@ -44,7 +44,7 @@ ArduSub can be configured to read leak sensors, and perform a failsafe action wh
 
 ### Battery
 
-It is recommended to design your vehicle to operate on battery power. Powering an ROV through the tether is not a trivial task, and is outside the scope of this document. Battery selection can be intimidating due to the overwhelming number of options, but there are only a few important considerations:
+It is recommended to design your vehicle to operate on battery power. Powering an ROV through the tether is not a trivial task, and is outside the scope of this documentation. Battery selection can be intimidating due to the overwhelming number of options, but there are only a few important considerations:
 
 - **Voltage:** Batteries often specify their voltage as well as a corresponding 'S' rating indicating the number of 3.7V cells in wired in **S**eries inside the battery. The voltage of your battery needs to be matched to the ratings of your ESCs. The Blue Robotics ESCs support 3S (11.1V) and 4S (14.8V) batteries. 
 - **Capacity** Batteries usually specify their capacity in units of mAh, the larger this number, the more energy the battery will store, and the longer you can run your ROV.
@@ -54,9 +54,24 @@ It is recommended to design your vehicle to operate on battery power. Powering a
 
 ### Companion Computer
 
+The Companion Computer has two major functions on the ROV:
+
+- Streaming HD video to the surface computer
+- Relaying communications between the autopilot and the Surface Computer via Ethernet communications
+
+The companion computer must be running the [Companion Computer Software](/getting-started/installation.md/raspberry-pi) to function correctly with ArduSub. Currently, only the Raspberry Pi 3 is supported for use with the Companion Computer Software.
+
 ### Camera
 
+The Companion Computer will stream HD video to the Ground Control Station at the surface. The Raspberry Pi camera and USB webcams with H.264 output are supported. The following USB webcams have been tested to work with the Companion Computer software:
+
+- [ELP 720p USB Camera Module](http://www.elpcctv.com/h264-hd-720p-usb-camera-module-usb20-ov9712-color-sensor-with-digital-audio-36mm-lens-p-228.html)
+
 ### Motors and ESCs
+
+ArduSub is designed to work with brushless motors. Brushless motors require Electronic Speed Controllers (ESCs) to operate. ArduSub requires all of the motors to operate in forward and reverse, so the ESC must support this functionality. Most ESCs for UAVs and Drones only operate in one direction! The following ESCs are supported for use with ArduSub:
+
+- Blue Robotics [Blue ESC](http://www.bluerobotics.com/store/thrusters/besc30-r2/)
 
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
