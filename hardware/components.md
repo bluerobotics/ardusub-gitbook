@@ -36,7 +36,7 @@ The autopilot is responsible for controlling the ROV. The autopilot will typical
 
 ### Depth Sensor
 
-ArduSub supports the MS5837 as an external water pressure and depth sensor. A depth sensor will need to be connected to the autopilot in order to use *Depth Hold* mode.
+ArduSub supports the use of the MS5837 as an external water pressure and depth sensor. A depth sensor will need to be connected to the autopilot in order to use *Depth Hold* mode.
 
 ### Leak Sensor
 
