@@ -9,6 +9,8 @@
 ## Hardware
 
 * [Components](hardware/components.md)
+    * [Topside](hardware/components.md#topside-components)
+    * [ROV](hardware/components.md#rov-components)
 
 ## Software
 
