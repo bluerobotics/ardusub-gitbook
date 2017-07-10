@@ -46,7 +46,7 @@ If your network is configured correctly, but you still have no telemetry, we nee
 
 Check that mavproxy is running on the pi. Log into the Pi via ssh or PuTTY, and type
 
-	sudo screen -r mavproxy
+	screen -r mavproxy
 
 Mavproxy and the Pixhawk are working correctly if the output contains something like this:
 
@@ -65,7 +65,7 @@ If you do not see the above lines in the output, or if you see something like th
 
 then there was an error starting MAVProxy. You can restart the MAVProxy process by typing:
 
-	~/companion/RPI2/Raspbian/start_mavproxy_telem_splitter.sh
+	~/companion/scripts/start_mavproxy_telem_splitter.sh
 
 Make sure that the Pixhawk is plugged into the companion computer (Raspberry Pi) with a micro USB cable. Make sure that the USB cable has data lines, some USB cables only provide power and will not allow communication. You can connect the Pixhawk to the surface computer directly with the USB cable to verify that the USB cable works.
 
@@ -83,7 +83,7 @@ If the video settings are correct, and there is no video stream, the most likely
 
 If you have checked all of the above and still don't have a video stream, you can check the video streaming process for errors. Log into the Raspberry Pi via SSH or PuTTY and enter the following command into the Raspberry Pi command line:
 
-	sudo screen -r video
+	screen -r video
 
 If the camera is working and the video stream is running, the output should end in something like this:
 
