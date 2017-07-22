@@ -51,17 +51,6 @@ Allows restricting radio overrides to only come from my ground station
 |255|Mission Planner and DroidPlanner|
 | 252| AP Planner 2|
 
-## CLI_ENABLED: CLI Enable
-
-*Note: This parameter is for advanced users*
-
-This enables/disables the checking for three carriage returns on telemetry links on startup to enter the diagnostics command line interface
-
-|Value|Meaning|
-|:---:|:---:|
-|0|Disabled|
-|1|Enabled|
-
 ## PILOT_THR_FILT: Throttle filter cutoff
 
 *Note: This parameter is for advanced users*
@@ -104,6 +93,9 @@ Controls whether failsafe will be invoked when battery voltage or current runs l
 |Value|Meaning|
 |:---:|:---:|
 |0|Disabled|
+|1|Warn only|
+|2|Disarm|
+|3|Enter surface mode|
 
 ## FS_BATT_VOLTAGE: Failsafe battery voltage
 
@@ -111,7 +103,7 @@ Battery voltage to trigger failsafe. Set to 0 to disable battery voltage failsaf
 
 - Increment: 0.1
 
-- Units: Volts
+- Units: V
 
 ## FS_BATT_MAH: Failsafe battery milliAmpHours
 
@@ -119,7 +111,7 @@ Battery capacity remaining to trigger failsafe. Set to 0 to disable battery rema
 
 - Increment: 50
 
-- Units: mAh
+- Units: mA.h
 
 ## FS_GCS_ENABLE: Ground Station Failsafe Enable
 
@@ -165,13 +157,13 @@ Controls what action to take if internal temperature exceeds FS_TEMP_MAX paramet
 
 The maximum internal pressure allowed before triggering failsafe. Failsafe action is determined by FS_PRESS_ENABLE parameter
 
-- Units: Pascal
+- Units: Pa
 
 ## FS_TEMP_MAX: Internal Temperature Failsafe Threshold
 
 The maximum internal temperature allowed before triggering failsafe. Failsafe action is determined by FS_TEMP_ENABLE parameter.
 
-- Units: Degrees Centigrade
+- Units: degC
 
 ## FS_TERRAIN_ENAB: Terrain Failsafe Enable
 
@@ -183,19 +175,29 @@ Controls what action to take if terrain information is lost during AUTO mode
 | 1|Hold Position|
 | 2|Surface|
 
+## FS_PILOT_INPUT: Pilot input failsafe action
+
+Controls what action to take if no pilot input has been received after the timeout period specified by the FS_PILOT_TIMEOUT parameter
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+| 1|Warn Only|
+| 2|Disarm|
+
+## FS_PILOT_TIMEOUT: Timeout for activation of pilot input failsafe
+
+Controls the maximum interval between received pilot inputs before the failsafe action is triggered
+
+- Range: 0.1 3.0
+
+- Units: s
+
 ## XTRACK_ANG_LIM: Crosstrack correction angle limit
 
 Maximum allowed angle (in degrees) between current track and desired heading during waypoint navigation
 
 - Range: 10 90
-
-## GPS_HDOP_GOOD: GPS Hdop Good
-
-*Note: This parameter is for advanced users*
-
-GPS Hdop value at or below this value represent a good position.  Used for pre-arm checks
-
-- Range: 100 900
 
 ## MAG_ENABLE: Compass enable/disable
 
@@ -225,7 +227,7 @@ The maximum vertical velocity the pilot may request in cm/s
 
 - Increment: 10
 
-- Units: Centimeters/Second
+- Units: cm/s
 
 ## PILOT_ACCEL_Z: Pilot vertical acceleration
 
@@ -239,73 +241,13 @@ The vertical acceleration used when pilot is controlling the altitude
 
 ## THR_DZ: Throttle deadzone
 
-The deadzone above and below mid throttle.  Used in AltHold, Loiter, PosHold flight modes
+The PWM deadzone in microseconds above and below mid throttle. Used in AltHold, Loiter, PosHold flight modes
 
 - Range: 0 300
 
 - Increment: 1
 
-- Units: pwm
-
-## FLTMODE1: Flight Mode 1
-
-Flight mode when Channel 5 pwm is <= 1230
-
-|Value|Meaning|
-|:---:|:---:|
-|0|Stabilize|
-|2|DepthHold|
-|19|Manual|
-
-## FLTMODE2: Flight Mode 2
-
-Flight mode when Channel 5 pwm is >1230, <= 1360
-
-|Value|Meaning|
-|:---:|:---:|
-|0|Stabilize|
-|2|DepthHold|
-|19|Manual|
-
-## FLTMODE3: Flight Mode 3
-
-Flight mode when Channel 5 pwm is >1360, <= 1490
-
-|Value|Meaning|
-|:---:|:---:|
-|0|Stabilize|
-|2|DepthHold|
-|19|Manual|
-
-## FLTMODE4: Flight Mode 4
-
-Flight mode when Channel 5 pwm is >1490, <= 1620
-
-|Value|Meaning|
-|:---:|:---:|
-|0|Stabilize|
-|2|DepthHold|
-|19|Manual|
-
-## FLTMODE5: Flight Mode 5
-
-Flight mode when Channel 5 pwm is >1620, <= 1749
-
-|Value|Meaning|
-|:---:|:---:|
-|0|Stabilize|
-|2|DepthHold|
-|19|Manual|
-
-## FLTMODE6: Flight Mode 6
-
-Flight mode when Channel 5 pwm is >=1750
-
-|Value|Meaning|
-|:---:|:---:|
-|0|Stabilize|
-|2|DepthHold|
-|19|Manual|
+- Units: PWM
 
 ## LOG_BITMASK: Log bitmask
 
@@ -328,84 +270,6 @@ Flight mode when Channel 5 pwm is >=1750
 |655358|All+FullIMU|
 |0|Disabled|
 
-## ESC_CALIBRATION: ESC Calibration
-
-*Note: This parameter is for advanced users*
-
-Controls whether ArduSub will enter ESC calibration on the next restart.  Do not adjust this parameter manually.
-
-|Value|Meaning|
-|:---:|:---:|
-|0|Normal Start-up|
-| 1|Start-up in ESC Calibration mode if throttle high|
-| 2|Start-up in ESC Calibration mode regardless of throttle|
-| 9|Disabled|
-
-## TUNE: Channel 6 Tuning
-
-Controls which parameters (normally PID gains) are being tuned with transmitter's channel 6 knob
-
-|Value|Meaning|
-|:---:|:---:|
-|0|None|
-|1|Stab Roll/Pitch kP|
-|4|Rate Roll/Pitch kP|
-|5|Rate Roll/Pitch kI|
-|21|Rate Roll/Pitch kD|
-|3|Stab Yaw kP|
-|6|Rate Yaw kP|
-|26|Rate Yaw kD|
-|14|Altitude Hold kP|
-|7|Throttle Rate kP|
-|34|Throttle Accel kP|
-|35|Throttle Accel kI|
-|36|Throttle Accel kD|
-|42|Loiter Speed|
-|12|Loiter Pos kP|
-|22|Velocity XY kP|
-|28|Velocity XY kI|
-|10|WP Speed|
-|25|Acro RollPitch kP|
-|40|Acro Yaw kP|
-|13|Heli Ext Gyro|
-|17|OF Loiter kP|
-|18|OF Loiter kI|
-|19|OF Loiter kD|
-|38|Declination|
-|39|Circle Rate|
-|41|RangeFinder Gain|
-|46|Rate Pitch kP|
-|47|Rate Pitch kI|
-|48|Rate Pitch kD|
-|49|Rate Roll kP|
-|50|Rate Roll kI|
-|51|Rate Roll kD|
-|52|Rate Pitch FF|
-|53|Rate Roll FF|
-|54|Rate Yaw FF|
-
-## TUNE_LOW: Tuning minimum
-
-The minimum value that will be applied to the parameter currently being tuned with the transmitter's channel 6 knob
-
-- Range: 0 32767
-
-## TUNE_HIGH: Tuning maximum
-
-The maximum value that will be applied to the parameter currently being tuned with the transmitter's channel 6 knob
-
-- Range: 0 32767
-
-## DISARM_DELAY: Disarm delay
-
-*Note: This parameter is for advanced users*
-
-Delay before automatic disarm in seconds. A value of zero disables auto disarm.
-
-- Range: 0 127
-
-- Units: Seconds
-
 ## ANGLE_MAX: Angle Max
 
 *Note: This parameter is for advanced users*
@@ -414,7 +278,7 @@ Maximum lean angle in all flight modes
 
 - Range: 1000 8000
 
-- Units: Centi-degrees
+- Units: cdeg
 
 ## RC_FEEL_RP: RC Feel Roll/Pitch
 
@@ -440,7 +304,9 @@ Controls the action that will be taken when an EKF failsafe is invoked
 
 |Value|Meaning|
 |:---:|:---:|
-|1|Disabled|
+|0|Disabled|
+| 1|Warn only|
+| 2|Disarm|
 
 ## FS_EKF_THRESH: EKF failsafe variance threshold
 
@@ -459,6 +325,8 @@ This enables automatic crash checking. When enabled the motors will disarm if a 
 |Value|Meaning|
 |:---:|:---:|
 |0|Disabled|
+|1|Warn only|
+|2|Disarm|
 
 ## JS_GAIN_DEFAULT: Default gain at boot
 
@@ -486,15 +354,19 @@ Controls the number of steps between minimum and maximum joystick gain when the 
 
 ## JS_CAM_TILT_STEP: Camera tilt step size
 
-Size of PWM increment on camera tilt servo
+Size of PWM increment in microseconds on camera tilt servo
 
 - Range: 30 400
+
+- Units: PWM
 
 ## JS_LIGHTS_STEP: Lights step size
 
-Size of PWM increment on lights servo
+Size of PWM increment in microseconds on lights servo
 
 - Range: 30 400
+
+- Units: PWM
 
 ## JS_THR_GAIN: Throttle gain scalar
 
@@ -504,9 +376,11 @@ Scalar for gain on the throttle channel
 
 ## CAM_CENTER: Camera tilt mount center
 
-Servo PWM at camera center position
+Servo PWM in microseconds at camera center position
 
 - Range: 1000 2000
+
+- Units: PWM
 
 ## FRAME_CONFIG: Frame configuration
 
@@ -666,7 +540,7 @@ Throttle acceleration controller I gain maximum.  Constrains the maximum pwm tha
 
 - Range: 0 1000
 
-- Units: Percent*10
+- Units: d%
 
 ## ACCEL_Z_D: Throttle acceleration controller D gain
 
@@ -702,12 +576,6 @@ This enables terrain following for RTL and SURFACE flight modes. To use this opt
 |:---:|:---:|
 |0|Do Not Use in RTL and SURFACE|
 |1|Use in RTL and SURFACE|
-
-## WP_NAVALT_MIN: Minimum navigation altitude
-
-This is the altitude in meters above which for navigation can begin. This applies in auto takeoff and auto landing.
-
-- Range: 0 5
 
 # AHRS Parameters
 
@@ -772,7 +640,7 @@ Compensates for the roll angle difference between the control board and the fram
 
 - Increment: 0.01
 
-- Units: Radians
+- Units: rad
 
 ## AHRS_TRIM_Y: AHRS Trim Pitch
 
@@ -782,7 +650,7 @@ Compensates for the pitch angle difference between the control board and the fra
 
 - Increment: 0.01
 
-- Units: Radians
+- Units: rad
 
 ## AHRS_TRIM_Z: AHRS Trim Yaw
 
@@ -794,7 +662,7 @@ Not Used
 
 - Increment: 0.01
 
-- Units: Radians
+- Units: rad
 
 ## AHRS_ORIENTATION: Board Orientation
 
@@ -891,7 +759,7 @@ Arming disabled until some requirements are met. If 0, there are no requirements
 
 ## ARMING_CHECK: Arm Checks to Peform (bitmask)
 
-Checks prior to arming motor. This is a bitmask of checks that will be performed befor allowing arming. The default is no checks, allowing arming at any time. You can select whatever checks you prefer by adding together the values of each check type to set this parameter. For example, to only allow arming when you have GPS lock and no RC failsafe you would set ARMING_CHECK to 72. For most users it is recommended that you set this to 1 to enable all checks.
+Checks prior to arming motor. This is a bitmask of checks that will be performed before allowing arming. The default is no checks, allowing arming at any time. You can select whatever checks you prefer by adding together the values of each check type to set this parameter. For example, to only allow arming when you have GPS lock and no RC failsafe you would set ARMING_CHECK to 72. For most users it is recommended that you set this to 1 to enable all checks.
 
 - Bitmask: 0:All,1:Barometer,2:Compass,3:GPS lock,4:INS,5:Parameters,6:RC,7:Board voltage,8:Battery Level,9:Airspeed,10:Logging Available,11:Hardware safety switch,12:GPS Configuration
 
@@ -928,7 +796,7 @@ The minimum voltage on the first battery to arm, 0 disables the check.  This par
 
 - Increment: 0.1 
 
-- Units: Volts
+- Units: V
 
 ## ARMING_MIN_VOLT2: Minimum arming voltage on the second battery
 
@@ -936,7 +804,7 @@ The minimum voltage on the first battery to arm, 0 disables the check. This para
 
 - Increment: 0.1 
 
-- Units: Volts
+- Units: V
 
 # ATC Parameters
 
@@ -950,7 +818,7 @@ Maximum rate the yaw target can be updated in Loiter, RTL, Auto flight modes
 
 - Increment: 100
 
-- Units: Centi-Degrees/Sec
+- Units: cdeg/s
 
 ## ATC_ACCEL_Y_MAX: Acceleration Max for Yaw
 
@@ -969,7 +837,7 @@ Maximum acceleration in yaw axis
 
 - Increment: 1000
 
-- Units: Centi-Degrees/Sec/Sec
+- Units: cdeg/s/s
 
 ## ATC_RATE_FF_ENAB: Rate Feedforward Enable
 
@@ -999,7 +867,7 @@ Maximum acceleration in roll axis
 
 - Increment: 1000
 
-- Units: Centi-Degrees/Sec/Sec
+- Units: cdeg/s/s
 
 ## ATC_ACCEL_P_MAX: Acceleration Max for Pitch
 
@@ -1018,7 +886,7 @@ Maximum acceleration in pitch axis
 
 - Increment: 1000
 
-- Units: Centi-Degrees/Sec/Sec
+- Units: cdeg/s/s
 
 ## ATC_ANGLE_BOOST: Angle Boost
 
@@ -1081,7 +949,7 @@ Roll axis rate controller I gain maximum.  Constrains the maximum motor output t
 
 - Increment: 0.01
 
-- Units: Percent
+- Units: %
 
 ## ATC_RAT_RLL_D: Roll axis rate controller D gain
 
@@ -1133,7 +1001,7 @@ Pitch axis rate controller I gain maximum.  Constrains the maximum motor output 
 
 - Increment: 0.01
 
-- Units: Percent
+- Units: %
 
 ## ATC_RAT_PIT_D: Pitch axis rate controller D gain
 
@@ -1185,7 +1053,7 @@ Yaw axis rate controller I gain maximum.  Constrains the maximum motor output th
 
 - Increment: 0.01
 
-- Units: Percent
+- Units: %
 
 ## ATC_RAT_YAW_D: Yaw axis rate controller D gain
 
@@ -1254,29 +1122,29 @@ Controls enabling monitoring of the battery's voltage and current
 
 ## BATT_VOLT_PIN: Battery Voltage sensing pin
 
-Setting this to 0 ~ 13 will enable battery voltage sensing on pins A0 ~ A13. For the 3DR power brick on APM2.5 it should be set to 13. On the PX4 it should be set to 100. On the Pixhawk powered from the PM connector it should be set to 2.
+Setting this to 0 ~ 13 will enable battery voltage sensing on pins A0 ~ A13. On the PX4-v1 it should be set to 100. On the Pixhawk, Pixracer and NAVIO boards it should be set to 2, Pixhawk2 Power2 is 13.
 
 |Value|Meaning|
 |:---:|:---:|
 |-1|Disabled|
 | 0|A0|
 | 1|A1|
-| 2|Pixhawk|
-| 13|A13|
-| 100|PX4|
+| 2|Pixhawk/Pixracer/Navio2/Pixhawk2_PM1|
+| 13|Pixhawk2_PM2|
+| 100|PX4-v1|
 
 ## BATT_CURR_PIN: Battery Current sensing pin
 
-Setting this to 0 ~ 13 will enable battery current sensing on pins A0 ~ A13. For the 3DR power brick on APM2.5 it should be set to 12. On the PX4 it should be set to 101. On the Pixhawk powered from the PM connector it should be set to 3.
+Setting this to 0 ~ 13 will enable battery current sensing on pins A0 ~ A13. On the PX4-v1 it should be set to 101. On the Pixhawk, Pixracer and NAVIO boards it should be set to 3, Pixhawk2 Power2 is 14.
 
 |Value|Meaning|
 |:---:|:---:|
 |-1|Disabled|
 | 1|A1|
 | 2|A2|
-| 3|Pixhawk|
-| 12|A12|
-| 101|PX4|
+| 3|Pixhawk/Pixracer/Navio2/Pixhawk2_PM1|
+| 14|Pixhawk2_PM2|
+| 101|PX4-v1|
 
 ## BATT_VOLT_MULT: Voltage Multiplier
 
@@ -1288,13 +1156,13 @@ Used to convert the voltage of the voltage sensing pin (BATT_VOLT_PIN) to the ac
 
 Number of amps that a 1V reading on the current sensor corresponds to. On the APM2 or Pixhawk using the 3DR Power brick this should be set to 17. For the Pixhawk with the 3DR 4in1 ESC this should be 17.
 
-- Units: Amps/Volt
+- Units: A/V
 
 ## BATT_AMP_OFFSET: AMP offset
 
 Voltage offset at zero current on current sensor
 
-- Units: Volts
+- Units: V
 
 ## BATT_CAPACITY: Battery capacity
 
@@ -1302,7 +1170,7 @@ Capacity of the battery in mAh when full
 
 - Increment: 50
 
-- Units: mAh
+- Units: mA.h
 
 ## BATT_WATT_MAX: Maximum allowed power (Watts)
 
@@ -1312,7 +1180,13 @@ If battery wattage (voltage * current) exceeds this value then the system will r
 
 - Increment: 1
 
-- Units: Watts
+- Units: W
+
+## BATT_SERIAL_NUM: Battery serial number
+
+*Note: This parameter is for advanced users*
+
+Battery serial number, automatically filled in for SMBus batteries, otherwise will be -1
 
 ## BATT2_MONITOR: Battery monitoring
 
@@ -1329,29 +1203,29 @@ Controls enabling monitoring of the battery's voltage and current
 
 ## BATT2_VOLT_PIN: Battery Voltage sensing pin
 
-Setting this to 0 ~ 13 will enable battery voltage sensing on pins A0 ~ A13. For the 3DR power brick on APM2.5 it should be set to 13. On the PX4 it should be set to 100. On the Pixhawk powered from the PM connector it should be set to 2.
+Setting this to 0 ~ 13 will enable battery voltage sensing on pins A0 ~ A13. On the PX4-v1 it should be set to 100. On the Pixhawk, Pixracer and NAVIO boards it should be set to 2, Pixhawk2 Power2 is 13.
 
 |Value|Meaning|
 |:---:|:---:|
 |-1|Disabled|
 | 0|A0|
 | 1|A1|
-| 2|Pixhawk|
-| 13|A13|
-| 100|PX4|
+| 2|Pixhawk/Pixracer/Navio2/Pixhawk2_PM1|
+| 13|Pixhawk2_PM2|
+| 100|PX4-v1|
 
 ## BATT2_CURR_PIN: Battery Current sensing pin
 
-Setting this to 0 ~ 13 will enable battery current sensing on pins A0 ~ A13. For the 3DR power brick on APM2.5 it should be set to 12. On the PX4 it should be set to 101. On the Pixhawk powered from the PM connector it should be set to 3.
+Setting this to 0 ~ 13 will enable battery current sensing on pins A0 ~ A13. On the PX4-v1 it should be set to 101. On the Pixhawk, Pixracer and NAVIO boards it should be set to 3, Pixhawk2 Power2 is 14.
 
 |Value|Meaning|
 |:---:|:---:|
 |-1|Disabled|
 | 1|A1|
 | 2|A2|
-| 3|Pixhawk|
-| 12|A12|
-| 101|PX4|
+| 3|Pixhawk/Pixracer/Navio2/Pixhawk2_PM1|
+| 14|Pixhawk2_PM2|
+| 101|PX4-v1|
 
 ## BATT2_VOLT_MULT: Voltage Multiplier
 
@@ -1363,13 +1237,13 @@ Used to convert the voltage of the voltage sensing pin (BATT_VOLT_PIN) to the ac
 
 Number of amps that a 1V reading on the current sensor corresponds to. On the APM2 or Pixhawk using the 3DR Power brick this should be set to 17. For the Pixhawk with the 3DR 4in1 ESC this should be 17.
 
-- Units: Amps/Volt
+- Units: A/V
 
 ## BATT2_AMP_OFFSET: AMP offset
 
 Voltage offset at zero current on current sensor
 
-- Units: Volts
+- Units: V
 
 ## BATT2_CAPACITY: Battery capacity
 
@@ -1377,7 +1251,7 @@ Capacity of the battery in mAh when full
 
 - Increment: 50
 
-- Units: mAh
+- Units: mA.h
 
 ## BATT2_WATT_MAX: Maximum allowed current
 
@@ -1387,7 +1261,36 @@ If battery wattage (voltage * current) exceeds this value then the system will r
 
 - Increment: 1
 
-- Units: Amps
+- Units: A
+
+## BATT2_SERIAL_NUM: Battery serial number
+
+*Note: This parameter is for advanced users*
+
+Battery serial number, automatically filled in for SMBus batteries, otherwise will be -1
+
+## BATT_LOW_TIMER: Low voltage timeout
+
+*Note: This parameter is for advanced users*
+
+This is the timeout in seconds before a low voltage event will be triggered. For aircraft with low C batteries it may be necessary to raise this in order to cope with low voltage on long takeoffs. A value of zero disables low voltage errors.
+
+- Range: 0 120
+
+- Increment: 1
+
+- Units: s
+
+## BATT_LOW_TYPE: Low voltage type
+
+*Note: This parameter is for advanced users*
+
+Voltage type used for detection of low voltage event
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Raw Voltage|
+| 1|Sag Compensated Voltage|
 
 # BRD Parameters
 
@@ -1469,19 +1372,7 @@ This sets the SBUS output frame rate in Hz
 
 User-defined serial number of this vehicle, it can be any arbitrary number you want and has no effect on the autopilot
 
-- Range: -32767 32768
-
-## BRD_CAN_ENABLE:  Enable use of UAVCAN devices
-
-*Note: This parameter is for advanced users*
-
-Enabling this option on a Pixhawk enables UAVCAN devices. Note that this uses about 25k of memory
-
-|Value|Meaning|
-|:---:|:---:|
-|0|Disabled|
-|1|Enabled|
-|2|Dynamic ID/Update|
+- Range: -32768 32767
 
 ## BRD_SAFETY_MASK: Channels to which ignore the safety switch state
 
@@ -1506,7 +1397,7 @@ This sets the target IMU temperature for boards with controllable IMU heating un
 
 - Range: -1 80
 
-- Units: degreesC
+- Units: degC
 
 ## BRD_TYPE: Board type
 
@@ -1529,7 +1420,21 @@ This allows selection of a PX4 or VRBRAIN board type. If set to zero then the bo
 |10|VR Micro Brain 5.2|
 |11|VRBrain Core 1.0|
 |12|VRBrain 5.4|
+|13|Intel Aero FC|
 |20|AUAV2.1|
+
+- RebootRequired: True
+
+## BRD_IO_ENABLE: Enable IO co-processor
+
+*Note: This parameter is for advanced users*
+
+This allows for the IO co-processor on FMUv1 and FMUv2 to be disabled
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|Enabled|
 
 - RebootRequired: True
 
@@ -1546,13 +1451,14 @@ Set to 0 to disable or choose a function
 |2|arm_toggle|
 |3|arm|
 |4|disarm|
-|5|mode_toggle|
-|6|enter_mode_1|
-|7|enter_mode_2|
-|8|enter_mode_3|
-|9|enter_mode_4|
-|10|enter_mode_5|
-|11|enter_mode_6|
+|5|mode_manual|
+|6|mode_stabilize|
+|7|mode_depth_hold|
+|8|mode_poshold|
+|9|mode_auto|
+|10|mode_circle|
+|11|mode_guided|
+|12|mode_acro|
 |21|mount_center|
 |22|mount_tilt_up|
 |23|mount_tilt_down|
@@ -1574,12 +1480,28 @@ Set to 0 to disable or choose a function
 |46|trim_pitch_inc|
 |47|trim_pitch_dec|
 |48|input_hold_toggle|
+|49|roll_pitch_toggle|
 |51|relay_1_on|
 |52|relay_1_off|
 |53|relay_1_toggle|
 |54|relay_2_on|
 |55|relay_2_off|
 |56|relay_2_toggle|
+|61|servo_1_inc|
+|62|servo_1_dec|
+|63|servo_1_min|
+|64|servo_1_max|
+|65|servo_1_center|
+|66|servo_2_inc|
+|67|servo_2_dec|
+|68|servo_2_min|
+|69|servo_2_max|
+|70|servo_2_center|
+|71|servo_3_inc|
+|72|servo_3_dec|
+|73|servo_3_min|
+|74|servo_3_max|
+|75|servo_3_center|
 |91|custom_1|
 |92|custom_2|
 |93|custom_3|
@@ -1598,13 +1520,14 @@ Set to 0 to disable or choose a function
 |2|arm_toggle|
 |3|arm|
 |4|disarm|
-|5|mode_toggle|
-|6|enter_mode_1|
-|7|enter_mode_2|
-|8|enter_mode_3|
-|9|enter_mode_4|
-|10|enter_mode_5|
-|11|enter_mode_6|
+|5|mode_manual|
+|6|mode_stabilize|
+|7|mode_depth_hold|
+|8|mode_poshold|
+|9|mode_auto|
+|10|mode_circle|
+|11|mode_guided|
+|12|mode_acro|
 |21|mount_center|
 |22|mount_tilt_up|
 |23|mount_tilt_down|
@@ -1626,12 +1549,28 @@ Set to 0 to disable or choose a function
 |46|trim_pitch_inc|
 |47|trim_pitch_dec|
 |48|input_hold_toggle|
+|49|roll_pitch_toggle|
 |51|relay_1_on|
 |52|relay_1_off|
 |53|relay_1_toggle|
 |54|relay_2_on|
 |55|relay_2_off|
 |56|relay_2_toggle|
+|61|servo_1_inc|
+|62|servo_1_dec|
+|63|servo_1_min|
+|64|servo_1_max|
+|65|servo_1_center|
+|66|servo_2_inc|
+|67|servo_2_dec|
+|68|servo_2_min|
+|69|servo_2_max|
+|70|servo_2_center|
+|71|servo_3_inc|
+|72|servo_3_dec|
+|73|servo_3_min|
+|74|servo_3_max|
+|75|servo_3_center|
 |91|custom_1|
 |92|custom_2|
 |93|custom_3|
@@ -1656,23 +1595,23 @@ How long the shutter will be held open in 10ths of a second (i.e. enter 10 for 1
 
 - Range: 0 50
 
-- Units: deciseconds
+- Units: ds
 
 ## CAM_SERVO_ON: Servo ON PWM value
 
-PWM value to move servo to when shutter is activated
+PWM value in microseconds to move servo to when shutter is activated
 
 - Range: 1000 2000
 
-- Units: pwm
+- Units: PWM
 
 ## CAM_SERVO_OFF: Servo OFF PWM value
 
-PWM value to move servo to when shutter is deactivated
+PWM value in microseconds to move servo to when shutter is deactivated
 
 - Range: 1000 2000
 
-- Units: pwm
+- Units: PWM
 
 ## CAM_TRIGG_DIST: Camera trigger distance
 
@@ -1680,7 +1619,7 @@ Distance in meters between camera triggers. If this value is non-zero then the c
 
 - Range: 0 1000
 
-- Units: meters
+- Units: m
 
 ## CAM_RELAY_ON: Relay ON value
 
@@ -1697,7 +1636,7 @@ Postpone shooting if previous picture was taken less than preset time(ms) ago.
 
 - Range: 0 10000
 
-- Units: milliseconds
+- Units: ms
 
 ## CAM_MAX_ROLL: Maximum photo roll angle.
 
@@ -1705,7 +1644,7 @@ Postpone shooting if roll is greater than limit. (0=Disable, will shoot regardle
 
 - Range: 0 180
 
-- Units: Degrees
+- Units: deg
 
 ## CAM_FEEDBACK_PIN: Camera feedback pin
 
@@ -1730,6 +1669,444 @@ Polarity for feedback pin. If this is 1 then the feedback pin should go high on 
 |0|TriggerLow|
 |1|TriggerHigh|
 
+# CAND1 Parameters
+
+## CAN_D1_DRIVER: Index of virtual driver to be used with physical CAN interface
+
+Enabling this option enables use of CAN buses.
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|First driver|
+|2|Second driver|
+
+- RebootRequired: True
+
+## CAN_D1_BITRATE: Bitrate of CAN interface
+
+*Note: This parameter is for advanced users*
+
+Bit rate can be set up to from 10000 to 1000000
+
+- Range: 10000 1000000
+
+## CAN_D1_DEBUG: Level of debug for CAN devices
+
+*Note: This parameter is for advanced users*
+
+Enabling this option will provide debug messages
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|Major messages|
+|2|All messages|
+
+## CAN_D1_PROTOCOL: Enable use of specific protocol over virtual driver
+
+*Note: This parameter is for advanced users*
+
+Enabling this option starts selected protocol that will use this virtual driver
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|UAVCAN|
+
+- RebootRequired: True
+
+# CAND1UC Parameters
+
+## CAN_D1_UC_NODE: UAVCAN node that is used for this network
+
+*Note: This parameter is for advanced users*
+
+UAVCAN node should be set implicitly
+
+- Range: 1 250
+
+## CAN_D1_UC_SRV_BM: RC Out channels to be transmitted as servo over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a servo command over UAVCAN
+
+- Bitmask: 0: Servo 1, 1: Servo 2, 2: Servo 3, 3: Servo 4, 4: Servo 5, 5: Servo 6, 6: Servo 7, 7: Servo 8, 8: Servo 9, 9: Servo 10, 10: Servo 11, 11: Servo 12, 12: Servo 13, 13: Servo 14, 14: Servo 15
+
+## CAN_D1_UC_ESC_BM: RC Out channels to be transmitted as ESC over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a ESC command over UAVCAN
+
+- Bitmask: 0: ESC 1, 1: ESC 2, 2: ESC 3, 3: ESC 4, 4: ESC 5, 5: ESC 6, 6: ESC 7, 7: ESC 8, 8: ESC 9, 9: ESC 10, 10: ESC 11, 11: ESC 12, 12: ESC 13, 13: ESC 14, 14: ESC 15, 15: ESC 16
+
+# CAND2 Parameters
+
+## CAN_D2_DRIVER: Index of virtual driver to be used with physical CAN interface
+
+Enabling this option enables use of CAN buses.
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|First driver|
+|2|Second driver|
+
+- RebootRequired: True
+
+## CAN_D2_BITRATE: Bitrate of CAN interface
+
+*Note: This parameter is for advanced users*
+
+Bit rate can be set up to from 10000 to 1000000
+
+- Range: 10000 1000000
+
+## CAN_D2_DEBUG: Level of debug for CAN devices
+
+*Note: This parameter is for advanced users*
+
+Enabling this option will provide debug messages
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|Major messages|
+|2|All messages|
+
+## CAN_D2_PROTOCOL: Enable use of specific protocol over virtual driver
+
+*Note: This parameter is for advanced users*
+
+Enabling this option starts selected protocol that will use this virtual driver
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|UAVCAN|
+
+- RebootRequired: True
+
+# CAND2UC Parameters
+
+## CAN_D2_UC_NODE: UAVCAN node that is used for this network
+
+*Note: This parameter is for advanced users*
+
+UAVCAN node should be set implicitly
+
+- Range: 1 250
+
+## CAN_D2_UC_SRV_BM: RC Out channels to be transmitted as servo over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a servo command over UAVCAN
+
+- Bitmask: 0: Servo 1, 1: Servo 2, 2: Servo 3, 3: Servo 4, 4: Servo 5, 5: Servo 6, 6: Servo 7, 7: Servo 8, 8: Servo 9, 9: Servo 10, 10: Servo 11, 11: Servo 12, 12: Servo 13, 13: Servo 14, 14: Servo 15
+
+## CAN_D2_UC_ESC_BM: RC Out channels to be transmitted as ESC over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a ESC command over UAVCAN
+
+- Bitmask: 0: ESC 1, 1: ESC 2, 2: ESC 3, 3: ESC 4, 4: ESC 5, 5: ESC 6, 6: ESC 7, 7: ESC 8, 8: ESC 9, 9: ESC 10, 10: ESC 11, 11: ESC 12, 12: ESC 13, 13: ESC 14, 14: ESC 15, 15: ESC 16
+
+# CAND3 Parameters
+
+## CAN_D3_DRIVER: Index of virtual driver to be used with physical CAN interface
+
+Enabling this option enables use of CAN buses.
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|First driver|
+|2|Second driver|
+
+- RebootRequired: True
+
+## CAN_D3_BITRATE: Bitrate of CAN interface
+
+*Note: This parameter is for advanced users*
+
+Bit rate can be set up to from 10000 to 1000000
+
+- Range: 10000 1000000
+
+## CAN_D3_DEBUG: Level of debug for CAN devices
+
+*Note: This parameter is for advanced users*
+
+Enabling this option will provide debug messages
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|Major messages|
+|2|All messages|
+
+## CAN_D3_PROTOCOL: Enable use of specific protocol over virtual driver
+
+*Note: This parameter is for advanced users*
+
+Enabling this option starts selected protocol that will use this virtual driver
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|UAVCAN|
+
+- RebootRequired: True
+
+# CAND3UC Parameters
+
+## CAN_D3_UC_NODE: UAVCAN node that is used for this network
+
+*Note: This parameter is for advanced users*
+
+UAVCAN node should be set implicitly
+
+- Range: 1 250
+
+## CAN_D3_UC_SRV_BM: RC Out channels to be transmitted as servo over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a servo command over UAVCAN
+
+- Bitmask: 0: Servo 1, 1: Servo 2, 2: Servo 3, 3: Servo 4, 4: Servo 5, 5: Servo 6, 6: Servo 7, 7: Servo 8, 8: Servo 9, 9: Servo 10, 10: Servo 11, 11: Servo 12, 12: Servo 13, 13: Servo 14, 14: Servo 15
+
+## CAN_D3_UC_ESC_BM: RC Out channels to be transmitted as ESC over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a ESC command over UAVCAN
+
+- Bitmask: 0: ESC 1, 1: ESC 2, 2: ESC 3, 3: ESC 4, 4: ESC 5, 5: ESC 6, 6: ESC 7, 7: ESC 8, 8: ESC 9, 9: ESC 10, 10: ESC 11, 11: ESC 12, 12: ESC 13, 13: ESC 14, 14: ESC 15, 15: ESC 16
+
+# CANP1 Parameters
+
+## CAN_P1_DRIVER: Index of virtual driver to be used with physical CAN interface
+
+Enabling this option enables use of CAN buses.
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|First driver|
+|2|Second driver|
+
+- RebootRequired: True
+
+## CAN_P1_BITRATE: Bitrate of CAN interface
+
+*Note: This parameter is for advanced users*
+
+Bit rate can be set up to from 10000 to 1000000
+
+- Range: 10000 1000000
+
+## CAN_P1_DEBUG: Level of debug for CAN devices
+
+*Note: This parameter is for advanced users*
+
+Enabling this option will provide debug messages
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|Major messages|
+|2|All messages|
+
+## CAN_P1_PROTOCOL: Enable use of specific protocol over virtual driver
+
+*Note: This parameter is for advanced users*
+
+Enabling this option starts selected protocol that will use this virtual driver
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|UAVCAN|
+
+- RebootRequired: True
+
+# CANP1UC Parameters
+
+## CAN_P1_UC_NODE: UAVCAN node that is used for this network
+
+*Note: This parameter is for advanced users*
+
+UAVCAN node should be set implicitly
+
+- Range: 1 250
+
+## CAN_P1_UC_SRV_BM: RC Out channels to be transmitted as servo over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a servo command over UAVCAN
+
+- Bitmask: 0: Servo 1, 1: Servo 2, 2: Servo 3, 3: Servo 4, 4: Servo 5, 5: Servo 6, 6: Servo 7, 7: Servo 8, 8: Servo 9, 9: Servo 10, 10: Servo 11, 11: Servo 12, 12: Servo 13, 13: Servo 14, 14: Servo 15
+
+## CAN_P1_UC_ESC_BM: RC Out channels to be transmitted as ESC over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a ESC command over UAVCAN
+
+- Bitmask: 0: ESC 1, 1: ESC 2, 2: ESC 3, 3: ESC 4, 4: ESC 5, 5: ESC 6, 6: ESC 7, 7: ESC 8, 8: ESC 9, 9: ESC 10, 10: ESC 11, 11: ESC 12, 12: ESC 13, 13: ESC 14, 14: ESC 15, 15: ESC 16
+
+# CANP2 Parameters
+
+## CAN_P2_DRIVER: Index of virtual driver to be used with physical CAN interface
+
+Enabling this option enables use of CAN buses.
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|First driver|
+|2|Second driver|
+
+- RebootRequired: True
+
+## CAN_P2_BITRATE: Bitrate of CAN interface
+
+*Note: This parameter is for advanced users*
+
+Bit rate can be set up to from 10000 to 1000000
+
+- Range: 10000 1000000
+
+## CAN_P2_DEBUG: Level of debug for CAN devices
+
+*Note: This parameter is for advanced users*
+
+Enabling this option will provide debug messages
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|Major messages|
+|2|All messages|
+
+## CAN_P2_PROTOCOL: Enable use of specific protocol over virtual driver
+
+*Note: This parameter is for advanced users*
+
+Enabling this option starts selected protocol that will use this virtual driver
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|UAVCAN|
+
+- RebootRequired: True
+
+# CANP2UC Parameters
+
+## CAN_P2_UC_NODE: UAVCAN node that is used for this network
+
+*Note: This parameter is for advanced users*
+
+UAVCAN node should be set implicitly
+
+- Range: 1 250
+
+## CAN_P2_UC_SRV_BM: RC Out channels to be transmitted as servo over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a servo command over UAVCAN
+
+- Bitmask: 0: Servo 1, 1: Servo 2, 2: Servo 3, 3: Servo 4, 4: Servo 5, 5: Servo 6, 6: Servo 7, 7: Servo 8, 8: Servo 9, 9: Servo 10, 10: Servo 11, 11: Servo 12, 12: Servo 13, 13: Servo 14, 14: Servo 15
+
+## CAN_P2_UC_ESC_BM: RC Out channels to be transmitted as ESC over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a ESC command over UAVCAN
+
+- Bitmask: 0: ESC 1, 1: ESC 2, 2: ESC 3, 3: ESC 4, 4: ESC 5, 5: ESC 6, 6: ESC 7, 7: ESC 8, 8: ESC 9, 9: ESC 10, 10: ESC 11, 11: ESC 12, 12: ESC 13, 13: ESC 14, 14: ESC 15, 15: ESC 16
+
+# CANP3 Parameters
+
+## CAN_P3_DRIVER: Index of virtual driver to be used with physical CAN interface
+
+Enabling this option enables use of CAN buses.
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|First driver|
+|2|Second driver|
+
+- RebootRequired: True
+
+## CAN_P3_BITRATE: Bitrate of CAN interface
+
+*Note: This parameter is for advanced users*
+
+Bit rate can be set up to from 10000 to 1000000
+
+- Range: 10000 1000000
+
+## CAN_P3_DEBUG: Level of debug for CAN devices
+
+*Note: This parameter is for advanced users*
+
+Enabling this option will provide debug messages
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|Major messages|
+|2|All messages|
+
+## CAN_P3_PROTOCOL: Enable use of specific protocol over virtual driver
+
+*Note: This parameter is for advanced users*
+
+Enabling this option starts selected protocol that will use this virtual driver
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|UAVCAN|
+
+- RebootRequired: True
+
+# CANP3UC Parameters
+
+## CAN_P3_UC_NODE: UAVCAN node that is used for this network
+
+*Note: This parameter is for advanced users*
+
+UAVCAN node should be set implicitly
+
+- Range: 1 250
+
+## CAN_P3_UC_SRV_BM: RC Out channels to be transmitted as servo over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a servo command over UAVCAN
+
+- Bitmask: 0: Servo 1, 1: Servo 2, 2: Servo 3, 3: Servo 4, 4: Servo 5, 5: Servo 6, 6: Servo 7, 7: Servo 8, 8: Servo 9, 9: Servo 10, 10: Servo 11, 11: Servo 12, 12: Servo 13, 13: Servo 14, 14: Servo 15
+
+## CAN_P3_UC_ESC_BM: RC Out channels to be transmitted as ESC over UAVCAN
+
+*Note: This parameter is for advanced users*
+
+Bitmask with one set for channel to be transmitted as a ESC command over UAVCAN
+
+- Bitmask: 0: ESC 1, 1: ESC 2, 2: ESC 3, 3: ESC 4, 4: ESC 5, 5: ESC 6, 6: ESC 7, 7: ESC 8, 8: ESC 9, 9: ESC 10, 10: ESC 11, 11: ESC 12, 12: ESC 13, 13: ESC 14, 14: ESC 15, 15: ESC 16
+
 # COMPASS Parameters
 
 ## COMPASS_OFS_X: Compass offsets in milligauss on the X axis
@@ -1742,7 +2119,7 @@ Offset to be added to the compass x-axis values to compensate for metal in the f
 
 - Increment: 1
 
-- Units: milligauss
+- Units: mGauss
 
 ## COMPASS_OFS_Y: Compass offsets in milligauss on the Y axis
 
@@ -1754,7 +2131,7 @@ Offset to be added to the compass y-axis values to compensate for metal in the f
 
 - Increment: 1
 
-- Units: milligauss
+- Units: mGauss
 
 ## COMPASS_OFS_Z: Compass offsets in milligauss on the Z axis
 
@@ -1766,7 +2143,7 @@ Offset to be added to the compass z-axis values to compensate for metal in the f
 
 - Increment: 1
 
-- Units: milligauss
+- Units: mGauss
 
 ## COMPASS_DEC: Compass declination
 
@@ -1776,7 +2153,7 @@ An angle to compensate between the true north and magnetic north
 
 - Increment: 0.01
 
-- Units: Radians
+- Units: rad
 
 ## COMPASS_LEARN: Learn compass offsets automatically
 
@@ -1828,37 +2205,37 @@ Set motor interference compensation type to disabled, throttle or current.  Do n
 
 *Note: This parameter is for advanced users*
 
-Multiplied by the current throttle and added to the compass's x-axis values to compensate for motor interference
+Multiplied by the current throttle and added to the compass's x-axis values to compensate for motor interference (Offset per Amp or at Full Throttle)
 
 - Range: -1000 1000
 
 - Increment: 1
 
-- Units: Offset per Amp or at Full Throttle
+- Units: mGauss/A
 
 ## COMPASS_MOT_Y: Motor interference compensation for body frame Y axis
 
 *Note: This parameter is for advanced users*
 
-Multiplied by the current throttle and added to the compass's y-axis values to compensate for motor interference
+Multiplied by the current throttle and added to the compass's y-axis values to compensate for motor interference (Offset per Amp or at Full Throttle)
 
 - Range: -1000 1000
 
 - Increment: 1
 
-- Units: Offset per Amp or at Full Throttle
+- Units: mGauss/A
 
 ## COMPASS_MOT_Z: Motor interference compensation for body frame Z axis
 
 *Note: This parameter is for advanced users*
 
-Multiplied by the current throttle and added to the compass's z-axis values to compensate for motor interference
+Multiplied by the current throttle and added to the compass's z-axis values to compensate for motor interference (Offset per Amp or at Full Throttle)
 
 - Range: -1000 1000
 
 - Increment: 1
 
-- Units: Offset per Amp or at Full Throttle
+- Units: mGauss/A
 
 ## COMPASS_ORIENT: Compass orientation
 
@@ -1930,7 +2307,7 @@ Offset to be added to compass2's x-axis values to compensate for metal in the fr
 
 - Increment: 1
 
-- Units: milligauss
+- Units: mGauss
 
 ## COMPASS_OFS2_Y: Compass2 offsets in milligauss on the Y axis
 
@@ -1942,7 +2319,7 @@ Offset to be added to compass2's y-axis values to compensate for metal in the fr
 
 - Increment: 1
 
-- Units: milligauss
+- Units: mGauss
 
 ## COMPASS_OFS2_Z: Compass2 offsets in milligauss on the Z axis
 
@@ -1954,43 +2331,43 @@ Offset to be added to compass2's z-axis values to compensate for metal in the fr
 
 - Increment: 1
 
-- Units: milligauss
+- Units: mGauss
 
 ## COMPASS_MOT2_X: Motor interference compensation to compass2 for body frame X axis
 
 *Note: This parameter is for advanced users*
 
-Multiplied by the current throttle and added to compass2's x-axis values to compensate for motor interference
+Multiplied by the current throttle and added to compass2's x-axis values to compensate for motor interference (Offset per Amp or at Full Throttle)
 
 - Range: -1000 1000
 
 - Increment: 1
 
-- Units: Offset per Amp or at Full Throttle
+- Units: mGauss/A
 
 ## COMPASS_MOT2_Y: Motor interference compensation to compass2 for body frame Y axis
 
 *Note: This parameter is for advanced users*
 
-Multiplied by the current throttle and added to compass2's y-axis values to compensate for motor interference
+Multiplied by the current throttle and added to compass2's y-axis values to compensate for motor interference (Offset per Amp or at Full Throttle)
 
 - Range: -1000 1000
 
 - Increment: 1
 
-- Units: Offset per Amp or at Full Throttle
+- Units: mGauss/A
 
 ## COMPASS_MOT2_Z: Motor interference compensation to compass2 for body frame Z axis
 
 *Note: This parameter is for advanced users*
 
-Multiplied by the current throttle and added to compass2's z-axis values to compensate for motor interference
+Multiplied by the current throttle and added to compass2's z-axis values to compensate for motor interference (Offset per Amp or at Full Throttle)
 
 - Range: -1000 1000
 
 - Increment: 1
 
-- Units: Offset per Amp or at Full Throttle
+- Units: mGauss/A
 
 ## COMPASS_PRIMARY: Choose primary compass
 
@@ -2014,7 +2391,7 @@ Offset to be added to compass3's x-axis values to compensate for metal in the fr
 
 - Increment: 1
 
-- Units: milligauss
+- Units: mGauss
 
 ## COMPASS_OFS3_Y: Compass3 offsets in milligauss on the Y axis
 
@@ -2026,7 +2403,7 @@ Offset to be added to compass3's y-axis values to compensate for metal in the fr
 
 - Increment: 1
 
-- Units: milligauss
+- Units: mGauss
 
 ## COMPASS_OFS3_Z: Compass3 offsets in milligauss on the Z axis
 
@@ -2038,43 +2415,43 @@ Offset to be added to compass3's z-axis values to compensate for metal in the fr
 
 - Increment: 1
 
-- Units: milligauss
+- Units: mGauss
 
 ## COMPASS_MOT3_X: Motor interference compensation to compass3 for body frame X axis
 
 *Note: This parameter is for advanced users*
 
-Multiplied by the current throttle and added to compass3's x-axis values to compensate for motor interference
+Multiplied by the current throttle and added to compass3's x-axis values to compensate for motor interference (Offset per Amp or at Full Throttle)
 
 - Range: -1000 1000
 
 - Increment: 1
 
-- Units: Offset per Amp or at Full Throttle
+- Units: mGauss/A
 
 ## COMPASS_MOT3_Y: Motor interference compensation to compass3 for body frame Y axis
 
 *Note: This parameter is for advanced users*
 
-Multiplied by the current throttle and added to compass3's y-axis values to compensate for motor interference
+Multiplied by the current throttle and added to compass3's y-axis values to compensate for motor interference (Offset per Amp or at Full Throttle)
 
 - Range: -1000 1000
 
 - Increment: 1
 
-- Units: Offset per Amp or at Full Throttle
+- Units: mGauss/A
 
 ## COMPASS_MOT3_Z: Motor interference compensation to compass3 for body frame Z axis
 
 *Note: This parameter is for advanced users*
 
-Multiplied by the current throttle and added to compass3's z-axis values to compensate for motor interference
+Multiplied by the current throttle and added to compass3's z-axis values to compensate for motor interference (Offset per Amp or at Full Throttle)
 
 - Range: -1000 1000
 
 - Increment: 1
 
-- Units: Offset per Amp or at Full Throttle
+- Units: mGauss/A
 
 ## COMPASS_DEV_ID: Compass device id
 
@@ -2361,6 +2738,24 @@ This controls the fitness level required for a successful compass calibration. A
 
 - Increment: 0.1
 
+## COMPASS_OFFS_MAX: Compass maximum offset
+
+*Note: This parameter is for advanced users*
+
+This sets the maximum allowed compass offset in calibration and arming checks
+
+- Range: 500 3000
+
+- Increment: 1
+
+## COMPASS_TYPEMASK: Compass disable driver type mask
+
+*Note: This parameter is for advanced users*
+
+This is a bitmask of driver types to disable. If a driver type is set in this mask then that driver will not try to find a sensor at startup
+
+- Bitmask: 0:HMC5883,1:LSM303D,2:AK8963,3:BMM150,4:LSM9DS1,5:LIS3MDL,6:AK09916,7:IST8310,8:ICM20948,9:MMC3416,10:QFLIGHT,11:UAVCAN,12:QMC5883
+
 # EK2 Parameters
 
 ## EK2_ENABLE: Enable EKF2
@@ -2373,6 +2768,8 @@ This enables EKF2. Enabling EKF2 only makes the maths run, it does not mean it w
 |:---:|:---:|
 |0|Disabled|
 | 1|Enabled|
+
+- RebootRequired: True
 
 ## EK2_GPS_TYPE: GPS mode control
 
@@ -2465,7 +2862,9 @@ This is the number of msec that the GPS measurements lag behind the inertial mea
 
 - Increment: 10
 
-- Units: milliseconds
+- Units: ms
+
+- RebootRequired: True
 
 ## EK2_ALT_SOURCE: Primary altitude sensor source
 
@@ -2512,7 +2911,9 @@ This is the number of msec that the Height measurements lag behind the inertial 
 
 - Increment: 10
 
-- Units: milliseconds
+- Units: ms
+
+- RebootRequired: True
 
 ## EK2_MAG_M_NSE: Magnetometer measurement noise (Gauss)
 
@@ -2524,7 +2925,7 @@ This is the RMS value of noise in magnetometer measurements. Increasing it reduc
 
 - Increment: 0.01
 
-- Units: gauss
+- Units: Gauss
 
 ## EK2_MAG_CAL: Magnetometer default fusion mode
 
@@ -2634,11 +3035,13 @@ This sets the percentage number of standard deviations applied to the optical fl
 
 This is the number of msec that the optical flow measurements lag behind the inertial measurements. It is the time from the end of the optical flow averaging period and does not include the time delay due to the 100msec of averaging within the flow sensor.
 
-- Range: 0 250
+- Range: 0 127
 
 - Increment: 10
 
-- Units: milliseconds
+- Units: ms
+
+- RebootRequired: True
 
 ## EK2_GYRO_P_NSE: Rate gyro noise (rad/s)
 
@@ -2682,7 +3085,7 @@ This noise controls the rate of gyro scale factor learning. Increasing it makes 
 
 - Range: 0.000001 0.001
 
-- Units: 1/s
+- Units: Hz
 
 ## EK2_ABIAS_P_NSE: Accelerometer bias stability (m/s^3)
 
@@ -2732,6 +3135,8 @@ This is a 1 byte bitmap controlling which GPS preflight checks are performed. Se
 
 - Bitmask: 0:FirstIMU,1:SecondIMU,2:ThirdIMU,3:FourthIMU,4:FifthIMU,5:SixthIMU
 
+- RebootRequired: True
+
 ## EK2_CHECK_SCALE: GPS accuracy check scaler (%)
 
 *Note: This parameter is for advanced users*
@@ -2759,6 +3164,8 @@ This sets the amount of position variation that the EKF allows for when operatin
 This sets the IMU mask of sensors to do full logging for
 
 - Bitmask: 0:FirstIMU,1:SecondIMU,2:ThirdIMU,3:FourthIMU,4:FifthIMU,5:SixthIMU
+
+- RebootRequired: True
 
 ## EK2_YAW_M_NSE: Yaw measurement noise (rad)
 
@@ -2802,7 +3209,7 @@ This state process noise controls the growth of earth magnetic field state error
 
 - Range: 0.00001 0.01
 
-- Units: gauss/s
+- Units: Gauss/s
 
 ## EK2_MAGB_P_NSE: Body magnetic field process noise (gauss/s)
 
@@ -2812,7 +3219,7 @@ This state process noise controls the growth of body magnetic field state error 
 
 - Range: 0.00001 0.01
 
-- Units: gauss/s
+- Units: Gauss/s
 
 ## EK2_RNG_USE_HGT: Range finder switch height percentage
 
@@ -2864,11 +3271,13 @@ This sets the percentage number of standard deviations applied to the range beac
 
 This is the number of msec that the range beacon measurements lag behind the inertial measurements. It is the time from the end of the optical flow averaging period and does not include the time delay due to the 100msec of averaging within the flow sensor.
 
-- Range: 0 250
+- Range: 0 127
 
 - Increment: 10
 
-- Units: milliseconds
+- Units: ms
+
+- RebootRequired: True
 
 ## EK2_RNG_USE_SPD: Range finder max ground speed
 
@@ -2890,6 +3299,18 @@ The range finder will not be used as the primary height source when the horizont
 
 - Bitmask: 0:FirstEKF,1:SecondEKF,2:ThirdEKF,3:FourthEKF,4:FifthEKF,5:SixthEKF
 
+- RebootRequired: True
+
+## EK2_OGN_HGT_MASK: Bitmask control of EKF reference height correction
+
+*Note: This parameter is for advanced users*
+
+When a height sensor other than GPS is used as the primary height source by the EKF, the position of the zero height datum is defined by that sensor and its frame of reference. If a GPS height measurement is also available, then the height of the WGS-84 height datum used by the EKF can be corrected so that the height returned by the getLLH() function is compensated for primary height sensor drift and change in datum over time. The first two bit positions control when the height datum will be corrected. Correction is performed using a Bayes filter and only operates when GPS quality permits. The third bit position controls where the corrections to the GPS reference datum are applied. Corrections can be applied to the local vertical position or to the reported EKF origin height (default).
+
+- Bitmask: 0:Correct when using Baro height,1:Correct when using range finder height,2:Apply corrections to local position
+
+- RebootRequired: True
+
 # EK3 Parameters
 
 ## EK3_ENABLE: Enable EKF3
@@ -2902,6 +3323,8 @@ This enables EKF3. Enabling EKF3 only makes the maths run, it does not mean it w
 |:---:|:---:|
 |0|Disabled|
 | 1|Enabled|
+
+- RebootRequired: True
 
 ## EK3_GPS_TYPE: GPS mode control
 
@@ -2997,6 +3420,8 @@ This parameter controls the primary height sensor used by the EKF. If the select
 | 2|Use GPS|
 | 3|Use Range Beacon|
 
+- RebootRequired: True
+
 ## EK3_ALT_M_NSE: Altitude measurement noise (m)
 
 *Note: This parameter is for advanced users*
@@ -3029,7 +3454,7 @@ This is the number of msec that the Height measurements lag behind the inertial 
 
 - Increment: 10
 
-- Units: milliseconds
+- Units: ms
 
 - RebootRequired: True
 
@@ -3043,7 +3468,7 @@ This is the RMS value of noise in magnetometer measurements. Increasing it reduc
 
 - Increment: 0.01
 
-- Units: gauss
+- Units: Gauss
 
 ## EK3_MAG_CAL: Magnetometer default fusion mode
 
@@ -3058,6 +3483,8 @@ This determines when the filter will use the 3-axis magnetometer fusion model th
 |2|Never|
 |3|After first climb yaw reset|
 |4|Always|
+
+- RebootRequired: True
 
 ## EK3_MAG_I_GATE: Magnetometer measurement gate size
 
@@ -3157,7 +3584,7 @@ This is the number of msec that the optical flow measurements lag behind the ine
 
 - Increment: 10
 
-- Units: milliseconds
+- Units: ms
 
 - RebootRequired: True
 
@@ -3243,6 +3670,8 @@ This is a 1 byte bitmap controlling which GPS preflight checks are performed. Se
 
 - Bitmask: 0:FirstIMU,1:SecondIMU,2:ThirdIMU,3:FourthIMU,4:FifthIMU,5:SixthIMU
 
+- RebootRequired: True
+
 ## EK3_CHECK_SCALE: GPS accuracy check scaler (%)
 
 *Note: This parameter is for advanced users*
@@ -3270,6 +3699,8 @@ This sets the amount of position variation that the EKF allows for when operatin
 This sets the IMU mask of sensors to do full logging for
 
 - Bitmask: 0:FirstIMU,1:SecondIMU,2:ThirdIMU,3:FourthIMU,4:FifthIMU,5:SixthIMU
+
+- RebootRequired: True
 
 ## EK3_YAW_M_NSE: Yaw measurement noise (rad)
 
@@ -3313,7 +3744,7 @@ This state process noise controls the growth of earth magnetic field state error
 
 - Range: 0.00001 0.01
 
-- Units: gauss/s
+- Units: Gauss/s
 
 ## EK3_MAGB_P_NSE: Body magnetic field process noise (gauss/s)
 
@@ -3323,7 +3754,7 @@ This state process noise controls the growth of body magnetic field state error 
 
 - Range: 0.00001 0.01
 
-- Units: gauss/s
+- Units: Gauss/s
 
 ## EK3_RNG_USE_HGT: Range finder switch height percentage
 
@@ -3379,7 +3810,7 @@ This is the number of msec that the range beacon measurements lag behind the ine
 
 - Increment: 10
 
-- Units: milliseconds
+- Units: ms
 
 - RebootRequired: True
 
@@ -3414,6 +3845,18 @@ The accelerometer bias state will be limited to +- this value
 1 byte bitmap of EKF cores that will disable magnetic field states and use simple magnetic heading fusion at all times. This parameter enables specified cores to be used as a backup for flight into an environment with high levels of external magnetic interference which may degrade the EKF attitude estimate when using 3-axis magnetometer fusion. NOTE : Use of a different magnetometer fusion algorithm on different cores makes unwanted EKF core switches due to magnetometer errors more likely.
 
 - Bitmask: 0:FirstEKF,1:SecondEKF,2:ThirdEKF,3:FourthEKF,4:FifthEKF,5:SixthEKF
+
+- RebootRequired: True
+
+## EK3_OGN_HGT_MASK: Bitmask control of EKF reference height correction
+
+*Note: This parameter is for advanced users*
+
+When a height sensor other than GPS is used as the primary height source by the EKF, the position of the zero height datum is defined by that sensor and its frame of reference. If a GPS height measurement is also available, then the height of the WGS-84 height datum used by the EKF can be corrected so that the height returned by the getLLH() function is compensated for primary height sensor drift and change in datum over time. The first two bit positions control when the height datum will be corrected. Correction is performed using a Bayes filter and only operates when GPS quality permits. The third bit position controls where the corrections to the GPS reference datum are applied. Corrections can be applied to the local vertical position or to the reported EKF origin height (default).
+
+- Bitmask: 0:Correct when using Baro height,1:Correct when using range finder height,2:Apply corrections to local position
+
+- RebootRequired: True
 
 # FENCE Parameters
 
@@ -3460,7 +3903,7 @@ Maximum altitude allowed before geofence triggers
 
 - Increment: 1
 
-- Units: Meters
+- Units: m
 
 ## FENCE_RADIUS: Circular Fence Radius
 
@@ -3468,7 +3911,7 @@ Circle fence radius which when breached will cause an RTL
 
 - Range: 30 10000
 
-- Units: Meters
+- Units: m
 
 ## FENCE_MARGIN: Fence Margin
 
@@ -3476,7 +3919,7 @@ Distance that autopilot's should maintain from the fence to avoid a breach
 
 - Range: 1 10
 
-- Units: Meters
+- Units: m
 
 ## FENCE_TOTAL: Fence polygon point total
 
@@ -3492,7 +3935,7 @@ Minimum altitude allowed before geofence triggers
 
 - Increment: 1
 
-- Units: Meters
+- Units: m
 
 # GND Parameters
 
@@ -3508,21 +3951,19 @@ calibrated ground pressure in Pascals
 
 - Increment: 1
 
-- Units: pascals
+- Units: Pa
 
 ## GND_TEMP: ground temperature
 
 *Note: This parameter is for advanced users*
 
-calibrated ground temperature in degrees Celsius
-
-- ReadOnly: True
+User provided ambient ground temperature in degrees Celsius. This is used to improve the calculation of the altitude the vehicle is at. This parameter is not persistent and will be reset to 0 every time the vehicle is rebooted. A value of 0 means use the internal measurement ambient temperature.
 
 - Volatile: True
 
 - Increment: 1
 
-- Units: degrees celsius
+- Units: degC
 
 ## GND_ALT_OFFSET: altitude offset
 
@@ -3532,7 +3973,7 @@ altitude offset in meters added to barometric altitude. This is used to allow fo
 
 - Increment: 0.1
 
-- Units: meters
+- Units: m
 
 ## GND_PRIMARY: Primary barometer
 
@@ -3556,6 +3997,7 @@ This selects the bus number for looking for an I2C barometer
 |:---:|:---:|
 |-1|Disabled|
 |0|Bus0|
+|1|Bus1|
 
 ## GND_SPEC_GRAV: Specific Gravity (For water depth measurement)
 
@@ -3575,21 +4017,7 @@ calibrated ground pressure in Pascals
 
 - Increment: 1
 
-- Units: pascals
-
-## GND_TEMP2: ground temperature
-
-*Note: This parameter is for advanced users*
-
-calibrated ground temperature in degrees Celsius
-
-- ReadOnly: True
-
-- Volatile: True
-
-- Increment: 1
-
-- Units: degrees celsius
+- Units: Pa
 
 ## GND_ABS_PRESS3: Absolute Pressure
 
@@ -3603,21 +4031,7 @@ calibrated ground pressure in Pascals
 
 - Increment: 1
 
-- Units: pascals
-
-## GND_TEMP3: ground temperature
-
-*Note: This parameter is for advanced users*
-
-calibrated ground temperature in degrees Celsius
-
-- ReadOnly: True
-
-- Volatile: True
-
-- Increment: 1
-
-- Units: degrees celsius
+- Units: Pa
 
 # GPS Parameters
 
@@ -3638,7 +4052,7 @@ GPS type
 |6|SiRF|
 |7|HIL|
 |8|SwiftNav|
-|9|PX4-UAVCAN|
+|9|UAVCAN|
 |10|SBF|
 |11|GSOF|
 |12|QURT|
@@ -3665,7 +4079,7 @@ GPS type of 2nd GPS
 |6|SiRF|
 |7|HIL|
 |8|SwiftNav|
-|9|PX4-UAVCAN|
+|9|UAVCAN|
 |10|SBF|
 |11|GSOF|
 |12|QURT|
@@ -3738,7 +4152,7 @@ This sets the minimum elevation of satellites above the horizon for them to be u
 
 - Range: -100 90
 
-- Units: Degrees
+- Units: deg
 
 ## GPS_INJECT_TO: Destination for GPS_INJECT_DATA MAVLink packets
 
@@ -3760,9 +4174,9 @@ Masked with the SBP msg_type field to determine whether SBR1/SBR2 data is logged
 
 |Value|Meaning|
 |:---:|:---:|
-|0x0000|None|
-| 0xFFFF|All|
-| 0xFF00|External only|
+|0|None (0x0000)|
+|-1|All (0xFFFF)|
+|-256|External only (0xFF00)|
 
 ## GPS_RAW_DATA: Raw data logging
 
@@ -3857,7 +4271,7 @@ Controls how often the GPS should provide a position update. Lowering below 5Hz 
 |125|8Hz|
 |200|5Hz|
 
-- Units: milliseconds
+- Units: ms
 
 ## GPS_RATE_MS2: GPS 2 update rate in milliseconds
 
@@ -3873,7 +4287,7 @@ Controls how often the GPS should provide a position update. Lowering below 5Hz 
 |125|8Hz|
 |200|5Hz|
 
-- Units: milliseconds
+- Units: ms
 
 ## GPS_POS1_X: Antenna X position offset
 
@@ -3931,7 +4345,9 @@ Controls the amount of GPS  measurement delay that the autopilot compensates for
 
 - Range: 0 250
 
-- Units: milliseconds
+- Units: ms
+
+- RebootRequired: True
 
 ## GPS_DELAY_MS2: GPS 2 delay in milliseconds
 
@@ -3941,7 +4357,9 @@ Controls the amount of GPS  measurement delay that the autopilot compensates for
 
 - Range: 0 250
 
-- Units: milliseconds
+- Units: ms
+
+- RebootRequired: True
 
 ## GPS_BLEND_MASK: Multi GPS Blending Mask
 
@@ -3959,7 +4377,7 @@ Controls the slowest time constant applied to the calculation of GPS position an
 
 - Range: 5.0 30.0
 
-- Units: seconds
+- Units: s
 
 # GRIP Parameters
 
@@ -3986,7 +4404,7 @@ Gripper enable/disable
 
 *Note: This parameter is for advanced users*
 
-PWM value sent to Gripper to initiate grabbing the cargo
+PWM value in microseconds sent to Gripper to initiate grabbing the cargo
 
 - Range: 1000 2000
 
@@ -3996,7 +4414,7 @@ PWM value sent to Gripper to initiate grabbing the cargo
 
 *Note: This parameter is for advanced users*
 
-PWM value sent to Gripper to release the cargo
+PWM value in microseconds sent to Gripper to release the cargo
 
 - Range: 1000 2000
 
@@ -4006,7 +4424,7 @@ PWM value sent to Gripper to release the cargo
 
 *Note: This parameter is for advanced users*
 
-PWM value sent to grabber when not grabbing or releasing
+PWM value in microseconds sent to grabber when not grabbing or releasing
 
 - Range: 1000 2000
 
@@ -4020,7 +4438,7 @@ Time in seconds that gripper will regrab the cargo to ensure grip has not weaken
 
 - Range: 0 255
 
-- Units: seconds
+- Units: s
 
 ## GRIP_UAVCAN_ID: EPM UAVCAN Hardpoint ID
 
@@ -4638,7 +5056,7 @@ Mount roll angle when in retracted position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT_RETRACT_Y: Mount tilt/pitch angle when in retracted position
 
@@ -4648,7 +5066,7 @@ Mount tilt/pitch angle when in retracted position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT_RETRACT_Z: Mount yaw/pan angle when in retracted position
 
@@ -4658,7 +5076,7 @@ Mount yaw/pan angle when in retracted position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT_NEUTRAL_X: Mount roll angle when in neutral position
 
@@ -4668,7 +5086,7 @@ Mount roll angle when in neutral position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT_NEUTRAL_Y: Mount tilt/pitch angle when in neutral position
 
@@ -4678,7 +5096,7 @@ Mount tilt/pitch angle when in neutral position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT_NEUTRAL_Z: Mount pan/yaw angle when in neutral position
 
@@ -4688,7 +5106,7 @@ Mount pan/yaw angle when in neutral position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT_STAB_ROLL: Stabilize mount's roll angle
 
@@ -4741,7 +5159,7 @@ Minimum physical roll angular position of mount.
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT_ANGMAX_ROL: Maximum roll angle
 
@@ -4751,7 +5169,7 @@ Maximum physical roll angular position of the mount
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT_RC_IN_TILT: tilt (pitch) RC input channel
 
@@ -4777,7 +5195,7 @@ Minimum physical tilt (pitch) angular position of mount.
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT_ANGMAX_TIL: Maximum tilt angle
 
@@ -4787,7 +5205,7 @@ Maximum physical tilt (pitch) angular position of the mount
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT_RC_IN_PAN: pan (yaw) RC input channel
 
@@ -4813,7 +5231,7 @@ Minimum physical pan (yaw) angular position of mount.
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT_ANGMAX_PAN: Maximum pan angle
 
@@ -4823,7 +5241,7 @@ Maximum physical pan (yaw) angular position of the mount
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT_JSTICK_SPD: mount joystick speed
 
@@ -4841,7 +5259,7 @@ Causes the servo angle output to lead the current angle of the vehicle by some a
 
 - Increment: .005
 
-- Units: Seconds
+- Units: s
 
 ## MNT_LEAD_PTCH: Pitch stabilization lead time
 
@@ -4851,7 +5269,7 @@ Causes the servo angle output to lead the current angle of the vehicle by some a
 
 - Increment: .005
 
-- Units: Seconds
+- Units: s
 
 ## MNT_TYPE: Mount Type
 
@@ -4888,7 +5306,7 @@ Mount2 roll angle when in retracted position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT2_RETRACT_Y: Mount2 tilt/pitch angle when in retracted position
 
@@ -4898,7 +5316,7 @@ Mount2 tilt/pitch angle when in retracted position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT2_RETRACT_Z: Mount2 yaw/pan angle when in retracted position
 
@@ -4908,7 +5326,7 @@ Mount2 yaw/pan angle when in retracted position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT2_NEUTRAL_X: Mount2 roll angle when in neutral position
 
@@ -4918,7 +5336,7 @@ Mount2 roll angle when in neutral position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT2_NEUTRAL_Y: Mount2 tilt/pitch angle when in neutral position
 
@@ -4928,7 +5346,7 @@ Mount2 tilt/pitch angle when in neutral position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT2_NEUTRAL_Z: Mount2 pan/yaw angle when in neutral position
 
@@ -4938,7 +5356,7 @@ Mount2 pan/yaw angle when in neutral position
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MNT2_STAB_ROLL: Stabilize Mount2's roll angle
 
@@ -4991,7 +5409,7 @@ Mount2's minimum physical roll angular position
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT2_ANGMAX_ROL: Mount2's maximum roll angle
 
@@ -5001,7 +5419,7 @@ Mount2's maximum physical roll angular position
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT2_RC_IN_TILT: Mount2's tilt (pitch) RC input channel
 
@@ -5027,7 +5445,7 @@ Mount2's minimum physical tilt (pitch) angular position
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT2_ANGMAX_TIL: Mount2's maximum tilt angle
 
@@ -5037,7 +5455,7 @@ Mount2's maximum physical tilt (pitch) angular position
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT2_RC_IN_PAN: Mount2's pan (yaw) RC input channel
 
@@ -5063,7 +5481,7 @@ Mount2's minimum physical pan (yaw) angular position
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT2_ANGMAX_PAN: Mount2's maximum pan angle
 
@@ -5073,7 +5491,7 @@ MOunt2's maximum physical pan (yaw) angular position
 
 - Increment: 1
 
-- Units: Centi-Degrees
+- Units: cdeg
 
 ## MNT2_LEAD_RLL: Mount2's Roll stabilization lead time
 
@@ -5083,7 +5501,7 @@ Causes the servo angle output to lead the current angle of the vehicle by some a
 
 - Increment: .005
 
-- Units: Seconds
+- Units: s
 
 ## MNT2_LEAD_PTCH: Mount2's Pitch stabilization lead time
 
@@ -5093,7 +5511,7 @@ Causes the servo angle output to lead the current angle of the vehicle by some a
 
 - Increment: .005
 
-- Units: Seconds
+- Units: s
 
 ## MNT2_TYPE: Mount2 Type
 
@@ -5190,15 +5608,51 @@ Used to decouple pitch from forward/vertical motion. 0 to disable, 1.2 normal
 
 - Increment: 0.1
 
+## MOT_9_DIRECTION: Motor normal or reverse
+
+Used to change motor rotation directions without changing wires
+
+|Value|Meaning|
+|:---:|:---:|
+|1|normal|
+|-1|reverse|
+
+## MOT_10_DIRECTION: Motor normal or reverse
+
+Used to change motor rotation directions without changing wires
+
+|Value|Meaning|
+|:---:|:---:|
+|1|normal|
+|-1|reverse|
+
+## MOT_11_DIRECTION: Motor normal or reverse
+
+Used to change motor rotation directions without changing wires
+
+|Value|Meaning|
+|:---:|:---:|
+|1|normal|
+|-1|reverse|
+
+## MOT_12_DIRECTION: Motor normal or reverse
+
+Used to change motor rotation directions without changing wires
+
+|Value|Meaning|
+|:---:|:---:|
+|1|normal|
+|-1|reverse|
+
 ## MOT_YAW_HEADROOM: Matrix Yaw Min
 
 *Note: This parameter is for advanced users*
 
-Yaw control is given at least this pwm range
+Yaw control is given at least this pwm in microseconds range
 
 - Range: 0 500
 
-- Units: pwm
+- Units: PWM
 
 ## MOT_THST_EXPO: Thrust Curve Expo
 
@@ -5224,7 +5678,7 @@ Battery voltage compensation maximum voltage (voltage above this will have no ad
 
 - Range: 6 35
 
-- Units: Volts
+- Units: V
 
 ## MOT_BAT_VOLT_MIN: Battery voltage compensation minimum voltage
 
@@ -5234,7 +5688,7 @@ Battery voltage compensation minimum voltage (voltage below this will have no ad
 
 - Range: 6 35
 
-- Units: Volts
+- Units: V
 
 ## MOT_BAT_CURR_MAX: Motor Current Max
 
@@ -5244,7 +5698,7 @@ Maximum current over which maximum throttle is limited (0 = Disabled)
 
 - Range: 0 200
 
-- Units: Amps
+- Units: A
 
 ## MOT_PWM_TYPE: Output PWM type
 
@@ -5257,7 +5711,7 @@ This selects the output PWM type, allowing for normal PWM continuous output, One
 |0|Normal|
 |1|OneShot|
 |2|OneShot125|
-|3|Brushed16kHz|
+|3|Brushed|
 
 - RebootRequired: True
 
@@ -5265,17 +5719,21 @@ This selects the output PWM type, allowing for normal PWM continuous output, One
 
 *Note: This parameter is for advanced users*
 
-This sets the min PWM output value that will ever be output to the motors, 0 = use input RC3_MIN
+This sets the min PWM output value in microseconds that will ever be output to the motors, 0 = use input RC3_MIN
 
 - Range: 0 2000
+
+- Units: PWM
 
 ## MOT_PWM_MAX: PWM output maximum
 
 *Note: This parameter is for advanced users*
 
-This sets the max PWM value that will ever be output to the motors, 0 = use input RC3_MAX
+This sets the max PWM value in microseconds that will ever be output to the motors, 0 = use input RC3_MAX
 
 - Range: 0 2000
+
+- Units: PWM
 
 ## MOT_SPIN_MIN: Motor Spin minimum
 
@@ -5301,7 +5759,7 @@ Time constant used to limit the maximum current
 
 - Range: 0 10
 
-- Units: Seconds
+- Units: s
 
 ## MOT_THST_HOVER: Thrust Hover Value
 
@@ -5342,7 +5800,7 @@ Yaw servo's maximum lean angle
 
 - Increment: 1
 
-- Units: Degrees
+- Units: deg
 
 ## MOT_SPOOL_TIME: Spool up time
 
@@ -5354,7 +5812,17 @@ Time in seconds to spool up the motors from zero to min throttle.
 
 - Increment: 0.1
 
-- Units: Seconds
+- Units: s
+
+## MOT_BOOST_SCALE: Motor boost scale
+
+*Note: This parameter is for advanced users*
+
+This is a scaling factor for vehicles with a vertical booster motor used for extra lift. It is used with electric multicopters that have an internal combusion booster motor for longer endurance. The output to the BoostThrottle servo function is set to the current motor thottle times this scaling factor. A higher scaling factor will put more of the load on the booster motor. A value of 1 will set the BoostThrottle equal to the main throttle.
+
+- Range: 0 5
+
+- Increment: 0.1
 
 # NTF Parameters
 
@@ -5405,6 +5873,18 @@ This sets up the type of on-board I2C display. Disabled by default.
 |1|ssd1306|
 |2|sh1106|
 
+## NTF_OREO_THEME: OreoLED Theme
+
+*Note: This parameter is for advanced users*
+
+Enable/Disable Solo Oreo LED driver, 0 to disable, 1 for Aircraft theme, 2 for Rover theme
+
+|Value|Meaning|
+|:---:|:---:|
+|0|Disabled|
+|1|Aircraft|
+|2|Rover|
+
 # PSC Parameters
 
 ## PSC_ACC_XY_FILT: XY Acceleration filter cutoff frequency
@@ -5425,37 +5905,37 @@ Lower values will slow the response of the navigation controller and reduce twit
 
 *Note: This parameter is for advanced users*
 
-RC minimum PWM pulse width. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
+RC minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
 
 - Range: 800 2200
 
 - Increment: 1
 
-- Units: pwm
+- Units: PWM
 
 ## RCn_TRIM: RC trim PWM
 
 *Note: This parameter is for advanced users*
 
-RC trim (neutral) PWM pulse width. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
+RC trim (neutral) PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
 
 - Range: 800 2200
 
 - Increment: 1
 
-- Units: pwm
+- Units: PWM
 
 ## RCn_MAX: RC max PWM
 
 *Note: This parameter is for advanced users*
 
-RC maximum PWM pulse width. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
+RC maximum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
 
 - Range: 800 2200
 
 - Increment: 1
 
-- Units: pwm
+- Units: PWM
 
 ## RCn_REVERSED: RC reversed
 
@@ -5472,11 +5952,11 @@ Reverse channel input. Set to 0 for normal operation. Set to 1 to reverse this i
 
 *Note: This parameter is for advanced users*
 
-dead zone around trim or bottom
+PWM dead zone in microseconds around trim or bottom
 
 - Range: 0 200
 
-- Units: pwm
+- Units: PWM
 
 # RELAY Parameters
 
@@ -5589,7 +6069,7 @@ What type of rangefinder device that is connected
 |0|None|
 |1|Analog|
 |2|MaxbotixI2C|
-|3|LidarLiteV2|
+|3|LidarLiteV2-I2C|
 |5|PX4-PWM|
 |6|BBB-PRU|
 |7|LightWareI2C|
@@ -5600,7 +6080,8 @@ What type of rangefinder device that is connected
 |12|LeddarOne|
 |13|MaxbotixSerial|
 |14|TrOneI2C|
-|15|LidarLiteV3|
+|15|LidarLiteV3-I2C|
+|16|VL53L0X|
 
 ## RNGFND_PIN: Rangefinder pin
 
@@ -5629,7 +6110,7 @@ Scaling factor between rangefinder reading and distance. For the linear and inve
 
 - Increment: 0.001
 
-- Units: meters/Volt
+- Units: m/V
 
 ## RNGFND_OFFSET: rangefinder offset
 
@@ -5637,7 +6118,7 @@ Offset in volts for zero distance for analog rangefinders. Offset added to dista
 
 - Increment: 0.001
 
-- Units: Volts
+- Units: V
 
 ## RNGFND_FUNCTION: Rangefinder function
 
@@ -5655,7 +6136,7 @@ Minimum distance in centimeters that rangefinder can reliably read
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND_MAX_CM: Rangefinder maximum distance
 
@@ -5663,7 +6144,7 @@ Maximum distance in centimeters that rangefinder can reliably read
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND_STOP_PIN: Rangefinder stop pin
 
@@ -5691,7 +6172,7 @@ The time in milliseconds that the rangefinder reading takes to settle. This is o
 
 - Increment: 1
 
-- Units: milliseconds
+- Units: ms
 
 ## RNGFND_RMETRIC: Ratiometric
 
@@ -5708,7 +6189,7 @@ This parameter sets the estimated terrain distance in meters above which the sen
 
 - Range: 0 32767
 
-- Units: meters
+- Units: m
 
 ## RNGFND_GNDCLEAR: Distance (in cm) from the range finder to the ground
 
@@ -5718,7 +6199,7 @@ This parameter sets the expected range measurement(in cm) that the range finder 
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND_ADDR: Bus address of sensor
 
@@ -5782,7 +6263,7 @@ What type of rangefinder device that is connected
 |0|None|
 |1|Analog|
 |2|MaxbotixI2C|
-|3|LidarLiteV2|
+|3|LidarLiteV2-I2C|
 |5|PX4-PWM|
 |6|BBB-PRU|
 |7|LightWareI2C|
@@ -5793,7 +6274,8 @@ What type of rangefinder device that is connected
 |12|LeddarOne|
 |13|MaxbotixSerial|
 |14|TrOneI2C|
-|15|LidarLiteV3|
+|15|LidarLiteV3-I2C|
+|16|VL53L0X|
 
 ## RNGFND2_PIN: Rangefinder pin
 
@@ -5826,7 +6308,7 @@ Scaling factor between rangefinder reading and distance. For the linear and inve
 
 - Increment: 0.001
 
-- Units: meters/Volt
+- Units: m/V
 
 ## RNGFND2_OFFSET: rangefinder offset
 
@@ -5836,7 +6318,7 @@ Offset in volts for zero distance
 
 - Increment: 0.001
 
-- Units: Volts
+- Units: V
 
 ## RNGFND2_FUNCTION: Rangefinder function
 
@@ -5858,7 +6340,7 @@ Minimum distance in centimeters that rangefinder can reliably read
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND2_MAX_CM: Rangefinder maximum distance
 
@@ -5868,7 +6350,7 @@ Maximum distance in centimeters that rangefinder can reliably read
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND2_STOP_PIN: Rangefinder stop pin
 
@@ -5900,7 +6382,7 @@ The time in milliseconds that the rangefinder reading takes to settle. This is o
 
 - Increment: 1
 
-- Units: milliseconds
+- Units: ms
 
 ## RNGFND2_RMETRIC: Ratiometric
 
@@ -5923,7 +6405,7 @@ This parameter sets the expected range measurement(in cm) that the second range 
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND2_ADDR: Bus address of second rangefinder
 
@@ -5988,8 +6470,8 @@ What type of rangefinder device that is connected
 |:---:|:---:|
 |0|None|
 |1|Analog|
-|2|APM2-MaxbotixI2C|
-|3|APM2-PulsedLightI2C|
+|2|MaxbotixI2C|
+|3|LidarLiteV2-I2C|
 |5|PX4-PWM|
 |6|BBB-PRU|
 |7|LightWareI2C|
@@ -5999,6 +6481,9 @@ What type of rangefinder device that is connected
 |11|uLanding|
 |12|LeddarOne|
 |13|MaxbotixSerial|
+|14|TrOneI2C|
+|15|LidarLiteV3-I2C|
+|16|VL53L0X|
 
 ## RNGFND3_PIN: Rangefinder pin
 
@@ -6031,7 +6516,7 @@ Scaling factor between rangefinder reading and distance. For the linear and inve
 
 - Increment: 0.001
 
-- Units: meters/Volt
+- Units: m/V
 
 ## RNGFND3_OFFSET: rangefinder offset
 
@@ -6041,7 +6526,7 @@ Offset in volts for zero distance
 
 - Increment: 0.001
 
-- Units: Volts
+- Units: V
 
 ## RNGFND3_FUNCTION: Rangefinder function
 
@@ -6063,7 +6548,7 @@ Minimum distance in centimeters that rangefinder can reliably read
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND3_MAX_CM: Rangefinder maximum distance
 
@@ -6073,7 +6558,7 @@ Maximum distance in centimeters that rangefinder can reliably read
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND3_STOP_PIN: Rangefinder stop pin
 
@@ -6105,7 +6590,7 @@ The time in milliseconds that the rangefinder reading takes to settle. This is o
 
 - Increment: 1
 
-- Units: milliseconds
+- Units: ms
 
 ## RNGFND3_RMETRIC: Ratiometric
 
@@ -6128,7 +6613,7 @@ This parameter sets the expected range measurement(in cm) that the third range f
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND3_ADDR: Bus address of third rangefinder
 
@@ -6193,8 +6678,8 @@ What type of rangefinder device that is connected
 |:---:|:---:|
 |0|None|
 |1|Analog|
-|2|APM2-MaxbotixI2C|
-|3|APM2-PulsedLightI2C|
+|2|MaxbotixI2C|
+|3|LidarLiteV2-I2C|
 |5|PX4-PWM|
 |6|BBB-PRU|
 |7|LightWareI2C|
@@ -6204,6 +6689,9 @@ What type of rangefinder device that is connected
 |11|uLanding|
 |12|LeddarOne|
 |13|MaxbotixSerial|
+|14|TrOneI2C|
+|15|LidarLiteV3-I2C|
+|16|VL53L0X|
 
 ## RNGFND4_PIN: Rangefinder pin
 
@@ -6236,7 +6724,7 @@ Scaling factor between rangefinder reading and distance. For the linear and inve
 
 - Increment: 0.001
 
-- Units: meters/Volt
+- Units: m/V
 
 ## RNGFND4_OFFSET: rangefinder offset
 
@@ -6246,7 +6734,7 @@ Offset in volts for zero distance
 
 - Increment: 0.001
 
-- Units: Volts
+- Units: V
 
 ## RNGFND4_FUNCTION: Rangefinder function
 
@@ -6268,7 +6756,7 @@ Minimum distance in centimeters that rangefinder can reliably read
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND4_MAX_CM: Rangefinder maximum distance
 
@@ -6278,7 +6766,7 @@ Maximum distance in centimeters that rangefinder can reliably read
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND4_STOP_PIN: Rangefinder stop pin
 
@@ -6310,7 +6798,7 @@ The time in milliseconds that the rangefinder reading takes to settle. This is o
 
 - Increment: 1
 
-- Units: milliseconds
+- Units: ms
 
 ## RNGFND4_RMETRIC: Ratiometric
 
@@ -6333,7 +6821,7 @@ This parameter sets the expected range measurement(in cm) that the fourth range 
 
 - Increment: 1
 
-- Units: centimeters
+- Units: cm
 
 ## RNGFND4_ADDR: Bus address of fourth rangefinder
 
@@ -6436,6 +6924,7 @@ The baud rate used on the USB console. The APM2 can support all baudrates up to 
 |57|57600|
 |111|111100|
 |115|115200|
+|460|460800|
 |500|500000|
 |921|921600|
 |1500|1500000|
@@ -6448,6 +6937,8 @@ Control what protocol to use on the console.
 |:---:|:---:|
 |1|MAVlink1|
 | 2|MAVLink2|
+
+- RebootRequired: True
 
 ## SERIAL1_PROTOCOL: Telem1 protocol selection
 
@@ -6467,7 +6958,9 @@ Control what protocol to use on the Telem1 port. Note that the Frsky options req
 | 10|FrSky SPort Passthrough (OpenTX)|
 | 11|Lidar360|
 | 12|Aerotenna uLanding|
-| 13|Pozyx Beacon|
+| 13|Beacon|
+
+- RebootRequired: True
 
 ## SERIAL1_BAUD: Telem1 Baud Rate
 
@@ -6506,7 +6999,9 @@ Control what protocol to use on the Telem2 port. Note that the Frsky options req
 | 10|FrSky SPort Passthrough (OpenTX)|
 | 11|Lidar360|
 | 12|Aerotenna uLanding|
-| 13|Pozyx Beacon|
+| 13|Beacon|
+
+- RebootRequired: True
 
 ## SERIAL2_BAUD: Telemetry 2 Baud Rate
 
@@ -6545,7 +7040,9 @@ Control what protocol Serial 3 (GPS) should be used for. Note that the Frsky opt
 | 10|FrSky SPort Passthrough (OpenTX)|
 | 11|Lidar360|
 | 12|Aerotenna uLanding|
-| 13|Pozyx Beacon|
+| 13|Beacon|
+
+- RebootRequired: True
 
 ## SERIAL3_BAUD: Serial 3 (GPS) Baud Rate
 
@@ -6584,7 +7081,9 @@ Control what protocol Serial4 port should be used for. Note that the Frsky optio
 | 10|FrSky SPort Passthrough (OpenTX)|
 | 11|Lidar360|
 | 12|Aerotenna uLanding|
-| 13|Pozyx Beacon|
+| 13|Beacon|
+
+- RebootRequired: True
 
 ## SERIAL4_BAUD: Serial 4 Baud Rate
 
@@ -6623,7 +7122,9 @@ Control what protocol Serial5 port should be used for. Note that the Frsky optio
 | 10|FrSky SPort Passthrough (OpenTX)|
 | 11|Lidar360|
 | 12|Aerotenna uLanding|
-| 13|Pozyx Beacon|
+| 13|Beacon|
+
+- RebootRequired: True
 
 ## SERIAL5_BAUD: Serial 5 Baud Rate
 
@@ -6661,33 +7162,33 @@ This enables automatic servo trim in flight. Servos will be trimed in stabilized
 
 ## SERVOn_MIN: Minimum PWM
 
-minimum PWM pulse width. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
+minimum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
 
 - Range: 800 2200
 
 - Increment: 1
 
-- Units: pwm
+- Units: PWM
 
 ## SERVOn_MAX: Maximum PWM
 
-maximum PWM pulse width. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
+maximum PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
 
 - Range: 800 2200
 
 - Increment: 1
 
-- Units: pwm
+- Units: PWM
 
 ## SERVOn_TRIM: Trim PWM
 
-Trim PWM pulse width. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
+Trim PWM pulse width in microseconds. Typically 1000 is lower limit, 1500 is neutral and 2000 is upper limit.
 
 - Range: 800 2200
 
 - Increment: 1
 
-- Units: pwm
+- Units: PWM
 
 ## SERVOn_REVERSED: Servo reverse
 
@@ -6719,14 +7220,14 @@ Function assigned to this servo. Seeing this to Disabled(0) will setup this outp
 |13|mount2_tilt|
 |14|mount2_roll|
 |15|mount2_open|
-|16|DifferentialSpoiler1|
-|17|DifferentialSpoiler2|
-|18|AileronWithInput|
+|16|DifferentialSpoilerLeft1|
+|17|DifferentialSpoilerRight1|
+|86|DifferentialSpoilerLeft2|
+|87|DifferentialSpoilerRight2|
 |19|Elevator|
-|20|ElevatorWithInput|
 |21|Rudder|
-|24|Flaperon1|
-|25|Flaperon2|
+|24|FlaperonLeft|
+|25|FlaperonRight|
 |26|GroundSteering|
 |27|Parachute|
 |28|EPM|
@@ -6767,6 +7268,17 @@ Function assigned to this servo. Seeing this to Disabled(0) will setup this outp
 |72|TrackerPitch|
 |73|ThrottleLeft|
 |74|ThrottleRight|
+|75|tiltMotorLeft|
+|76|tiltMotorRight|
+|77|ElevonLeft|
+|78|ElevonRight|
+|79|VTailLeft|
+|80|VTailRight|
+|81|BoostThrottle|
+|82|Motor9|
+|83|Motor10|
+|84|Motor11|
+|85|Motor12|
 
 # SRn Parameters
 
@@ -6799,18 +7311,6 @@ Stream rate of SYS_STATUS, MEMINFO, MISSION_CURRENT, GPS_RAW_INT, NAV_CONTROLLER
 *Note: This parameter is for advanced users*
 
 Stream rate of SERVO_OUTPUT_RAW and RC_CHANNELS_RAW to ground station
-
-- Range: 0 10
-
-- Increment: 1
-
-- Units: Hz
-
-## SRn_RAW_CTRL: Raw Control stream rate to ground station
-
-*Note: This parameter is for advanced users*
-
-Stream rate of RC_CHANNELS_SCALED (HIL only) to ground station
 
 - Range: 0 10
 
