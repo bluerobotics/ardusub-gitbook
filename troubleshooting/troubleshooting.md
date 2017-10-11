@@ -121,6 +121,18 @@ Check that joystick buttons [have been assigned](/getting-started/initial-setup.
 
 This message indicates that the APM io thread has stopped running. The most likely cause is a corrupted filesystem on the micro SD card. Remove the card from the pixhawk, and format it as FAT32. If the error persists, you will need to replace the SD card, or disable dataflash log files by setting the LOG_BACKEND_TYPE parameter to None (0).
 
+
+### Compass heading drifts while the vehicle is stationary
+
+The compass inside of the ROV is very sensitive and will be affected by large iron/steel structures, including rebar in concrete. You will get the best compass calibration outside, away from large structures and concrete. It is possible to calibrate inside, you may need to increase the value of the COMPASS_OFS_MAX parameter before you get a passing calibration.
+
+Perform these steps to recalibrate the compass:
+1. Power on the vehicle and wait 10 minutes to ensure the sensors are warmed up.
+2. Make sure that the INS_GYR_CAL parameter value is set to 'Never'.
+3. Perform an accelerometer calibration.
+4. Perform a compass calibration.
+5. Reboot the vehicle. The compass should be still.
+
 # Issue Reporting
 
 We're always trying to make our documentation, instructions, software, and user experience better. If you're having an issue with anything, please report it so that we can address it as soon as possible! Here's where to do that depending on what's wrong:
