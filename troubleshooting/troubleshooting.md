@@ -124,7 +124,7 @@ This message indicates that the APM io thread has stopped running. The most like
 
 ### Compass heading drifts while the vehicle is stationary
 
-The compass inside of the ROV is very sensitive and will be affected by large iron/steel structures, including rebar in concrete. You will get the best compass calibration outside, away from large structures and concrete. It is possible to calibrate inside, you may need to increase the value of the COMPASS_OFS_MAX parameter before you get a passing calibration.
+The compass inside of the ROV is very sensitive and will be affected by large iron/steel structures, including rebar in concrete. You will get the best compass calibration outside, away from large structures and concrete. It is possible to calibrate inside, you may need to increase the value of the COMPASS_OFS_MAX parameter before you get a passing calibration. Note that the compass will always be affected by ferrous structures because they distort Earth's magnetic field, however the heading should remain stationary (maybe incorrect) while the vehicle is stationary in any case.
 
 Perform these steps to recalibrate the compass:
 1. Power on the vehicle and wait 10 minutes to ensure the sensors are warmed up.
