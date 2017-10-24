@@ -54,3 +54,7 @@
     * [QGroundControl](resources/downloads.md#qgroundcontrol)
     * [ArduSub Firmware](resources/downloads.md#ardusub-firmware-files)
     * [Raspberry Pi Image](resources/downloads.md#raspberry-pi-images)
+    
+## Miscellaneous
+
+* [Wireless Topside](miscellaneous/wireless-topside.md)
