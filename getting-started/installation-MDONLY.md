@@ -79,16 +79,6 @@ The *Companion Computer* is assigned a static IP address of 192.168.2.2, and it 
 
 	<img src="/images/mac-setup/mac-network-settings-annotated.png" class="img-responsive img-center" style="max-width:800px" />
 
-**Sharing Settings**
-
-1. Go to _Sharing_ and select "Internet Sharing". 
-
-2. Select "Wi-Fi" from the "Share your connection from" dropdown.
-
-3. Select "USB 10/100 LAN" (if using the recommended Ethernet USB adaptor) or your Ethernet port or adapter from the "To computers using" menu.
-
-	<img src="/images/mac-setup/mac-sharing-settings-annotated.png" class="img-responsive img-center" style="max-width:800px" />
-
 # Linux
 
 1. Click the Network Icon in the toolbar at the top of the screen, and click "Edit Connections..."
