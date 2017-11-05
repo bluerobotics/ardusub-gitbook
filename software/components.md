@@ -3,7 +3,7 @@
 There are three major software components involved in the operation of ArduSub:
 
 - [ArduSub](https://github.com/ArduPilot/ardupilot): ArduSub is the autopilot software responsible for processing pilot input and controlling the ROV. ArduSub is the 'brains' of the ROV.
-- [QGroundControl](https://github.com/mavlink/qgroundcontrol): QGroundControl is the user interface for operating the ROV.
+- [QGroundControl](https://github.com/bluerobotics/qgroundcontrol): QGroundControl is the user interface for operating the ROV.
 - [Companion](https://github.com/bluerobotics/companion): The Raspberry Pi *Companion Computer* runs software that relays communications between the autopilot and QGroundControl via Ethernet communications. The Companion software also streams HD video to QGroundControl.
 
 Here is a typical diagram of the software components and their interactions:
