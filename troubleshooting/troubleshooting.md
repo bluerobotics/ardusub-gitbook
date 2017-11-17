@@ -107,6 +107,51 @@ If the output of this command contains something like this:
 
 Then the camera isn't working. Double check the camera ribbon cable, and try running `sudo rpi-update`.
 
+####If you are using a Windows computer:
+
+- Disable/re-enable the network interface
+- Reboot
+
+## Poor video streaming performance
+
+The video stream should have about 200ms delay, just barely noticable. There are many factors that could cause lag, low framerate, and pixelation/tearing in the video.
+
+Here are some tips for troubleshooting poor video performance:
+
+####In general:
+
+- Bandwidth - Test the bandwidth at [192.168.2.2:2770/network](http://192.168.2.2:2770/network). The maximum theoretical bandwidth on a Raspberry Pi 3 is 100Mbps, if the bandwidth tests acheive greater than 70Mbps, it is a very good connection. Systems with bandwidths below 40Mbps should be diagnosed for issues.
+- Try another cable - Not all cables are created equal; some are really junk.
+- Update Software - Use the latest software to make sure you are getting the best performance.
+- Companion  computer  power supply - Most companion computers require a power supply capable of providing 5V at 2A. Smaller/weaker power supplies can severely affect performance of the companion computer.
+- Tether interface power supply - If you are using a tether interface board, make sure it has a solid power supply. Some laptop USB ports cannot provide enough power for the tether interface board to perform optimally. Try using a portable USB battery charger.
+- Tether interface connections - Make sure that all connections are well-seated and tight.
+- System resources - Open the system resource monitor and look at how much CPU and RAM your computer is using. Try closing other programs like anti-virus and screen recorders to make more system resources available to programs used to operate the vehicle.
+
+####If you are using a Raspberry Pi camera:
+
+- Delete the '--intra 1' setting at [192.168.2.2:2770/camera](http://192.168.2.2:2770/camera) and restart the camera.
+- Update the companion computer software at [192.168.2.2:2770/system](http://192.168.2.2:2770/system).
+
+####If you are using a Windows computer:
+
+- Upgrade to Windows 10!
+- Try these three suggestions by [Bo Koppel](http://discuss.bluerobotics.com/t/video-delay-in-qgc/1335/5):
+	
+	1. When using original power supply that supply laptop (but not charge at the same time) there is something probably in BIOS that slow down graphic card to save energy. That makes processor do some of the graphics calculations. (And actually consume even more energy!)
+	Solution: Go on battery or use a large powersupply (in our case 120W)
+	How to quick check if this is the problem: pull out powersupply, if this is the case, latency disappear in two seconds.
+	
+	2. Nvidia powerful graphic cards use an engine called PhysX for games etc. It seams QGC does not use that.
+	Also QGC works default on motherboard graphic card, not on the more powerful Nvidia extension card.
+	Solution: In Nvidias “control panel” select under “Programs” QGC so Nvidia forces QGC to use Nvidia card.
+	Some graphic cards also needs tweeking in Nvidia 3D setup (same place as above line)
+	
+	3. Real crazy in a few computers: Switch system fonts from 125% size to 100%
+	(Right click desktop, “adjust screen” then “monitor” translated from Swedish OS)
+	Check the 100% tickbox instead of 125%
+	Log out and log in again, fixed….
+
 ## Miscellaneous
 
 ### Camera does not tilt
