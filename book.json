@@ -37,7 +37,7 @@
                     "label": "Bug tracker",
                     "icon": "fa fa-bug",
                     "position" : "left",
-                    "url": "https://github.com/jaxxzer/ardusub-gitbooks/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"
+                    "url": "https://github.com/bluerobotics/ardusub-gitbook/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"
                     
                 },
                 {
@@ -49,7 +49,7 @@
                     "label": "Edit page on github",
                     "icon": "fa fa-pencil-square-o",
                     "position" : "left",
-                    "url": "https://github.com/jaxxzer/ardusub-gitbooks/edit/master/{{filepath_lang}}"
+                    "url": "https://github.com/bluerobotics/ardusub-gitbook/edit/master/{{filepath_lang}}"
                 }
             ]
         }
