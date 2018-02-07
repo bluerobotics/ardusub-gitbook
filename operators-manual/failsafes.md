@@ -16,7 +16,7 @@ This is triggered when the internal pressure of the water tight enclosure (WTE) 
 
 #### Internal Temperature
 
-This is triggered when the internal temperature of the water tight enclosure (WTE) exceeds the threshold set by the *FS_TEMP_MAX* parameter. The failsafe is cleared immediately when the internal temperature is less than the treshold value.
+This is triggered when the internal temperature of the water tight enclosure (WTE) exceeds the threshold set by the *FS_TEMP_MAX* parameter. The failsafe is cleared immediately when the internal temperature is less than the threshold value.
 
 #### Ground Control Station HEARTBEAT
 

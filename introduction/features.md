@@ -6,7 +6,7 @@ ArduSub has many features including:
 - Attitude and Heading Reference System (AHRS) and Inertial Navigation Filter (EKF)
 - Extensive user-configurable parameter system
 - Well developed ground control station software for piloting and configuration
-- Compatability with many development tools targeting MAVLink-enabled vehicles
+- Compatibility with many development tools targeting MAVLink-enabled vehicles
 - Sensor and data logging
 - **No Programming Required**
 
