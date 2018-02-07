@@ -114,13 +114,13 @@ Then the camera isn't working. Double check the camera ribbon cable, and try run
 
 ## Poor video streaming performance
 
-The video stream should have about 200ms delay, just barely noticable. There are many factors that could cause lag, low framerate, and pixelation/tearing in the video.
+The video stream should have about 200ms delay, just barely noticeable. There are many factors that could cause lag, low framerate, and pixelation/tearing in the video.
 
 Here are some tips for troubleshooting poor video performance:
 
 ####In general:
 
-- Bandwidth - Test the bandwidth at [192.168.2.2:2770/network](http://192.168.2.2:2770/network). The maximum theoretical bandwidth on a Raspberry Pi 3 is 100Mbps, if the bandwidth tests acheive greater than 70Mbps, it is a very good connection. Systems with bandwidths below 40Mbps should be diagnosed for issues.
+- Bandwidth - Test the bandwidth at [192.168.2.2:2770/network](http://192.168.2.2:2770/network). The maximum theoretical bandwidth on a Raspberry Pi 3 is 100Mbps, if the bandwidth tests achieve greater than 70Mbps, it is a very good connection. Systems with bandwidths below 40Mbps should be diagnosed for issues.
 - Try another cable - Not all cables are created equal; some are really junk.
 - Update Software - Use the latest software to make sure you are getting the best performance.
 - Companion  computer  power supply - Most companion computers require a power supply capable of providing 5V at 2A. Smaller/weaker power supplies can severely affect performance of the companion computer.
