@@ -1,14 +1,14 @@
 # Pymavlink
 
-This is a python implementation of the MAVLink protocol, this protocol in the one used but ArduSub, with pymavlink is possible to create a python script to communicate and control an ArduSub vehicle.
+ArduSub communicates with a protocol called MAVLink. Pymavlink is a python implementation of the MAVLink protocol. With pymavlink, it is possible to create a python script to read sensor data and send commands to an ArduSub vehicle.
 
-It's possible to check the pymavlink [repository](https://github.com/ArduPilot/pymavlink) and [chat](https://gitter.im/ArduPilot/pymavlink) for further information.
+Please reference the pymavlink [repository](https://github.com/ArduPilot/pymavlink) and [chat](https://gitter.im/ArduPilot/pymavlink) for further information.
 
 ## Recommendation
 
 Pymavlink is currently a Python 2 package. It is recommended to install and use it with Python 2.
 
-However an initial Python 3 support is given. The following instructions assume you are using Python 2 and a Debian-based \(like Ubuntu\) installation.
+However Python 3 support is in development. The following instructions assume you are using Python 2 and a Debian-based \(like Ubuntu\) installation.
 
 ## Installation
 
@@ -33,15 +33,17 @@ import pymavlink
 pymavlink.__doc__
 ```
 
-This should return some information about pymavlink.
+This should return some information about pymavlink:
 
-`'Python MAVLink library - see http://www.qgroundcontrol.org/mavlink/mavproxy_startpage`
+```bash
+Python MAVLink library - see http://www.qgroundcontrol.org/mavlink/mavproxy_startpage
+```
 
 # Examples
 
 ### Connect
 
-##### ArduSub Board \(E.g: Pixhawk\) connected to the computer via serial
+##### Autopilot \(E.g: Pixhawk\) connected to the computer via serial
 
 ```py
 # Import mavutil
@@ -57,16 +59,16 @@ master = mavutil.mavlink_connection(
 master.reboot_autopilot()
 ```
 
-##### ArduSub Board \(E.g: Pixhawk\) connected to the computer via UDP
+##### Autopilot \(E.g: Pixhawk\) connected to the computer via UDP
 
 ```py
 # Import mavutil
 from pymavlink import mavutil
 
 # Create the connection
-#  If using the companion computer
-#  the ip 192.168.2.1 and the port 14550
-#  will be available for connection
+#  If using a companion computer
+#  the default connection is available
+#  at ip 192.168.2.1 and the port 14550
 master = mavutil.mavlink_connection('udp:192.168.2.1:14550')
 
 # Get some information !
@@ -91,14 +93,14 @@ Output:
 '''
 ```
 
-##### Change mode
+##### Change flight mode
 
 ```py
 # Import mavutil
 from pymavlink import mavutil
 
 # Create the connection
-master = mavutil.mavlink_connection('udp:192.168.2.1:14550')
+master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
 
 # Choose a mode
 mode = 'MANUAL'
@@ -122,7 +124,7 @@ master.set_mode(mode_id)
 from pymavlink import mavutil
 
 # Create the connection
-master = mavutil.mavlink_connection('udp:192.168.2.1:14550')
+master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
 
 # Arm
 master.arducopter_arm()
@@ -138,7 +140,7 @@ master.arducopter_disarm()
 from pymavlink import mavutil
 
 # Create the connection
-master = mavutil.mavlink_connection('udp:192.168.2.1:14550')
+master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
 
 # Create a function to send RC values
 # More information about Joystick channels
