@@ -44,6 +44,7 @@
 
 ## Developers
 
+* [Pymavlink](developers/pymavlink.md)
 * [Build ArduSub](developers/developers.md)
 * [Build this Documentation](developers/building-docs.md)
 * [GPS Positioning](developers/gps-positioning.md)
