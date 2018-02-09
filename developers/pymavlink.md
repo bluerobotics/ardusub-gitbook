@@ -188,10 +188,10 @@ while True:
     if msg == None:
         continue
     if msg.get_type() == 'HEARTBEAT':
-        print("\n\n*****Got message: %s*****") % msg.get_type()
-        print("Message: %s") % msg
-        print("\nAs dictionary: %s") % msg.to_dict()
+        print("\n\n*****Got message: %s*****" % msg.get_type())
+        print("Message: %s" % msg)
+        print("\nAs dictionary: %s" % msg.to_dict())
         # Armed = MAV_STATE_STANDBY (4), Disarmed = MAV_STATE_ACTIVE (3)
-        print("\nSystem status: %s") % msg.system_status
+        print("\nSystem status: %s" % msg.system_status)
 ```
 
