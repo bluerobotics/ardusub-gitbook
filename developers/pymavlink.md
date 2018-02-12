@@ -121,7 +121,16 @@ if mode not in master.mode_mapping():
 # Get mode ID
 mode_id = master.mode_mapping()[mode]
 # Set new mode
-master.set_mode(mode_id)
+# master.mav.command_long_send(
+#    master.target_system, master.target_component,
+#    mavutil.mavlink.MAV_CMD_DO_SET_MODE, 0,
+#    0, mode_id, 0, 0, 0, 0, 0) or:
+# master.set_mode(mode_id) or:
+master.mav.set_mode_send(
+    master.target_system,
+    mavutil.mavlink.MAV_MODE_FLAG_CUSTOM_MODE_ENABLED,
+    mode_id)
+
 # Check ACK
 ack = False
 while not ack:
