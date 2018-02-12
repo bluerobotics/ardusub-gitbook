@@ -102,3 +102,27 @@ Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code rele
 <a href="https://github.com/bluerobotics/ardusub-docs/issues/">Submit a Documentation GitHub Issue here</a> to report any errors, suggestions, or missing information in this documentation.<br />
 <a href="https://github.com/bluerobotics/ardusub/issues/">Submit an ArduSub GitHub Issue here</a> to report issues with the ArduSub software.
 </p>
+
+### ArduSub default button configuration
+This is the default configuration of the joystick buttons in ArduSub.
+
+|  Normal function | Shift function |
+|:----------------:|:--------------:|
+|       none       |      none      |
+|    mode_manual   |      none      |
+|  mode_depth_hold |      none      |
+|  mode_stabilize  |      none      |
+|      disarm      |      none      |
+|       shift      |      none      |
+|        arm       |      none      |
+|   mount_center   |      none      |
+|  input_hold_set  |      none      |
+|  mount_tilt_down |      none      |
+|   mount_tilt_up  |      none      |
+|     gain_inc     | trim_pitch_dec |
+|     gain_dec     | trim_pitch_inc |
+|  lights1_dimmer  |  trim_roll_dec |
+| lights1_brighter |  trim_roll_inc |
+|       none       |      none      |
+
+For more information, it's possible to check the ArduSub [joystick source code](https://github.com/ArduPilot/ardupilot/blob/master/ArduSub/joystick.cpp#L649).
