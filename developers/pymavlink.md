@@ -144,11 +144,25 @@ master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
 # Wait a heartbeat before sending commands
 master.wait_heartbeat()
 
+# http://mavlink.org/messages/common#MAV_CMD_COMPONENT_ARM_DISARM
+
 # Arm
-master.arducopter_arm()
+# master.arducopter_arm() or:
+master.mav.command_long_send(
+    master.target_system,
+    master.target_component,
+    mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
+    0,
+    1, 0, 0, 0, 0, 0, 0)
 
 # Disarm
-master.arducopter_disarm()
+# master.arducopter_disarm() or:
+master.mav.command_long_send(
+    master.target_system,
+    master.target_component,
+    mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
+    0,
+    0, 0, 0, 0, 0, 0, 0)
 ```
 
 ##### Send RC \(Joystick\)
