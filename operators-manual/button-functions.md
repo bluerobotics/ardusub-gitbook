@@ -103,8 +103,8 @@ Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code rele
 <a href="https://github.com/bluerobotics/ardusub/issues/">Submit an ArduSub GitHub Issue here</a> to report issues with the ArduSub software.
 </p>
 
-### ArduSub buttons default state
-These are the default configurations of the joystick buttons in ArduSub.
+### ArduSub default button configuration
+This is the default configuration of the joystick buttons in ArduSub.
 
 |  Normal function | Shift function |
 |:----------------:|:--------------:|
