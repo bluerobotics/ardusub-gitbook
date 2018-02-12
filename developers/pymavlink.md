@@ -141,6 +141,8 @@ from pymavlink import mavutil
 
 # Create the connection
 master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
+# Wait a heartbeat before sending commands
+master.wait_heartbeat()
 
 # Arm
 master.arducopter_arm()
@@ -157,6 +159,8 @@ from pymavlink import mavutil
 
 # Create the connection
 master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
+# Wait a heartbeat before sending commands
+master.wait_heartbeat()
 
 # Create a function to send RC values
 # More information about Joystick channels
