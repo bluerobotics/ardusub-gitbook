@@ -41,6 +41,11 @@ Python MAVLink library - see http://www.qgroundcontrol.org/mavlink/mavproxy_star
 
 # Examples
 
+Pymavlink have 3 types of messages:
+* `command_long_send`: To create a raw package
+* `"MAVLink Messages"_send`: To send simple mavlink messages
+* `mavutil`: Functions to abstract some MAVLink messages
+
 ### Connect
 
 ##### Autopilot \(E.g: Pixhawk\) connected to the computer via serial
