@@ -225,6 +225,38 @@ set_rc_channel_pwm(4, 1600)
 set_rc_channel_pwm(8, 1900)
 ```
 
+#### Send Manual Control
+```py
+# Import mavutil
+from pymavlink import mavutil
+
+# Create the connection
+master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
+# Wait a heartbeat before sending commands
+master.wait_heartbeat()
+
+# Send a positive x value, negative y, negative z,
+# positive rotation and no button.
+# http://mavlink.org/messages/common#MANUAL_CONTROL
+master.mav.manual_control_send(
+    master.target_system,
+    500,
+    -500,
+    -500,
+    500,
+    0)
+
+# To active button 1, 4 and 8
+buttons = 1 + 1 << 3 + 1 << 7
+master.mav.manual_control_send(
+    master.target_system,
+    0,
+    0,
+    0,
+    0,
+    buttons)
+```
+
 ##### Receive data and filter by message type
 
 ```py
