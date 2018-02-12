@@ -238,7 +238,7 @@ master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
 
 while True:
     msg = master.recv_match()
-    if msg == None:
+    if not msg:
         continue
     if msg.get_type() == 'HEARTBEAT':
         print("\n\n*****Got message: %s*****" % msg.get_type())
