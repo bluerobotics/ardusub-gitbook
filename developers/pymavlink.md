@@ -199,25 +199,30 @@ def set_rc_channel_pwm(id, pwm=1500):
         id (TYPE): Channel ID
         pwm (int, optional): Channel pwm value 1100-1900
     """
-    rc_channel_values = [65535 for _ in range(8)]
-    rc_channel_values[id] = pwm
-    #http://mavlink.org/messages/common#RC_CHANNELS_OVERRIDE
-    master.mav.rc_channels_override_send(
-        master.target_system,                # target_system
-        master.target_component,             # target_component
-        *rc_channel_values)                  # RC channel list, in microseconds.
+    if id < 1:
+        print("Channel does not exist.")
+        return
 
-# Set some forward command !
+    # We only have 8 channels
+    #http://mavlink.org/messages/common#RC_CHANNELS_OVERRIDE
+    if id < 9:
+        rc_channel_values = [65535 for _ in range(8)]
+        rc_channel_values[id - 1] = pwm
+        master.mav.rc_channels_override_send(
+            master.target_system,                # target_system
+            master.target_component,             # target_component
+            *rc_channel_values)                  # RC channel list, in microseconds.
+
+# Set some roll
+set_rc_channel_pwm(2, 1600)
+
+# Set some yaw
 set_rc_channel_pwm(4, 1600)
 
-# Set camera tilt to 45º
-set_rc_channel_pwm(7, 1900)
-
-# set lights 1 in maximum state
+# The camera pwm value is the servo speed
+# and not the servo position
+# Set camera tilt to 45º with full speed
 set_rc_channel_pwm(8, 1900)
-
-# set lights 2 in medium state
-set_rc_channel_pwm(9, 1600)
 ```
 
 ##### Receive data and filter by message type
