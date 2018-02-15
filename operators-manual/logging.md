@@ -12,9 +12,9 @@ There are two types of logs that can be used to diagnose problems while running 
 
 ## Telemetry logs
 
-Telemetry logs store received MAVLink messages. MAVProxy and QGroundControl save telemetry logs locally in a **.tlog** file. Telemetry logs are the preferred way of diagnosing most problems.
+Ground Control Station (GCS) software will store all of the autopilot telemtry in a log. These telemetry logs contain all of the MAVLink messages received in their binary format. MAVProxy and QGroundControl save telemetry logs locally in a **.tlog** file. Telemetry logs are the preferred way of diagnosing most problems.
 
-Once connected to the autopilot, MAVProxy will save all telemetry to a file called 'mav.tlog'. The mav.tlog file is saved under the same path from which MAVProxy was run. By default, QGroundControl only begins logging telemetry after the vehicle has been armed. QGroundControl can be configured to log telemetry while the autopilot is disarmed by clicking the 'Q' icon in the menu bar, then selecting the 'General' tab. Select the option to save logs 'even if vehicle was not armed' in order to log telemetry while disarmed. In order to save a telemetry log from QGroundControl, you *MUST* click save when prompted after disconnecting from the vehicle, or after quitting the application. *Note* recent versions of QGroundControl allow you to configure a directory to automatically save all telemetry logs, these versions will not prompt to save.
+Once connected to the autopilot, MAVProxy will save all telemetry to a file called 'mav.tlog'. The mav.tlog file is saved under the same path from which MAVProxy was run. By default, QGroundControl only begins logging telemetry after the vehicle has been armed. QGroundControl can be configured to log telemetry while the autopilot is disarmed in the _General_ tab of the _Vehicle Seup_ menu (click the purple 'Q' icon in the menu bar). Select the option to save logs 'even if vehicle was not armed' in order to log telemetry while disarmed. QGroundControl saves the telemetry logs in the 'Telemetry' directory under the 'Save Path' that is specified in the _General_ tab of the _Vehicle Seup_ menu.
 
 <img src="/images/log-disarmed-qgc.png" class="img-responsive img-center" style="max-height:400px;">
 
