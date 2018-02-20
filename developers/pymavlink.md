@@ -165,7 +165,7 @@ master.wait_heartbeat()
 master.mav.command_long_send(
     master.target_system,
     master.target_component,
-    mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
+    mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
     0,
     1, 0, 0, 0, 0, 0, 0)
 
@@ -174,7 +174,7 @@ master.mav.command_long_send(
 master.mav.command_long_send(
     master.target_system,
     master.target_component,
-    mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
+    mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
     0,
     0, 0, 0, 0, 0, 0, 0)
 ```
