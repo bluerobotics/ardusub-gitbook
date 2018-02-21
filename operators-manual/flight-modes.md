@@ -16,6 +16,9 @@ ArduSub supports several different flight modes, some of which are only availabl
 
 # Position Enabled Modes
 
+> **Warning** These modes are still in development and are not considered stable.
+
+<span></span>
 > **GPS** These modes require an [under water positioning system](http://www.bluerobotics.com/store/electronics/underwater-gps/aps-wl-11001/). A GPS antenna will not work under water.
 
 ## Position Hold
