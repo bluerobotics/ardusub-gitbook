@@ -44,6 +44,7 @@
 
 ## Developers
 
+* [OpenCV](developers/opencv.md)
 * [Pymavlink](developers/pymavlink.md)
 * [Build ArduSub](developers/developers.md)
 * [Build this Documentation](developers/building-docs.md)
