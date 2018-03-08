@@ -41,6 +41,7 @@
 * [Troubleshooting](troubleshooting/troubleshooting.md)
 * [RC Input and Output](operators-manual/rc-input-and-output.md)
 * [Recording Video](operators-manual/recording-video.md)
+* [Altimeters](operators-manual/altimeters.md)
 
 ## Developers
 
