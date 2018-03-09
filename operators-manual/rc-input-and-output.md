@@ -14,7 +14,7 @@ These are the default channel mappings for RC input:
 | 4 | Yaw |
 | 5 | Forward |
 | 6 | Lateral |
-| 7 | Reserved |
+| 7 | Camera Pan |
 | 8 | Camera Tilt |
 | 9 | Lights 1 Level |
 | 10 | Lights 2 Level |
