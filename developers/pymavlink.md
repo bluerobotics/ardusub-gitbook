@@ -246,7 +246,8 @@ master.mav.manual_control_send(
     500,
     0)
 
-# To active button 1, 4 and 8
+# To active button 0 (first button), 3 (fourth button) and 7 (eighth button)
+# It's possible to check and configure this buttons in the Joystick menu of QGC
 buttons = 1 + 1 << 3 + 1 << 7
 master.mav.manual_control_send(
     master.target_system,
