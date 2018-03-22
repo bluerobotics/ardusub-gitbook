@@ -27,6 +27,56 @@ The autopilot navigation filter needs to be tuned to the characteristics of the 
 
 If the position-enabled flight modes are to be used, the autopilot position controller needs to be tuned. In QGC, check the 'Show advanced settings' option in the _General_ tab of the _Application Setup_ menu, and restart the application. There will be a _Tuning_ tab on the _Vehicle Setup_ page that can be used to facilitate tuning the position controller. The parameters of interest are those with 'XY' in the name in the 'Position Controller' section.
 
+## Sending GPS position to ROV
+
+It's possible to send position information to the ROV via socket or MAVLink message.
+This is an alternative for using a system that does not provide NMEA output. I.e: SLAM, visual odometry and etc.
+
+### Socket via MAVProxy
+
+The GPSInput module (command `module load GPSInput` inside MAVProxy command line) of MAVProxy can be used to send position information to the ROV, this module uses socket communication to allow a simple interface layer. The default port is `25100` but can be changed with the parameter`GPSInput.port` (command `set GPSInput.port port_number`). The `GPS_TYPE` parameter of the vehicle need to be **MAV** to allow the communication.
+
+```py
+#!/usr/bin/python
+
+import time
+import socket
+import json
+
+from os import system
+
+sockit = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sockit.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+sockit.setblocking(0)
+
+while True:
+    result = {}
+    result['time_usec'] = 0             #Timestamp (micros since boot or Unix epoch)
+    result['gps_id'] = 0                #ID of the GPS for multiple GPS inputs
+    result['ignore_flags'] = 8|16|32    #Flags indicating which fields to ignore (see GPS_INPUT_IGNORE_FLAGS enum). All other fields must be provided.
+    result['time_week_ms'] = 0          #GPS time (milliseconds from start of GPS week)
+    result['time_week'] = 0             #GPS week number
+    result['fix_type'] = 3              #0-1: no fix, 2: 2D fix, 3: 3D fix. 4: 3D with DGPS. 5: 3D with RTK
+    result['lat'] = 0                   #Latitude (WGS84), in degrees * 1E7
+    result['lon'] = 0                   #Longitude (WGS84), in degrees * 1E7
+    result['alt'] = 0                   #Altitude (AMSL, not WGS84), in m (positive for up)
+    result['hdop'] = 1                  #GPS HDOP horizontal dilution of position in m
+    result['vdop'] = 1                  #GPS VDOP vertical dilution of position in m
+    result['vn'] = 0                    #GPS velocity in m/s in NORTH direction in earth-fixed NED frame
+    result['ve'] = 0                    #GPS velocity in m/s in EAST direction in earth-fixed NED frame
+    result['vd'] = 0                    #GPS velocity in m/s in DOWN direction in earth-fixed NED frame
+    result['speed_accuracy'] = 0        #GPS speed accuracy in m/s
+    result['horiz_accuracy'] = 0        #GPS horizontal accuracy in m
+    result['vert_accuracy'] = 0         #GPS vertical accuracy in m
+    result['satellites_visible'] = 0    #Number of satellites visible.
+    result = json.dumps(result)
+    sockit.sendto(result.encode(), ('0.0.0.0', 25100))
+    time.sleep(0.2)
+```
+
+### MAVLink message with GPS_INPUT
+Check in [Developers/pymavlink section](developers/pymavlink.md).
+
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
 <a href="https://github.com/bluerobotics/ardusub-docs/issues/">Submit a Documentation GitHub Issue here</a> to report any errors, suggestions, or missing information in this documentation.<br />
