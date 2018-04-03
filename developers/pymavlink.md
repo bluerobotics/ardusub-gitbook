@@ -4,6 +4,14 @@ ArduSub communicates with a protocol called MAVLink. Pymavlink is a python imple
 
 Please reference the pymavlink [repository](https://github.com/ArduPilot/pymavlink) and [chat](https://gitter.im/ArduPilot/pymavlink) for further information.
 
+# Safety
+
+The autopilot employs a some failsafe mechanisms to keep you and your equipement safe, as well as to prevent your ROV from running away from you during experiments.
+
+All system components that communicate via MAVLink are expected to send a HEARTBEAT message at a constant rate of at least 1 Hz. If the autopilot does not receive a heartbeat from your application after this interval, it will trigger a [failsafe](/operators-manual/failsafes.html).
+
+When the autopilot is being commanded to move via RC_CHANNELS_RAW or MANUAL_CONTROL messages, the messages must be sent at a constant rate like the HEARTBEAT message. Otherwise, the autopilot will execute a failsafe if it has not received an updated command after a timeout period.
+
 ## Recommendation
 
 Pymavlink is currently a Python 2 package. It is recommended to install and use it with Python 2.
