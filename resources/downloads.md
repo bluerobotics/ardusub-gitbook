@@ -6,23 +6,17 @@
 - [Mac](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/QGroundControl.dmg)
 - [Linux](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/QGroundControl.AppImage)
 
+Previous releases of QGroundControl can be found on our [github releases](https://github.com/bluerobotics/qgroundcontrol/releases) page.
+
 ## ArduSub Firmware Files
 
-Compiled firmware can be downloaded from [firmware.ardupilot.org](http://http://firmware.us.ardupilot.org/). See [here](/getting-started/installation.md#ardusub) for instructions on how to flash the Pixhawk.
+**Stable Release for Pixhawk (px4-v2):** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub V3.5](http://firmware.us.ardupilot.org/Sub/stable/PX4/ArduSub-v2.px4)
 
-#### Pixhawk (px4-v2) Downloads
-
-**Stable Release:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub V3.5](http://firmware.us.ardupilot.org/Sub/stable/PX4/ArduSub-v2.px4)
-
-The stable release is the recommended download for most users.
-
-**Latest Build:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub V3.6-dev](http://firmware.us.ardupilot.org/Sub/latest/PX4/ArduSub-v2.px4)
-
-This is the latest build of the developmental master branch. This build should only be used by developers and advanced users.
+Firmware for other platforms can be downloaded from [firmware.ardupilot.org](http://http://firmware.us.ardupilot.org/). See [here](https://www.ardusub.com/getting-started/installation.html#ardusub) for instructions on how to flash the Pixhawk.
 
 ## Raspberry Pi Images
 
-A fully set up image for the Raspberry Pi is available here. This image is used to set up the Raspberry Pi 3 computer as a *companion computer* for the Pixhawk autopilot. See [here](/getting-started/installation.md#raspberry-pi) for instructions on how to flash the image to the SD card.
+This is a fully configured image for the Raspberry Pi 3 computer to be used as a *companion computer* for the Pixhawk autopilot running ArduSub. See [here](https://www.ardusub.com/getting-started/installation.html#raspberry-pi) for instructions on how to flash the image to the SD card.
 
 <i class="fa fa-download" aria-hidden="true"></i> [Latest Ardusub-Raspbian Image](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/stable/ardusub-raspbian.img.zip)
 
