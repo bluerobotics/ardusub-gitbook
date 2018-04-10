@@ -44,7 +44,7 @@ If the lights are not on, make sure that you are using a network patch cable, no
 
 If your network is configured correctly, but you still have no telemetry, we need to make sure that MAVProxy is running on the companion computer and that the Pixhawk and the Raspberry Pi are communicating. Please note that the Pixhawk must be connected to the companion computer before the companion computer is powered on. The MAVProxy process is started at boot, and if the Pixhawk is not connected at this point the MAVProxy process will exit until the companion computer is rebooted.
 
-Check that mavproxy is running on the pi. Log into the Pi via ssh or PuTTY, and type
+Check that mavproxy is running on the pi. Log into the Pi via ssh or PuTTY (user: pi, password: companion), and type
 
 	screen -r mavproxy
 
