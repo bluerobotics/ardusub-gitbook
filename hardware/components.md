@@ -59,7 +59,7 @@ The Companion Computer has two major functions on the ROV:
 - Streaming HD video to the surface computer
 - Relaying communications between the autopilot and the Surface Computer via Ethernet communications
 
-The companion computer must be running the [Companion Computer Software](/getting-started/installation.md/raspberry-pi) to function correctly with ArduSub. Currently, only the Raspberry Pi 3 is supported for use with the Companion Computer Software.
+The companion computer must be running the [Companion Computer Software](/getting-started/installation.md/raspberry-pi) to function correctly with ArduSub. Currently, only the Raspberry Pi 3 model B (not yet B+) is supported for use with the Companion Computer Software.
 
 ### Camera
 
