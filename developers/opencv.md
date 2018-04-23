@@ -38,7 +38,7 @@ sudo apt install python-gst-1.0 gstreamer1.0-plugins-good \
 ```
 
 # Examples
-Take a look in the [diagram of the software components](software/components.md) to see how the communication between all the modules work.
+Take a look in the [diagram of the software components](/software/components.html) to see how the communication between all the modules work.
 
 The video raw data goes to gstreamer that send it via udp (:5600) inside the companion board to the topside computer.
 
