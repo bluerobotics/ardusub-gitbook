@@ -61,9 +61,13 @@ These button functions will command a switch to the corresponding flight mode. P
 - relay_1_off: Sets the pin configured by the *RELAY_PIN* parameter to output LOW
 - relay_1_toggle: Toggles the state of the pin configured by the *RELAY_PIN* parameter
 
-- relay_1_on: Sets the pin configured by the *RELAY_PIN2* parameter to output HIGH
-- relay_1_off: Sets the pin configured by the *RELAY_PIN2* parameter to output LOW
-- relay_1_toggle: Toggles the state of the pin configured by the *RELAY_PIN2* parameter
+- relay_2_on: Sets the pin configured by the *RELAY_PIN2* parameter to output HIGH
+- relay_2_off: Sets the pin configured by the *RELAY_PIN2* parameter to output LOW
+- relay_2_toggle: Toggles the state of the pin configured by the *RELAY_PIN2* parameter
+
+- relay_3_on: Sets the pin configured by the *RELAY_PIN3* parameter to output HIGH
+- relay_3_off: Sets the pin configured by the *RELAY_PIN3* parameter to output LOW
+- relay_3_toggle: Toggles the state of the pin configured by the *RELAY_PIN3* parameter
 
 ### Servo Control
 
