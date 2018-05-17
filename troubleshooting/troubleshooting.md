@@ -75,11 +75,12 @@ If you still do not have telemetry after all of these steps, please reboot the s
 
 If you do not have telemetry, please troubleshoot that first according to the above instructions.
 
+
 If you have telemetry, but no video, make sure the video settings are correct in QGroundControl. The video settings are found in the General tab of the Application Settings (Q icon) view. The video source should be set to UDP video, and the port should be 5600. These are the default settings. If you change these settings, you will need to close and re-launch QGroundControl.
 
 <img src="/images/qgc-video-settings.png" class="img-responsive img-center" style="max-height:400px;">
 
-If the video settings are correct, and there are no errors displayed in the *Console* tab of the *Application Settings* in QGC, the most likely cause of a missing video stream is a faulty physical connection with the camera ribbon cable. Disconnect power to the ROV/Raspberry Pi and reseat the ribbon cable on both ends, ensuring that the contact side of the cable is oriented correctly. The contacts should face towards the board on the camera module, and towards the HDMI connector on the Raspberry Pi.
+If the video settings are correct, and there are no errors displayed in the *Console* tab of the *Application Settings* in QGC, the most likely cause of a missing video stream is a faulty physical connection with the camera ribbon cable. Disconnect power to the ROV/Raspberry Pi and reseat the ribbon cable on both ends, ensuring that the contact side of the cable is oriented correctly. The contacts should face towards the board on the camera module, and towards the HDMI connector on the Raspberry Pi. If you are using a USB camera, make sure that the camera supports H.264 video output.
 
 If you have checked all of the above and still don't have a video stream, you can check the video streaming process for errors. Log into the Raspberry Pi (the default ip address of the Raspberry Pi is 192.168.2.2) via SSH or [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) using the username 'pi' and the password 'companion'. After you have logged  and enter the following command into the Raspberry Pi command line:
 
