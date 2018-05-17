@@ -99,7 +99,7 @@ If the video stream isn't running the output of the `screen` command will be:
 
 You can relaunch the video streaming process by entering:
 
-	~/companion/RPI2/Raspbian/start_video.sh
+	~/companion/scripts/start_video.sh
 
 If the output of this command contains something like this:
 
