@@ -28,6 +28,8 @@ Make sure that the QGroundControl is configured to automatically connect to UDP 
 
 #### Check Your Network
 
+Verify that your [network settings](/getting-started/installation.html#network-setup) are correct, your Ethernet IP address should be 192.168.2.1 and the subnet mask should be 255.255.255.0.
+
 You should be able to ping the companion computer from the surface computer. On the surface computer's command line enter:
 
 	ping 192.168.2.2
@@ -75,6 +77,7 @@ If you still do not have telemetry after all of these steps, please reboot the s
 
 If you do not have telemetry, please troubleshoot that first according to the above instructions.
 
+Begin by verifying that your [network settings](/getting-started/installation.html#network-setup) are correct, your Ethernet IP address should be 192.168.2.1 and the subnet mask should be 255.255.255.0.
 
 If you have telemetry, but no video, make sure the video settings are correct in QGroundControl. The video settings are found in the General tab of the Application Settings (Q icon) view. The video source should be set to UDP video, and the port should be 5600. These are the default settings. If you change these settings, you will need to close and re-launch QGroundControl.
 
