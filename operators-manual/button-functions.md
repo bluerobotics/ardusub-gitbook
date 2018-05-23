@@ -110,23 +110,23 @@ Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code rele
 ### ArduSub default button configuration
 This is the default configuration of the joystick buttons in ArduSub.
 
-|  Normal function | Shift function |
-|:----------------:|:--------------:|
-|       none       |      none      |
-|    mode_manual   |      none      |
-|  mode_depth_hold |      none      |
-|  mode_stabilize  |      none      |
-|      disarm      |      none      |
-|       shift      |      none      |
-|        arm       |      none      |
-|   mount_center   |      none      |
-|  input_hold_set  |      none      |
-|  mount_tilt_down |      none      |
-|   mount_tilt_up  |      none      |
-|     gain_inc     | trim_pitch_dec |
-|     gain_dec     | trim_pitch_inc |
-|  lights1_dimmer  |  trim_roll_dec |
-| lights1_brighter |  trim_roll_inc |
-|       none       |      none      |
+| Button Number |  Normal function | Shift function |
+|:-------------:|:----------------:|:--------------:|
+|       0       |       none       |      none      |
+|       1       |    mode_manual   |      none      |
+|       2       |  mode_depth_hold |      none      |
+|       3       |  mode_stabilize  |      none      |
+|       4       |      disarm      |      none      |
+|       5       |       shift      |      none      |
+|       6       |        arm       |      none      |
+|       7       |   mount_center   |      none      |
+|       8       |  input_hold_set  |      none      |
+|       9       |  mount_tilt_down |      none      |
+|       10      |   mount_tilt_up  |      none      |
+|       11      |     gain_inc     | trim_pitch_dec |
+|       12      |     gain_dec     | trim_pitch_inc |
+|       13      |  lights1_dimmer  |  trim_roll_dec |
+|       14      | lights1_brighter |  trim_roll_inc |
+|       15      |       none       |      none      |
 
 For more information, it's possible to check the ArduSub [joystick source code](https://github.com/ArduPilot/ardupilot/blob/master/ArduSub/joystick.cpp#L649).
