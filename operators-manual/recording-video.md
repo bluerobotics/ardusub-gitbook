@@ -7,4 +7,6 @@ QGroundControl supports recording the raw video stream. If you would like to rec
 To record video in QGroundControl, click the red circle in the lower right-hand corner of the video window. The red video recording icon is a square when QGroundControl is currently recording the video stream to a file. When QGroundControl is not recording video, the red video recording icon is a circle. Each time the red circle is clicked to start recording, a new video file is created. The videos are saved in Matroska format (.mkv). Matroska was chosen because it is robust when saving raw streams, and it is harder to corrupt the file. If you would like to use your video in another format, you must convert the .mkv file with a transcoding program like VLC.
 
 <img src="/images/qgc/video-record-button.png" class="img-responsive img-center" style="max-height:400px;" align="middle">
+
+Your video files will be saved in your QGroundControl/Videos file path.
 <img src="/images/qgc/qgc-save-location.png" class="img-responsive img-center" style="max-height:600px;" align="middle">
