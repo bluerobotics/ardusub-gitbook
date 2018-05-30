@@ -2,9 +2,13 @@
 
 ## How to Get the Code
 
-ArduSub is hosted and maintained on [github](https://github.com/ardupilot/ardupilot.git). You can clone the repository or download the source code as a zip file from [github](https://github.com/ardupilot/ardupilot.git).
+ArduSub is hosted and maintained on [github](https://github.com/ardupilot/ardupilot.git). You need to clone the repository to have full code access including submodules.
 
-	git clone https://github.com/ardupilot/ardupilot.git
+```sh
+    git clone https://github.com/ardupilot/ardupilot.git
+    cd ardupilot
+    git submodule update --init --recursive
+```
 
 ## Compiling
 
@@ -14,14 +18,17 @@ To set up your build environment, follow these instructions:
 - [Linux Instructions](http://ardupilot.org/dev/docs/building-setup-linux.html)
 - [Windows Instructions](http://ardupilot.org/dev/docs/building-setup-windows.html)
 
-To compile ArduSub, first checkout the stable version:
+Before compiling ArduSub, first checkout the stable version:
 
 ```
 git fetch --tags
 git checkout ArduSub-stable
+git submodule update --recursive
 ```
 
-`cd ArduSub` to enter the directory and then use a command with the following format:
+### MAKE (deprecated)
+To compile the ArduSub branch with make, first it's necessary to be in ArduSub directory `cd ArduSub`.
+The make command uses the following format:
 
 	make [board type]
 
@@ -31,22 +38,40 @@ For example, to build for the Pixhawk 1:
 
 The available board types can be seen by entering `make` with no arguments.
 
-## Uploading Locally
+### WAF
+Waf is a global build system for ArduPilot repository, it's necessary to be inside the root folder of ArduPilot to use it.
+You can check how to use waf with:
 
-To upload the code to a PixHawk or similar controller, add `-upload` to the build command. For example:
+	./waf --help
+
+To configure waf to build ArduSub for Pixhawk 1:
+
+	./waf configure --board px4-v2
+
+And to compile:
+
+	./waf build sub
+
+#### Uploading Locally
+
+This only works with a direct USB connection to the Pixhawk, and to upload the code:
+
+**make**: Add `-upload` to `make` build command (only works after building with `make`).
 
 	make px4-v2-upload
 
-This only works with a direct USB connection to the Pixhawk.
+**waf**: Use `--upload` with the vehicle type (only works after configuring and building with `waf` before).
 
-## Uploading Remotely
+	./waf --upload sub
+
+### Uploading Remotely
 
 With an Ethernet tether and companion computer, it is possible to flash the Pixhawk firmware through the companion computer - no need to directly access the Pixhawk.
 
 #### Flashing From the Command Line
 
 	ssh pi@192.168.2.2 "/home/pi/companion/tools/flash_px4.py --stdin" < ArduSub-v2.px4
-	
+
 #### Flashing Via Web Interface
 
 	Navigate to [192.168.2.2:2770/system](http://192.168.2.2:2770/system) in your browser. Under the 'Pixhawk Firmware Update' section, click 'Browse' and select the firmware file (.px4) saved on your computer. Click 'Upload' and wait for the flashing process to complete.
