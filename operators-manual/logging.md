@@ -53,7 +53,121 @@ DataFlash logs can be retrieved in two ways:
 		Type 'log download X' to download log number X
 
 		While the log is downloading, you can type 'log status' to view the status of the download, or 'log cancel' to cancel the download.
-		
+
+# Log Analysis
+
+Telemetry logs and dataflash logs are stored in different formats, and contain different data. The log entries for telemetry logs are the MAVLink messages that are documented here and here. The log entries in dataflash logs are self-documented in their binary format, but the formats can also be determined by looking at the code here.
+
+Below is a brief description of some tools that are available for viewing and extracting data from logs.
+
+## MAVExplorer.py
+
+MAVExplorer is a command line/graphical tool used to plot log data. MAVExplorer supports both telemetry logs and dataflash logs, and is included as part of a MAVProxy installation. Please refer to the [MAVExplorer documentation](http://ardupilot.org/dev/docs/using-mavexplorer-for-log-analysis.html) for more information. **Note, the log file name should not contain any spaces when using this tool**
+
+## mavlogdump.py
+
+mavlogdump.py is a command line tool used to filter and export log data to plain-text files like .csv or .json. mavlogdump.py supports both telemetry logs and dataflash logs, and it is just one of many such log analysis tools included as part of a pymavlink installation (also installed with MAVProxy). **Note, the log file name should not contain any spaces when using this tool**
+
+To install mavlogdump.py, install pymavlink from pip:
+
+`pip install pymavlink`
+
+To use mavlogdump.py, refer to the output of `mavlogdump.py --help`:
+
+```
+usage: mavlogdump.py [-h] [--no-timestamps] [--planner] [--robust] [-f]
+                     [--condition CONDITION] [-q] [-o OUTPUT] [-p]
+                     [--format FORMAT] [--csv_sep CSV_SEP] [--types TYPES]
+                     [--nottypes NOTTYPES] [--dialect DIALECT]
+                     [--zero-time-base] [--no-bad-data] [--show-source]
+                     [--show-seq] [--source-system SOURCE_SYSTEM]
+                     [--source-component SOURCE_COMPONENT] [--link LINK]
+                     LOG
+
+example program that dumps a Mavlink log file. The log file is assumed to be
+in the format that qgroundcontrol uses, which consists of a series of MAVLink
+packets, each with a 64 bit timestamp header. The timestamp is in microseconds
+since 1970 (unix epoch)
+
+positional arguments:
+  LOG
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --no-timestamps       Log doesn't have timestamps
+  --planner             use planner file format
+  --robust              Enable robust parsing (skip over bad data)
+  -f, --follow          keep waiting for more data at end of file
+  --condition CONDITION
+                        select packets by condition
+  -q, --quiet           don't display packets
+  -o OUTPUT, --output OUTPUT
+                        output matching packets to give file
+  -p, --parms           preserve parameters in output with -o
+  --format FORMAT       Change the output format between 'standard', 'json',
+                        and 'csv'. For the CSV output, you must supply types
+                        that you want.
+  --csv_sep CSV_SEP     Select the delimiter between columns for the output
+                        CSV file. Use 'tab' to specify tabs. Only applies when
+                        --format=csv
+  --types TYPES         types of messages (comma separated with wildcard)
+  --nottypes NOTTYPES   types of messages not to include (comma separated with
+                        wildcard)
+  --dialect DIALECT     MAVLink dialect
+  --zero-time-base      use Z time base for DF logs
+  --no-bad-data         Don't output corrupted messages
+  --show-source         Show source system ID and component ID
+  --show-seq            Show sequence numbers
+  --source-system SOURCE_SYSTEM
+                        filter by source system ID
+  --source-component SOURCE_COMPONENT
+                        filter by source component ID
+  --link LINK           filter by comms link ID
+```
+
+#### mavlogdump.py Examples
+
+Print out all STATUSTEXT messages in the log file:
+
+
+```
+mavlogdump.py --types=STATUSTEXT test.tlog 
+2018-05-15 12:59:42.57: STATUSTEXT {severity : 6, text : ArduSub V3.5.3 (ad81760b)}
+2018-05-15 12:59:42.57: STATUSTEXT {severity : 6, text : PX4: 8d505a02 NuttX: 1a99ba58}
+2018-05-15 12:59:42.57: STATUSTEXT {severity : 6, text : PX4v2 00400027 32365109 36363331}
+2018-05-15 13:00:46.97: STATUSTEXT {severity : 4, text : Motor test timed out!}
+2018-05-15 13:00:47.87: STATUSTEXT {severity : 6, text : ArduSub V3.5.3 (ad81760b)}
+2018-05-15 13:00:47.88: STATUSTEXT {severity : 6, text : PX4: 8d505a02 NuttX: 1a99ba58}
+2018-05-15 13:00:47.88: STATUSTEXT {severity : 6, text : PX4v2 00400027 32365109 36363331}
+2018-05-15 13:00:49.05: STATUSTEXT {severity : 2, text : 10 second cool down required}
+2018-05-15 13:00:49.05: STATUSTEXT {severity : 4, text : Arm motors before testing motors.}
+2018-05-15 13:00:49.06: STATUSTEXT {severity : 4, text : motor test initialization failed!}
+
+```
+
+The output can be filtered based on message type, and also based on conditions in the message fields.
+
+Export all ATTITUDE messages to a .csv file:
+
+```
+mavlogdump.py --types=ATTITUDE --format=csv test.tlog > test.csv
+```
+
+Export all SCALED_PRESSURE2 messages to a .csv file, filter by showing only messages while vehicle was armed
+
+```
+mavlogdump.py --types=SCALED_PRESSURE2 --condition HEARTBEAT.system_status==4 --format=csv test.tlog > test.csv
+```
+
+Export all messages to a human readable file, filter to discrete time span (only two seconds here)
+```
+ mavlogdump.py --condition 'SYSTEM_TIME.time_unix_usec>1526496245000000 and SYSTEM_TIME.time_unix_usec<1526496247000000' test.tlog > test.log
+```
+
+## Mission Planner
+
+Mission Planner is a ground control station software like QGroundControl. Mission Planner does not have support for operating ArduSub, but the log files produced by ArduSub are compatible with the graphical analysis tools in Mission Planner. See the [Mission Planner log analysis documentation](http://ardupilot.org/copter/docs/common-downloading-and-analyzing-data-logs-in-mission-planner.html) for more details.
+
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
 <a href="https://github.com/bluerobotics/ardusub-docs/issues/">Submit a Documentation GitHub Issue here</a> to report any errors, suggestions, or missing information in this documentation.<br />
