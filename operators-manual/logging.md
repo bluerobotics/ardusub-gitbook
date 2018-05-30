@@ -56,7 +56,7 @@ DataFlash logs can be retrieved in two ways:
 
 # Log Analysis
 
-Telemetry logs and dataflash logs are stored in different formats, and contain different data. The log entries for telemetry logs are the MAVLink messages that are documented [here](http://mavlink.org/messages/common) and [here](http://mavlink.org/messages/ardupilotmega). The log entries in dataflash logs are self-documented in their binary format, but the formats can also be determined by looking at the code [here](https://github.com/ArduPilot/ardupilot/blob/master/ArduSub/Log.cpp).
+Telemetry logs and dataflash logs are stored in different formats, and contain different (but in many cases overlapping) data. The log entries for telemetry logs are the MAVLink messages that are documented [here](http://mavlink.org/messages/common) and [here](http://mavlink.org/messages/ardupilotmega). The log entries in dataflash logs are self-documented in their binary format, but the formats can also be determined by looking at the code [here](https://github.com/ArduPilot/ardupilot/blob/master/ArduSub/Log.cpp).
 
 Below is a brief description of some tools that are available for viewing and extracting data from logs.
 
