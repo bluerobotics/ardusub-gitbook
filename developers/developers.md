@@ -8,11 +8,20 @@ ArduSub is hosted and maintained on [github](https://github.com/ardupilot/ardupi
 
 ## Compiling
 
+To set up your build environment, follow these instructions:
+
 - [Mac Instructions](http://dev.ardupilot.com/wiki/building-px4-with-make-on-mac/)
 - [Linux Instructions](http://dev.ardupilot.com/wiki/building-px4-for-linux-with-make/)
 - [Windows Instructions](http://dev.ardupilot.com/wiki/building-px4-with-make/)
 
-To compile the ArduSub branch, first `cd ArduSub` to enter the directory and then use a command with the following format:
+To compile ArduSub, first checkout the stable version:
+
+```
+git fetch --tags
+git checkout ArduSub-stable
+```
+
+`cd ArduSub` to enter the directory and then use a command with the following format:
 
 	make [board type]
 
