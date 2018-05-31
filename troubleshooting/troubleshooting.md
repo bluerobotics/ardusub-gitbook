@@ -83,7 +83,11 @@ If you have telemetry, but no video, make sure the video settings are correct in
 
 <img src="/images/qgc-video-settings.png" class="img-responsive img-center" style="max-height:400px;">
 
-If the video settings are correct, and there are no errors displayed in the *Console* tab of the *Application Settings* in QGC, the most likely cause of a missing video stream is a faulty physical connection with the camera ribbon cable. Disconnect power to the ROV/Raspberry Pi and reseat the ribbon cable on both ends, ensuring that the contact side of the cable is oriented correctly. The contacts should face towards the board on the camera module, and towards the HDMI connector on the Raspberry Pi. If you are using a USB camera, make sure that the camera supports H.264 video output.
+If you are using Linux, you must install a few dependencies for the video to work:
+
+    apt install gstreamer1.0-plugins-bad gstreamer1.0-libav
+
+If the video settings are correct, and there are no errors displayed in the *Console* tab of the *Application Settings* in QGC, the most likely cause of a missing video stream is a faulty physical connection with the camera. If you are using a Raspberry Pi camera, disconnect power to the ROV/Raspberry Pi and reseat the ribbon cable on both ends, ensuring that the contact side of the cable is oriented correctly. The contacts should face towards the board on the camera module, and towards the HDMI connector on the Raspberry Pi. If you are using a USB camera, make sure that the camera supports H.264 video output, and make sure the usb cable is well-seated.
 
 If you have checked all of the above and still don't have a video stream, you can check the video streaming process for errors. Log into the Raspberry Pi (the default ip address of the Raspberry Pi is 192.168.2.2) via SSH or [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) using the username 'pi' and the password 'companion'. After you have logged  and enter the following command into the Raspberry Pi command line:
 
