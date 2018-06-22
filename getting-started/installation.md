@@ -93,7 +93,7 @@ The *Companion Computer* is assigned a static IP address of 192.168.2.2, and it 
 </div>
 <div id="linuxDiv" style="display:none">
 
-	<h1 id="linux">Linux</h1>
+	<h1 id="linux">Linux (Ubuntu 16.04)</h1>
 	<ol>
 	<li><p>Click the Network Icon in the toolbar at the top of the screen, and click &quot;Edit Connections...&quot;</p>
 	<p> <img src="../images/linux-setup/LinuxStep1.png" class="img-responsive img-center" style="max-width:800px"></p>
@@ -109,6 +109,21 @@ The *Companion Computer* is assigned a static IP address of 192.168.2.2, and it 
 	</li>
 	<li><p>Click the &quot;IPv4 Settings&quot; tab, and from the &quot;Method&quot; dropdown menu, select &quot;Manual&quot;. Click &quot;Add&quot;, and enter 192.168.2.1 for the Address, 255.255.255.0 for the Netmask and 0.0.0.0 for the Gateway. Click &quot;Save...&quot; to complete the setup.</p>
 	<p> <img src="../images/linux-setup/LinuxStep5.png" class="img-responsive img-center" style="max-width:800px"></p>
+	</li>
+	</ol>
+
+	<h1 id="linux">Linux (Ubuntu 18.04)</h1>
+	<ol>
+	<li><p>Click on the Wifi icon in the toolbar at the top of the screen. Ubuntu 18.04 saves the profiles of every connection you make. If the pi is connected to the computer via USB to Ethernet convertor, click on &quot;Ethernet Connecting&quot;/&quot;USB Ethernet Connecting.&quot; If the pi is connected to the computer directly via an Ethernet Cable, click on &quot;Wired Connecting&quot;/&quot;PCI Ethernet Connecting.&quot; From the drop-down menu, select &quot;Wired Settings&quot;</p>
+	<p> <img src="../images/linux-setup/18.04(1).png" class="img-responsive img-center" style="max-width:400px"></p>
+	<p> <img src="../images/linux-setup/18.04(2).png" class="img-responsive img-center" style="max-width:400px"></p>
+	</li>
+	<li><p>Click on the gear icon next to your connection type.</p>
+	<p> <img src="../images/linux-setup/18.04(3).png" class="img-responsive img-center" style="max-width:800px"></p>
+	</li>
+	<li><p>Go to the &quot;IPv4&quot; tab for the connection type. Select IPv4 Method as &quot;Manual&quot; and enter the address information as shown in the figure. Click &quot;Apply&quot; to complete the setup.</p>
+	<p> <img src="../images/linux-setup/18.04(4).png" class="img-responsive img-center" style="max-width:800px"></p>
+	<p> <img src="../images/linux-setup/18.04(5).png" class="img-responsive img-center" style="max-width:800px"></p>
 	</li>
 	</ol>
 
