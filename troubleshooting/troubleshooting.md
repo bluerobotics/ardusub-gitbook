@@ -42,6 +42,14 @@ Check the activity lights on the Raspberry Pi ethernet Jack. The lights should b
 
 If the lights are not on, make sure that you are using a network patch cable, not a crossover cable. Look closely at the color of the wires inside connectors on either end of the network cable, the order of the wires should be the same on both ends of the cable.
 
+#### Try another Ethernet cable
+
+Sometimes the wires inside a cable break, and the cable stops working.
+
+#### Reboot your computer
+
+If you are using Windows, sometimes the computer needs to be rebooted for network settings to take affect.
+
 #### Check MAVProxy
 
 If your network is configured correctly, but you still have no telemetry, we need to make sure that MAVProxy is running on the companion computer and that the Pixhawk and the Raspberry Pi are communicating. Please note that the Pixhawk must be connected to the companion computer before the companion computer is powered on. The MAVProxy process is started at boot, and if the Pixhawk is not connected at this point the MAVProxy process will exit until the companion computer is rebooted.
