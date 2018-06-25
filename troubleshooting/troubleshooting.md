@@ -38,7 +38,7 @@ If you do not get a ping response, then something is wrong with the network comm
 
 Check your network settings. The surface computer should have a static IP address of 192.168.2.1. You may have to adjust your firewall settings to allow QGrouncControl access to the network. 
 
-Check the activity lights on the Raspberry Pi ethernet Jack. The lights should be on or blinking.
+Check the activity lights on the Raspberry Pi Ethernet Jack. The lights should be on or blinking.
 
 If the lights are not on, make sure that you are using a network patch cable, not a crossover cable. Look closely at the color of the wires inside connectors on either end of the network cable, the order of the wires should be the same on both ends of the cable.
 
@@ -54,7 +54,7 @@ If you are using Windows, sometimes the computer needs to be rebooted for networ
 
 If your network is configured correctly, but you still have no telemetry, we need to make sure that MAVProxy is running on the companion computer and that the Pixhawk and the Raspberry Pi are communicating. Please note that the Pixhawk must be connected to the companion computer before the companion computer is powered on. The MAVProxy process is started at boot, and if the Pixhawk is not connected at this point the MAVProxy process will exit until the companion computer is rebooted.
 
-Check that mavproxy is running on the pi. Log into the Pi via ssh or PuTTY (user: pi, password: companion), and type
+Check that mavproxy is running on the pi. Log into the Pi via the [web terminal](/operators-manual/companion-web.html#terminal-over-browser), ssh, or PuTTY (user: pi, password: companion), and type
 
 	screen -r mavproxy
 
