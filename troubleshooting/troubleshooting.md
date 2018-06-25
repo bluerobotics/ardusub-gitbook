@@ -42,6 +42,10 @@ Check the activity lights on the Raspberry Pi Ethernet Jack. The lights should b
 
 If the lights are not on, make sure that you are using a network patch cable, not a crossover cable. Look closely at the color of the wires inside connectors on either end of the network cable, the order of the wires should be the same on both ends of the cable.
 
+#### Turn off firewall and antivirus
+
+Antivirus and firewall software can block the incomming connection from the ROV. Make an exception/rule to allow traffic on UDP ports 5600 and 14550, or turn off your antivirus and firewall software.
+
 #### Try another Ethernet cable
 
 Sometimes the wires inside a cable break, and the cable stops working.
