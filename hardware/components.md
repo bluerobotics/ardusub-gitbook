@@ -65,7 +65,7 @@ The companion computer must be running the [Companion Computer Software](/gettin
 
 The Companion Computer will stream HD video to the Ground Control Station at the surface. The Raspberry Pi camera and USB webcams with H.264 output are supported. The following USB webcams have been tested to work with the Companion Computer software:
 
-- [ELP 720p USB Camera Module](http://www.elpcctv.com/h264-hd-720p-usb-camera-module-usb20-ov9712-color-sensor-with-digital-audio-36mm-lens-p-228.html)
+- [Blue Robotics H.264 USB Camera](https://www.bluerobotics.com/store/electronics/cam-usb-low-light-r1/)
 
 ### Motors and ESCs
 
