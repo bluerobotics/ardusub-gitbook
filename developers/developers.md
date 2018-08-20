@@ -74,7 +74,7 @@ With an Ethernet tether and companion computer, it is possible to flash the Pixh
 
 #### Flashing Via Web Interface
 
-	Navigate to [192.168.2.2:2770/system](http://192.168.2.2:2770/system) in your browser. Under the 'Pixhawk Firmware Update' section, click 'Browse' and select the firmware file (.px4) saved on your computer. Click 'Upload' and wait for the flashing process to complete.
+Navigate to [192.168.2.2:2770/system](http://192.168.2.2:2770/system) in your browser. Under the 'Pixhawk Firmware Update' section, click 'Browse' and select the firmware file (.px4) saved on your computer. Click 'Upload' and wait for the flashing process to complete.
 
 ## Running
 
