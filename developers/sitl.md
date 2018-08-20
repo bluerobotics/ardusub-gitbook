@@ -53,3 +53,14 @@ To run ArduSub SITL with Gazebo, it's necessary to:
 The console will start to display the output if the connection was successful.
 
 <img src="/images/gazebo_sitl.gif" class="img-responsive img-center" style="max-height:400px;">
+
+## Troubleshooting
+
+1. Check if all dependencies are installed via [install some required packages](http://ardupilot.org/dev/docs/setting-up-sitl-on-linux.html#install-some-required-packages).
+    * If you are running an Unix OS, it's possible also to install missing dependencies with your package manager or `pip`.
+2. Be sure that mavproxy is installed with `whereis mavproxy`, `pip list | grep mavproxy -i` or just `mavproxy`.
+    * If mavproxy is not installed, please run the install packages script (described in step 1 of this troubleshooting) or install the packages manually.
+3. Check if ArduPilot tools are in your system PATH. It's possible to check with `echo $PATH | grep ardupilot`, the result should contains `*/ardupilot/Tools/autotest` path.
+    * Check again [add some directories to your search path](http://ardupilot.org/dev/docs/setting-up-sitl-on-linux.html#add-some-directories-to-your-search-path-facultative).
+4. Check if all `ardupilot/modules` folders are populated.
+    * It's necessary to use git and update/sync all submodules after the first installation, check [cloning with the command line](http://ardupilot.org/dev/docs/setting-up-sitl-on-linux.html#cloning-with-the-command-line).
