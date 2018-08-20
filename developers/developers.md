@@ -107,6 +107,13 @@ The behavior of each motor will be defined by its assigned contributions to each
 
 <img src="/images/bluerov-frame.png" class="img-responsive img-center" style="max-height:250px;">
 
+## Troubleshooting
+
+1. If something goes wrong while compiling:
+    1. Check the [compiling](#compiling) section to set up your environment.
+    2. ArduSub is only compatible with GCC 4.9. Be sure that "gcc-arm-none-eabi 4.9" is your "PATH" env with: `echo $PATH | grep gcc-arm-none-eabi`.
+        1. It's also possible to add custom paths for the compiler with `export PATH=/your_path/gcc-arm-none-eabi-4_9-2015q3/bin/:$PATH`. Run `./waf configure --board px4-v2` again if compiling with [WAF](#waf).
+
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
 <a href="https://github.com/bluerobotics/ardusub-docs/issues/">Submit a Documentation GitHub Issue here</a> to report any errors, suggestions, or missing information in this documentation.<br />
