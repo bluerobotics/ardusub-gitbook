@@ -171,7 +171,7 @@ Output:
 from pymavlink import mavutil
 
 # Create the connection
-master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
+master = mavutil.mavlink_connection('udpin:0.0.0.0:14550')
 # Wait a heartbeat before sending commands
 master.wait_heartbeat()
 
@@ -220,7 +220,7 @@ while not ack:
 from pymavlink import mavutil
 
 # Create the connection
-master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
+master = mavutil.mavlink_connection('udpin:0.0.0.0:14550')
 # Wait a heartbeat before sending commands
 master.wait_heartbeat()
 
@@ -252,7 +252,7 @@ master.mav.command_long_send(
 from pymavlink import mavutil
 
 # Create the connection
-master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
+master = mavutil.mavlink_connection('udpin:0.0.0.0:14550')
 # Wait a heartbeat before sending commands
 master.wait_heartbeat()
 
@@ -297,7 +297,7 @@ set_rc_channel_pwm(8, 1900)
 from pymavlink import mavutil
 
 # Create the connection
-master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
+master = mavutil.mavlink_connection('udpin:0.0.0.0:14550')
 # Wait a heartbeat before sending commands
 master.wait_heartbeat()
 
@@ -418,7 +418,7 @@ from pymavlink import mavutil
 import time
 
 # Create the connection
-master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
+master = mavutil.mavlink_connection('udpin:0.0.0.0:14550')
 # Wait a heartbeat before sending commands
 master.wait_heartbeat()
 
@@ -456,8 +456,7 @@ from pymavlink import mavutil
 
 # Create the connection
 # From topside computer
-master = mavutil.mavlink_connection('udp:0.0.0.0:14550')
-
+master = mavutil.mavlink_connection('udpin:0.0.0.0:14550')
 
 while True:
     msg = master.recv_match()
@@ -478,11 +477,25 @@ while True:
 from pymavlink import mavutil
 import time
 
+# Wait for server connection
+def wait_conn(master):
+    msg = None
+    while not msg:
+        master.mav.ping_send(
+            time.time(), # Unix time
+            0, # Ping number
+            0, # Request ping of all systems
+            0 # Request ping of all components
+        )
+        msg = master.recv_match()
+        time.sleep(0.5)
+
 # Connect to the default listening port for
 # mavproxy on Blue Robotics companion computer
-# This endpoint is created with the 
-# '--out udpin:localhost:9000' option with MAVProxy
 master = mavutil.mavlink_connection('udpout:localhost:9000')
+
+# Send a ping to start connection and wait for any reply.
+wait_conn(master)
 
 # Configure the autopilot to use mavlink rangefinder, the autopilot
 # will need to be rebooted after this to use the updated setting
@@ -492,7 +505,7 @@ master.mav.param_set_send(
     "RNGFND_TYPE",
     10, # "MAVLink"
     mavutil.mavlink.MAV_PARAM_TYPE_INT8)
-    
+
 min = 10 # minimum valid measurement that the autopilot should use
 max = 40 # maximum valid measurement that the autopilot should use
 distance = 20 # You will need to supply the distance measurement
