@@ -56,6 +56,13 @@ Pymavlink has 3 types of messages:
 
 ### Connect
 
+There is 3 types of udp connections for `mavlink_connection`:
+* **udpout**: It outputs data to a specified address:port (client).
+* **udpbcast**: Is the same thing as `udpout`, but will scan for a valid server.
+    * With `192.168.1.255` ip, it will scan for `*.1.1` to `*.1.255`.
+* **udpin**: It binds to a specific port in address:port (server), it's necessary to receive data from clients (**udpout**) before starting to send any data.
+* **udp**: It exist for legacy reasons, works as **udpin**.
+
 ##### Autopilot \(E.g: Pixhawk\) connected to the computer via serial
 
 ```py
