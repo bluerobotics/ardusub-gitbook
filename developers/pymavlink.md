@@ -111,13 +111,56 @@ Output:
 {'mavpackettype': 'AHRS3', 'roll': 0.025831475853919983, 'pitch': 0.006112074479460716, 'yaw': 2.1514968872070312, 'altitude': 0.0, 'lat': 0, 'lng': 0, 'v1': 0.0, 'v2': 0.0, 'v3': 0.0, 'v4': 0.0}
 {'mavpackettype': 'VFR_HUD', 'airspeed': 0.0, 'groundspeed': 0.0, 'heading': 123, 'throttle': 0, 'alt': 3.129999876022339, 'climb': 3.2699999809265137}
 {'mavpackettype': 'AHRS', 'omegaIx': 0.0014122836291790009, 'omegaIy': -0.022567369043827057, 'omegaIz': 0.02394154854118824, 'accel_weight': 0.0, 'renorm_val': 0.0, 'error_rp': 0.08894175291061401, 'error_yaw': 0.0990816056728363}
-{'mavpackettype': 'HWSTATUS', 'Vcc': 4651, 'I2Cerr': 0}
-{'mavpackettype': 'SYSTEM_TIME', 'time_unix_usec': 0, 'time_boot_ms': 75191}
-{'mavpackettype': 'EKF_STATUS_REPORT', 'flags': 0, 'velocity_variance': 0.0, 'pos_horiz_variance': 0.000695356575306505, 'pos_vert_variance': 0.20162872970104218, 'compass_variance': 0.0037216085474938154, 'terrain_alt_variance': 0.04920071363449097}
-{'mavpackettype': 'VIBRATION', 'time_usec': 75191474, 'vibration_x': 0.03712763264775276, 'vibration_y': 0.03271860256791115, 'vibration_z': 0.05147671326994896, 'clipping_0': 0, 'clipping_1': 0, 'clipping_2': 0}
-{'mavpackettype': 'RAW_IMU', 'time_usec': 75430490, 'xacc': 6, 'yacc': -27, 'zacc': -1123, 'xgyro': -1, 'ygyro': 22, 'zgyro': -23, 'xmag': -353, 'ymag': -532, 'zmag': 257}
-{'mavpackettype': 'SCALED_IMU2', 'time_boot_ms': 75430, 'xacc': 39, 'yacc': 38, 'zacc': -980, 'xgyro': -45, 'ygyro': -65, 'zgyro': -13, 'xmag': 0, 'ymag': 0, 'zmag': 0}
+'''
+```
 
+##### Run pyMavlink on the companion computer
+
+```py
+import time
+# Import mavutil
+from pymavlink import mavutil
+
+# Wait for server connection
+def wait_conn(master):
+    msg = None
+    while not msg:
+        master.mav.ping_send(
+            time.time(), # Unix time
+            0, # Ping number
+            0, # Request ping of all systems
+            0 # Request ping of all components
+        )
+        msg = master.recv_match()
+        time.sleep(0.5)
+
+# Create the connection
+#  Companion is already configured to allow script connections under the port 9000
+# Note: The connection is done with 'udpout' and not 'udpin'.
+#  You can check in http:192.168.1.2:2770/mavproxy that the communication made for 9000
+#  uses a 'udp' (server) and not 'udpout' (client).
+master = mavutil.mavlink_connection('udpout:0.0.0.0:9000')
+
+# Send a ping to start connection and wait for any reply.
+#  This function is necessary when using 'udpout',
+#  as described before, 'udpout' connects to 'udpin',
+#  and needs to send something to allow 'udpin' to start
+#  sending data.
+wait_conn(master)
+
+# Get some information !
+while True:
+    try:
+        print(master.recv_match().to_dict())
+    except:
+        pass
+    time.sleep(0.1)
+'''
+Output:
+{'mavpackettype': 'AHRS2', 'roll': -0.11364290863275528, 'pitch': -0.02841472253203392, 'yaw': 2.0993032455444336, 'altitude': 0.0, 'lat': 0, 'lng': 0}
+{'mavpackettype': 'AHRS3', 'roll': 0.025831475853919983, 'pitch': 0.006112074479460716, 'yaw': 2.1514968872070312, 'altitude': 0.0, 'lat': 0, 'lng': 0, 'v1': 0.0, 'v2': 0.0, 'v3': 0.0, 'v4': 0.0}
+{'mavpackettype': 'VFR_HUD', 'airspeed': 0.0, 'groundspeed': 0.0, 'heading': 123, 'throttle': 0, 'alt': 3.129999876022339, 'climb': 3.2699999809265137}
+{'mavpackettype': 'AHRS', 'omegaIx': 0.0014122836291790009, 'omegaIy': -0.022567369043827057, 'omegaIz': 0.02394154854118824, 'accel_weight': 0.0, 'renorm_val': 0.0, 'error_rp': 0.08894175291061401, 'error_yaw': 0.0990816056728363}
 '''
 ```
 
