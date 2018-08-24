@@ -79,9 +79,10 @@ master = mavutil.mavlink_connection(
 master.reboot_autopilot()
 ```
 
-##### Autopilot \(E.g: Pixhawk\) connected to the computer via UDP
+##### Run pyMavlink on the surface computer
 
 ```py
+import time
 # Import mavutil
 from pymavlink import mavutil
 
@@ -89,7 +90,13 @@ from pymavlink import mavutil
 #  If using a companion computer
 #  the default connection is available
 #  at ip 192.168.2.1 and the port 14550
-master = mavutil.mavlink_connection('udp:192.168.2.1:14550')
+# Note: The connection is done with 'udpin' and not 'udpout'.
+#  You can check in http:192.168.2.2:2770/mavproxy that the communication made for 14550
+#  uses a 'udpbcast' (client) and not 'udpin' (server).
+#  If you want to use QGroundControl in parallel with your python script,
+#  it's possible to add a new output port in http:192.168.2.2:2770/mavproxy as a new line.
+#  E.g: --out udpbcast:192.168.2.255:yourport
+master = mavutil.mavlink_connection('udpin:0.0.0.0:14550')
 
 # Get some information !
 while True:
@@ -97,6 +104,7 @@ while True:
         print(master.recv_match().to_dict())
     except:
         pass
+    time.sleep(0.1)
 '''
 Output:
 {'mavpackettype': 'AHRS2', 'roll': -0.11364290863275528, 'pitch': -0.02841472253203392, 'yaw': 2.0993032455444336, 'altitude': 0.0, 'lat': 0, 'lng': 0}
