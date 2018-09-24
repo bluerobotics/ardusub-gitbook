@@ -147,6 +147,7 @@ Here are some tips for troubleshooting poor video performance:
 - Tether interface power supply - If you are using a tether interface board, make sure it has a solid power supply. Some laptop USB ports cannot provide enough power for the tether interface board to perform optimally. Try using a portable USB battery charger.
 - Tether interface connections - Make sure that all connections are well-seated and tight.
 - System resources - Open the system resource monitor and look at how much CPU and RAM your computer is using. Try closing other programs like anti-virus and screen recorders to make more system resources available to programs used to operate the vehicle.
+- Resolution - Modify the video stream Frame Size at [192.168.2.2:2770/camera](http://192.168.2.2:2770/camera). Change it to a value equal to or less than the resolution of your display.
 
 ####If you are using a Raspberry Pi camera:
 
