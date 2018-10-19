@@ -2,6 +2,12 @@
 
 The companion computer hosts a useful web-interface with different pages for accessing parameters and functionalities associated with companion. When a companion computer is connected to a ground computer, a user can access the web-interface on [192.168.2.2:2770](http://192.168.2.2:2770). Users can access Network, System, Camera and Routing pages alongside a number of other user friendly options as described below. 
 
+##Companion Header
+
+The header on Companion Web Interface now displays the companion software version. It also features a toggle switch that enables advanced options on the network page. 
+
+[Header Image]
+
 ##Network
 
 The web interface by default opens at the [Network](http://192.168.2.2:2770/network) page. This page allows users to:
@@ -10,6 +16,12 @@ The web interface by default opens at the [Network](http://192.168.2.2:2770/netw
 - Check WiFi and Internet Status 
 - Configure Ethernet IP address
 - Test the network for Uploads and Downloads
+- Change companion network configuration settings in advanced mode. There are three network configuration options available.
+  - Manual: In this configuration, companion has a static IP(192.168.2.2) and this is the default network configuration mode with a fresh companion image.
+  - DHCP Server: In this configuration, companion acts as a server and assigns an IP address to any device connected to it on the same network. The IP address of companion is set to static IP(192.168.2.2) in this mode.
+  - DHCP Client: In this configuration, companion acts as a client and gets an IP address from any active DHCP server on the network. In this mode, companion does not have any fixed IP address pre-assigned to it.
+ 
+[Image for advanced options]
 
 <img src="/images/network-setup.png" class="img-responsive img-center" style="max-width:750px" />
 
@@ -18,7 +30,10 @@ The web interface by default opens at the [Network](http://192.168.2.2:2770/netw
 The [System](http://192.168.2.2:2770/system) page provides the following functionalities and features:
 
 - Display companion computer hardware status parameters
-- Display software version
+- Give detailed information about status of processes running on companion. Shows basic error debugging information for most common issues.
+- Display companion software version
+- Display ArduSub version information
+- Download system/webui logs for additional information and error identification
 - Update software on companion
 - Download, Update, or Restore pixhawk firmware
 
