@@ -49,6 +49,7 @@
 ## Developers
 
 * [OpenCV](developers/opencv.md)
+* [Cameras](developers/cameras.md)
 * [Pymavlink](developers/pymavlink.md)
 * [SITL](developers/sitl.md)
 * [Build ArduSub](developers/developers.md)
