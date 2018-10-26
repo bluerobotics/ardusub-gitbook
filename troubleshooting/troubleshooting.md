@@ -97,7 +97,7 @@ If you have telemetry, but no video, make sure the video settings are correct in
 
 If you are using Linux, you must install a few dependencies for the video to work:
 
-    apt install gstreamer1.0-plugins-bad gstreamer1.0-libav
+    apt-get install gstreamer1.0-plugins-bad gstreamer1.0-libav
 
 If the video settings are correct, and there are no errors displayed in the *Console* tab of the *Application Settings* in QGC, the most likely cause of a missing video stream is a faulty physical connection with the camera. If you are using a Raspberry Pi camera, disconnect power to the ROV/Raspberry Pi and reseat the ribbon cable on both ends, ensuring that the contact side of the cable is oriented correctly. The contacts should face towards the board on the camera module, and towards the HDMI connector on the Raspberry Pi. If you are using a USB camera, make sure that the camera supports H.264 video output, and make sure the usb cable is well-seated.
 
