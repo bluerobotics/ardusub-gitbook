@@ -20,6 +20,28 @@ The flight controller attempts to stabilize the vehicle's attitude so that it is
 
 ## No Telemetry (No Pixhawk Connection)
 
+Check if the Pixhawk is connected with following steps:
+1. Go to http://192.168.2.2:8088 to access the companion terminal.
+2. Check the list of devices connected in the usb HUB with `lsusb` or the serial devices with `ls /dev/serial/by-id/*`.
+    - You should see the following device ID (**26ac:0011**).
+    ```
+    pi@raspberrypi:~ $ lsusb
+    Bus 001 Device 007: ID 26ac:0011
+    ```
+    - Or the following device name:
+    ```
+    pi@raspberrypi:~ $ ls /dev/serial/by-id/*
+    /dev/serial/by-id/usb-3D_Robotics_PX4_FMU_v2.x_0-if00
+    ```
+3. If none of this commands has a valid output, check the Pixhawk connection with the Raspberry.
+    - You can test the Pixhawk or the usb cable with your surface computer with QGroundControl.
+    - Try to change:
+        1. The usb port used in the Raspberry.
+        2. The usb cable between the Pixhawk and the Raspberry.
+        3. The Pixhawk.
+
+4. If you get a valid output in step 2, try to connect the Pixhawk in your surface computer and flash ArduSub with [ArduSub firmware update](/software/ardusub-firmware.html#updating).
+
 Make sure the companion computer is powered with a supply that is capable of delivering at least 2A.
 
 Make sure that the QGroundControl is configured to automatically connect to UDP links. Click on the 'Q' icon in the upper left to view the Application Settings. Click on the 'General Settings' tab. In the options for 'Autoconnect to:', make sure the UDP option is checked.
