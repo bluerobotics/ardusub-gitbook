@@ -42,8 +42,8 @@ These button functions will command a switch to the corresponding flight mode. P
 - mount_tilt_down: Decrease RC Input channel 8 pwm by the amount configured by the *JS_CAM_TILT_STEP* parameter
 - camera_trigger: Trigger cameras shutter **NOT IMPLEMENTED**
 - camera_source_toggle: Toggle video source, toggles RC Input channel 10 between 1100 and 1900 pwm
-- mount_pan_right: Pan mount right **NOT IMPLEMENTED**
-- mount_pan_left: Pan mount left **NOT IMPLEMENTED**
+- mount_pan_right: Pan mount right
+- mount_pan_left: Pan mount left
 
 ### Lights Control
 
