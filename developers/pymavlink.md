@@ -34,18 +34,23 @@ pip install mavproxy
 ```
 
 ##### Test installation
+You can test your installation with python interactive shell.
 
 ```bash
 python
 import pymavlink
-pymavlink.__doc__
+print(pymavlink.__doc__)
 ```
-
-This should return some information about pymavlink:
-
+Output:
 ```bash
 Python MAVLink library - see http://www.qgroundcontrol.org/mavlink/mavproxy_startpage
 ```
+
+Note that `pymavlink.__doc__` will show some information about the package.
+This is a record of this example running in python interactive shell:
+
+[![asciicast](https://asciinema.org/a/237333.svg)](https://asciinema.org/a/237333)
+
 
 # Examples
 
