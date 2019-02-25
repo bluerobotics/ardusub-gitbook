@@ -1,14 +1,14 @@
-#Companion Web Interface
+# Companion Web Interface
 
 The Companion computer hosts a useful web-interface with different pages for accessing parameters and functionalities associated with Companion. When a Companion computer is connected to a ground computer, a user can access the web-interface on [192.168.2.2:2770](http://192.168.2.2:2770). Users can access Network, System, Camera and Routing pages alongside a number of other user friendly options as described below.
 
-##Companion Header
+## Companion Header
 
 The web interface header displays the Companion software version. It provides navigation links to the main configuration pages available in the web interface, options to restart and shutdown the Companion computer, and a switch to enable advanced options on the current page (if available).
 
 <img src="/images/companionversion.png" class="img-responsive img-center" style="max-width:750px" />
 
-##Network
+## Network
 
 The web interface by default opens at the [Network](http://192.168.2.2:2770/network) page. This page allows users to:
 
@@ -23,7 +23,7 @@ The web interface by default opens at the [Network](http://192.168.2.2:2770/netw
 
 <img src="/images/Network.png" class="img-responsive img-center" style="max-width:750px" />
 
-##System
+## System
 
 The [System](http://192.168.2.2:2770/system) page provides the following functionalities and features:
 
@@ -40,7 +40,7 @@ The [System](http://192.168.2.2:2770/system) page provides the following functio
 
 <img src="/images/system2.png" class="img-responsive img-center" style="max-width:750px" />
 
-##Camera
+## Camera
 
 The [Camera](http://192.168.2.2:2770/camera) page allows the user to view and make changes to:
  
@@ -49,7 +49,7 @@ The [Camera](http://192.168.2.2:2770/camera) page allows the user to view and ma
 
 <img src="/images/camera.png" class="img-responsive img-center" style="max-width:750px" />
 
-##Routing
+## Routing
 
 The [Routing](http://192.168.2.2:2770/routing) page can be used to configure Serial and UDP endpoints as well as to create routes. 
 
@@ -59,7 +59,7 @@ The [Routing](http://192.168.2.2:2770/routing) page can be used to configure Ser
 
 Apart from the four pages that can be accessed via direct links, Companion web interface also provides a few other pages for interacting with some more features.
 
-###MAVProxy
+### MAVProxy
 
 [MAVProxy](http://192.168.2.2:2770/mavproxy) page allows the user to:
 
@@ -68,7 +68,7 @@ Apart from the four pages that can be accessed via direct links, Companion web i
 
 <img src="/images/mavproxy.png" class="img-responsive img-center" style="max-width:750px" />
 
-###Git
+### Git
 
 [Git](http://192.168.2.2:2770/git) page is used for:
 
@@ -78,7 +78,7 @@ Apart from the four pages that can be accessed via direct links, Companion web i
 
 <img src="/images/git.png" class="img-responsive img-center" style="max-width:750px" />
 
-###Waterlinked
+### Waterlinked
 
 [Waterlinked](http://192.168.2.2:2770/waterlinked) page can be used to: 
 
@@ -87,7 +87,7 @@ Apart from the four pages that can be accessed via direct links, Companion web i
 
 <img src="/images/waterlinked.png" class="img-responsive img-center" style="max-width:750px" />
 
-###Terminal over browser
+### Terminal over browser
 
 [Terminal](http://192.168.2.2:8088) page can be used to:
 
@@ -95,7 +95,7 @@ Apart from the four pages that can be accessed via direct links, Companion web i
 
 <img src="/images/terminal.png" class="img-responsive img-center" style="max-width:750px" />
 
-###File System Access
+### File System Access
 
 [File Manager](http://192.168.2.2:7777) page can be used to:
  
@@ -109,4 +109,3 @@ Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code rele
 <a href="https://github.com/bluerobotics/ardusub-docs/issues/">Submit a Documentation GitHub Issue here</a> to report any errors, suggestions, or missing information in this documentation.<br />
 <a href="https://github.com/bluerobotics/ardusub/issues/">Submit an ArduSub GitHub Issue here</a> to report issues with the ArduSub software.
 </p>
-
