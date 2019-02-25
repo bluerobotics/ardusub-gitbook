@@ -121,36 +121,9 @@ If you are using Linux, you must install a few dependencies for the video to wor
 
     apt install gstreamer1.0-plugins-bad gstreamer1.0-libav
 
-If the video settings are correct, and there are no errors displayed in the *Console* tab of the *Application Settings* in QGC, the most likely cause of a missing video stream is a faulty physical connection with the camera. If you are using a Raspberry Pi camera, disconnect power to the ROV/Raspberry Pi and reseat the ribbon cable on both ends, ensuring that the contact side of the cable is oriented correctly. The contacts should face towards the board on the camera module, and towards the HDMI connector on the Raspberry Pi. If you are using a USB camera, make sure that the camera supports H.264 video output, and make sure the usb cable is well-seated.
+If your camera is detected, it will be listed under the USB devices on the Companion system webpage. If your camera is not detected, make sure that the camera supports H.264 video output, and make sure the usb cable is well-seated, or try another USB cable.
 
-If you have checked all of the above and still don't have a video stream, you can check the video streaming process for errors. Access http://192.168.2.2:8088 or log into the Raspberry Pi via SSH with [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (on windows), or the terminal in Linux or MacOS.
-The default ip address of the Raspberry Pi is 192.168.2.2, the username is 'pi' and the password 'companion'. After you have logged and enter the following command into the Raspberry Pi command line:
-
-```sh
-screen -r video
-```
-
-If the camera is working and the video stream is running, the output should end in something like this:
-
-	Pipeline is PREROLLED ...
-	Setting pipeline to PLAYING ...
-	New clock: GstSystemClock
-
-To return to the command line and keep the streaming process running, hit control+a then type 'd' (to detach).
-
-If the video stream isn't running the output of the `screen` command will be:
-
-	There is no screen to be resumed matching video.
-
-You can relaunch the video streaming process by entering:
-
-	~/companion/scripts/start_video.sh
-
-If the output of this command contains something like this:
-
-	mmal: Failed to create camera component
-
-Then the camera isn't working. Double check the camera ribbon cable, and try running `sudo rpi-update`.
+Make sure the video streaming service is active, it should be listed under the active services on the Companion [system webpage](/operators-manual/companion-web.md#system).
 
 ####If you are using a Windows computer:
 
