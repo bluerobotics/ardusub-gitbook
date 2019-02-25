@@ -49,11 +49,45 @@ The [Camera](http://192.168.2.2:2770/camera) page allows the user to view and ma
 
 ## Routing
 
-The [Routing](http://192.168.2.2:2770/routing) page can be used to configure Serial and UDP endpoints as well as to create routes. 
+The [Routing](http://192.168.2.2:2770/routing) page can be used to route serial communications between serial devices and network ports. It can be used to create one-to-one, and one-to-many connections. The configuration on this page is persistent and loaded at boot. The configuration is stored in the file `~/routing.conf`.
 
-<img src="/images/routing.png" class="img-responsive img-center" style="max-width:750px" />
+> **Note:** This program is written in python and is not optimized or well-suited for high-bandwidth applications. The maximum recommended baudrate is 115200. If high bandwidth routing is required, standard linux tools like `tty`, `socat` and `netcat` should be used instead.
 
-##Other Pages:
+<img src="/images/companion-routing/routing-setup.png" class="img-responsive img-center" style="max-width:750px" />
+
+To use the companion routing tool:
+
+- create one or more endpoints with your desired configuration
+- add connections between the endpoints as you want
+- remove connections by clicking the 'broken link' button next to the configuration
+- remove endpoints by clicking the 'trash can' button next to the configuration
+
+<img src="/images/companion-routing/configuration.png" class="img-responsive img-center" style="max-width:750px" />
+
+### Endpoints
+
+An endpoint can be a serial port or a network port. Create an endpoint by entering the desired port settings, and click 'create link'.
+
+**Serial Endpoints**
+
+Select one of the available serial ports from the drop down list, and choose the baudrate to use. The serial port must not be in use by another program! Click 'Add Serial Endpoint' to create the communication endpoint.
+
+<img src="/images/companion-routing/serial-endpoint.png" class="img-responsive img-center" style="max-width:750px" />
+
+**UDP Endpoints**
+
+Enter the ip address and UDP port to use. If the ip address is '0.0.0.0', it will bind the local port as a server. All other ip addresses will result in a client connection. Click 'Add UDP Endpoint' to create the communication endpoint.
+
+<img src="/images/companion-routing/udp-endpoint.png" class="img-responsive img-center" style="max-width:750px" />
+
+### Routes
+
+Endpoints can be connected bidirectionally (typical), or with a one way connection. To begin routing communications between endpoints, choose the endpoints that you wish to connect, the direction to route communications, and click 'connect'.
+
+<img src="/images/companion-routing/create-routes.png" class="img-responsive img-center" style="max-width:750px" />
+
+
+## Other Pages:
 
 Apart from the four pages that can be accessed via direct links, Companion web interface also provides a few other pages for interacting with some more features.
 
