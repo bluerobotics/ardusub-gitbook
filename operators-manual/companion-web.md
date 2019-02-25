@@ -27,8 +27,10 @@ The web interface by default opens at the [Network](http://192.168.2.2:2770/netw
 
 The [System](http://192.168.2.2:2770/system) page provides the following functionalities and features:
 
-- Update software on Companion
-- Display Companion computer hardware status parameters and detailed status of processes.
+- Update the Companion software
+- Display system resource information
+- Display the active services
+- Display detected/recognized devices
 
 <img src="/images/system1.png" class="img-responsive img-center" style="max-width:750px" />
 
