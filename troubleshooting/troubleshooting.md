@@ -121,14 +121,15 @@ If you are using Linux, you must install a few dependencies for the video to wor
 
     apt install gstreamer1.0-plugins-bad gstreamer1.0-libav
 
-If your camera is detected, it will be listed under the USB devices on the Companion system webpage. If your camera is not detected, make sure that the camera supports H.264 video output, and make sure the usb cable is well-seated, or try another USB cable.
+Verify that your camera is detected by seeing it listed under the detected video devices section on the Companion [system webpage](/operators-manual/companion-web.md#system). If your camera is not detected, make sure that the camera supports H.264 video output, and make sure the cable is well-seated, or try another camera cable.
 
-Make sure the video streaming service is active, it should be listed under the active services on the Companion [system webpage](/operators-manual/companion-web.md#system).
+Verify that the video streaming service is active; it should be listed under the active services on the Companion [system webpage](/operators-manual/companion-web.md#system).
 
-####If you are using a Windows computer:
+#### If you are using a Windows computer:
 
 - Disable/re-enable the network interface
 - Reboot
+- QGC installs three shortcuts: *QGC*, *QGC (GPU Safe Mode)*, and *QGC (GPU Compatibility Mode)*. Try launching QGC with each of these shortcuts
 
 ## Poor video streaming performance
 
