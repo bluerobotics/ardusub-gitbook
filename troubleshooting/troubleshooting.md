@@ -18,73 +18,63 @@ Make sure that the vehicle is in *Manual* mode.
 
 The flight controller attempts to stabilize the vehicle's attitude so that it is perfectly level. If the vehicle's attitude is off from level, even a fraction of a degree, the flight controller will spin the motors in an attempt to correct the error. If the vehicle is sitting on land, the error will not change, and the flight controller will spin the motors faster and faster as it tries harder and harder to correct the error. Testing the vehicle on land should be done in MANUAL mode, which just passes pilot inputs to the motors with no stabilization.
 
-## No Telemetry (No Pixhawk Connection)
+## No Telemetry (No Autopilot Connection)
 
-Check if the Pixhawk is connected with following steps:
-1. Go to http://192.168.2.2:8088 to access the companion terminal.
-2. Check the list of devices connected in the usb HUB with `lsusb` or the serial devices with `ls /dev/serial/by-id/*`.
-    - You should see the following device ID (**26ac:0011**).
-    ```
-    pi@raspberrypi:~ $ lsusb
-    Bus 001 Device 007: ID 26ac:0011
-    ```
-    - Or the following device name:
-    ```
-    pi@raspberrypi:~ $ ls /dev/serial/by-id/*
-    /dev/serial/by-id/usb-3D_Robotics_PX4_FMU_v2.x_0-if00
-    ```
-3. If none of this commands has a valid output, check the Pixhawk connection with the Raspberry.
-    - You can test the Pixhawk or the usb cable with your surface computer with QGroundControl.
-    - Try to change:
-        1. The usb port used in the Raspberry.
-        2. The usb cable between the Pixhawk and the Raspberry.
-        3. The Pixhawk.
+#### Verify Network Configuration
 
-4. If you get a valid output in step 2, try to connect the Pixhawk in your surface computer and flash ArduSub with [ArduSub firmware update](/software/ardusub-firmware.html#updating).
-
-Make sure the companion computer is powered with a supply that is capable of delivering at least 2A.
-
-Make sure that the QGroundControl is configured to automatically connect to UDP links. Click on the 'Q' icon in the upper left to view the Application Settings. Click on the 'General Settings' tab. In the options for 'Autoconnect to:', make sure the UDP option is checked.
-
-<img src="/images/qgc-autoconnect-settings.png" class="img-responsive img-center" style="max-height:400px;">
-
-#### Check Your Network
-
-Verify that your [network settings](/getting-started/installation.html#network-setup) are correct, your Ethernet IP address should be 192.168.2.1 and the subnet mask should be 255.255.255.0.
+Verify that your [network settings](/getting-started/installation.html#network-setup) are correct. Verify your network configuration by entering the command `ipconfig` (Windows) or `ifconfig` (Mac/Linux) on the surface computer command line. The output should show that your Ethernet IP address is 192.168.2.1 and the subnet mask is 255.255.255.0.
 
 You should be able to ping the companion computer from the surface computer. On the surface computer's command line enter:
 
 	ping 192.168.2.2
 
-If you do not get a ping response, then something is wrong with the network communication between the surface computer and the companion computer.
+If you do not get a ping response, then something is wrong with the network communication between the surface computer and the companion computer. You may have to adjust your firewall and/or antivirus settings to allow QGrouncControl access to the network.
 
-Check your network settings. The surface computer should have a static IP address of 192.168.2.1. You may have to adjust your firewall settings to allow QGrouncControl access to the network. 
+#### Firewall and Antivirus
 
-Check the activity lights on the Raspberry Pi Ethernet Jack. The lights should be on or blinking.
+Antivirus and firewall software can block the incomming connection from the ROV. Make an exception/rule to allow *inbound and outbound* traffic on UDP ports 5600 and 14550, or turn off your antivirus and firewall software.
 
-If the lights are not on, make sure that you are using a network patch cable, not a crossover cable. Look closely at the color of the wires inside connectors on either end of the network cable, the order of the wires should be the same on both ends of the cable.
+#### Cabling
 
-#### Turn off firewall and antivirus
+Try replacing your Ethernet cable. Sometimes the wires inside a cable break, and the cable stops working.
 
-Antivirus and firewall software can block the incomming connection from the ROV. Make an exception/rule to allow traffic on UDP ports 5600 and 14550, or turn off your antivirus and firewall software.
-
-#### Try another Ethernet cable
-
-Sometimes the wires inside a cable break, and the cable stops working.
-
-#### Reboot your computer
+#### Reboot Computer
 
 If you are using Windows, sometimes the computer needs to be rebooted for network settings to take affect.
 
+#### Verify QGC Autoconnect settings
+
+Make sure that the QGroundControl is configured to automatically connect to UDP and USB links. Click on the 'Q' icon in the upper left to view the Application Settings. Click on the 'General Settings' tab. In the options for 'Autoconnect to:', make sure the UDP option is checked.
+
+<img src="/images/qgc-autoconnect-settings.png" class="img-responsive img-center" style="max-height:400px;">
+
+#### Verify Autopilot USB Connection
+
+Check if the Autopilot is connected with following steps:
+1. Navigate to the [system page](/operators-manual/companion-web.md#system) in the Companion web interface
+2. Check the list of detected serial devices for an entry that says `Pixhawk Autopilot`
+3. If you do not see an entry that says `Pixhawk Autopilot`, check the autopilot connection with the Companion computer.
+    - You can test the autopilot and the usb cable by connecting the autopilot directly to your surface computer and checking the connection with QGroundControl.
+    - If you cannot connect to the autopilot:
+        1. Try using a different usb cable. Make sure that the USB cable has data lines, some USB cables only provide power and will not allow communication. You can connect the Pixhawk to the surface computer directly with the USB cable to verify that the USB cable works.
+        2. Try connecting the autopilot to a different usb port
+        3. Try replacing the autopilot
+
+4. If you see an entry in the detected serial devices list that says `Pixhawk Autopilot (bootloader)`, you must flash the autopilot with ArduSub firmware. Click the 'Restore Default Firmware' button on the system page, and wait for the text on the bottom of the page to indicate that the process is complete.
+
+If you do not see the system web page, make sure the companion computer is powered on with a supply that is capable of delivering at least 2A. Check the activity lights on the Raspberry Pi Ethernet Jack. The lights should be on or blinking. If the lights are not on, make sure that you are using a network patch cable, not a crossover cable. Look closely at the color of the wires inside connectors on either end of the network cable, the order of the wires should be the same on both ends of the cable. If everything appears ok with the companion computer and the physical network connection, check your network settings (below).
+
 #### Check MAVProxy
 
-If your network is configured correctly, but you still have no telemetry, we need to make sure that MAVProxy is running on the companion computer and that the Pixhawk and the Raspberry Pi are communicating. Please note that the Pixhawk must be connected to the companion computer before the companion computer is powered on. The MAVProxy process is started at boot, and if the Pixhawk is not connected at this point the MAVProxy process will exit until the companion computer is rebooted.
+If your network is configured correctly, but you still have no telemetry, we need to make sure that MAVProxy is running on the companion computer and that the autopilot and MAVProxy are communicating.
 
-Check that mavproxy is running on the pi. Log into the Pi via the [web terminal](/operators-manual/companion-web.html#terminal-over-browser), ssh, or PuTTY (user: pi, password: companion), and type
+To verify that MAVProxy is running, visit the [system page](/operators-manual/companion-web.md#system) in the companion web interface, and look for the `mavproxy` entry under the list of active services.
+
+To verify that MAVProxy and the autopilot are communicating, log into the Companion computer via the [web terminal](/operators-manual/companion-web.html#terminal-over-browser), ssh, or PuTTY (user: pi, password: companion), and enter the command:
 
 	screen -r mavproxy
 
-Mavproxy and the Pixhawk are working correctly if the output contains something like this:
+If Mavproxy and the autopilot are working correctly, the output should contain something like this:
 
 	APM: ArduSub V3.4 (422c10cf)
 	APM: PX4: 96a4c296 NuttX: 580f5354
@@ -95,17 +85,7 @@ Mavproxy and the Pixhawk are working correctly if the output contains something 
 
 To return to the command line and keep the mavproxy process running, hit control+a then type 'd' (to detach).
 
-If you do not see the above lines in the output, or if you see something like this:
-
-	There is no screen to be resumed matching mavproxy.
-
-then there was an error starting MAVProxy. You can restart the MAVProxy process by typing:
-
-	~/companion/scripts/start_mavproxy_telem_splitter.sh
-
-Make sure that the Pixhawk is plugged into the companion computer (Raspberry Pi) with a micro USB cable. Make sure that the USB cable has data lines, some USB cables only provide power and will not allow communication. You can connect the Pixhawk to the surface computer directly with the USB cable to verify that the USB cable works.
-
-If you still do not have telemetry after all of these steps, please reboot the surface computer and the companion computer, and try again. If it is still not working after rebooting, please leave a comment on discuss.bluerobotics.com.
+If you still do not have telemetry after all of these steps, please reboot the surface computer and the companion computer, and try again. If it is still not working after rebooting, please leave a comment on discuss.bluerobotics.com with notes on your results of all of the above troubleshooting steps.
 
 ## No Video
 
