@@ -119,7 +119,7 @@ If you have telemetry, but no video, make sure the video settings are correct in
 
 If you are using Linux, you must install a few dependencies for the video to work:
 
-    apt install gstreamer1.0-plugins-bad gstreamer1.0-libav
+    apt install gstreamer1.0-x gstreamer1.0-libav gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
 
 Verify that your camera is detected by seeing it listed under the detected video devices section on the Companion [system webpage](/operators-manual/companion-web.md#system). If your camera is not detected, make sure that the camera supports H.264 video output, and make sure the cable is well-seated, or try another camera cable.
 
