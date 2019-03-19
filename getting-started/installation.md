@@ -8,6 +8,8 @@ Download and install QGroundControl using one of the links below.
 - [Mac](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/QGroundControl.dmg)
 - [Linux](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/QGroundControl.AppImage)
 
+>**Note** Linux needs additional GStreamer dependencies, see the [QGroundControl User Guide](https://docs.qgroundcontrol.com/en/getting_started/download_and_install.html#ubuntu) for details.
+
 ## ArduSub
 
 Open QGroundControl and navigate to the *Firmware* tab of the *Vehicle Setup* page.
