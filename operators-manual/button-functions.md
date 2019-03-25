@@ -2,7 +2,7 @@
 
 Joystick buttons can be configured to perform different functions. Each button may be assigned a regular function and a shift function. To use shift functions, a button must be assigned the special *shift* function. The shift button will then act like a shift key on a keyboard; when held, it modifies the other buttons to execute their assigned shift functions. The available button functions are described below.
 
-### General
+## General
 
 - none: Do nothing, button is disabled
 - shift: When held, act as a shift modifier for other buttons
@@ -19,7 +19,7 @@ Joystick buttons can be configured to perform different functions. Each button m
 - input_hold_toggle: Toggle holding current joystick axis inputs (cruise control on/off)
 - roll_pitch_toggle: Toggle between roll/pitch and forward/lateral control on joystick input
 
-### Mode Selection
+## Mode Selection
 
 These button functions will command a switch to the corresponding flight mode. Please note that the advanced modes are in development and are not recommended for general use.
 
@@ -35,7 +35,7 @@ These button functions will command a switch to the corresponding flight mode. P
 - mode_guided
 - mode_acro
 
-### Camera Control
+## Camera Control
 
 - mount_center: Sets RC Input channel 8 pwm to the value configured by the *CAM_TILT_CENTER* parameter
 - mount_tilt_up: Increase RC Input channel 8 pwm by the amount configured by the *JS_CAM_TILT_STEP* parameter
@@ -45,7 +45,7 @@ These button functions will command a switch to the corresponding flight mode. P
 - mount_pan_right: Pan mount right
 - mount_pan_left: Pan mount left
 
-### Lights Control
+## Lights Control
 
 - lights1_cycle: Increase or decrease RC Input channel 9 pwm by the amount configured by the *JS_LIGHTS_STEP* parameter, switches between increasing and increasing when output limits are reached
 - lights1_brighter: Increase RC Input channel 9 pwm by the amount configured by the *JS_LIGHTS_STEP* parameter
@@ -55,7 +55,7 @@ These button functions will command a switch to the corresponding flight mode. P
 - lights2_brighter: Increase RC Input channel 10 pwm by the amount configured by the *JS_LIGHTS_STEP* parameter
 - lights2_dimmer: Decrease RC Input channel 10 pwm by the amount configured by the *JS_LIGHTS_STEP* parameter
 
-### Relay Control
+## Relay Control
 
 - relay_1_on: Sets the pin configured by the *RELAY_PIN* parameter to output HIGH
 - relay_1_off: Sets the pin configured by the *RELAY_PIN* parameter to output LOW
@@ -69,7 +69,7 @@ These button functions will command a switch to the corresponding flight mode. P
 - relay_3_off: Sets the pin configured by the *RELAY_PIN3* parameter to output LOW
 - relay_3_toggle: Toggles the state of the pin configured by the *RELAY_PIN3* parameter
 
-### Servo Control
+## Servo Control
 
 - servo_1_inc: Increase *Aux1* servo output by 50 pwm
 - servo_1_dec: Decrease *Aux1* servo output by 50 pwm
@@ -90,7 +90,7 @@ These button functions will command a switch to the corresponding flight mode. P
 - servo_3_center: Set *Aux3* servo output to the configured center according to SERVO11_TRIM
 
 
-### Custom
+## Custom
 
 These are reserved for developer use, and do not do anything by default
 
@@ -101,7 +101,7 @@ These are reserved for developer use, and do not do anything by default
 - custom_5
 - custom_6
 
-### ArduSub default button configuration
+## ArduSub default button configuration
 This is the default configuration of the joystick buttons in ArduSub.
 
 | Button Number |  Normal function | Shift function |
