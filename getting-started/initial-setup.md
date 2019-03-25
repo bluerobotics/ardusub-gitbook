@@ -113,6 +113,15 @@ On the *Power* tab choose the appropriate setup. If using the standard 3DR Power
 
 <img src="/images/qgc/power-setup-1.png" class="img-responsive img-center" />
 
+
+## Setup Low Voltage Failsafe
+
+On the *Safety* tab set the battery failsafe to Warning and the desired voltage or capacity to trigger the alarm. Remember you will need some power to go back home.
+
+<img src="/images/qgc/failsafe.jpg" class="img-responsive img-center" />
+
+> **Warning** Lithium Batteries should not be overdischarged, as it damages their internal chemistry. Do not let each cell's voltage get lower than 3.0 V.
+
 ## Camera Tilt Setup (if used)
 
 Select the *Camera* tab. The "Gimbal Tilt" settings are used for the camera tilt. Choose whichever channel the servo is plugged into for "Output channel" and *RC8* for "Input channel". Valid output channels are any of the unused motor outputs (RC1-RC8), and Aux outputs 1-4 (RC9-RC12). Select *Servo* for the "Type" under "Gimbal Settings" on the right.
