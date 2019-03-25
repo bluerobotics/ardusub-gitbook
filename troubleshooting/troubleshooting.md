@@ -4,6 +4,10 @@ This page shares issues that users have run into and how they were resolved. Hop
 
 ## Vehicle Control
 
+**Vehicle has telemetry but does not respond to joystick**
+
+Make sure you followed the instructions in [Joystick/Gamepad Calibration](/getting-started/initial-setup.md#joystickgamepad-calibration) and that the "Enable joystick input" checkbox is checked.
+
 **Vehicle flips itself over**
 
 Check that the motor directions are [configured correctly](/getting-started/initial-setup.md#configuring-motor-directions). Also check that the motors are connected to the correct motor outputs on the flight controller, according to the [supported frame diagrams](/introduction/features.md#supported-frames).
