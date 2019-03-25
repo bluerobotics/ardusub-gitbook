@@ -92,6 +92,7 @@ Some joysticks require calibration before they can be used with QGroundControl. 
 
 1. Click "Calibrate" on the joystick page, then click "Next".
 2. Follow the instructions printed on the screen, and the diagram showing how to move the sticks for each step of the calibration.
+3. Make sure that the "Enable joystick input" checkbox is checked.
 
 ## Button Setup
 
