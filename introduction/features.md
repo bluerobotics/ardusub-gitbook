@@ -38,6 +38,10 @@ ArduSub includes a high-level motor library that can configure motors in any con
 			<img src="/images/simplerov-4.png" class="img-responsive img-center" style="max-height:250px;">
 			<p><strong>ROV</strong> with side-by-side vertical thrusters. (Frame: <code>simplerov</code>)</p>
 		</td>
+		<td align="center">
+			<img src="/images/simplerov-5.png" class="img-responsive img-center" style="max-height:250px;">
+			<p><strong>ROV</strong> with a lateral thruster and side-by-side vertical thrusters. (Frame: <code>simplerov</code>)</p>
+		</td>
 	</tr>
 </table>
 
