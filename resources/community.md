@@ -10,4 +10,6 @@ The [ArduPilot Forum](http://discuss.ardupilot.org/) is a community of ArduPilot
 
 ## Gitter
 
-The [ArduSub gitter](https://gitter.im/bluerobotics/ardusub) is a chatroom to discuss ArduSub code, but we're happy to help anyone who drops by.
+The [Blue Robotics gitter](https://gitter.im/bluerobotics/discussion) is a chatroom to discuss Blue Robotics and Ardusub matters, we're happy to help anyone who drops by.
+
+The [ArduPilot gitter](https://gitter.im/ArduPilot/ardupilot) is a chatroom for ArduPilot developers, for technical discussions about pull requests and code changes.
