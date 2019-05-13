@@ -88,6 +88,36 @@ Endpoints can be connected bidirectionally (typical), or with a one way connecti
 
 <img src="/images/companion-routing/create-routes.png" class="img-responsive img-center" style="max-width:750px" />
 
+### Example configurations
+
+#### Topside as UDP Server
+
+To bridge serial communications between a device connected to the companion computer inside the ROV, and the existing network connection to the topside computer:
+
+ 1. Create a serial endpoint corresponding to the attached serial device and the desired serial baudrate
+ 2. Create a UDP endpoint using the topside computer IP address **192.168.2.1**, and the port that the topside application will bind.
+ 3. Connect them bidirectionally
+ 4. The application on the topside computer should bind the UDP port as a server
+
+To test the connection on a linux machine, bind to the port with "netcat" on the topside computer: `nc -ulp <port>`
+
+> **Note:** Topside as UDP Server mode is not recommended for master-slave setups. For the connection to be properly stabilished, the serial device must send some data. Only then the connection is stabilished and the topside is able to send data to the companion.
+
+#### Companion as UDP Server
+
+ 1. Create a serial endpoint corresponding to the attached serial device and the desired serial baudrate
+ 2. Create a UDP endpoint using the **0.0.0.0** IP address, and the port that the server will bind to.
+ 3. Connect them bidirectionally
+ 4. The application on the topside computer should connect to **192.168.2.2** at the port chosen in step two
+
+To test the connection on a linux machine, bind to the port with "netcat" on the topside computer: `nc -u 192.168.2.2 <port>`
+
+<!--
+To create a fake serial device `/dev/ttyVirt` under linux, do `socat PTY,link=/dev/ttyS0,group=uucp,perm=0660,ignoreeof UDP-LISTEN:5000`
+You can then use it with applications, try `screen /dev/ttyVirt` for example.
+
+Note: This is not enough! some applications, such as Arduino, do not find this port, and screen fails to release it when detaching.
+!-->
 
 ## Other Pages:
 
