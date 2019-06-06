@@ -16,6 +16,27 @@ The red video recording icon is a square when QGroundControl is currently record
 
 <img src="/images/qgc/qgc-stream-recording.gif" class="img-responsive img-center" style="max-height:400px;" align="middle">
 
+
+## VLC
+
+VLC can record and display the received video. To receive the video video from companion, it's necessary
+to go in: **Media** → **Open Network Stream** → **http://192.168.2.2:2770/vlc.sdp** → **play**.
+
+<img src="/images/vlc/media.png" class="img-responsive img-center" style="max-height:400px;" align="middle">
+
+<img src="/images/vlc/network.png" class="img-responsive img-center" style="max-height:400px;" align="middle">
+
+Note: It's possible to configure the caching size of VLC to allow a faster time response from the video, this configuration
+is done under: **Media** → **Open Network Stream** → **Show more options** → **Set caching to a number around 200** → **play**
+
+<img src="/images/vlc/caching.png" class="img-responsive img-center" style="max-height:400px;" align="middle">
+
+The record and conversion can be done with the save menu: **Media** → **Convert** → **Network** → **Convert / Save** → **Select format** → **Select destination** → **Start**.
+
+<img src="/images/vlc/convert.png" class="img-responsive img-center" style="max-height:400px;" align="middle">
+<img src="/images/vlc/save.png" class="img-responsive img-center" style="max-height:400px;" align="middle">
+<img src="/images/vlc/start-convert.png" class="img-responsive img-center" style="max-height:400px;" align="middle">
+
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
 <a href="https://github.com/bluerobotics/ardusub-docs/issues/">Submit a Documentation GitHub Issue here</a> to report any errors, suggestions, or missing information in this documentation.<br />
