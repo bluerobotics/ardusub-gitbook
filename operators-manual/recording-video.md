@@ -34,7 +34,9 @@ is done under: **Media** → **Open Network Stream** → **Show more options** �
 The record and conversion can be done with the save menu: **Media** → **Convert** → **Network** → **Convert / Save** → **Select format** → **Select destination** → **Start**.
 
 <img src="/images/vlc/convert.png" class="img-responsive img-center" style="max-height:400px;" align="middle">
+
 <img src="/images/vlc/save.png" class="img-responsive img-center" style="max-height:400px;" align="middle">
+
 <img src="/images/vlc/start-convert.png" class="img-responsive img-center" style="max-height:400px;" align="middle">
 
 <p style="font-size:10px; text-align:center">
