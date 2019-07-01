@@ -13,8 +13,8 @@ We will divide the hardware required to run ArduSub into three categories:
 The following operating systems are supported use with the topside software ([QGroundControl](http://qgroundcontrol.com/)):
 
 - Windows 10
-- Mac OSX
-- Ubuntu 14.04 and 16.04
+- macOS 10.10 or later
+- Ubuntu 16.04 or later
 
 ### Joystick
 
