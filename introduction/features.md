@@ -69,13 +69,14 @@ Please let us know if you have tested ArduSub on another platform!
 
 In addition to the standard onboard sensors (IMU, compass), the ArduSub controller directly supports a number of external sensors including:
 
-- Pressure/depth sensors for measurement and auto depth-hold ([example](https://www.bluerobotics.com/store/electronics/bar30-sensor-r1/))
-- GPS for position at the surface (does not work underwater)
+- Pressure/depth sensors for measurement and auto depth-hold ([such as the Bar30](https://www.bluerobotics.com/store/electronics/bar30-sensor-r1/))
 
 Other sensors, and in particular high-bandwidth and specialized sensors, are integrated as *Companion* sensors, attached to the companion computer and running alongside *ArduSub* and sharing communication pathways. This allows rapid integration of new and unique payloads and allows you to use the manufacturer's user interface to control the sensor.
 
-Sensor integration is still in the early phase, but will eventually include sensors such as:
+Sensors integration via companion includes sensors such as:
+- Depth sounders (the [Ping Sonar](https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping-sonar-r2-rp/))
+- UDP Input of external GPS data from underwater localization systems ([such as the Water Linked Underwater GPS](https://www.bluerobotics.com/store/electronics/bar30-sensor-r1/))
 
-- Depth sounders
+With upcoming sensors:
 - Scanning sonars
 - Conductivity sensors
