@@ -41,7 +41,7 @@ ArduSub supports the use of the MS5837 (used in the [Bar30](https://bluerobotics
 
 ### Leak Sensor
 
-ArduSub can be configured to read leak sensors, and perform a failsafe action when a leak is detected. The SOS leak sensor is an excellent option.
+ArduSub can be configured to read leak sensors, and perform a failsafe action when a leak is detected. The [SOS leak sensor](https://bluerobotics.com/store/sensors-sonars-cameras/leak-sensor/sos-leak-sensor/) is an excellent option.
 
 ### Battery
 
