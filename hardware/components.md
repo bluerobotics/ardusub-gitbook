@@ -23,6 +23,7 @@ The following joysticks are supported for use with the topside software ([QGroun
 - Logitech F310
 - Logitech F710
 - Microsoft Xbox controllers
+- Wired PlayStation 4 controllers
 
 ## ROV Components
 
