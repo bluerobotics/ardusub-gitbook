@@ -26,7 +26,7 @@ ArduSub includes a high-level motor library that can configure motors in any con
 		</td>
 		<td align="center">
 			<img src="/images/vectored6dof-frame.png" class="img-responsive img-center" style="max-height:250px;">
-			<p><strong>Vectored ROV w/ Four Vertical Thrusters</strong>, an 8-thruster configuration with 6-DOF control and heavy-lifting capacity. (Frame: <code>vectored6dof</code>)</p>
+			<p><strong>Vectored ROV w/ Four Vertical Thrusters</strong>, an 8-thruster configuration with 6-DOF control and heavy-lifting capacity. Used for the <a href="https://bluerobotics.com/introducing-bluerov2-heavy/"><em>BlueROV2 Heavy</em></a>. (Frame: <code>vectored6dof</code>)</p>
 		</td>
 	</tr>
 	<tr>
