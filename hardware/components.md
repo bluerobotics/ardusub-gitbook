@@ -10,7 +10,7 @@ We will divide the hardware required to run ArduSub into three categories:
 
 ### Computer
 
-The following operating systems are supported use with the topside software (QGroundControl):
+The following operating systems are supported use with the topside software ([QGroundControl](http://qgroundcontrol.com/)):
 
 - Windows 10
 - Mac OSX
@@ -18,7 +18,7 @@ The following operating systems are supported use with the topside software (QGr
 
 ### Joystick
 
-The following joysticks are supported for use with the topside software (QGroundControl):
+The following joysticks are supported for use with the topside software ([QGroundControl](http://qgroundcontrol.com/)):
 
 - Logitech F310
 - Logitech F710
