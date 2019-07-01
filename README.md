@@ -4,7 +4,7 @@
 
 ## ArduSub and the ArduPilot Project
 
-The ArduSub project is a fully-featured open-source solution for remotely operated underwater vehicles (ROVs) and autonomous underwater vehicles (AUVs). ArduSub is a part of the ArduPilot project, and was originally derived from the ArduCopter code. ArduSub has extensive capabilities out of the box including feedback stability control, depth and heading hold, and autonomous navigation.
+The ArduSub project is a fully-featured open-source solution for remotely operated underwater vehicles (ROVs) and autonomous underwater vehicles (AUVs). ArduSub is a part of the [ArduPilot project](http://ardupilot.org/), and was originally derived from the ArduCopter code. ArduSub has extensive capabilities out of the box including feedback stability control, depth and heading hold, and autonomous navigation.
 
 ArduSub is designed to be safe, feature-rich, open-ended, and easy to use even for novice users.
 
@@ -14,7 +14,7 @@ ArduSub is on the leading edge of marine robotics and intended for anyone who wa
 
 ## About this Book
 
-This book is an on-going work in progress to document the ArduSub software as well as supporting software and hardware. The documentation in this book is based on the most recent software available at the time of writing. In some cases, features or options documented here may be only available in developmental versions of the software. The authoring of this book and the ArduSub project are sponsored by BlueRobotics.
+This book is an on-going work in progress to document the ArduSub software as well as supporting software and hardware. The documentation in this book is based on the most recent software available at the time of writing. In some cases, features or options documented here may be only available in developmental versions of the software. The authoring of this book and the ArduSub project are sponsored by [Blue Robotics](https://bluerobotics.com).
 
 ## License
 
