@@ -37,8 +37,6 @@ ArduSub supports several different flight modes, some of which are only availabl
 
 *Guided* mode allows the vehicle's target position to be set dynamically by a ground control station or companion computer. This allows 'Click to Navigate Here' interactions with a map.
 
-# Secret Menu
-
 ## Acro
 
 *Acro* (Acrobatic) mode performs angular rate stabilization.
