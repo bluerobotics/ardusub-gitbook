@@ -103,6 +103,30 @@ To test the connection on a linux machine, bind to the port with "netcat" on the
 
 > **Note:** Topside as UDP Server mode is not recommended for master-slave setups. For the connection to be properly stabilished, the serial device must send some data. Only then the connection is stabilished and the topside is able to send data to the companion.
 
+This python script exemplifies how to run an UDP server with Python:
+
+```Python
+"""
+Companion routing UDP server example.
+
+This script Binds to an UDP port and receives data from the Companion at
+a given port.
+You should run this at your topside computer.
+"""
+import socket
+
+UDP_IP = "192.168.2.1" # Topside (local) IP
+UDP_PORT = 5555        # Topside (local) port to listen on
+
+sock = socket.socket(socket.AF_INET, # Internet
+                    socket.SOCK_DGRAM) # UDP
+sock.bind((UDP_IP, UDP_PORT))
+
+while True:
+    data, addr = sock.recvfrom(1024) # Buffer size is 1024 bytes
+    print(data.decode())
+```
+
 #### Companion as UDP Server
 
  1. Create a serial endpoint corresponding to the attached serial device and the desired serial baudrate
@@ -111,6 +135,38 @@ To test the connection on a linux machine, bind to the port with "netcat" on the
  4. The application on the topside computer should connect to **192.168.2.2** at the port chosen in step two
 
 To test the connection on a linux machine, bind to the port with "netcat" on the topside computer: `nc -u 192.168.2.2 <port>`
+
+This Python example shows how to communicate using these UDP ports:
+
+```Python
+"""
+Companion routing UDP client example.
+
+This script connects to a endpoint at the Companion exposed using the IP 0.0.0.0
+and a given port. It then sends some data so the server knows it has a client
+and starts relaying the serial data back at it.
+You should run this at your topside computer.
+"""
+import socket
+import time
+
+UDP_IP = "192.168.2.2" # Remote (Companion's) IP to connect to
+UDP_PORT = 5555        # Remote (Companion's) port to connect to
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+try:
+    # Send something so the server knows where to reply to
+    sent = sock.sendto(b"hello", (UDP_IP, UDP_PORT))
+    # Loop receiving data
+    while True:
+        data, server = sock.recvfrom(4096)
+        print(data.decode())
+        time.sleep(0.01)
+except Exception as e:
+    print(e)
+finally:
+    sock.close()
+```
 
 <!--
 To create a fake serial device `/dev/ttyVirt` under linux, do `socat PTY,link=/dev/ttyS0,group=uucp,perm=0660,ignoreeof UDP-LISTEN:5000`
