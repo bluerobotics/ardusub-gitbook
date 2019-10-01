@@ -76,15 +76,18 @@ If you have compiled ArduSub with a custom frame configuration, you may select y
 
 ## Sensor Calibration
 
-Once the autopilot is connected to QGC for the first time, we must calibrate the accelerometers, compass, and joystick.
+Autopilots contain sensors that determine the vehicle's orientation and movement in 3-d space. These sensors include an accelerometer to sense acceleration and forces like gravity, a gyroscope to sense rotational movements, and a digital compass. ArduSub firmware can be operated normally without doing any sensor calibration. The sensors may be calibrated to provide more accurate data and improve performance. If you would like to calibrate the sensors in the autopilot, follow these steps:
 
-1. Go to the settings tab in QGC and select the red *Sensors* tab on the left sidebar.
+1. Go to the settings tab in QGC and select the *Sensors* tab on the left sidebar.
 2. Choose your autopilot orientation:
 	- `None` for level orientation (such as the BlueROV1)
 	- `Roll90` for the BlueROV2
 3. Click on *Accelerometers* and follow the instructions.
 4. Click on *Compass* and follow the instructions.
-5. When completed, the *Sensors* tab will no longer be red.
+
+> **Note** The main symptom that you may need compass calibration is a bad heading indication, such as showing north in compass while pointing west. See also the [troubleshooting section on compass drift](/troubleshooting/troubleshooting.md#compass-heading-drifts-while-the-vehicle-is-stationary)
+
+> **Warning** For using GPS-enabled modes, you **must** do the compass calibration.
 
 ## Joystick/Gamepad Calibration
 
