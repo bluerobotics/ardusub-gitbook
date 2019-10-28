@@ -229,7 +229,7 @@ master = mavutil.mavlink_connection('udpin:0.0.0.0:14550')
 # Wait a heartbeat before sending commands
 master.wait_heartbeat()
 
-# http://mavlink.org/messages/common#MAV_CMD_COMPONENT_ARM_DISARM
+# https://mavlink.io/en/messages/common.html#MAV_CMD_COMPONENT_ARM_DISARM
 
 # Arm
 # master.arducopter_arm() or:
@@ -275,7 +275,7 @@ def set_rc_channel_pwm(id, pwm=1500):
         return
 
     # We only have 8 channels
-    #http://mavlink.org/messages/common#RC_CHANNELS_OVERRIDE
+    # https://mavlink.io/en/messages/common.html#RC_CHANNELS_OVERRIDE
     if id < 9:
         rc_channel_values = [65535 for _ in range(8)]
         rc_channel_values[id - 1] = pwm
@@ -308,7 +308,7 @@ master.wait_heartbeat()
 
 # Send a positive x value, negative y, negative z,
 # positive rotation and no button.
-# http://mavlink.org/messages/common#MANUAL_CONTROL
+# https://mavlink.io/en/messages/common.html#MANUAL_CONTROL
 # Warning: Because of some legacy workaround, z will work between [0-1000]
 # where 0 is full reverse, 500 is no output and 1000 is full throttle.
 # x,y and r will be between [-1000 and 1000].
