@@ -23,7 +23,7 @@ If the two systems do not agree on North:
 - Verify the magnetic heading of the autopilot, change the [COMPASS_DEC](operators-manual/full-parameter-list.html#compassdec-compass-declination) parameter if neccessary
 - Offset the positioning system heading to match the autopilot heading. If this is not possible offset the autopilot heading with the COMPASS_DEC parameter to match the positioning system heading
 
-The autopilot navigation filter needs to be tuned to the characteristics of the positioning system. Many factors can affect the tuning requirements including: Accuracy/precision of the positioning system, position update frequency, position update delay behind inertial measurements, etc. The navigation filter parameters can be found [here](operators-manual/full-parameter-list.html#ek2-parameters).
+The autopilot navigation filter needs to be tuned to the characteristics of the positioning system. Many factors can affect the tuning requirements including: Accuracy/precision of the positioning system, position update frequency, position update delay behind inertial measurements, etc. The navigation filter parameters can be found [here](../operators-manual/full-parameter-list.html#ek2-parameters).
 
 If the position-enabled flight modes are to be used, the autopilot position controller needs to be tuned. In QGC, check the 'Show advanced settings' option in the _General_ tab of the _Application Setup_ menu, and restart the application. There will be a _Tuning_ tab on the _Vehicle Setup_ page that can be used to facilitate tuning the position controller. The parameters of interest are those with 'XY' in the name in the 'Position Controller' section.
 
