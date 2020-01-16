@@ -127,6 +127,17 @@ The output channel for the lights is configured in the *Lights* tab of the *Vehi
 
 ## Configuring Motor Directions
 
+### Automatic Motor Direction Setup
+
+As of ArduSub 4.0, it is possible to automatically detect the thrusters directions and reverse them if necessary.
+To do so, put the ROV in the water away obstacles, and click "Auto-Detect Directions".
+The Rov will briefly pulse each thruster and check the IMU outputs for the desired outputs, if the output is reversed, it reverses the motor.
+Additional output from the process will be shown by the button, and when done the ROV will be disarmed and put back into Manual mode.
+
+![Automatic Motor Direction Setup](../images/autodetect-motors.png)
+
+### Manual Motor Direction Setup
+
 Due to clockwise and counterclockwise propellers, as well as wiring, the motor directions will have to be tested and corrected during initial setup. *ArduSub* includes a set of parameters for this purpose. The parameters are called *MOT_n_DIRECTION* where *n* is the output number, and valid values are *normal* or *reverse*.
 
 We generally follow this process to check motor rotation directions:
