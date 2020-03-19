@@ -4,11 +4,10 @@
 
 There are three flavors of ArduSub firmware:
 
-- Stable (3.5): The recommended build for most users.
-- Beta (3.5-rc2): A pre-release of a stable build, used for testing and bugfixes before officially labeling a build as stable. The versions for the these builds are suffixed with *-rcx*, where rc stands for release candidate, and x is a number that is incremented as the beta is updated.
-- Development (3.6-dev): Development build, updated frequently. This build should only be used in practice by developers and advanced users. The versions for these builds are suffixed with *-dev*.
+- Stable (4.0): The recommended build for most users.
+- Development (4.1-dev): Development build, updated frequently. This build should only be used in practice by developers and advanced users. The versions for these builds are suffixed with *-dev*.
 
-Precompiled ArduSub binaries are available [here](http://firmware.us.ardupilot.org/Sub/). **Note** Binaries are provided for many platforms, but only the Pixhawk 1 (PX4-v2 platform) is thoroughly tested and supported.
+Precompiled ArduSub binaries are available [here](https://firmware.us.ardupilot.org/Sub/). **Note** Binaries are provided for many platforms, but only the Pixhawk 1 (PX4-v2 platform) is thoroughly tested and supported.
 
 ## Release History
 
