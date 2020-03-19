@@ -72,7 +72,7 @@ The Companion Computer will stream HD video to the Ground Control Station at the
 
 ArduSub is designed to work with brushless motors. Brushless motors require Electronic Speed Controllers (ESCs) to operate. ArduSub requires all of the motors to operate in forward and reverse, so the ESC must support this functionality. Most ESCs for UAVs and Drones only operate in one direction! The following ESCs are supported for use with ArduSub:
 
-- Blue Robotics [Blue ESC](http://www.bluerobotics.com/store/thrusters/besc30-r2/)
+- Blue Robotics [Basic ESC](https://bluerobotics.com/store/electronics/besc30-r3/)
 
 <p style="font-size:10px; text-align:center">
 Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
