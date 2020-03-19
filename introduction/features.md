@@ -76,7 +76,7 @@ Other sensors, and in particular high-bandwidth and specialized sensors, are int
 Sensors integration via companion includes sensors such as:
 - Depth sounders (the [Ping Sonar](https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping-sonar-r2-rp/))
 - UDP Input of external GPS data from underwater localization systems ([such as the Water Linked Underwater GPS](https://www.bluerobotics.com/store/electronics/bar30-sensor-r1/))
+- Scanning Sonars (the [Ping360 Scanning Imaging Sonar](https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping360-sonar-r1-rp/))
 
 With upcoming sensors:
-- Scanning sonars
 - Conductivity sensors
