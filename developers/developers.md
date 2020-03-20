@@ -12,11 +12,11 @@ ArduSub is hosted and maintained on [github](https://github.com/ardupilot/ardupi
 
 ## Compiling
 
-Before compiling ArduSub, first checkout the 3.6 (soon-to-be stable) version:
+Before compiling ArduSub, first checkout the ArduSub-stable tag into a new branch (here we call it new-branch):
 
 ```
 git fetch --tags
-git checkout Sub-3.6
+git checkout ArduSub-stable -b new-branch
 git submodule update --init --recursive
 ```
 
@@ -26,37 +26,7 @@ To set up your build environment, follow these instructions:
 - [Linux Instructions](http://ardupilot.org/dev/docs/building-setup-linux.html)
 - [Windows Instructions](http://ardupilot.org/dev/docs/building-setup-windows.html)
 
-> **Note:** Skip the clone instructions in the links above, as they could cause you to use __master__ instead of __Sub-3.6__ and lead the install scripts to install a different set of tools.
-
-### Python Version (Linux only)
-ArduSub 3.6 still requires Python 2 to build. If your System defaults to Python 3 (check your version by running `python --version` in terminal), you need a workaround so that Ardupilot uses Python 2 to build.
-
-Make a dummy folder at your home:
-
-    mkdir ~/bin
-
-And then add Symlinks to Python2 in there:
-
-    ln -s /usr/bin/python2 ~/bin/python
-    ln -s /usr/bin/python2-config ~/bin/python-config
-
-Doing this, you have a dummy folder with Python2 binaries. Now you can make a terminal session look for Python in this folder first with
-
-    export PATH=~/bin:$PATH
-
-> **Note:** Master branch currently works fine with Python 3, but since all Ardupilot development is done on it, it is more prone to eventual issues which can take some time to be cleared.
-
-### MAKE (deprecated)
-To compile the ArduSub branch with make, it's necessary to be inside the root folder of ArduPilot to use it.
-The make command uses the following format:
-
-	make [board type]
-
-For example, to build for the Pixhawk 1:
-
-	make Pixhawk1
-
-The available board types can be seen by entering `make list_boards`.
+> **Note:** Skip the clone instructions in the links above, as they could cause you to use __master__ instead of __ArduSub-stable__ and lead the install scripts to install a different set of tools.
 
 ### WAF
 Waf is a global build system for ArduPilot repository, it's necessary to be inside the root folder of ArduPilot to use it.
@@ -70,7 +40,7 @@ To configure waf to build ArduSub for Pixhawk 1:
 
 And to compile:
 
-	./waf build sub
+	./waf sub
 
 The firmware file will be created at `ardupilot/build/Pixhawk1/bin/ardusub.apj`
 
@@ -103,7 +73,7 @@ One of the biggest additions to the ArduSub code is a six degree-of-freedom moto
                        |---- AP_MotorsMatrix
                                     |---- AP_Motors6DOF
 
-To add a new motor configuration, you will need to add your custom motor setup to [AP_Motors6DOF.cpp](https://github.com/bluerobotics/ardusub/blob/master/libraries/AP_Motors/AP_Motors6DOF.cpp). Find the following line, and add your frame configuration there. The frame is configured at boot according to the FRAME_CONFIG parameter. You will need to change this parameter to CUSTOM to use your custom frame.
+To add a new motor configuration, you will need to add your custom motor setup to [AP_Motors6DOF.cpp](https://github.com/ardupilot/ardupilot/blob/master/libraries/AP_Motors/AP_Motors6DOF.cpp). Find the following line, and add your frame configuration there. The frame is configured at boot according to the FRAME_CONFIG parameter. You will need to change this parameter to CUSTOM to use your custom frame.
 
     case AS_MOTORS_CUSTOM_FRAME:
         // Put your custom motor setup here
@@ -129,7 +99,7 @@ The behavior of each motor will be defined by its assigned contributions to each
         1. It's also possible to add custom paths for the compiler with `export PATH=/your_path/gcc-arm-none-eabi-6-2017-q2-update/bin/:$PATH`. Run `./waf configure --board Pixhawk1` again if compiling with [WAF](#waf).
 
 <p style="font-size:10px; text-align:center">
-Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
+Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/ardupilot/ardupilot/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
 <a href="https://github.com/bluerobotics/ardusub-gitbook/issues/">Submit a Documentation GitHub Issue here</a> to report any errors, suggestions, or missing information in this documentation.<br />
-<a href="https://github.com/bluerobotics/ardusub/issues/">Submit an ArduSub GitHub Issue here</a> to report issues with the ArduSub software.
+<a href="https://github.com/ArduPilot/ardupilot/issues/new/choose">Submit an ArduSub GitHub Issue here</a> to report issues with the ArduSub software.
 </p>
