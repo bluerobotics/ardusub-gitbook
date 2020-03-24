@@ -4,11 +4,11 @@
 
 QGroundControl software release notes are [here](https://raw.githubusercontent.com/bluerobotics/qgroundcontrol/3.2.4/BlueRobotics-Revision-Notes.txt). To update QGroundControl, simply download and install the latest stable version of QGC (BlueRobotics flavor) from one of the links below:
 
-[Windows](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/QGroundControl-installer.exe)
+[Windows](https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl-installer.exe)
 
-[Mac](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/QGroundControl.dmg)
+[Mac](https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.dmg)
 
-[Linux](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/QGroundControl.AppImage)
+[Linux](https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage)
 
 ## Companion
 
