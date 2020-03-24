@@ -26,7 +26,7 @@ To set up your build environment, follow these instructions:
 - [Linux Instructions](http://ardupilot.org/dev/docs/building-setup-linux.html)
 - [Windows Instructions](http://ardupilot.org/dev/docs/building-setup-windows.html)
 
-> **Note:** Skip the clone instructions in the links above, as they could cause you to use __master__ instead of __ArduSub-stable__ and lead the install scripts to install a different set of tools.
+> **Note** Skip the clone instructions in the links above, as they could cause you to use __master__ instead of __ArduSub-stable__ and lead the install scripts to install a different set of tools.
 
 ### WAF
 Waf is a global build system for ArduPilot repository, it's necessary to be inside the root folder of ArduPilot to use it.
