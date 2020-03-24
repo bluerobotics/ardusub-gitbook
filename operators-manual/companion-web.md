@@ -53,7 +53,7 @@ The [Camera](http://192.168.2.2:2770/camera) page allows the user to view and ma
 
 The [Routing](http://192.168.2.2:2770/routing) page can be used to route serial communications between serial devices and network ports. It can be used to create one-to-one, and one-to-many connections. The configuration on this page is persistent and loaded at boot. The configuration is stored in the file `~/routing.conf`.
 
-> **Note:** This program is written in python and is not optimized or well-suited for high-bandwidth applications. The maximum recommended baudrate is 115200. If high bandwidth routing is required, standard linux tools like `tty`, `socat` and `netcat` should be used instead.
+> **Note** This program is written in python and is not optimized or well-suited for high-bandwidth applications. The maximum recommended baudrate is 115200. If high bandwidth routing is required, standard linux tools like `tty`, `socat` and `netcat` should be used instead.
 
 <img src="/images/companion-routing/routing-setup.png" class="img-responsive img-center" style="max-width:750px" />
 
@@ -101,7 +101,7 @@ To bridge serial communications between a device connected to the companion comp
 
 To test the connection on a linux machine, bind to the port with "netcat" on the topside computer: `nc -ulp <port>`
 
-> **Note:** Topside as UDP Server mode is not recommended for master-slave setups. For the connection to be properly stabilished, the serial device must send some data. Only then the connection is stabilished and the topside is able to send data to the companion.
+> **Note** Topside as UDP Server mode is not recommended for master-slave setups. For the connection to be properly stabilished, the serial device must send some data. Only then the connection is stabilished and the topside is able to send data to the companion.
 
 This python script exemplifies how to run an UDP server with Python:
 
