@@ -42,7 +42,6 @@
 * [RC Input and Output](operators-manual/rc-input-and-output.md)
 * [Controlling Outputs](operators-manual/outputs.md)
 * [Recording Video](operators-manual/recording-video.md)
-* [Altimeters](operators-manual/altimeters.md)
 * [Companion Web Interface](operators-manual/companion-web.md)
 * [Updating Software](operators-manual/software-update.md)
 
