@@ -3,8 +3,40 @@
 ## Introduction
 
 * [Overview](README.md)
-* [Features](introduction/features.md)
-* [Applications](introduction/applications.md)
+   * [Features](introduction/features.md)
+   * [History](introduction/history.md)
+   * [Featured Applications](introduction/applications.md)
+   
+* [Required Software](to do)
+   * [ArduSub Autopilot Firmware](to do)
+   * [Companion Computer Software](to do)
+   * [QGroundControl Software](to do)
+   
+* [Hardware Options](to do)
+   * [Connection Diagrams](to do)
+   * [Required Hardware](to do)
+         * [Autopilot](to do)
+         * [Companion Computer](to do)
+         * [Camera](to do)
+         * [Tether](to do)
+         * [Power Supply](to do)
+         * [Topside Computer](to do)
+   * [Recommended Extras](to do)
+         * [Pressure Sensor](to do)
+         * [Camera Tilt Mount](to do)
+         * [Lights](to do)
+   * [Additional Peripheral Options](to do)
+         * [Leak Sensors](to do)
+         * [Temperature Sensor](to do)
+         * [Servos](to do)
+         * [Relays](to do)
+         * [Grippers and Manipulators](to do)
+         * [Underwater Positioning and GPS (SBL and USBL)](to do)
+         * [Sonars](to do)
+            * [Altimeters and Echosounders](to do)
+            * [Scanning Imaging Sonars](to do)
+   
+   
 
 ## Hardware
 
