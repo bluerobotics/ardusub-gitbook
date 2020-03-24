@@ -20,6 +20,8 @@
          * [Camera](to do)
          * [Tether](to do)
          * [Power Supply](to do)
+         * [Electronic Speed Controls (ESCs)](to do)
+         * [Thrusters](to do)
          * [Topside Computer](to do)
    * [Recommended Extras](to do)
          * [Pressure Sensor](to do)
@@ -35,6 +37,50 @@
          * [Sonars](to do)
             * [Altimeters and Echosounders](to do)
             * [Scanning Imaging Sonars](to do)
+## Quick Start
+* [Building a Vehicle Frame](to do)
+* [Connection Diagram](to do)
+* [Installing QGroundControl](to do)
+* [Installing Companion Software Image](to do)
+* [Network Setup](to do)
+* [Installing Autopilot Firmware](to do)
+* [Frame Selection](to do)
+* [Completing Calibrations](to do)
+* [First Dive](to do)
+   
+## Reference Documentation
+
+* [QGroundControl Features and Configuration](to do)
+    * [Quick Start](to do)
+    * [QGC Documentation](to do)
+          * [Main Toolbar](to do)
+          * [QGC Application Settings View](to do)
+                * [Video Setup]
+                * [Brand Image]
+                * [GPS Configurations]
+          * [Vehicle Setup View](to do)
+          * [Plan View](to do)
+          * [Fly View](to do)
+                * [Recoding Video]
+          * [Analyze View]
+          * [Other Features]
+              * [Telemetry Text Overlay Recording]
+* [ArduSub Configuration and Features](to do)
+    * [Vehicle Setup View](to do)
+          * [Summary Page]
+          * [Joystick Setup Page]
+          * [Sensors Setup Page]
+          * [Power Setup Page]
+          * [Motors Setup Page]
+          * [Safety Setup Page (Failsafes)]
+          * [Tuning Setup Page]
+          * [Camera Mount Setup Page]
+          * [Lights Setup Page]
+          * [Frame Setup Page]
+          * [Parameters Page]
+    * [Features While in Operation]
+          
+          
    
    
 
