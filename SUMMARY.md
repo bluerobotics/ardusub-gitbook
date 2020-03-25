@@ -89,6 +89,75 @@
     * [Web UI]
     * [Terminal Access + SSH]
 * [Peripheral Device Configurations]
+    * [Leak Sensor]
+    * [Lights]
+    * [Camera] (mount control)
+    * [Camera] (streaming control) 
+    * [Altimeters]
+    * [Pressure and Temperature Sensors]
+    * [Grippers]
+    * [Positioning Systems (GPS)]
+          * [USBL Systems]
+          * [SBL Systems]
+    * [DVLs]
+    * [Servos]
+    * [Relays]
+    * [Custom Sensors and Actuators
+ * [Data Logging]
+ * [Updating Software and Firmware]
+ * [Troubleshooting]
+ * [Beta Features]
+ 
+## Developers
+
+* [System Detail]
+* [RC Input and Output]
+* [Full Parameter List]
+* [Networking]
+* [Companion Services]
+* [Companion APIs]
+* [Dynamic Control]
+* [OpenCV](developers/opencv.md)
+* [Pymavlink](developers/pymavlink.md)
+* [SITL](developers/sitl.md)
+* [ROS]
+* [GPS Positioning](developers/gps-positioning.md)
+* [Controlling Motors]
+* [Controlling Peripherals]
+* [Sensor Integration]
+* [Wireless Topside](miscellaneous/wireless-topside.md)
+* [Remote Control via Internet]
+* [Build ArduSub](developers/developers.md)
+* [Build Companion]
+* [Build QGC]
+* [Build this Documentation](developers/building-docs.md)
+
+## Resources
+
+* [Community]
+    * [Blue Robotics Forum]
+    * [ArduPilot Forum]
+    * [ArduPilot Gitter]
+    * [PX4 Slack (QGC)]
+* [Downloads]
+  * [ArduSub Firmware]
+  * [ArduSub Parameter Files]
+  * [Companion Image (RPi)]
+  * [QGroundControl]
+  * [Ping Firmware]
+  * [Ping360 Firmware]
+* [Further Reading]
+  * [Blue Robotics Blog]
+  * [ArduPilot Blog]
+  * [Blue Robotics "Learn" Articles]
+  * [ArduPilot Docs]
+  * [QGC Docs]
+  * [Mavlink Docs]
+  * [Ping-protocol Docs]
+  * [Water Linked Docs]
+  * [ROS]
+    
+    
           
    
    
