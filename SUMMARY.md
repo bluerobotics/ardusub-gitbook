@@ -27,7 +27,7 @@
          * [Pressure Sensor](to do)
          * [Camera Tilt Mount](to do)
          * [Lights](to do)
-   * [Additional Peripheral Options](to do)
+   * [Additional Peripheral Devices](to do)
          * [Leak Sensors](to do)
          * [Temperature Sensor](to do)
          * [Servos](to do)
@@ -79,7 +79,16 @@
           * [Frame Setup Page]
           * [Parameters Page]
     * [Features While in Operation]
-          
+          * [Joystick Button Functions]
+          * [Flight Modes]
+          * [Pilot Input Gain]
+          * [Pitch/Roll Control]
+          * [Notifications]
+* [Companion Web Interface Configuration and Features]
+    * [Quick Start]
+    * [Web UI]
+    * [Terminal Access + SSH]
+* [Peripheral Device Configurations]
           
    
    
