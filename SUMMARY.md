@@ -13,30 +13,30 @@
    * [QGroundControl Software](to do)
    
 * [Hardware Options](to do)
-   * [Connection Diagrams](to do)
-   * [Required Hardware](to do)
-         * [Autopilot](to do)
-         * [Companion Computer](to do)
-         * [Camera](to do)
-         * [Tether](to do)
-         * [Power Supply](to do)
-         * [Electronic Speed Controls (ESCs)](to do)
-         * [Thrusters](to do)
-         * [Topside Computer](to do)
+    * [Connection Diagrams](to do)
+    * [Required Hardware](to do)
+      * [Autopilot](to do)
+      * [Companion Computer](to do)
+      * [Camera](to do)
+      * [Tether](to do)
+      * [Power Supply](to do)
+      * [Electronic Speed Controls (ESCs)](to do)
+      * [Thrusters](to do)
+      * [Topside Computer](to do)
    * [Recommended Extras](to do)
-         * [Pressure Sensor](to do)
-         * [Camera Tilt Mount](to do)
-         * [Lights](to do)
+      * [Pressure Sensor](to do)
+      * [Camera Tilt Mount](to do)
+      * [Lights](to do)
    * [Additional Peripheral Devices](to do)
-         * [Leak Sensors](to do)
-         * [Temperature Sensor](to do)
-         * [Servos](to do)
-         * [Relays](to do)
-         * [Grippers and Manipulators](to do)
-         * [Underwater Positioning and GPS (SBL and USBL)](to do)
-         * [Sonars](to do)
-            * [Altimeters and Echosounders](to do)
-            * [Scanning Imaging Sonars](to do)
+      * [Leak Sensors](to do)
+      * [Temperature Sensor](to do)
+      * [Servos](to do)
+      * [Relays](to do)
+      * [Grippers and Manipulators](to do)
+      * [Underwater Positioning and GPS (SBL and USBL)](to do)
+      * [Sonars](to do)
+        * [Altimeters and Echosounders](to do)
+        * [Scanning Imaging Sonars](to do)
 ## Quick Start
 * [Building a Vehicle Frame](to do)
 * [Connection Diagram](to do)
@@ -53,37 +53,37 @@
 * [QGroundControl Features and Configuration](to do)
     * [Quick Start](to do)
     * [QGC Documentation](to do)
-          * [Main Toolbar](to do)
-          * [QGC Application Settings View](to do)
-                * [Video Setup]
-                * [Brand Image]
-                * [GPS Configurations]
-          * [Vehicle Setup View](to do)
-          * [Plan View](to do)
-          * [Fly View](to do)
-                * [Recoding Video]
-          * [Analyze View]
-          * [Other Features]
-              * [Telemetry Text Overlay Recording]
+      * [Main Toolbar](to do)
+      * [QGC Application Settings View](to do)
+        * [Video Setup]
+        * [Brand Image]
+        * [GPS Configurations]
+      * [Vehicle Setup View](to do)
+      * [Plan View](to do)
+      * [Fly View](to do)
+         * [Recoding Video]
+      * [Analyze View]
+      * [Other Features]
+        * [Telemetry Text Overlay Recording]
 * [ArduSub Configuration and Features](to do)
     * [Vehicle Setup View](to do)
-          * [Summary Page]
-          * [Joystick Setup Page]
-          * [Sensors Setup Page]
-          * [Power Setup Page]
-          * [Motors Setup Page]
-          * [Safety Setup Page (Failsafes)]
-          * [Tuning Setup Page]
-          * [Camera Mount Setup Page]
-          * [Lights Setup Page]
-          * [Frame Setup Page]
-          * [Parameters Page]
+      * [Summary Page]
+      * [Joystick Setup Page]
+      * [Sensors Setup Page]
+      * [Power Setup Page]
+      * [Motors Setup Page]
+      * [Safety Setup Page (Failsafes)]
+      * [Tuning Setup Page]
+      * [Camera Mount Setup Page]
+      * [Lights Setup Page]
+      * [Frame Setup Page]
+      * [Parameters Page]
     * [Features While in Operation]
-          * [Joystick Button Functions]
-          * [Flight Modes]
-          * [Pilot Input Gain]
-          * [Pitch/Roll Control]
-          * [Notifications]
+      * [Joystick Button Functions]
+      * [Flight Modes]
+      * [Pilot Input Gain]
+      * [Pitch/Roll Control]
+      * [Notifications]
 * [Companion Web Interface Configuration and Features]
     * [Quick Start]
     * [Web UI]
@@ -97,8 +97,8 @@
     * [Pressure and Temperature Sensors]
     * [Grippers]
     * [Positioning Systems (GPS)]
-          * [USBL Systems]
-          * [SBL Systems]
+      * [USBL Systems]
+      * [SBL Systems]
     * [DVLs]
     * [Servos]
     * [Relays]
@@ -135,10 +135,10 @@
 ## Resources
 
 * [Community]
-    * [Blue Robotics Forum]
-    * [ArduPilot Forum]
-    * [ArduPilot Gitter]
-    * [PX4 Slack (QGC)]
+  * [Blue Robotics Forum]
+  * [ArduPilot Forum]
+  * [ArduPilot Gitter]
+  * [PX4 Slack (QGC)]
 * [Downloads]
   * [ArduSub Firmware]
   * [ArduSub Parameter Files]
