@@ -84,21 +84,21 @@ These button functions will command a switch to the corresponding flight mode. P
 
 - **servo_1_inc**: Increase *Aux1* servo output by 50 pwm
 - **servo_1_dec**: Decrease *Aux1* servo output by 50 pwm
-- **servo_1_min**: Set *Aux1* servo output to the configured minimum pwm according to SERVO9_MIN
-- **servo_1_max**: Set *Aux1* servo output to the configured maximum pwm according to SERVO9_MAX
-- **servo_1_center**: Set *Aux1* servo output to the configured center according to SERVO9_TRIM
+- **servo_1_min**: Set *Aux1* servo output to the configured minimum pwm according to *SERVO9_MIN*
+- **servo_1_max**: Set *Aux1* servo output to the configured maximum pwm according to *SERVO9_MAX*
+- **servo_1_center**: Set *Aux1* servo output to the configured center according to *SERVO9_TRIM*
 
 - **servo_2_inc**: Increase *Aux2* servo output by 50 pwm
 - **servo_2_dec**: Decrease *Aux2* servo output by 50 pwm
-- **servo_2_min**: Set *Aux2* servo output to the configured minimum pwm according to SERVO10_MIN
-- **servo_2_max**: Set *Aux2* servo output to the configured maximum pwm according to SERVO10_MAX
-- **servo_2_center**: Set *Aux2* servo output to the configured center according to SERVO10_TRIM
+- **servo_2_min**: Set *Aux2* servo output to the configured minimum pwm according to *SERVO10_MIN*
+- **servo_2_max**: Set *Aux2* servo output to the configured maximum pwm according to *SERVO10_MAX*
+- **servo_2_center**: Set *Aux2* servo output to the configured center according to *SERVO10_TRIM*
 
 - **servo_3_inc**: Increase *Aux3* servo output by 50 pwm
 - **servo_3_dec**: Decrease *Aux3* servo output by 50 pwm
-- **servo_3_min**: Set *Aux3* servo output to the configured minimum pwm according to SERVO11_MIN
-- **servo_3_max**: Set *Aux3* servo output to the configured maximum pwm according to SERVO11_MAX
-- **servo_3_center**: Set *Aux3* servo output to the configured center according to SERVO11_TRIM
+- **servo_3_min**: Set *Aux3* servo output to the configured minimum pwm according to *SERVO11_MIN*
+- **servo_3_max**: Set *Aux3* servo output to the configured maximum pwm according to *SERVO11_MAX*
+- **servo_3_center**: Set *Aux3* servo output to the configured center according to *SERVO11_TRIM*
 
 
 ## Custom
