@@ -12,12 +12,6 @@ All system components that communicate via MAVLink are expected to send a HEARTB
 
 When the autopilot is being commanded to move via RC_CHANNELS_RAW or MANUAL_CONTROL messages, the messages must be sent at a constant rate like the HEARTBEAT message. Otherwise, the autopilot will execute a failsafe if it has not received an updated command after a timeout period.
 
-## Recommendation
-
-Pymavlink is currently a Python 2 package. It is recommended to install and use it with Python 2.
-
-However Python 3 support is in development. The following instructions assume you are using Python 2 and a Debian-based \(like Ubuntu\) installation.
-
 ## Installation
 
 #### Ubuntu 16.04
