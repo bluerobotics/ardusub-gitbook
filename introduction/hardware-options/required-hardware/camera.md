@@ -1,6 +1,6 @@
 # Camera
 
-The Companion Computer software contains a series of drivers which will stream HD video from the vehicle to the Ground Control Station (GCS) at the surface. 
+The Companion Computer software contains a series of drivers which will stream HD video from the vehicle to the Ground Control Station (GCS) at the surface. Only one camera may be connected to the Companion at a time. Support for multiple camera streams is planned, but not implemented at this time.
 
 # Supported Cameras
 
@@ -17,7 +17,7 @@ The following USB cameras have been tested to work:
 
 ## Camera Serial Interface (CSI) Cameras
 
-With a Camera Serial Interface (CSI) input on the Raspberry Pi, this type of camera may be used with the Companion software.
+With a Camera Serial Interface (CSI) input on the Raspberry Pi, this type of camera may be used with the Companion software. A Raspberry Pi camera module came pre-installed on the BlueROV2 until mid-2017 when it was replaced by the Low-Light HD USB Camera.
 
 The following CSI cameras have been tested to work:
 
