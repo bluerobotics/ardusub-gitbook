@@ -270,19 +270,19 @@ def set_rc_channel_pwm(id, pwm=1500):
         id (TYPE): Channel ID
         pwm (int, optional): Channel pwm value 1100-1900
     """
-    if id < 1:
+    if id < 1 or id > 18:
         print("Channel does not exist.")
         return
 
-    # We only have 8 channels
+    # Mavlink 2 supports up to 18 channels:
     # https://mavlink.io/en/messages/common.html#RC_CHANNELS_OVERRIDE
-    if id < 9:
-        rc_channel_values = [65535 for _ in range(8)]
-        rc_channel_values[id - 1] = pwm
-        master.mav.rc_channels_override_send(
-            master.target_system,                # target_system
-            master.target_component,             # target_component
-            *rc_channel_values)                  # RC channel list, in microseconds.
+    rc_channel_values = [65535 for _ in range(18)]
+    rc_channel_values[id - 1] = pwm
+    master.mav.rc_channels_override_send(
+        master.target_system,                # target_system
+        master.target_component,             # target_component
+        *rc_channel_values)                  # RC channel list, in microseconds.
+
 
 # Set some roll
 set_rc_channel_pwm(2, 1600)
@@ -294,6 +294,12 @@ set_rc_channel_pwm(4, 1600)
 # and not the servo position
 # Set camera tilt to 45º with full speed
 set_rc_channel_pwm(8, 1900)
+
+# Set channel 12 to 1500us
+# This can be used to control a device connected to a servo output by setting the
+# SERVO[N]_Function to RCIN12 (Where N is one of the PWM outputs)
+set_rc_channel_pwm(12, 1500)
+
 ```
 
 #### Send Manual Control
