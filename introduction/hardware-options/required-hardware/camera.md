@@ -1,5 +1,30 @@
 # Camera
 
-The Companion Computer will stream HD video to the Ground Control Station at the surface. The Raspberry Pi camera and USB webcams with H.264 output are supported. The following USB webcams have been tested to work with the Companion Computer software:
+The Companion Computer software contains a series of drivers which will stream HD video from the vehicle to the Ground Control Station (GCS) at the surface. 
 
-- [Blue Robotics H.264 USB Camera](https://www.bluerobotics.com/store/electronics/cam-usb-low-light-r1/)
+# Supported Cameras
+
+## USB Cameras
+
+Most modern USB cameras are compatible with the Companion software as long as they have the following specifications:
+
+* H.264 Output
+* 1080p resolution (4k cameras are not supported)
+
+The following USB cameras have been tested to work:
+
+* [Blue Robotics Low-Light HD USB Camera](https://www.bluerobotics.com/store/electronics/cam-usb-low-light-r1/)
+
+## Camera Serial Interface (CSI) Cameras
+
+With a Camera Serial Interface (CSI) input on the Raspberry Pi, this type of camera may be used with the Companion software.
+
+The following CSI cameras have been tested to work:
+
+* [Raspberry Pi Camera Module v2](https://www.raspberrypi.org/products/camera-module-v2/)
+
+## Ethernet Cameras
+
+The following Ethernet cameras have been tested to work:
+
+
