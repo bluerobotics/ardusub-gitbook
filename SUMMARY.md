@@ -18,7 +18,7 @@
       * [Autopilot](/introduction/hardware-options/required-hardware/autopilot.md)
       * [Companion Computer](/introduction/hardware-options/required-hardware/companion-computer.md)
       * [Camera](/introduction/hardware-options/required-hardware/camera.md)
-      * [Electronic Speed Controls (ESCs)](to do)
+      * [Electronic Speed Controls (ESCs)](/introduction/hardware-options/required-hardware/escs.md)
       * [Thrusters](to do)
       * [Power Supply](to do)
       * [Tether](to do)
