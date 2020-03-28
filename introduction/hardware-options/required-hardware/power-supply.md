@@ -12,11 +12,19 @@ For safety reasons, it is recommended to design an underwater vehicle to operate
 
 - **Current Rating:** Batteries usually specify a **C** rating for **C**urrent. In order to calculate the rated current in Amps, multiply the capacity of the battery in Ah (mAh/1000) times the **C** rating. For example, a 10000 mAh (10 Ah) battery with a 10C rating is rated for 100 Amps. As a general rule of thumb, your battery should be rated for a continuous current draw of 15 Amps times the number of thrusters.
 
-A battery will also need its own watertight enclosure (WTE) unless space is allocated inside the main electronics enclosure.
+A battery will also need its own [watertight enclosure (WTE)](https://bluerobotics.com/product-category/watertight-enclosures/) unless space is allocated inside the main electronics enclosure.
 
 These batteries are known to fit inside a 3" inner diameter (WTE):
 * [Blue Robotics Lithium-ion Battery (14.8V, 18Ah)](https://bluerobotics.com/store/comm-control-power/batteries/battery-li-4s-18ah-r3/)
 * [Turnigy Li-po (14.8V, 10Ah) (Hobby King)](https://hobbyking.com/en_us/turnigy-high-capacity-10000mah-4s-12c-multi-rotor-lipo-pack-w-xt90.html)
 * [HobbyStar Li-po (14.8V, 10Ah) (Amazon)](https://www.amazon.com/HobbyStar-000mAh-14-8V-LiPo-Battery/dp/B07J5XT5MD/)
 
+<img src="/images/introduction/hardware/hardware-battery.jpg" class="img-responsive img-center" style="max-height:600px;">
+
 # Power Over Tether (High Voltage)
+
+**With the inherent danger of high voltage around water, the ArduSub developers highly discourage users from making their own high voltage power supplies.**
+
+If a power over tether solution is required, then Blue Robotics sells the [Outland Technology Power Supply (OTPS) for the BlueROV2](https://bluerobotics.com/store/comm-control-power/powersupplies-batteries/otps1kw/). Although the OTPS system was resigned to replace the battery enclosure on the BlueROV2, it can be adapted for other vehicle projects.
+
+<img src="/images/introduction/hardware/hardware-otps.jpg" class="img-responsive img-center" style="max-height:600px;">
