@@ -25,6 +25,9 @@ The following CSI cameras have been tested to work:
 
 ## Ethernet Cameras
 
-The following Ethernet cameras have been tested to work:
+Although no Ethernet cameras have been tested, the minimum requirements for working directly with QGroundControl are:
+
+* H.264 Output
+* RTSP
 
 
