@@ -91,6 +91,13 @@ The behavior of each motor will be defined by its assigned contributions to each
 
 <img src="/images/bluerov-frame.png" class="img-responsive img-center" style="max-height:250px;">
 
+## Using the New Custom Configuration
+
+To use the newly created frame, set the **FRAME_CONFIG** parameter to "Custom" in QGroundControl and then reboot the flight controller.
+
+<img src="/images/custom_frame.png" class="img-responsive img-center">
+
+
 ## Troubleshooting
 
 1. If something goes wrong while compiling:
