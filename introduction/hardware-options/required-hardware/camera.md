@@ -11,6 +11,8 @@ Most modern USB cameras are compatible with the Companion software as long as th
 * H.264 Output
 * 1080p resolution (4k cameras are not supported)
 
+<img src="/images/introduction/hardware/hardware-cam-usb.png" class="img-responsive img-center" style="max-height:600px;">
+
 The following USB cameras have been tested to work:
 
 * [Blue Robotics Low-Light HD USB Camera](https://www.bluerobotics.com/store/electronics/cam-usb-low-light-r1/)
@@ -18,6 +20,8 @@ The following USB cameras have been tested to work:
 ## Camera Serial Interface (CSI) Cameras
 
 With a Camera Serial Interface (CSI) input on the Raspberry Pi, this type of camera may be used with the Companion software. A Raspberry Pi camera module came pre-installed on the BlueROV2 until mid-2017 when it was replaced by the Low-Light HD USB Camera.
+
+<img src="/images/introduction/hardware/hardware-rpicam.jpg" class="img-responsive img-center" style="max-height:600px;">
 
 The following CSI cameras have been tested to work:
 
