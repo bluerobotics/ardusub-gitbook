@@ -7,10 +7,14 @@ ArduPilot does not currently support controlling both brushed and brushless moto
 The minumim requirements for an ESC of either type are:
 
 * Bi-directional control - they operate in forward and reverse (most ESCS for UAVs and hobby drones only operate in one direction)
-* Controlled by a PWM input where 1500 micro-seconds is stopped, 1900 is full forward and 1100 is full reverse
-
+* Controlled by a PWM input where:
+    * 1900 us is full forward
+    * 1500 us is stopped
+    * 1100 us is full reverse
 
 # Brushless ESCs
+
+/images/introduction/hardware/hardware-besc.png
 
 The following brushless ESCs are supported for use with ArduSub:
 
