@@ -2,7 +2,7 @@
 
 ArduSub is designed to work with brushless and brushed Electronic Speed Controls (ESCs) to control motors and thrusters. A corresponding ESC will need to be used for a similar motor type. For example if a brushless thruster is used, then a brushless ESC will be needed.
 
-ArduPilot does not currently support controlling both brushed and brushless motors at the same time.
+ArduPilot does not support controlling both brushed and brushless motors at the same time.
 
 The minumim requirements for an ESC of either type are:
 
@@ -14,7 +14,7 @@ The minumim requirements for an ESC of either type are:
 
 # Brushless ESCs
 
-/images/introduction/hardware/hardware-besc.png
+<img src="/images/introduction/hardware/hardware-besc.png" class="img-responsive img-center" style="max-height:600px;">
 
 The following brushless ESCs are supported for use with ArduSub:
 
