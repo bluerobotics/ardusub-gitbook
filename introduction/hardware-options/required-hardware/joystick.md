@@ -11,7 +11,7 @@ The following joysticks are supported for use with the topside software ([QGroun
 
 # Custom Joystick
 
-* Leo Bodnar Electronics
+* [Leo Bodnar Electronics](https://www.leobodnar.com/shop/)
     * [BU0836X 12-Bit Joystick Board](http://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=94&products_id=180)
     * [BU0836A 12-Bit Joystick Controller](http://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=94&products_id=204)
     * [BU0836A-NC 12-Bit Joystick Controller No Connectors](http://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=94&products_id=219)
