@@ -1,6 +1,6 @@
 # Joystick
 
-A joystick (hand controller, gamepad, etc) when connected to the topside controller is how the user provides control inputs to the vehicle. These inputs may be in the form of movement (stick control) or action items (button presses).
+A joystick (also known as ahand controller, gamepad, etc) when connected to the topside controller is how the user provides control inputs to the vehicle. These inputs may be in the form of movement (stick control) or action items (button presses).
 
 QGroundControl has support for Microsoft's [XInput Game Controller API](https://docs.microsoft.com/en-us/windows/win32/xinput/xinput-game-controller-apis-portal) meaning any controller which supports XInput may be used.
 
@@ -31,3 +31,9 @@ The following control boards have been known to work:
     * [Mini-PAC Standard](https://www.ultimarc.com/control-interfaces/mini-pac-en/mini-pac/)
 
 ## Custom Joystick Examples
+
+* [ROVsim Surface Control Unit mk4](http://marinesimulation.com/rovsim-surface-control-unit/)
+
+* [BlueLink Professional ROV Hand Controller](https://blue-linked.com/bluerov2-store/ols/products/professional-rov-hand-controller-preorder)
+
+* [DeltaROV ROV USB Joystick v1.0](http://www.deltarov.com/new/product/br2-controller/)
