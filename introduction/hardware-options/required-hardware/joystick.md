@@ -23,17 +23,23 @@ Marine Simulation wrote a quick tutorial on how to do so: [Custom Hand Controlle
 
 The following control boards have been known to work:
 
-* [Leo Bodnar Electronics](https://www.leobodnar.com/shop/)
+* Leo Bodnar Electronics
     * [BU0836X 12-Bit Joystick Board](http://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=94&products_id=180)
     * [BU0836A 12-Bit Joystick Controller](http://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=94&products_id=204)
     * [BU0836A-NC 12-Bit Joystick Controller No Connectors](http://www.leobodnar.com/shop/index.php?main_page=product_info&cPath=94&products_id=219)
-* [Ultimarc](https://www.ultimarc.com/)
+* Ultimarc
     * [Mini-PAC Standard](https://www.ultimarc.com/control-interfaces/mini-pac-en/mini-pac/)
 
 ## Custom Joystick Examples
 
+Below are some examples of custom joysticks created by our customers and distributors.
+
 * [ROVsim Surface Control Unit mk4](http://marinesimulation.com/rovsim-surface-control-unit/)
 
+<img src="/images/introduction/hardware/hardware-joystick-rovsim.jpg" class="img-responsive img-center" style="max-height:600px;">
+
 * [BlueLink Professional ROV Hand Controller](https://blue-linked.com/bluerov2-store/ols/products/professional-rov-hand-controller-preorder)
+
+<img src="/images/introduction/hardware/hardware-joystick-bluelink.png" class="img-responsive img-center" style="max-height:600px;">
 
 * [DeltaROV ROV USB Joystick v1.0](http://www.deltarov.com/new/product/br2-controller/)
