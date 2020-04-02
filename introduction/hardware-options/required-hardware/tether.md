@@ -15,4 +15,8 @@ Although optional and not necessary for basic functionality, tether interfaces i
 
 Interface boards which use the [Homeplug AV](https://en.wikipedia.org/wiki/HomePlug#HomePlug_AV) standard provide a robust high-speed, long-distance Ethernet connection over a single pair of wires. These boards enable HD video and high-bandwidth data over 300m+ tether lengths.
 
+The following interface boards are supported:
+* [Blue Robotics Fathom-X Tether Interface Board Set](https://bluerobotics.com/store/comm-control-power/tether-interface/fathom-x-r1/)
+* [Blue Link Dual Ethernet Plus Serial Multiplexer (DEPS MUX)](https://blue-linked.com/bluerov2-store/ols/products/deps-mux)
+
 ## Interfaces for Fiber Optic Cable
