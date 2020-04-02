@@ -8,3 +8,11 @@ The Companion Computer communicates by 10/100 Base Ethernet. Therefore, a standa
 
 # Tether Interfaces
 
+Although optional and not necessary for basic functionality, tether interfaces increase the **range** and **reliability** of Ethernet communications.
+
+## Interfaces for Copper Twisted Wire Pairs
+
+
+Interface boards which use the [Homeplug AV](https://en.wikipedia.org/wiki/HomePlug#HomePlug_AV) standard provide a robust high-speed, long-distance Ethernet connection over a single pair of wires. These boards enable HD video and high-bandwidth data over 300m+ tether lengths.
+
+## Interfaces for Fiber Optic Cable
