@@ -4,11 +4,16 @@ The topside
 
 # Supported Operating Systems
 
-QGroundControl has been tested and supported on the following operating systems:
+QGroundControl has been tested and is supported on the following operating systems:
 
 * Windows 10
 * macOS 10.10 or later
 * Ubuntu 16.04 or later
+
+The minumum requirements are recommended for Windows and Linux computers:
+
+* i5 Processor
+* 8GB RAM
 
 ## Rugged and Semi-Rugged Computers
 
