@@ -32,7 +32,7 @@ The following control boards have been known to work:
 
 ## Custom Joystick Examples
 
-Below are some examples of custom joysticks created by our customers and distributors.
+Below are some examples of custom joysticks created by ArduSub users.
 
 * [ROVsim Surface Control Unit mk4](http://marinesimulation.com/rovsim-surface-control-unit/)
 
