@@ -43,3 +43,5 @@ Below are some examples of custom joysticks created by ArduSub users.
 <img src="/images/introduction/hardware/hardware-joystick-bluelink.png" class="img-responsive img-center" style="max-height:600px;">
 
 * [DeltaROV ROV USB Joystick v1.0](http://www.deltarov.com/new/product/br2-controller/)
+
+<img src="/images/introduction/hardware/hardware-joystick-deltarov.jpg" class="img-responsive img-center" style="max-height:600px;">
