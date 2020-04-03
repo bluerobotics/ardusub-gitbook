@@ -1,10 +1,12 @@
 # Sonars
 
-# Altimeters and Echosounders
+# Echosounders and Altimeters 
 
-Another useful type of sonar is an echosounder, also known as an altimeter when installed on an ROV. An altimeter is a single-beam sonar which gets a range measurement from the bottom of the ROV to the seabed. This is useful in low visibility situations where the distance to the bottom is unknown.
+A useful type of sonar is an echosounder, also known as an altimeter when installed on an ROV. An altimeter is a single-beam sonar which gets a range measurement from the bottom of the ROV to the seabed. This is useful in low visibility situations where the distance to the bottom is unknown.
 
-In addition to getting a distance reading, echosounders can provide the full echo response (echo strength versus time) which can be plotted like the display of a fishfinder sonar, which is useful for locating targets or obstructions beneath the ROV.
+In addition to getting a distance reading, echosounders can provide the full echo response (echo strength versus time) which can be plotted like the display of a fishfinder sonar. This is useful for locating targets or obstructions beneath the ROV.
+
+## Supported Echosounders/Altimeters
 
 # Scanning Imaging Sonars
 
