@@ -4,7 +4,7 @@ A gripper is a useful tool for picking up small objects, attaching recovery line
 
 Ardusub has the ability to natively control grippers through assigning joystick buttons and servo outputs for grippers that use Pulse Width Modulation (PWM) for control.
 
-Other grippers often have their own control software and interface for assigning control functions. In this case, it is recommended to use Grippers for RS485 for control as they can use a spare twisted wire pair in the tether for data transmission instead of needing to write custom software for the [Companion Computer]().
+Other grippers often have their own control software and interface for assigning control functions. In this case, it is recommended to use grippers with RS485 for control (instead of RS232) as they can use a spare twisted wire pair in the tether for data transmission instead of needing to write custom software for the [Companion Computer]().
 
 # Supported Grippers and Manipulators
 
