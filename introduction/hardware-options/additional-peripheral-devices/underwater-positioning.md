@@ -6,10 +6,12 @@ A positioning system is a useful addition to an ArduSub vehicle either for displ
 
 ## GPS Module
 
-ArduSub maintains the same GPS module drivers as the rest of the ArduPilot family of firmwares, so a compatible GPS module may be directly connected to the GPS port on the autopilot. Positioning information will only be available when the vehicle is on the surface and the module is out of the water. The module will not be able to obtain a fix if it is underwater due to high frequency radio waves unable to penetrate the water medium.
+ArduSub maintains the same [GPS module drivers](https://ardupilot.org/copter/docs/common-positioning-landing-page.html) as the rest of the ArduPilot family of firmwares, so a compatible GPS module may be directly connected to the GPS port on the autopilot. Positioning information will only be available when the vehicle is on the surface and the module is out of the water. The module will not be able to obtain a fix if it is underwater due to high frequency radio waves unable to penetrate the water medium.
 
 Acoustic positioning systems are the only reliable way of providing positioning information underwater.
 
 # SBL Positioning Systems
+
+A short baseline acoustic positioning system 
 
 # USBL Positioning Systems
