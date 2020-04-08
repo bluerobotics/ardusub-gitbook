@@ -12,7 +12,11 @@ Acoustic positioning systems are the only reliable way of providing positioning 
 
 # SBL Positioning Systems
 
-A short baseline acoustic positioning system 
+A [short baseline (SBL) acoustic positioning system](https://en.wikipedia.org/wiki/Short_baseline_acoustic_positioning_system) uses an acoustic transmitter on the vehicle to transmit timed acoustic pulses. These pulses are received by a series of multiple receivers on the surface in an arraged geometric pattern. The "time of flight" is calculated to when each receiver records the acoustic pulse and then a consolidated position for the underwater vehicle can be plotted.
+
+SBL systems can produce better positioning accuracy in highly reflective environments due to the adjustable receiver locations.
+
+Below is an example of a Water Linked Underwater GPS System being used to locate a shipwreck:
 
 <iframe width="300" height="225" src="https://www.youtube.com/embed/NpAClMNhno0" frameborder="0" allowfullscreen></iframe>
 
@@ -21,6 +25,10 @@ A short baseline acoustic positioning system
 * [Water Linked Underwater GPS Explorer Kit](https://waterlinked.com/underwater-gps/)
 
 # USBL Positioning Systems
+
+An [ultra-short baseline acoustic positioning system] is similar to SBL system where and acoustic pulse is transmitted from a tranciever on the vehicle and then recieved by a receiver on the surface. Instead of simply calculating time of flight, range and bearing are calculated by USBLs.
+
+USBLs are more compact than SBL systems where are the receivers transducers are fixed in one tranciever head.
 
 ## Supported USBL Systems
 
