@@ -21,3 +21,7 @@ A short baseline acoustic positioning system
 * [Water Linked Underwater GPS Explorer Kit](https://waterlinked.com/underwater-gps/)
 
 # USBL Positioning Systems
+
+## Supported USBL Systems
+
+* [Cerulean Sonar ROV Locator](https://ceruleansonar.com/products/usbl-rov-locator?variant=16138964107330)
