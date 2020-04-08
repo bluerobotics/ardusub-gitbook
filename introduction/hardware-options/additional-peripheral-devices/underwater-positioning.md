@@ -14,4 +14,10 @@ Acoustic positioning systems are the only reliable way of providing positioning 
 
 A short baseline acoustic positioning system 
 
+<iframe width="300" height="225" src="https://www.youtube.com/embed/NpAClMNhno0" frameborder="0" allowfullscreen></iframe>
+
+## Supported SBL Systems
+
+* [Water Linked Underwater GPS Explorer Kit](https://waterlinked.com/underwater-gps/)
+
 # USBL Positioning Systems
