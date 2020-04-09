@@ -16,7 +16,7 @@ Mechanically scanning sonars are useful tools for navigation, and acoustically i
 
 ## Supported Scanning Sonars
 
-* [Blue Robotics Ping360 Scanning Imaging Sonar](https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping360-sonar-r1-rp/) (USB connection to Companion Computer or RS485 connection through tether: [Changing Communications Interface](https://bluerobotics.com/learn/changing-communications-interface-on-the-ping360/))
+* [Blue Robotics Ping360 Scanning Imaging Sonar](https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping360-sonar-r1-rp/) (USB or RS485: [Changing Communications Interface](https://bluerobotics.com/learn/changing-communications-interface-on-the-ping360/))
 * [Tritech Micron Sonar](https://www.tritech.co.uk/product/small-rov-mechanical-sector-scanning-sonar-tritech-micron) (RS485 connection through tether)
 * [Imagenex 852 Ultra-Miniature Imaging](https://imagenex.com/products/852-ultra-miniature-imaging) (RS485 connection through tether)
 
