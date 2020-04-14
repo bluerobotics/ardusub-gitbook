@@ -1,13 +1,13 @@
 # Companion Computer
 
-Companion Computers are usually small single board computers (SBCs) which can be connected to an autopilot board and communicate using the [MAVLink protocol](https://ardupilot.org/dev/docs/mavlink-basics.html). A Companion Computer will take in MAVLink telemetry from the autopilot and can route or process the telemetry data. 
+Companion Computers are usually small single board computers (SBCs) which can be connected to an autopilot board and communicate using the [MAVLink protocol](https://ardupilot.org/dev/docs/mavlink-basics.html). A Companion Computer will take in MAVLink telemetry from the [autopilot](/introduction/hardware-options/required-hardware/autopilot.md) and can route or process the telemetry data. 
 
 The Companion Computer has two major functions within the ArduSub control system:
 
 * Streaming HD video to the surface computer
-* Relaying communications between the autopilot and the Surface Computer via Ethernet communications
+* Relaying communications between the autopilot and the [Topside Computer](/introduction/hardware-options/required-hardware/topside-computer.md) via Ethernet communications
 
-The Companion Computer must be running the [Companion Computer Software]() to function correctly with ArduSub. 
+The Companion Computer must be running the [ArduSub Companion Computer Software]() to function correctly with ArduSub. 
 
 # Supported Hardware
 
