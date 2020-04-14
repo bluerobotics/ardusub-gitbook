@@ -22,4 +22,6 @@ The following brushless ESCs are supported for use with ArduSub:
 
 # Brushed ESCs
 
-The following brushed ESCs are supported for use with ArduSub:
+No brushed ESCs have been reported to be used with ArduSub, but here is the reference documentation from ArduPilot:
+
+* [Brushed Motor ESCs](https://ardupilot.org/rover/docs/common-brushed-motors.html)
