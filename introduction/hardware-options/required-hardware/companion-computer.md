@@ -4,8 +4,8 @@ Companion Computers are usually small single board computers (SBCs) which can be
 
 The Companion Computer has two major functions within the ArduSub control system:
 
-* Streaming HD video to the surface computer
-* Relaying communications between the autopilot and the [Topside Computer](/introduction/hardware-options/required-hardware/topside-computer.md) via Ethernet communications
+* Streaming HD video to the [Topside Computer]((/introduction/hardware-options/required-hardware/topside-computer.md))
+* Relaying communications between the autopilot and the Topside Computer via Ethernet communications
 
 The Companion Computer must be running the [ArduSub Companion Computer Software]() to function correctly with ArduSub. 
 
