@@ -4,7 +4,7 @@ ArduSub is designed to work with brushless and brushed Electronic Speed Controls
 
 ArduPilot does not support controlling both brushed and brushless motors at the same time.
 
-The minumim requirements for an ESC of either type are:
+The miniumim requirements for an ESC of either type are:
 
 * Bi-directional control - they operate in forward and reverse (most ESCS for UAVs and hobby drones only operate in one direction)
 * Controlled by a PWM input where:
