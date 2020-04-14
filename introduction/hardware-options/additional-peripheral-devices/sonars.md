@@ -1,5 +1,7 @@
 # Sonars
 
+Sonars are useful pieces of equipment in situations where visibility is low. Sonars can help get ranges to surfaces or acoustically image targets to better understand their shape.
+
 # Echosounders and Altimeters 
 
 A useful type of sonar is an echosounder, also known as an altimeter when installed on an underwater vehicle. An altimeter is a single-beam sonar which gets a range measurement from the bottom of the ROV to the seabed. This is useful in low visibility situations where the distance to the bottom is unknown.
