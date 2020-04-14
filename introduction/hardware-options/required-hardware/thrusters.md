@@ -8,6 +8,14 @@ Although brushless or brushed thrusters may be used with ArduSub, they may not b
 
 # Brushless Thrusters
 
-Brushless thrusters are a good choice for propulsion as they often have a 
+Brushless thrusters are a good choice for propulsion as they do not have brushes that must be protected and wear out. 
+
+## Recommended Brushless Thrusters
+
+* [Blue Robotics T200 Thruster](https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster/)
 
 # Brushed Thrusters
+
+Brushed thrusters are generally cheaper than brushless types, but must be internally sealed with either an oil compensating system or have shaft seals.
+
+Partially disasembled bilge pump motors with propellers have been used in the past for a shallow water sealed thruster unit.
