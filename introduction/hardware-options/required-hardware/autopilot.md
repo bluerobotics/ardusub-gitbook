@@ -27,7 +27,7 @@ With feedback from other users, the following autopilot boards are not recommend
 2. [RadioLink Pixhawk](https://www.foxtechfpv.com/pixhawk-autopilot-combo.html) 
     * Issues: Proprietary firmware binaries, only works with RadioLink version of Mission Planner, incorrect connectors.
 3. Any autopilot with [Picoblade](https://www.molex.com/molex/products/family/picoblade) series connectors instead of [DF13](https://bluerobotics.com/learn/wl-connector-standard/#hirose-df13-series-not-recommended-for-new-designs) connectors.
-    * Issues: Is not connector compatible with DF13, which is used on many Blue Robotics products.
+    * Issue: Is not connector compatible with DF13, which is used on many Blue Robotics products.
 
 # Other Autopilots That Haven't Been Tested
 
