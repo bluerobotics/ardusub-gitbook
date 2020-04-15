@@ -1,5 +1,9 @@
 # Power Supply
 
+A stable power supply and power distribution system is an integral part of any underwater vehicle. The power supply needs to be able to power all the onboard electronics and keep up with the current draw of the thrusters.
+
+The working voltage is usually tied to the maximum voltage rating of the thrusters. Voltage regulators step down higher voltages into lower ones to power the electronics.
+
 # Battery Power
 
 For safety reasons, it is recommended to design an underwater vehicle to operate on battery power. Lithium type batteries are a popular choice due to their high storage capacity in a compact form factor. When selecting a battery for a new vehicle, here are a few important considerations:
@@ -28,3 +32,5 @@ These batteries are known to fit inside a 3" inner diameter (WTE):
 If a power over tether solution is required, then Blue Robotics sells the [Outland Technology Power Supply (OTPS) for the BlueROV2](https://bluerobotics.com/store/comm-control-power/powersupplies-batteries/otps1kw/). Although the OTPS system was resigned to replace the battery enclosure on the BlueROV2, it can be adapted for other vehicle projects.
 
 <img src="/images/introduction/hardware/hardware-otps.jpg" class="img-responsive img-center" style="max-height:600px;">
+
+# Voltage Regulators
