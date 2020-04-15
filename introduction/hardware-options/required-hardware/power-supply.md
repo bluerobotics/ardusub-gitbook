@@ -18,12 +18,14 @@ For safety reasons, it is recommended to design an underwater vehicle to operate
 
 A battery will also need its own [watertight enclosure (WTE)](https://bluerobotics.com/product-category/watertight-enclosures/) unless space is allocated inside the main electronics enclosure.
 
+<img src="/images/introduction/hardware/hardware-battery.jpg" class="img-responsive img-center" style="max-height:600px;">
+
 These batteries are known to fit inside a 3" inner diameter (WTE):
 * [Blue Robotics Lithium-ion Battery (14.8V, 18Ah)](https://bluerobotics.com/store/comm-control-power/batteries/battery-li-4s-18ah-r3/)
 * [Turnigy Li-po (14.8V, 10Ah) (Hobby King)](https://hobbyking.com/en_us/turnigy-high-capacity-10000mah-4s-12c-multi-rotor-lipo-pack-w-xt90.html)
 * [HobbyStar Li-po (14.8V, 10Ah) (Amazon)](https://www.amazon.com/HobbyStar-000mAh-14-8V-LiPo-Battery/dp/B07J5XT5MD/)
 
-<img src="/images/introduction/hardware/hardware-battery.jpg" class="img-responsive img-center" style="max-height:600px;">
+
 
 # Power Over Tether (High Voltage)
 
@@ -34,3 +36,5 @@ If a power over tether solution is required, then Blue Robotics sells the [Outla
 <img src="/images/introduction/hardware/hardware-otps.jpg" class="img-responsive img-center" style="max-height:600px;">
 
 # Voltage Regulators
+
+Depending on the electronics used, the primary voltage of the vehicle will most likely need to be stepped down and regulated more more sensitive electronics such as Companion Computers and autopilots. 
