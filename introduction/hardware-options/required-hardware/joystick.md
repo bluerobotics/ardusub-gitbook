@@ -4,7 +4,7 @@ A joystick (also known as ahand controller, gamepad, etc) when connected to the 
 
 QGroundControl has support for Microsoft's [XInput Game Controller API](https://docs.microsoft.com/en-us/windows/win32/xinput/xinput-game-controller-apis-portal) meaning any controller which supports XInput may be used.
 
-QgroundControl supports controllers with up to 4 control axes and 16 buttons.
+QGroundControl supports controllers with up to 4 control axes and 16 buttons.
 
 # Supported Commercial Joysticks
 
