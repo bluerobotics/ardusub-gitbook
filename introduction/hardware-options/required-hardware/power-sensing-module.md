@@ -4,7 +4,7 @@ A power sensing module provides analog current and voltage sensing to an autopil
 
 # Recommended Power Sensing Modules
 
-<img src="/introduction/hardware/hardware-psm.png" class="img-responsive img-center" style="max-height:600px;">
+<img src="/images/introduction/hardware/hardware-psm.png" class="img-responsive img-center" style="max-height:600px;">
 
 * [Blue Robotics Power Sense Module](https://bluerobotics.com/store/comm-control-power/elec-packages/psm-asm-r2-rp/)
     * Does not provide power to the autopilot, voltage and current sensing only.
