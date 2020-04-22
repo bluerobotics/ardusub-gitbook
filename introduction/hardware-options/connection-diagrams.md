@@ -14,12 +14,5 @@ For more details on connections, the manufacturer's product pages and documentat
 
 * For clarity reasons, power distribution connections are not shown but the input voltage ranges are.
 
-## Serial Devices to Companion Computer
-
-## Ethernet Devices
-
-## RS485 Devices through Tether
-
-
 
 
