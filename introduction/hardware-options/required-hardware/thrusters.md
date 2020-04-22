@@ -21,3 +21,5 @@ Brushless thrusters are a good choice for propulsion as they do not have brushes
 Brushed thrusters are generally cheaper than brushless types, but must be internally sealed with either an oil compensating system or have shaft seals.
 
 Partially disasembled bilge pump motors with propellers have been used in the past for a shallow water sealed thruster unit.
+
+Brushed thrusters must use an appropriate [brushed ESC](/introduction/hardware-options/required-hardware/escs.md#brushed-escs).
