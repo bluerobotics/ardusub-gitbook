@@ -1,4 +1,8 @@
-This section groups hardware that may (or may not be) present on your frame, including rangefinders, camera mounts, telemetry radios etc. For information related to Autopilot selection see Autopilot Hardware Options.
+# Additional Peripheral Devices
+
+The following components and devices are **not** required to be installed for a functioning control system, but add additional functionality and customization to the underwater vehicle.
+
+Connection information can be found on the manufacturers product pages.
 
 * [Leak Sensors](/introduction/hardware-options/additional-peripheral-devices/leak-sensor.md)
 * [Temperature Sensor](/introduction/hardware-options/additional-peripheral-devices/temperature-sensor.md)
