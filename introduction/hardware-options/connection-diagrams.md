@@ -10,6 +10,7 @@ For more details on connections, the manufacturer's product pages and documentat
 
 <img src="https://github.com/bluerobotics/ardusub-gitbook/blob/ArduSub-Docs-Overhaul/images/introduction/hardware/Connection-Diagram-R1.png" class="img-responsive img-center" style="max-height:600px;">
 * Click and 'Save file as...' for the full resolution image.
+
 * For clarity reasons, power distribution connections are not shown but the input voltage ranges are.
 
 ## Serial Devices to Companion Computer
