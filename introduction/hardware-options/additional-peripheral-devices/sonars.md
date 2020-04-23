@@ -31,7 +31,7 @@ The following scanning sonars have been installed on ArduSub vehicles:
 Multibeam imaging sonars are similar to mechanically scanning sonars in that they acoustically image targets in a top-down 2-dimensional representation. However, with multiple sonar beams the refresh rate is much righer and presenting a real-time image of what is in front of the vehicle.
 
 The following multibeam sonars have been installed on ArduSub vehicles:
- * [blueprint subsea Oculus Series Multibeam Sonars](https://www.blueprintsubsea.com/oculus/) (Ethernet)
+ * [Blueprint Subsea Oculus Series Multibeam Sonars](https://www.blueprintsubsea.com/oculus/) (Ethernet)
  * [Tritech International Gemini 720im Multibeam Sonar](https://www.tritech.co.uk/product/gemini-720im) (Ethernet or RS485 connection through tether)
  * [Tritech International Gemini 720ik Multibeam Sonar](https://www.tritech.co.uk/product/gemini-720ik) (Ethernet)
  
