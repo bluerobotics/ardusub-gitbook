@@ -21,7 +21,7 @@ QGroundControl runs well on consumer level laptops meeting the minimum specifica
 
 ## Rugged and Semi-Rugged Computers
 
-If a brighter screen or water resitance are required, then a rugged or semi-rugged laptop may be a better choice. Modern rugged laptops are about equal with their consumer level counterparts.
+If a brighter screen or water resitance are required, then a rugged or semi-rugged laptop may be a better choice. Modern rugged laptops are about equal with their consumer level counterparts from a performance perspective.
 
 * [Panasonic Toughbook Series](https://na.panasonic.com/us/computers-tablets-handhelds)
 * [Dell Rugged Series](https://www.dell.com/en-us/work/learn/rugged)
