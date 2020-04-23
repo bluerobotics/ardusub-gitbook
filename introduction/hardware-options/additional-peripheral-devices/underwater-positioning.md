@@ -20,6 +20,8 @@ A [short baseline (SBL) acoustic positioning system](https://en.wikipedia.org/wi
 
 SBL systems can produce better positioning accuracy in highly reflective environments due to the adjustable receiver locations.
 
+<img src="/images/introduction/hardware/hardware-SBL-WL.png" class="img-responsive img-center" style="max-height:600px;">
+
 ## Supported SBL Systems
 
 * [Water Linked Underwater GPS Explorer Kit](https://waterlinked.com/underwater-gps/)
@@ -29,6 +31,8 @@ SBL systems can produce better positioning accuracy in highly reflective environ
 An [ultra-short baseline acoustic positioning system](https://en.wikipedia.org/wiki/Ultra-short_baseline) is similar to SBL system where and acoustic pulse is transmitted from a tranciever on the vehicle and then recieved by a receiver on the surface. Instead of simply calculating time of flight, range and bearing are calculated by USBLs.
 
 USBLs are more compact than SBL systems where are the receivers transducers are fixed in one tranciever head.
+
+<img src="/images/introduction/hardware/hardware-USBL-CS.png" class="img-responsive img-center" style="max-height:600px;">
 
 ## Supported USBL Systems
 
