@@ -4,6 +4,8 @@ Lights are an integral component of any marine vehicle where optical inspection 
 
 # Supported Light Products
 
+<img src="/images/introduction/hardware/hardware-lumen.JPG" class="img-responsive img-center" style="max-height:600px;">
+
 The following light products may be controlled by an [autopilot]():
 * [Lumen Subsea Light for ROV/AUV](https://bluerobotics.com/store/thrusters/lights/lumen-r2-rp/)
 * [Lumen Subsea Light (Pre-Connected Sets)](https://bluerobotics.com/store/thrusters/lights/lumen-sets-r2-rp/)
