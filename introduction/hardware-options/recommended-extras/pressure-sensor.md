@@ -11,7 +11,7 @@ ArduSub has pre-installed drivers for the following sensor types:
 
 <img src="/images/introduction/hardware/hardware-bar30.JPG" class="img-responsive img-center" style="max-height:600px;">
 
-The following sensor products may be directly connected to an [autopilot]():
+The following sensor products may be directly connected to an [autopilot](/introduction/hardware-options/required-hardware/autopilot.md):
 * [Bar30 High-Resolution 300m Depth/Pressure Sensor](https://bluerobotics.com/store/sensors-sonars-cameras/sensors/bar30-sensor-r1/)
 * [PCB for Bar30 High-Resolution 300m Depth/Pressure Sensor](https://bluerobotics.com/store/sensors-sonars-cameras/sensors/bar30-sensor-pcb-r1/)
 * [Bar100 High-Resolution 1000m Depth/Pressure Sensor](https://bluerobotics.com/store/sensors-sonars-cameras/sensors/bar100-sensor-r2-rp/)
