@@ -6,6 +6,8 @@ ArduSub can be configured to read leak sensors through the auxiliary servo pins 
 
 # Supported Sensors
 
+<img src="/images/introduction/hardware/hardware-leak-sensor.png" class="img-responsive img-center" style="max-height:600px;">
+
 The following sesnor products are supported:
 
 * [Blue Robotics SOS Leak Sensor](https://bluerobotics.com/store/sensors-sonars-cameras/leak-sensor/sos-leak-sensor/)
