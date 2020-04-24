@@ -10,6 +10,8 @@ In addition to getting a distance reading, echosounders can provide the full ech
 
 ## Supported Echosounders/Altimeters
 
+<img src="/images/introduction/hardware/hardware-ping.png" class="img-responsive img-center" style="max-height:600px;">
+
 * [Blue Robotics Ping Sonar Altimeter and Echosounder](https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping-sonar-r2-rp/) (USB connection to Companion Computer)
 
 # Scanning Imaging Sonars
@@ -19,6 +21,8 @@ Mechanically scanning sonars are useful tools for navigation, and acoustically i
 ## Supported Scanning Sonars
 
 Only the Blue Robotics Ping360 Scanning Sonar is fully integrated with the ArduSub system and has advanced features such as heading rotation and a direct connection to the Companion Computer.
+
+<img src="/images/introduction/hardware/hardware-ping360.JPG" class="img-responsive img-center" style="max-height:600px;">
 
 * [Blue Robotics Ping360 Scanning Imaging Sonar](https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping360-sonar-r1-rp/) (USB or RS485: [Changing Communications Interface](https://bluerobotics.com/learn/changing-communications-interface-on-the-ping360/))
 
