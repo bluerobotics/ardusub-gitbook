@@ -8,6 +8,8 @@ Other grippers often have their own control software and interface for assigning
 
 # Supported Grippers and Manipulators
 
+<img src="/images/introduction/hardware/hardware-gripper.JPG" class="img-responsive img-center" style="max-height:600px;">
+
 The following grippers have been used on ArduSub vehicles:
 
 * [Blue Robotics Newton Subsea Gripper](https://bluerobotics.com/store/rov/bluerov2-accessories/newton-gripper-asm-r1-rp/) (PWM output from autopilot)
