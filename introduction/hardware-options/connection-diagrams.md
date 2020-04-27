@@ -12,4 +12,6 @@ For more details on connections, the manufacturer's product pages and documentat
 
 * Right click and 'Save image as...' for the full resolution image.
 
+* Components are not shown to scale, some are enlarged to show connection locations.
+
 * For clarity reasons, power distribution connections are not shown but the input voltage ranges are.
