@@ -18,4 +18,4 @@ To find out what firmware version is installed on your autopilot, navigate to th
 
 ## Release History
 
-ArduSub release history is available [here](https://raw.githubusercontent.com/ArduPilot/ardupilot/master/ArduSub/ReleaseNotes.txt).
+QGroundControl release history is available [here](https://docs.qgroundcontrol.com/en/releases/release_notes.html).
