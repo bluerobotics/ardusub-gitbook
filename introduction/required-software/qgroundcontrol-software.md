@@ -18,7 +18,7 @@ There are two versions of QGroundControl software:
 
 ## What Version is Installed?
 
-To find out what firmware version is installed on your autopilot, navigate to the Summary tab of the Vehicle Setup page. The firmware version will be listed under the Frame section.
+To find out what software version is installed on your topside computer, navigate to the _Application Settings_ and scroll to the bottom of the _General_ tab. 
 
 ## Release History
 
