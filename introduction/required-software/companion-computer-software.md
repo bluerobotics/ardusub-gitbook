@@ -18,4 +18,4 @@ To find out what firmware version is installed on your autopilot, navigate to th
 
 ## Release History
 
-ArduSub release history is available [here](https://raw.githubusercontent.com/ArduPilot/ardupilot/master/ArduSub/ReleaseNotes.txt).
+Companion release history is available [here](https://github.com/bluerobotics/companion/blob/master/release-notes.txt).
