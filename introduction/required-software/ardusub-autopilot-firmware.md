@@ -1,6 +1,6 @@
 # ArduSub Autopilot Firmware
 
-The ArduSub firmware is a binary file that is loaded on to the EEPROM (electrically erasable programmable read-only memory) of a compatible [autopilot] board. The firmware contains the necessary logic processes to control the specified vehicle type, Sub in this case.
+The ArduSub firmware is a binary file that is loaded on to the EEPROM (electrically erasable programmable read-only memory) of a compatible [autopilot](/introduction/hardware-options/required-hardware/autopilot.md) board. The firmware contains the necessary logic processes to control the specified vehicle type, Sub in this case.
 
 The other vehicle firmware types of the ArduPilot family are:
 * [ArduCopter](https://ardupilot.org/copter/index.html)
