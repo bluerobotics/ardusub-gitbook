@@ -7,10 +7,10 @@
    * [History](introduction/history.md)
    * [Featured Applications](introduction/applications.md)
    
-* [Required Software](to do)
-   * [ArduSub Autopilot Firmware](to do)
-   * [Companion Computer Software](to do)
-   * [QGroundControl Software](to do)
+* [Required Software](/introduction/required-software.md)
+   * [ArduSub Autopilot Firmware](/introduction/required-software/ardusub-autopilot-firmware.md)
+   * [Companion Computer Software](/introduction/required-software/companion-computer-software.md)
+   * [QGroundControl Software](/introduction/required-software/qgroundcontrol-software.md)
    
 * [Hardware Options](/introduction/hardware-options.md)
     * [Connection Diagrams](/introduction/hardware-options/connection-diagrams.md)
