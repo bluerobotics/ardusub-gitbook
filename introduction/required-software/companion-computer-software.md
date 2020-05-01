@@ -1,5 +1,7 @@
 # Companion Computer Software
 
+<img src="/images/introduction/software/software-companion.png" class="img-responsive img-center" style="max-height:600px;">
+
 ## Versioning
 
 There are three flavors of ArduSub firmware:
