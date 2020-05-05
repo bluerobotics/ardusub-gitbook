@@ -68,23 +68,23 @@
         * [Telemetry Text Overlay Recording]
 * [ArduSub Configuration and Features](to do)
     * [Vehicle Setup View](to do)
-      * [Summary Page]
-      * [Joystick Setup Page]
-      * [Sensors Setup Page]
-      * [Power Setup Page]
-      * [Motors Setup Page]
-      * [Safety Setup Page (Failsafes)]
-      * [Tuning Setup Page]
-      * [Camera Mount Setup Page]
-      * [Lights Setup Page]
-      * [Frame Setup Page]
-      * [Parameters Page]
+      * [Summary Page](/reference/ardusub/summary-page.md)
+      * [Joystick Setup Page](/reference/ardusub/joystick-setup-page.md)
+      * [Sensors Setup Page](/reference/ardusub/sensors-setup-page.md)
+      * [Power Setup Page](/reference/ardusub/power-setup-page.md)
+      * [Motors Setup Page](/reference/ardusub/motors-setup-page.md)
+      * [Safety Setup Page (Failsafes)](/reference/ardusub/safety-setup-page.md)
+      * [Tuning Setup Page](/reference/ardusub/tuning-setup-page.md)
+      * [Camera Mount Setup Page](/reference/ardusub/camera-mount-setup-page.md)
+      * [Lights Setup Page](/reference/ardusub/lights-setup-page.md)
+      * [Frame Setup Page](/reference/ardusub/frame-setup-page.md)
+      * [Parameters Page](/reference/ardusub/parameters-page.md)
     * [Features While in Operation]
-      * [Joystick Button Functions]
-      * [Flight Modes]
-      * [Pilot Input Gain]
-      * [Pitch/Roll Control]
-      * [Notifications]
+      * [Joystick Button Functions]()
+      * [Flight Modes]()
+      * [Pilot Input Gain]()
+      * [Pitch/Roll Control]()
+      * [Notifications]()
 * [Companion Web Interface Configuration and Features]
     * [Quick Start]
     * [Web UI]
