@@ -248,6 +248,10 @@ where each **field** exists and can be accessible.
 Besides the MAVLink specification, each message contains an structure called `message_information`,
 that provides the time, frequency and counter of such message.
 
+> **Note** This feature requires an endpoint `--out udpin:0.0.0.0:14660` at the companion [MavProxy page](#mavproxy). Companion 0.0.19 and newer ship with that as a default, but if you updated from a previous version you may need to [**Restore Default Options**](#mavproxy).
+
+> It also requires the autopilot to be talking the MAVLink2 protocol. Use QGroundControl to set the **SERIAL0_PROTOCOL** parameter to **MAVLink2**.
+
 It's possible to access:
 - All messages available in [/mavlink](http://192.168.2.2:4777/mavlink)
 - Specific messages via subpath, E.g: [/mavlink/HEARTBEAT](http://192.168.2.2:4777/mavlink/HEARTBEAT) or [/mavlink/ATTITUDE](http://192.168.2.2:4777/mavlink/ATTITUDE).
