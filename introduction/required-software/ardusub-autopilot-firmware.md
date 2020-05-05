@@ -25,7 +25,7 @@ Precompiled ArduSub binaries are available [here](https://firmware.ardupilot.org
 
 ## What Version is Installed?
 
-To find out what firmware version is installed on your autopilot, navigate to the Summary tab of the Vehicle Setup page. The firmware version will be listed under the Frame section.
+To find out what firmware version is installed on your autopilot, navigate to the _Vehicle Setup_ view and then the _Summary_ tab. The firmware version will be listed under the Frame section.
 
 <img src="/images/introduction/software/software-ardusub-version.png" class="img-responsive img-center" style="max-height:600px;">
 
