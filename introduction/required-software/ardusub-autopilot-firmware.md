@@ -2,7 +2,7 @@
 
 The ArduSub firmware is a binary file that is loaded on to the EEPROM (electrically erasable programmable read-only memory) of a compatible [autopilot](/introduction/hardware-options/required-hardware/autopilot.md) board. The firmware contains the necessary logic processes to control the specified vehicle type, Sub in this case.
 
-No software programming is required to operate ArduSub, settings are changed through user configurable parameters.
+No software programming is required to operate ArduSub, settings are changed through user configurable parameters when connected to [QGroundControl](/introduction/required-software/qgroundcontrol-software.md).
 
 <img src="/images/introduction/software/software-ardusub.png" class="img-responsive img-center" style="max-height:600px;">
 
