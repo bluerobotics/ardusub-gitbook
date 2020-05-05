@@ -22,6 +22,8 @@ There are two versions of QGroundControl software:
 
 To find out what software version is installed on your topside computer, navigate to the _Application Settings_ and scroll to the bottom of the _General_ tab. 
 
+<img src="/images/introduction/software/software-QGC-version.png" class="img-responsive img-center" style="max-height:600px;">
+
 ## Release History
 
 QGroundControl release history is available [here](https://docs.qgroundcontrol.com/en/releases/release_notes.html).
