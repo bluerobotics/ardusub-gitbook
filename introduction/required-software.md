@@ -12,7 +12,7 @@ Here is a diagram of what software piece is loaded onto which hardware component
 
 <img src="/images/introduction/software/software-overall.png" class="img-responsive img-center" style="max-height:600px;">
 
-Here is a technical diagram of the software components and their interactions:
+Here is a technical block diagram of the software components and their interactions:
 
 <img src="/images/software-components.jpg" class="img-responsive img-center" style="max-height:600px;">
 
