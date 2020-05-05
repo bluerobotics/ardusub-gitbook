@@ -91,6 +91,10 @@ To return to the command line and keep the mavproxy process running, hit control
 
 If you still do not have telemetry after all of these steps, please reboot the surface computer and the companion computer, and try again. If it is still not working after rebooting, please leave a comment on discuss.bluerobotics.com with notes on your results of all of the above troubleshooting steps.
 
+#### Reset MavProxy Options
+
+Some updates require changes to the MavProxy options. To avoid overwriting user changes, those do not apply until you **Restore Default Options**. Navigate to [MavProxy page](/operators-manual/companion-web.md#mavproxy) and click **Restore Default Options**. This will erase the current options, revert to the default for the current companion version, and reset the MavProxy service.
+
 ## No Video
 
 If you do not have telemetry, please troubleshoot that first according to the above instructions.
