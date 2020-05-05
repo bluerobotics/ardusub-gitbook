@@ -1,5 +1,12 @@
 # Companion Computer Software
 
+The Companion Computer software image is a modified version of [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) that is written onto a microSD card and installed in the [Companion Computer](/introduction/hardware-options/required-hardware/companion-computer.md). 
+
+Companion software performs the following functions:
+* Relays communications between the autopilot and QGroundControl via Ethernet communications
+* Streams HD video to QGroundControl.
+* Allows interfacing of additional peripherals (sensors and sonars) with compatible drivers.
+
 <img src="/images/introduction/software/software-companion.png" class="img-responsive img-center" style="max-height:600px;">
 
 ## What Version is Installed?
