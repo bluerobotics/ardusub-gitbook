@@ -6,20 +6,16 @@
 * [Features](introduction/features.md)
 * [Applications](introduction/applications.md)
 
+* [Required Software](/introduction/required-software.md)
+   * [ArduSub Autopilot Firmware](/introduction/required-software/ardusub-autopilot-firmware.md)
+   * [Companion Computer Software](/introduction/required-software/companion-computer-software.md)
+   * [QGroundControl Software](/introduction/required-software/qgroundcontrol-software.md)
+
 ## Hardware
 
 * [Components](hardware/components.md)
     * [Topside](hardware/components.md#topside-components)
     * [ROV](hardware/components.md#rov-components)
-
-## Software
-
-* [Components](software/components.md)
-* [ArduSub Firmware](software/ardusub-firmware.md)
-    * [Versioning](software/ardusub-firmware.md#versioning)
-    * [Release History](software/ardusub-firmware.md#release-history)
-    * [What Version is Installed?](software/ardusub-firmware.md#what-version-is-installed)
-    * [Updating](software/ardusub-firmware.md#updating)
 
 ## Getting Started
 
