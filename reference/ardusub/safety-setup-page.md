@@ -4,6 +4,16 @@
 
 ## Failsafe Actions
 
+* Disabled
+
+* Warn Only
+
+* Disarm
+
+* Enter Depth Hold
+
+* Enter Surface Mode
+
 ## Failsafe Triggers
 
 * GCS Heartbeat
