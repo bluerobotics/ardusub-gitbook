@@ -15,6 +15,10 @@ The General Settings tab:
 
 ## Button Assignment
 
+This tab allows users to reconfigure buttons based on their preference.
+
+Pressing a physical joystick button with highlight the number on the screen. The user can then select the desired button action from the dropdown.
+
 <img src="/images/reference/reference-ardusub-joystick-button-assignment.png" class="img-responsive img-center" style="max-height:600px;">
 
 ### Joystick Button Functions
