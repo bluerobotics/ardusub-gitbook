@@ -138,10 +138,37 @@ These are reserved for developer use, and do not do anything by default
 
 For more information, it's possible to check the ArduSub [joystick source code](https://github.com/ArduPilot/ardupilot/blob/master/ArduSub/joystick.cpp#L649).
 
-## Joystick Calibration
+## Calibration
+
+This tab calibrates the joysticks control axis for recognition as proper inputs for QGC.
+
+The calibration process wil only recognize 4 axis (0-3) even if there are more on the physical joystick.
 
 <img src="/images/reference/reference-ardusub-joystick-calibration.png" class="img-responsive img-center" style="max-height:600px;">
 
-## Advanced Joystick Settings
+### Calibration Procedures
+
+1. Press the Start button and then follow the on-screen instructions to calibrate/move the sticks.
+2. The joystick is enabled as the last step of the calibration process.
+3. Test the buttons and sticks work as intended by pressing them, and viewing the result in the Axis/Button monitor in the _General_ tab.
+
+## Advanced Settings
+
+Some additional options are available in this tab. These options may be useful for specific, unsual setups, for increasing sensibility, and for handling noisy joysticks.
+
+Some options are not required or useful with ArduSub and may inhibit proper operation if used.
 
 <img src="/images/reference/reference-ardusub-joystick-advanced.png" class="img-responsive img-center" style="max-height:600px;">
+
+### Throttle Options
+* Full down stick is zero throttle: In this mode, lowered stick sends 0 in MANUAL_CONTROL z, centered stick 500, and raised 1000.
+* Center stick is zero throttle: Centered or lowered stick sends 0 in MANUAL_CONTROL z, raised stick sends 1000.
+    * Spring loaded throttle smoothing: In this mode you control not the throttle itself, but the rate at which it increases/decreases. This is useful for setups where the throttle stick is spring loaded, as the user can hold the desired throttle while releasing the stick.
+
+### Exponential Slider
+
+The exponential slider allows you to make the sticks less sensitive in the center, allowing finer control in this zone. The slider adjusts the curvature of the exponential curve. The higher the Expo value, the flatter the curve is at the center, and steeper it is at the edges.
+
+### Further Advanced Settings
+
+The advanced settings are not recommended for everyday users. They can cause unpredicted results if used incorrectly.
