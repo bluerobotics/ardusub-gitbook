@@ -26,6 +26,8 @@
 
 * Pilot Input
 
+## Arming Checks
+
 * Internal Temperature
 
 * Internal Pressure
