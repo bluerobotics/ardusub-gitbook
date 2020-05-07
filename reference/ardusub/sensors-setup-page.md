@@ -10,7 +10,7 @@ Available sensors are displayed as a list of buttons beside the sidebar. Sensors
 
 <img src="/images/reference/reference-ardusub-sensors-accelerometer.png" class="img-responsive img-center" style="max-height:600px;">
 
-To calibrate the flight controller accelerometers the vehicle will need to be placed and held in a number of orientations.
+To calibrate the autopilot's accelerometers the vehicle will need to be placed and held in a number of orientations.
 
 The calibration steps are:
 
@@ -23,9 +23,18 @@ The calibration steps are:
 
 <img src="/images/reference/reference-ardusub-sensors-compass.png" class="img-responsive img-center" style="max-height:600px;">
 
-You need to rotate the vehicle randomly around all axes until the progress bar fills all the way to the right and the calibration completes. When the calibration completes you will get the following results:
+
+
+The calibration steps are:
+
+1. Click the **Compass** sensor button.
+2. Click OK to start the calibration.
+3. You need to rotate the vehicle randomly around all axes until the progress bar fills all the way to the right and the calibration completes.  
+4. When the calibration completes you will get the following results:
 
 <img src="/images/reference/reference-ardusub-sensors-compass-complete.png" class="img-responsive img-center" style="max-height:600px;">
+
+5. 
 
 ## Level Horizon
 
