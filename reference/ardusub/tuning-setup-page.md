@@ -11,3 +11,5 @@ Adjust a parameter by moving the desired slider, or by clicking the increase/dec
 * **Position Controller Parameters** are the parameters for the controller responsible for positioning the vehicle at a point in 3D space. The **Z** parameters control how the depth control works (eg in **Depth Hold** mode). The **XY** parameters affect how the vehicle controls the horizontal position in Position Enabled modes.
 
 * **Waypoint Navigation Parameters** are the parameters for the controller responsible for following waypoints in **Auto** and **Guided** mode.
+
+> **Note** **Guided** and **Auto** modes are currently unsupported and some features are disabled in QGC.
