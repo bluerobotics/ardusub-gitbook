@@ -83,4 +83,5 @@ To arm the vehicle, select Disarmed in the Fly Toolbar and then use the confirma
 
 Disarming the vehicle stops the motors (making the vehicle safe). To disarm the vehicle select Armed in the Fly Toolbar when the vehicle is landed.
 
+## Replay Telemetry Data
 
