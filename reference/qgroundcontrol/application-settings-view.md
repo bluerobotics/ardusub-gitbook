@@ -12,8 +12,52 @@ You can switch between the various pages by clicking the buttons in the left-sid
 
 The main application configuration settings. These are used to specify: display units, autoconnection devices, video display and storage, etc.
 
+#### Units
 <img src="/images/reference/reference-qgc-application-settings-general-units.png" class="img-responsive img-center" style="max-height:600px;">
 
+##### Miscellaneous
+
+<img src="/images/reference/reference-qgc-application-settings-general-misc.png" class="img-responsive img-center" style="max-height:600px;">
+
+#### Data Persistence
+
+<img src="/images/reference/reference-qgc-application-settings-general-data-persistence.png" class="img-responsive img-center" style="max-height:600px;">
+
+#### Telemetry Logs
+
+<img src="/images/reference/reference-qgc-application-settings-general-telemetry-logs.png" class="img-responsive img-center" style="max-height:600px;">
+
+#### Fly View
+
+<img src="/images/reference/reference-qgc-application-settings-general-fly-view.png" class="img-responsive img-center" style="max-height:600px;">
+
+#### Plan View
+
+<img src="/images/reference/reference-qgc-application-settings-general-plan-view.png" class="img-responsive img-center" style="max-height:600px;">
+
+#### Autoconnect Devices
+
+<img src="/images/reference/reference-qgc-application-settings-general-autoconnect.png" class="img-responsive img-center" style="max-height:600px;">
+
+#### RTK GPS
+
+<img src="/images/reference/reference-qgc-application-settings-general-rtk.png" class="img-responsive img-center" style="max-height:600px;">
+
+#### ADSB Server
+
+<img src="/images/reference/reference-qgc-application-settings-general-adsb.png" class="img-responsive img-center" style="max-height:600px;">
+
+#### Video
+
+<img src="/images/reference/reference-qgc-application-settings-general-video.png" class="img-responsive img-center" style="max-height:600px;">
+
+#### Video Recording
+
+<img src="/images/reference/reference-qgc-application-settings-general-video-recording.png" class="img-responsive img-center" style="max-height:600px;">
+
+#### Brand Image
+
+<img src="/images/reference/reference-qgc-application-settings-general-brand-image.png" class="img-responsive img-center" style="max-height:600px;">
 
 **Comm Links Page**: Allows you to manually create communication links and connect to them. Keep in mind that normally this is not needed since QGroundControl will automatically connect to the most common devices.
 
