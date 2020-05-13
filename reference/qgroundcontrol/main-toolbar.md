@@ -22,18 +22,13 @@ The following icons are used to switch between the main _Views_. These are displ
 
 Status icons are displayed when QGroundControl is connected to a vehicle. These show the high level status of the vehicle, and can be clicked to see more detailed information.
 
-<img src="/images/reference/reference-qgc-toolbar-vehicle-messages.png" class="img-responsive img-left" style="max-height:600px;">
-**Vehicle Messages**: Click to show a dropdown of messages from the vehicle. This will change to a Yield sign if there are critical messages.
+<img src="/images/reference/reference-qgc-toolbar-vehicle-messages.png" class="img-responsive img-left" style="max-height:600px;"> **Vehicle Messages**: Click to show a dropdown of messages from the vehicle. This will change to a Yield sign if there are critical messages.
 
-<img src="/images/reference/reference-qgc-toolbar-battery.png" class="img-responsive img-left" style="max-height:600px;">
-**Battery**: Current battery voltage. [Power Sensing Module]() will need to be properly configured to display the correct voltage.
+<img src="/images/reference/reference-qgc-toolbar-battery.png" class="img-responsive img-left" style="max-height:600px;"> **Battery**: Current battery voltage. [Power Sensing Module]() will need to be properly configured to display the correct voltage.
 
-<img src="/images/reference/reference-qgc-toolbar-joystick.png" class="img-responsive img-left" style="max-height:600px;">
-**Joystick Status**: 
+<img src="/images/reference/reference-qgc-toolbar-joystick.png" class="img-responsive img-left" style="max-height:600px;"> **Joystick Status**: 
 
-<img src="/images/reference/reference-qgc-toolbar-flight-mode.png" class="img-responsive img-left" style="max-height:600px;">
-**Flight Mode**: Current flight mode. Click or press an assigned button to change flight mode.
+<img src="/images/reference/reference-qgc-toolbar-flight-mode.png" class="img-responsive img-left" style="max-height:600px;"> **Flight Mode**: Current flight mode. Click or press an assigned button to change flight mode.
 
-<img src="/images/reference/reference-qgc-toolbar-arming-status.png" class="img-responsive img-left" style="max-height:600px;">
-**Arming Status**:
+<img src="/images/reference/reference-qgc-toolbar-arming-status.png" class="img-responsive img-left" style="max-height:600px;"> **Arming Status**:
 
