@@ -86,9 +86,9 @@
       * [Pitch/Roll Control]()
       * [Notifications]()
 * [Companion Web Interface Configuration and Features]
-    * [Quick Start]
-    * [Web UI]
-    * [Terminal Access + SSH]
+    * [Quick Start](/reference/companion/quick-start.md)
+    * [Web UI](/reference/companion/web-ui.md)
+    * [Terminal Access + SSH](/reference/companion/web-ui.md)
 * [Peripheral Device Configurations]
     * [Leak Sensor]
     * [Lights]
