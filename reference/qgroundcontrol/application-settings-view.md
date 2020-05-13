@@ -59,10 +59,18 @@ The main application configuration settings. These are used to specify: display 
 
 <img src="/images/reference/reference-qgc-application-settings-general-brand-image.png" class="img-responsive img-center" style="max-height:600px;">
 
-**Comm Links Page**: Allows you to manually create communication links and connect to them. Keep in mind that normally this is not needed since QGroundControl will automatically connect to the most common devices.
+### Comm Links Page
 
-**Offline Maps**: Allows you to cache maps for use while you have no Internet connection.
+Allows you to manually create communication links and connect to them. Keep in mind that normally this is not needed since QGroundControl will automatically connect to the most common devices.
 
-**Mavlink**: Settings associated with the MAVLink connection to a vehicle.
+### Offline Maps
 
-**Console**: Used to capture application logs for help with diagnosing application problems.
+Allows you to cache maps for use while you have no Internet connection.
+
+### Mavlink
+
+Settings associated with the MAVLink connection to a vehicle.
+
+### Console
+
+Used to capture application logs for help with diagnosing application problems.
