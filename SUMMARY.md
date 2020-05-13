@@ -135,11 +135,11 @@
 
 ## Resources
 
-* [Community] (/resources/community.md)
-  * [Blue Robotics Forum]
-  * [ArduPilot Forum]
-  * [ArduPilot Gitter]
-  * [PX4 Slack (QGC)]
+* [Community](/resources/community.md)
+  * [Blue Robotics Forum](/resources/community.md#blue-robotics-forum)
+  * [ArduPilot Forum](/resources/community.md#ardupilot-forum)
+  * [ArduPilot Gitter](/resources/community.md#gitter)
+  * [PX4 Slack (QGC)](/resources/community.md#slack)
 * [Downloads](/resources/downloads.md)
   * [ArduSub Firmware](/resources/downloads.md#ardusub-firmware-files)
   * [ArduSub Parameter Files](/resources/downloads.md#ardusub-parameter-files)
