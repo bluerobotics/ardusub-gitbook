@@ -16,4 +16,4 @@ The [ArduPilot gitter](https://gitter.im/ArduPilot/ardupilot) is a chatroom for 
 
 ## Slack
 
-[PX4 Slack (QGC](https://slack.px4.io/)
+[PX4 Slack (QGC)](https://slack.px4.io/)
