@@ -4,6 +4,8 @@ The _Application Settings View_ is used to configure the settings for the QGroun
 
 You can switch between the various pages by clicking the buttons in the left-sidebar.
 
+<img src="/images/reference/reference-qgc-application-settings.png" class="img-responsive img-center" style="max-height:600px;">
+
 ## Pages
 
 **General Settings Page**: The main application configuration settings. These are used to specify: display units, autoconnection devices, video display and storage, etc.
