@@ -12,4 +12,4 @@ The selected values are laid out in three columns to optimize the screen utiliza
 
 ### Playing a File
 
-The overlay can be used with any player that supports the SubStation Alpha subtitle format. Most players will open both files together when you try to play the video. They need to be in the same folder and with the same name, which is how they are created by QGC.
+The overlay can be used with any player that [supports the SubStation Alpha](https://en.wikipedia.org/wiki/SubStation_Alpha#Players_and_renderers) subtitle format. Most players will open both files together when you try to play the video. They need to be in the same folder and with the same name, which is how they are created by QGC.
