@@ -2,6 +2,8 @@
 
 The main menu/tool bar provides access to the different application views, and high level status information for the connected vehicle. The menu is the same in all views except for "Plan View" (which has a single icon to take you back to "Fly" view).
 
+<img src="/images/reference/reference-qgc-toolbar.png" class="img-responsive img-center" style="max-height:600px;">
+
 ## View Selection Icons
 
 The following icons are used to switch between the main _Views_. These are displayed even if no vehicle is connected.
