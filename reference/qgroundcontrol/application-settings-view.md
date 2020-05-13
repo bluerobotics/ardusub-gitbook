@@ -8,7 +8,12 @@ You can switch between the various pages by clicking the buttons in the left-sid
 
 ## Pages
 
-**General Settings Page**: The main application configuration settings. These are used to specify: display units, autoconnection devices, video display and storage, etc.
+### General Settings Page
+
+The main application configuration settings. These are used to specify: display units, autoconnection devices, video display and storage, etc.
+
+<img src="/images/reference/reference-qgc-application-settings-general-units.png" class="img-responsive img-center" style="max-height:600px;">
+
 
 **Comm Links Page**: Allows you to manually create communication links and connect to them. Keep in mind that normally this is not needed since QGroundControl will automatically connect to the most common devices.
 
