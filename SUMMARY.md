@@ -65,7 +65,7 @@
          * [Recoding Video]
       * [Analyze View](/reference/qgroundcontrol/analyze-view.md)
       * [Other Features](/reference/qgroundcontrol/other-features.md)
-        * [Telemetry Text Overlay Recording]
+        * [Telemetry Text Overlay Recording](/reference/qgroundcontrol/other-features.md#video-overlay)
 * [ArduSub Configuration and Features](to do)
     * [Vehicle Setup View](to do)
       * [Summary Page](/reference/ardusub/summary-page.md)
