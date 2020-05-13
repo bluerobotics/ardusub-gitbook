@@ -135,19 +135,18 @@
 
 ## Resources
 
-* [Community]
+* [Community] (/resources/community.md)
   * [Blue Robotics Forum]
   * [ArduPilot Forum]
   * [ArduPilot Gitter]
   * [PX4 Slack (QGC)]
-* [Downloads]
-  * [ArduSub Firmware]
-  * [ArduSub Parameter Files]
-  * [Companion Image (RPi)]
-  * [QGroundControl]
-  * [Ping Firmware]
-  * [Ping360 Firmware]
-* [Further Reading]
+* [Downloads](/resources/downloads.md)
+  * [ArduSub Firmware](/resources/downloads.md#ardusub-firmware-files)
+  * [ArduSub Parameter Files](/resources/downloads.md#ardusub-parameter-files)
+  * [Companion Image (RPi)](l/resources/downloads.md#companion-computer-images)
+  * [QGroundControl](/resources/downloads.md#qgroundcontrol)
+  * [Ping Firmware](/resources/downloads.md#ping-echosounder-firmware-files)
+* [Further Reading](/resources/further-reading.md)
   * [Blue Robotics Blog]
   * [ArduPilot Blog]
   * [Blue Robotics "Learn" Articles]
