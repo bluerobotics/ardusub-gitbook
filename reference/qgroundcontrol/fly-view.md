@@ -1,12 +1,12 @@
 # Fly View
 
-The Fly View is used to command and monitor the vehicle when flying.
+The Fly View is used to control and monitor the vehicle when diving.
+
 You can use it to:
-Run an automated pre-flight checklist.
-Control missions: start, continue, pause, and resume.
-Guide the vehicle to arm/disarm/emergency stop, takeoff/land, change altitude, go to or orbit a particular location, and return/RTL.
-Switch between a map view and a video view (if available)
-Display video, mission, telemetry, and other information for the current vehicle, and also switch between connected vehicles.
+* Display video, mission, telemetry, and other information for the current vehicle.
+* Control the vehicle and accessories with a connected joystick.
+* Switch between a video view and map view (if an underwater positioning system is used).
+
 
 ## UI Overview
 The screenshot above shows the main elements of the fly view:
