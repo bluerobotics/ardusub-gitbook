@@ -11,7 +11,14 @@ You can use it to:
 ## UI Overview
 The screenshot above shows the main elements of the fly view:
 
-* Map: Displays the positions of all connected vehicles and the mission for the current vehicle.
+* Video:
+QGroundControl supports RTP and RTSP video streaming over your vehicles UDP connection. It also support directly connected UVC device support. QGC video support is further discussed in the Video README.
+A Telemetry Overlay is automatically generated as a subtitle file
+
+* Map/Switcher: 
+Toggle between video or map in a window.: 
+Press the element to switch Video and Map to foreground.
+Displays the positions of all connected vehicles and the mission for the current vehicle.
 You can drag the map to move it around (the map automatically re-centres after a certain amount of time).
 Once flying, you can click on the map to set a Go to or Orbit at location.
 
@@ -21,11 +28,6 @@ Press the Flight mode text (e.g. "Hold") to select a new mode. Not every mode ma
 Press the Armed/Disarmed text to toggle the armed state. If flying you can press this text to Emergency Stop.
 
 * Instrument Panel: A multi-page widget that displays vehicle information including: telemetry, camera, video, system health, and vibration.
-
-* Video/Switcher: Toggle between video or map in a window.
-Press the element to switch Video and Map to foreground.
-QGroundControl supports RTP and RTSP video streaming over your vehicles UDP connection. It also support directly connected UVC device support. QGC video support is further discussed in the Video README.
-A Telemetry Overlay is automatically generated as a subtitle file
 
 * Confirmation Slider: Context sensitive slider to confirm requested actions. Slide to start operation. Press X to cancel.
 
