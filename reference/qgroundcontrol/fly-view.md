@@ -11,6 +11,11 @@ You can use it to:
 ## UI Overview
 The screenshot above shows the main elements of the fly view:
 
+* **[Fly Toolbar](/reference/qgroundcontrol/main-toolbar.md):** Key status information (warning messages, battery, joystick status), and vehicle state (Flight mode, Armed/Disarmed status).
+    * Select the sensor indicators to view more detail.
+    * Press the Flight mode text (e.g. "Manual") to select a new mode or press an assigned joystick button. Not every mode may be available.
+    * Press the Armed/Disarmed text to toggle the armed state or press an assigned joystick button.
+
 * **Video:** Displays live video from the vehicle when connected to the [Companion Computer](/introduction/hardware-options/required-hardware/companion-computer.md).
     * A [Telemetry Overlay](https://github.com/bluerobotics/ardusub-gitbook/blob/ArduSub-Docs-Overhaul/reference/qgroundcontrol/other-features.md#video-overlay) is automatically generated as a subtitle file when a video is recorded.
 
@@ -20,16 +25,10 @@ The screenshot above shows the main elements of the fly view:
     * The switcher can be hidden by clicking on the **"<<<"** icon.
     * The switcher can be expanded by clicking and dragging the upper right hand corner.
     * The switcher can be popped out by clicking on the upper left hand icon when video is in the secondary window element.
-    
 
-* Fly Toolbar: Key status information for sensors (GPS, battery, RC control), and vehicle state (Flight mode, Armed/Disarmed status).
-Select the sensor indicators to view more detail.
-Press the Flight mode text (e.g. "Hold") to select a new mode. Not every mode may be available.
-Press the Armed/Disarmed text to toggle the armed state. If flying you can press this text to Emergency Stop.
+* **Instrument Panel**: A multi-page widget that displays vehicle information including: telemetry, camera, video, system health, and vibration.
 
-* Instrument Panel: A multi-page widget that displays vehicle information including: telemetry, camera, video, system health, and vibration.
-
-* Confirmation Slider: Context sensitive slider to confirm requested actions. Slide to start operation. Press X to cancel.
+* **Confirmation Slider**: Context sensitive slider to confirm requested actions. Slide to start operation. Press X to cancel.
 
 ## Display Video
 
