@@ -48,11 +48,8 @@ You can configure what information is display by pressing the small gear icon on
 
 ### Camera
 
-The camera page is used to configure and control the camera. For a camera connected directly to the Flight Controller the only available option is camera triggering:
+This functionality is not built into ArduSub, please use [Companion's Camera Settings Page](/reference/companion/web-ui.md#camera) to change camera settings.
 
-When connected to camera that supports the MAVLink Camera Protocol you can additionally configure and use other camera services that it makes available. For example, if your camera supports video mode you will be able to switch between still image capture and video mode, and start/stop recording.
-
-Advanced settings can be changed via the gear icon at the top left of the page.
 <img src="/images/reference/reference-qgc-fly-instruments-camera.png" class="img-responsive img-center" style="max-height:600px;">
 
 ### Video Stream
