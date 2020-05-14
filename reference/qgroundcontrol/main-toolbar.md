@@ -24,7 +24,7 @@ Status icons are displayed when QGroundControl is connected to a vehicle. These 
 
 <img src="/images/reference/reference-qgc-toolbar-vehicle-messages.png" class="img-responsive img-left" style="max-height:600px;"> **Vehicle Messages**: Click to show a dropdown of messages from the vehicle. This will change to a Yield sign if there are critical messages.
 
-<img src="/images/reference/reference-qgc-toolbar-battery.png" class="img-responsive img-left" style="max-height:600px;"> **Battery**: Current battery voltage. [Power Sensing Module]() will need to be properly configured to display the correct voltage.
+<img src="/images/reference/reference-qgc-toolbar-battery.png" class="img-responsive img-left" style="max-height:600px;"> **Battery**: Current battery voltage. A [Power Sensing Module](/introduction/hardware-options/required-hardware/power-sensing-module.md) will need to be [properly configured](/reference/ardusub/power-setup-page.md) to display the correct voltage.
 
 <img src="/images/reference/reference-qgc-toolbar-joystick.png" class="img-responsive img-left" style="max-height:600px;"> **Joystick Status**: 
 
