@@ -40,7 +40,11 @@ The default page displays vehicle telemetry - use the drop down menu in the righ
 
 The values page shows telemetry information; by default the altitude (relative to the home location) and the ground speed.
 
+<img src="/images/reference/reference-qgc-fly-instruments-values.png" class="img-responsive img-center" style="max-height:600px;">
+
 You can configure what information is display by pressing the small gear icon on the top left of the panel. Each value can be displayed in normal or "large" size (large size shows just one value per row in the page, while normal shows 2).
+
+<img src="/images/reference/reference-qgc-fly-instruments-values-configure.png" class="img-responsive img-center" style="max-height:600px;">
 
 ### Camera
 
@@ -49,10 +53,13 @@ The camera page is used to configure and control the camera. For a camera connec
 When connected to camera that supports the MAVLink Camera Protocol you can additionally configure and use other camera services that it makes available. For example, if your camera supports video mode you will be able to switch between still image capture and video mode, and start/stop recording.
 
 Advanced settings can be changed via the gear icon at the top left of the page.
+<img src="/images/reference/reference-qgc-fly-instruments-camera.png" class="img-responsive img-center" style="max-height:600px;">
 
 ### Video Stream
 
 The video page is used to enable/disable video streaming. When enabled, you can start/stop the video stream, enable a grid overlay, change how the image fits the screen, and record the video locally with QGC.
+
+<img src="/images/reference/reference-qgc-fly-instruments-video-stream.png" class="img-responsive img-center" style="max-height:600px;">
 
 ### Health
 
@@ -61,6 +68,8 @@ The health page shows you the health of the systems within your vehicle. QGround
 ### Vibration
 
 The vibration page shows current vibration levels and clip counts.
+
+<img src="/images/reference/reference-qgc-fly-instruments-vibration.png" class="img-responsive img-center" style="max-height:600px;">
 
 ## Actions/Tasks
 
