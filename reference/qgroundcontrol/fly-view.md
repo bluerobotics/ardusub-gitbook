@@ -23,8 +23,8 @@ The screenshot above shows the main elements of the fly view:
     * Click on the element to toggle the video or map views in the primary or secondary windows. 
     * You can drag the map to move it around (the map automatically re-centres after a certain amount of time).
     * The switcher can be hidden by clicking on the **"<<<"** icon.
-    * The switcher can be expanded by clicking and dragging the upper right hand corner.
-    * The switcher can be popped out by clicking on the upper left hand icon when video is in the secondary window element.
+    * The switcher can be expanded by clicking and dragging the upper right corner.
+    * The switcher can be popped out by clicking on the upper left icon when video is in the secondary window element.
 
 * **Instrument Panel**: A multi-page widget that displays vehicle information including: telemetry, camera, video, system health, and vibration.
 
@@ -33,7 +33,8 @@ The screenshot above shows the main elements of the fly view:
 ## Instrument Panel
 
 The instrument panel is a multi-page widget that displays information about the current vehicle, including: telemetry, camera, video, system health, and vibration information.
-The default page displays vehicle telemetry - use the drop down menu on the to right to select the other options.
+
+The default page displays vehicle telemetry - use the drop down menu in the right corner to select the other pages.
 
 ### Values
 
