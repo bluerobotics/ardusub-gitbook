@@ -11,16 +11,16 @@ You can use it to:
 ## UI Overview
 The screenshot above shows the main elements of the fly view:
 
-* **Video:**
-    * Displays live video from the vehicle when connected to the [Companion Computer](/introduction/hardware-options/required-hardware/companion-computer.md).
+* **Video:** Displays live video from the vehicle when connected to the [Companion Computer](/introduction/hardware-options/required-hardware/companion-computer.md).
     * A [Telemetry Overlay](https://github.com/bluerobotics/ardusub-gitbook/blob/ArduSub-Docs-Overhaul/reference/qgroundcontrol/other-features.md#video-overlay) is automatically generated as a subtitle file when a video is recorded.
 
-* Map/Switcher: 
-Toggle between video or map in a window.: 
-Press the element to switch Video and Map to foreground.
-Displays the positions of all connected vehicles and the mission for the current vehicle.
-You can drag the map to move it around (the map automatically re-centres after a certain amount of time).
-Once flying, you can click on the map to set a Go to or Orbit at location.
+* **Map/Switcher:** Displays the position of a connected vehicle when using an underwater positioning system.
+    * Click on the element to toggle the video or map views in the primary or secondary windows. 
+    * You can drag the map to move it around (the map automatically re-centres after a certain amount of time).
+    * The switcher can be hidden by clicking on the **"<<<"** icon.
+    * The switcher can be expanded by clicking and dragging the upper right hand corner.
+    * The switcher can be popped out by clicking on the upper left hand icon when video is in the secondary window element.
+    
 
 * Fly Toolbar: Key status information for sensors (GPS, battery, RC control), and vehicle state (Flight mode, Armed/Disarmed status).
 Select the sensor indicators to view more detail.
