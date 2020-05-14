@@ -1,10 +1,12 @@
 # Vehicle Setup View
 
-The Setup View is used to configure a new vehicle prior to first flight and/or tune a configured vehicle.
+The Vehicle Setup View is used to configure a new vehicle prior to first use and tune a configured vehicle.
+
+<img src="/images/reference/reference-ardusub-summary.png" class="img-responsive img-center" style="max-height:600px;">
 
 ## Pages
 
-To the left of the screen are the set of available setup options. A setup button is marked with a red icon if there are still settings needed to be adjusted/specified. You should not fly if any of these are red. In the above image the Radio setup is not yet complete.
+To the left of the screen are the set of available setup options. A setup button is marked with a red icon if there are still settings needed to be adjusted/specified. You should not dive if any of these are red.
 
 **[Summary Page](/reference/ardusub/summary-page.md)**
 
