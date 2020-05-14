@@ -11,9 +11,9 @@ You can use it to:
 ## UI Overview
 The screenshot above shows the main elements of the fly view:
 
-* Video:
-QGroundControl supports RTP and RTSP video streaming over your vehicles UDP connection. It also support directly connected UVC device support. QGC video support is further discussed in the Video README.
-A Telemetry Overlay is automatically generated as a subtitle file
+* **Video:**
+    * Displays live video from the vehicle when connected to the [Companion Computer](/introduction/hardware-options/required-hardware/companion-computer.md).
+    * A [Telemetry Overlay](https://github.com/bluerobotics/ardusub-gitbook/blob/ArduSub-Docs-Overhaul/reference/qgroundcontrol/other-features.md#video-overlay) is automatically generated as a subtitle file when a video is recorded.
 
 * Map/Switcher: 
 Toggle between video or map in a window.: 
