@@ -32,3 +32,7 @@ Status icons are displayed when QGroundControl is connected to a vehicle. These 
 
 <img src="/images/reference/reference-qgc-toolbar-arming-status.png" class="img-responsive img-left" style="max-height:600px;"> **Arming Status**:
 
+## Brand Image
+
+This can be changed in the [General Settings](/reference/qgroundcontrol/application-settings-view.md#brand-image) of the _Application Settings View_.
+
