@@ -8,15 +8,15 @@ The main menu/tool bar provides access to the different application views, and h
 
 The following icons are used to switch between the main _Views_. These are displayed even if no vehicle is connected.
 
-<img src="/images/reference/reference-qgc-toolbar-application-settings.png" class="img-responsive img-left" style="max-height:600px;"> **Application Settings View**: Configure the QGroundControl application.
+<img src="/images/reference/reference-qgc-toolbar-application-settings.png" class="img-responsive img-left" style="max-height:600px;"> **[Application Settings View](/reference/qgroundcontrol/application-settings-view.md)**: Configure the QGroundControl application.
 
-<img src="/images/reference/reference-qgc-toolbar-vehicle-setup.png" class="img-responsive img-left" style="max-height:600px;"> **Vehicle Setup View**: Configure and tune your vehicle.
+<img src="/images/reference/reference-qgc-toolbar-vehicle-setup.png" class="img-responsive img-left" style="max-height:600px;"> **[Vehicle Setup View](/reference/qgroundcontrol/vehicle-setup-view.md)**: Configure and tune your vehicle.
 
-<img src="/images/reference/reference-qgc-toolbar-plan.png" class="img-responsive img-left" style="max-height:600px;"> **Plan View**: Create autonomous missions. [Not functional with ArduSub 4.0.1]
+<img src="/images/reference/reference-qgc-toolbar-plan.png" class="img-responsive img-left" style="max-height:600px;"> **[Plan View](/reference/qgroundcontrol/plan-view.md)**: Create autonomous missions. [Not functional with ArduSub 4.0.1]
 
-<img src="/images/reference/reference-qgc-toolbar-fly.png" class="img-responsive img-left" style="max-height:600px;"> **Fly View**: Control and monitor your ArduSub vehicle, including streaming video.
+<img src="/images/reference/reference-qgc-toolbar-fly.png" class="img-responsive img-left" style="max-height:600px;"> **[Fly View](/reference/qgroundcontrol/fly-view.md)**: Control and monitor your ArduSub vehicle, including streaming video.
 
-<img src="/images/reference/reference-qgc-toolbar-analyze.png" class="img-responsive img-left" style="max-height:600px;"> **Analyze View**: Download logs, and access the MAVLink console.
+<img src="/images/reference/reference-qgc-toolbar-analyze.png" class="img-responsive img-left" style="max-height:600px;"> **[Analyze](/reference/qgroundcontrol/analyze-view.md) View**: Download logs, and access the MAVLink console.
 
 ## Status Icons
 
