@@ -57,7 +57,7 @@
       * [Main Toolbar](/reference/qgroundcontrol/main-toolbar.md)
       * [Application Settings View](/reference/qgroundcontrol/application-settings-view.md)
       * [Vehicle Setup View](/reference/qgroundcontrol/vehicle-setup-view.md)
-      * [Plan View](/reference/qgroundcontrol/plan-view.md) [Does not work for ArduSub]
+      * [Plan View](/reference/qgroundcontrol/plan-view.md)
       * [Fly View](/reference/qgroundcontrol/fly-view.md)
          * [Recoding Video]
       * [Analyze View](/reference/qgroundcontrol/analyze-view.md)
