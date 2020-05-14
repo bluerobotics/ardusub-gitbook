@@ -64,7 +64,7 @@
       * [Other Features](/reference/qgroundcontrol/other-features.md)
         * [Telemetry Text Overlay Recording](/reference/qgroundcontrol/other-features.md#video-overlay)
 * [ArduSub Configuration and Features](to do)
-    * [Vehicle Setup View](to do)
+    * [Vehicle Setup View](/reference/qgroundcontrol/vehicle-setup-view.md)
       * [Summary Page](/reference/ardusub/summary-page.md)
       * [Joystick Setup Page](/reference/ardusub/joystick-setup-page.md)
       * [Sensors Setup Page](/reference/ardusub/sensors-setup-page.md)
