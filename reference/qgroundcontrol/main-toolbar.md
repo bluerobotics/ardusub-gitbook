@@ -16,7 +16,7 @@ The following icons are used to switch between the main _Views_. These are displ
 
 <img src="/images/reference/reference-qgc-toolbar-fly.png" class="img-responsive img-left" style="max-height:600px;"> **[Fly View](/reference/qgroundcontrol/fly-view.md)**: Control and monitor your ArduSub vehicle, including streaming video.
 
-<img src="/images/reference/reference-qgc-toolbar-analyze.png" class="img-responsive img-left" style="max-height:600px;"> **[Analyze](/reference/qgroundcontrol/analyze-view.md) View**: Download logs, and access the MAVLink console.
+<img src="/images/reference/reference-qgc-toolbar-analyze.png" class="img-responsive img-left" style="max-height:600px;"> **[Analyze View](/reference/qgroundcontrol/analyze-view.md)**: Download logs, and access the MAVLink console.
 
 ## Status Icons
 
