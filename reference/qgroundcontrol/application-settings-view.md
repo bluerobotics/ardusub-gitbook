@@ -71,7 +71,7 @@ Allows you to manually create communication links and connect to them. Keep in m
 
 Allows you to cache maps for use while you have no Internet connection.
 
-<img src="/images/reference/reference-qgc-application-settings-general-brand-image.png" class="img-responsive img-center" style="max-height:600px;">
+<img src="/images/reference/reference-qgc-application-settings-general-offline-maps.png" class="img-responsive img-center" style="max-height:600px;">
 
 ### Mavlink
 
