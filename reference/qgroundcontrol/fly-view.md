@@ -30,15 +30,6 @@ The screenshot above shows the main elements of the fly view:
 
 * **Confirmation Slider**: Context sensitive slider to confirm requested actions. Slide to start operation. Press X to cancel.
 
-## Display Video
-
-When video streaming is enabled, QGroundControl will display the video stream for the currently selected vehicle in the "video switcher window" at the bottom left of the map. You can press the switcher anywhere to toggle Video and Map to foreground (below we show the video in the foreground).
-
-You can further configure video display using controls on the switcher:
-Resize the switcher by dragging the icon in the to right corner.
-Hide the switcher by pressing the toggle icon in the lower left.
-Detach the video switcher window by pressing on the icon in its top left corner (once detached, you can move and resize the window just like any other in your OS). If you close the detached window the switcher will re-lock to the QGC Fly view.
-
 ## Instrument Panel
 
 The instrument panel is a multi-page widget that displays information about the current vehicle, including: telemetry, camera, video, system health, and vibration information.
