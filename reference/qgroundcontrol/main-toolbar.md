@@ -12,7 +12,7 @@ The following icons are used to switch between the main _Views_. These are displ
 
 <img src="/images/reference/reference-qgc-toolbar-vehicle-setup.png" class="img-responsive img-left" style="max-height:600px;"> **[Vehicle Setup View](/reference/qgroundcontrol/vehicle-setup-view.md)**: Configure and tune your vehicle.
 
-<img src="/images/reference/reference-qgc-toolbar-plan.png" class="img-responsive img-left" style="max-height:600px;"> **[Plan View](/reference/qgroundcontrol/plan-view.md)**: Create autonomous missions. [Not functional with ArduSub 4.0.1]
+<img src="/images/reference/reference-qgc-toolbar-plan.png" class="img-responsive img-left" style="max-height:600px;"> **[Plan View](/reference/qgroundcontrol/plan-view.md)**: Create autonomous missions. **[Not functional with ArduSub 4.0.1]**
 
 <img src="/images/reference/reference-qgc-toolbar-fly.png" class="img-responsive img-left" style="max-height:600px;"> **[Fly View](/reference/qgroundcontrol/fly-view.md)**: Control and monitor your ArduSub vehicle, including streaming video.
 
