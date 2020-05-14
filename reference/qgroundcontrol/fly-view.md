@@ -10,25 +10,24 @@ You can use it to:
 
 ## UI Overview
 The screenshot above shows the main elements of the fly view:
-Map: Displays the positions of all connected vehicles and the mission for the current vehicle.
+
+* Map: Displays the positions of all connected vehicles and the mission for the current vehicle.
 You can drag the map to move it around (the map automatically re-centres after a certain amount of time).
 Once flying, you can click on the map to set a Go to or Orbit at location.
-Fly Toolbar: Key status information for sensors (GPS, battery, RC control), and vehicle state (Flight mode, Armed/Disarmed status).
+
+* Fly Toolbar: Key status information for sensors (GPS, battery, RC control), and vehicle state (Flight mode, Armed/Disarmed status).
 Select the sensor indicators to view more detail.
 Press the Flight mode text (e.g. "Hold") to select a new mode. Not every mode may be available.
 Press the Armed/Disarmed text to toggle the armed state. If flying you can press this text to Emergency Stop.
-Fly tools: You can use these to:
-Toggle between takeoff/land.
-Pause/restart the current operation (e.g. landing, or the mission).
-Safety return (also known as RTL or Return).
-The Action button offers other appropriate options for the current state (these overlay the Confirmation Slider). Actions include changing the altitude or continuing a mission.
-Enable the preflight checklist (tool option disabled by default).
-Instrument Panel: A multi-page widget that displays vehicle information including: telemetry, camera, video, system health, and vibration.
-Video/Switcher: Toggle between video or map in a window.
+
+* Instrument Panel: A multi-page widget that displays vehicle information including: telemetry, camera, video, system health, and vibration.
+
+* Video/Switcher: Toggle between video or map in a window.
 Press the element to switch Video and Map to foreground.
 QGroundControl supports RTP and RTSP video streaming over your vehicles UDP connection. It also support directly connected UVC device support. QGC video support is further discussed in the Video README.
 A Telemetry Overlay is automatically generated as a subtitle file
-Confirmation Slider: Context sensitive slider to confirm requested actions. Slide to start operation. Press X to cancel.
+
+* Confirmation Slider: Context sensitive slider to confirm requested actions. Slide to start operation. Press X to cancel.
 
 ## Display Video
 
