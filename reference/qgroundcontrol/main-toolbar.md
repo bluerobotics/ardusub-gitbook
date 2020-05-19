@@ -26,11 +26,13 @@ Status icons are displayed when QGroundControl is connected to a vehicle. These 
 
 <img src="/images/reference/reference-qgc-toolbar-battery.png" class="img-responsive img-left" style="max-height:600px;"> **Battery**: Current battery voltage. A [Power Sensing Module](/introduction/hardware-options/required-hardware/power-sensing-module.md) will need to be [properly configured](/reference/ardusub/power-setup-page.md) to display the correct voltage.
 
-<img src="/images/reference/reference-qgc-toolbar-joystick.png" class="img-responsive img-left" style="max-height:600px;"> **Joystick Status**: 
+<img src="/images/reference/reference-qgc-toolbar-joystick.png" class="img-responsive img-left" style="max-height:600px;"> **Joystick Status**: Click to show the joystick status. The icon will be red if no joystick is connected and/or it is not enabled. After a joystick is [calibrated and enabled](/reference/ardusub/joystick-setup-page.md#calibration-procedures), the icon will turn white.
 
 <img src="/images/reference/reference-qgc-toolbar-flight-mode.png" class="img-responsive img-left" style="max-height:600px;"> **Flight Mode**: Current flight mode. Click or press an assigned button to change flight mode.
 
-<img src="/images/reference/reference-qgc-toolbar-arming-status.png" class="img-responsive img-left" style="max-height:600px;"> **Arming Status**:
+<img src="/images/reference/reference-qgc-toolbar-arming-status.png" class="img-responsive img-left" style="max-height:600px;"> **Arming Status**: This dropdown shows the arming status of the vehicle. 
+    * **Disarmed** means control to the ESCs has been disabled and cannot be activated inadvertently. 
+    * **Armed** means the ESCs are enabled and moving the joystick will cause the thrusters to spin in the corresponding direction.
 
 ## Brand Image
 
