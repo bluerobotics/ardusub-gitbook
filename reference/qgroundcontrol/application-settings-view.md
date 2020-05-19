@@ -23,17 +23,47 @@ The main application configuration settings. These are used to specify: display 
 #### Units
 <img src="/images/reference/reference-qgc-application-settings-general-units.png" class="img-responsive img-center" style="max-height:600px;">
 
+The settings are:
+* **Distance:** Meters | Feet
+* **Area:** SquareMetres | SquareFeet | SquareKilometers | Hectares | Acres |SquareMiles
+* **Speed:** Metres/second | Feet/second | Miles/hour | Kilometres/hour | Knots
+* **Temperature:** Celsius | Fahrenheit
+
 ##### Miscellaneous
 
 <img src="/images/reference/reference-qgc-application-settings-general-misc.png" class="img-responsive img-center" style="max-height:600px;">
+
+The settings are:
+* **Language:** System (System Language) | Bulgarian, Chinese, etc...
+* **Color Scheme:** Indoor (Dark) | Outdoor (Light)
+* **Map Provider:** Google | Mapbox | Bing | Airmap | VWorld | Eniro | Statkart
+* **Map Type:** Road | Hybrid | Satellite
+* **Stream GCS Position:** Never | Always | When in Follow Me Flight Mode.
+* **UI Scaling:** UI scale percentage (affects fonts, icons, button sizes, layout etc.)
+* **Mute all audio output:** Turns off all audio output.
+* **Check for Internet Connection:** Uncheck to allow maps to be used in China/places where map tile downloads are likely to fail (stops the map-tile engine continually rechecking for an Internet connection).
+* **Autoload Missions:** If enabled, automatically upload a plan to the vehicle on connection.
+    * The plan file must be named AutoLoad#.plan, where the # is replaced with the vehicle id.
+    * The plan file must be located in the Application Load/Save Path.
+* **Clear all settings on next start:** Resets all settings to the default (including this one) when QGroundControl restarts.
+* **Announce battery lower than:** Battery level at which QGroundControl will start low battery announcements.
+* **Application Load/Save Path:** Default location for loading/saving application files, including: parameters, telemetry logs, and mission plans.
 
 #### Data Persistence
 
 <img src="/images/reference/reference-qgc-application-settings-general-data-persistence.png" class="img-responsive img-center" style="max-height:600px;">
 
+The settings are:
+* **Disable all data persistence:** Check to prevent any data being saved or cached: logs, map tiles etc. This setting disables the telemetry logs section.
+
 #### Telemetry Logs
 
 <img src="/images/reference/reference-qgc-application-settings-general-telemetry-logs.png" class="img-responsive img-center" style="max-height:600px;">
+
+The settings are:
+* **Save log after each flight:** Telemetry logs (.tlog) automatically saved to the Application Load/Save Path (above) after flight.
+* **Save logs even if vehicle was not armed: Logs when a vehicle connects to QGroundControl. Stops logging when the last vehicle disconnects.
+* **[CSV Logging:](https://docs.qgroundcontrol.com/en/SettingsView/csv.html)** Log subset of telemetry data to a CSV file.
 
 #### Fly View
 
