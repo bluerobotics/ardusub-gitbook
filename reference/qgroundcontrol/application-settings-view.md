@@ -62,12 +62,28 @@ The settings are:
 
 The settings are:
 * **Save log after each flight:** Telemetry logs (.tlog) automatically saved to the Application Load/Save Path (above) after flight.
-* **Save logs even if vehicle was not armed: Logs when a vehicle connects to QGroundControl. Stops logging when the last vehicle disconnects.
+* **Save logs even if vehicle was not armed:** Logs when a vehicle connects to QGroundControl. Stops logging when the last vehicle disconnects.
 * **[CSV Logging:](https://docs.qgroundcontrol.com/en/SettingsView/csv.html)** Log subset of telemetry data to a CSV file.
 
 #### Fly View
 
 <img src="/images/reference/reference-qgc-application-settings-general-fly-view.png" class="img-responsive img-center" style="max-height:600px;">
+
+The settings are:
+* **Use Preflight Checklist:** Enable pre-flight checklist in Fly toolbar.
+* **Enforce Preflight Checklist:** Checklist completion is a pre-condition for arming.
+* **Keep Map Centered on Vehicle:** Forces map to center on the currently selected vehicle.
+* **Show Telemetry Log Replay Status Bar:** Display status bar for Replaying Flight Data.
+* **Virtual Joystick:** Enable virtual joysticks (Does NOT work for ArduSub, PX4 only)
+* **Use Vertical Instrument Panel:** Align instrument panel vertically rather than horizontally (default).
+* **Show additional heading indicators on Compass:** Adds additional indicators to the compass rose:
+    * Blue arrow: course over ground.
+    * White house: direction back to home.
+    * Green line: Direction to next waypoint.
+* **Lock Compass Nose-Up:** Check to rotate the compass rose (default is to rotate the vehicle inside the compass indicateor, North Up).
+* **Guided Minimum Altitude:** Minimum value for guided actions altitude slider.
+* **Guided Maximum Altitude:** Minimum value for guided actions altitude slider.
+* **Go To Location Max Distance:** The maximum distance that a Go To location can be set from the current vehicle location (in guided mode).
 
 #### Plan View
 
