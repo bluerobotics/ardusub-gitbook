@@ -32,9 +32,9 @@ Status icons are displayed when QGroundControl is connected to a vehicle. These 
 
 <img src="/images/reference/reference-qgc-toolbar-arming-status.png" class="img-responsive img-left" style="max-height:600px;"> **Arming Status**: This dropdown shows the arming status of the vehicle. 
 
-    * **Disarmed** means control to the ESCs has been disabled and cannot be activated inadvertently. 
+   * **Disarmed** means control to the ESCs has been disabled and cannot be activated inadvertently. 
     
-    * **Armed** means the ESCs are enabled and moving the joystick will cause the thrusters to spin in the corresponding direction.
+   * **Armed** means the ESCs are enabled and moving the joystick will cause the thrusters to spin in the corresponding direction.
 
 ## Brand Image
 
