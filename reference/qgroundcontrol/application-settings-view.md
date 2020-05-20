@@ -182,15 +182,34 @@ Allows you to manually create communication links and connect to them. Keep in m
 
 ### Offline Maps
 
-Allows you to cache maps for use while you have no Internet connection.
+Offline Maps allows you to cache map tiles for use when not connected to the internet. You can create multiple offline sets, each for a different location.
 
 <img src="/images/reference/reference-qgc-application-settings-general-offline-maps.png" class="img-responsive img-center" style="max-height:600px;">
 
+To use:
+1. To create a new offline map set, click "Add new set". 
+2. From here you can name you set as well as specify the zoom levels you want to cache. 
+3. Move the map to the position you can to cache and then set the zoom levels and click Download to cache the tiles.
+4. To the left you can see previews of the min and max zoom levels you have chosen.
+
 ### Mavlink
 
-Settings associated with the MAVLink connection to a vehicle.
+The MAVLink settings allow you to configure options and view information specific to MAVLink communications. This includes setting the MAVLink system ID for QGroundControl and viewing link quality.
 
 <img src="/images/reference/reference-qgc-application-settings-mavlink.png" class="img-responsive img-center" style="max-height:600px;">
+
+#### Ground Station
+
+This section sets the MAVLink properties and behaviour of QGroundControl.
+
+* **MAVLink System ID:** System ID of QGroundControl on the MAVLink network (Default: 255). Vehicles are typically allocated IDs from 1. 
+* **Emit heartbeat:** Disable emission of regular MAVLink HEARTBEAT message (Default: True). Generally speaking, you should not turn this off.
+* **Request start of MAVLink telemetry streams (ArduPilot only):** Enable QGroundControl requesting the standard-rate ArduPilot telemetry streams (Default: True). If non-standard rates are required (e.g. if the vehicle is connecting over a slow link) then you can disable starting the standard streams so that the vehicle can control streaming rates.
+* **Only accept MAVs with the same protocol version:** Set true to only connect to MAVLink 1 or to MAVLink 2 vehicles (Default: True).
+
+#### Link Status
+
+This shows the status of MAVLink message transfer over the communications link. A high Loss rate may lead to protocol errors for things like parameter download or mission upload/download.
 
 ### Console
 
