@@ -38,7 +38,7 @@ The settings are:
 * **Color Scheme:** Indoor (Dark) | Outdoor (Light)
 * **Map Provider:** Google | Mapbox | Bing | Airmap | VWorld | Eniro | Statkart
 * **Map Type:** Road | Hybrid | Satellite
-* **Stream GCS Position:** Never | Always | When in Follow Me Flight Mode.
+* **Stream GCS Position:** Never | Always | When in Follow Me Flight Mode (Does NOT work for ArduSub, PX4 only)
 * **UI Scaling:** UI scale percentage (affects fonts, icons, button sizes, layout etc.)
 * **Mute all audio output:** Turns off all audio output.
 * **Check for Internet Connection:** Uncheck to allow maps to be used in China/places where map tile downloads are likely to fail (stops the map-tile engine continually rechecking for an Internet connection).
@@ -70,28 +70,59 @@ The settings are:
 <img src="/images/reference/reference-qgc-application-settings-general-fly-view.png" class="img-responsive img-center" style="max-height:600px;">
 
 The settings are:
-* **Use Preflight Checklist:** Enable pre-flight checklist in Fly toolbar.
-* **Enforce Preflight Checklist:** Checklist completion is a pre-condition for arming.
+* **Use Preflight Checklist:** Enable pre-flight checklist in Fly toolbar (Does NOT work for ArduSub).
+* **Enforce Preflight Checklist:** Checklist completion is a pre-condition for arming (Does NOT work for ArduSub).
 * **Keep Map Centered on Vehicle:** Forces map to center on the currently selected vehicle.
 * **Show Telemetry Log Replay Status Bar:** Display status bar for Replaying Flight Data.
-* **Virtual Joystick:** Enable virtual joysticks (Does NOT work for ArduSub, PX4 only)
+* **Virtual Joystick:** Enable virtual joysticks (Does NOT work for ArduSub, PX4 only).
 * **Use Vertical Instrument Panel:** Align instrument panel vertically rather than horizontally (default).
-* **Show additional heading indicators on Compass:** Adds additional indicators to the compass rose:
+* **Show additional heading indicators on Compass:** Adds additional indicators to the compass rose: (only works with an underwater positioning system)
     * Blue arrow: course over ground.
     * White house: direction back to home.
     * Green line: Direction to next waypoint.
 * **Lock Compass Nose-Up:** Check to rotate the compass rose (default is to rotate the vehicle inside the compass indicateor, North Up).
-* **Guided Minimum Altitude:** Minimum value for guided actions altitude slider.
-* **Guided Maximum Altitude:** Minimum value for guided actions altitude slider.
+* **Guided Minimum Altitude:** Minimum value for guided actions altitude slider (Does NOT work for ArduSub).
+* **Guided Maximum Altitude:** Minimum value for guided actions altitude slider (Does NOT work for ArduSub).
 * **Go To Location Max Distance:** The maximum distance that a Go To location can be set from the current vehicle location (in guided mode).
 
 #### Plan View
 
 <img src="/images/reference/reference-qgc-application-settings-general-plan-view.png" class="img-responsive img-center" style="max-height:600px;">
 
+The settings are:
+* **Default Mission Altitude:** The default altitude used for the Mission Start Panel, and hence for the first waypoint (Does NOT work for ArduSub).
+
 #### Autoconnect Devices
 
+This section defines the set of devices to which QGroundControl will auto-connect.
+
 <img src="/images/reference/reference-qgc-application-settings-general-autoconnect.png" class="img-responsive img-center" style="max-height:600px;">
+
+Settings include:
+* **Pixhawk:** Autoconnect to Pixhawk-series device
+* **SiK Radio:** Autoconnect to SiK (Telemetry) radio
+* **PX4 Flow:** Autoconnect to PX4Flow device
+* **LibrePilot:** Autoconnect to Libre Pilot autopilot
+* **UDP:** Autoconnect to UDP
+* **RTK GPS:** Autoconnect to RTK GPS device
+* **NMEA GPS Device:** Autoconnect to an external GPS device to get ground station position (see below)
+
+##### Ground Station Location (NMEA GPS Device)
+
+QGroundControl will automatically use an internal GPS to display its own location on the map with a purple "Q" icon (if the GPS provides a heading, this will be also indicated by the icon).
+
+You can also configure QGC to connect to an external GPS device via a serial or UDP port. The GPS device must support the ASCII NMEA format - this is normally the case.
+
+Use the NMEA GPS Device drop-down selector to manually select the GPS device and other options:
+* USB connection:
+    * **NMEA GPS Device:** Serial
+    * **NMEA GPS Baudrate:** The baudrate for the serial port
+
+* Network connection:
+    * **NMEA GPS Device:** UDP Port.
+    * **NMEA Stream UDP Port:** The UDP port on which QGC will listen for NMEA data (QGC binds the port as a server)
+    
+> **NOTE** To troubleshoot serial GPS problems: Disable RTK GPS auto connection, close QGroundControl, reconnect your GPS, and open QGC.
 
 #### RTK GPS
 
