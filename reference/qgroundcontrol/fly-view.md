@@ -70,8 +70,6 @@ The vibration page shows current vibration levels and clip counts.
 
 ## Actions/Tasks
 
-The vibration page shows current vibration levels and clip counts.
-
 ### Arm
 
 Arming a vehicle starts the motors in preparation for takeoff.
