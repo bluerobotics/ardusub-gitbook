@@ -1,6 +1,6 @@
 # Vehicle Setup View
 
-The Vehicle Setup View is used to configure a new vehicle prior to first use and tune a configured vehicle.
+The Vehicle Setup View is used to configure a new ArduSub vehicle prior to first use and tune a configured vehicle.
 
 <img src="/images/reference/reference-ardusub-summary.png" class="img-responsive img-center" style="max-height:600px;">
 
