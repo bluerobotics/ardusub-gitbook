@@ -126,23 +126,51 @@ Use the NMEA GPS Device drop-down selector to manually select the GPS device and
 
 #### RTK GPS
 
+This feature does not work with ArduSub.
+
 <img src="/images/reference/reference-qgc-application-settings-general-rtk.png" class="img-responsive img-center" style="max-height:600px;">
 
 #### ADSB Server
+
+This feature does not work with ArduSub.
 
 <img src="/images/reference/reference-qgc-application-settings-general-adsb.png" class="img-responsive img-center" style="max-height:600px;">
 
 #### Video
 
+The Video section is used to define the source and connection settings for video that will be displayed in Fly View.
+
 <img src="/images/reference/reference-qgc-application-settings-general-video.png" class="img-responsive img-center" style="max-height:600px;">
+
+The settings are:
+* **Video Source:** Video Stream Disabled | RTSP Video Stream | UDP h.264 Video Stream | UDP h.265 Video Stream | TCP-MPEG2 Video Stream | MPEG-TS (h.264) Video Stream | Integrated Camera
+* **URL/Port:** Connection type-specific stream address (may be port or URL).
+* **Aspect Ratio:** Aspect ratio for scaling video in video widget (set to 0.0 to ignore scaling)
+* **Disabled When Disarmed:** Disable video feed when vehicle is disarmed.
+* **Low Latency Mode:** Enabling low latency mode reduces the video stream latency, but may cause frame loss and choppy video (this is enabled by default whan an ArduSub vehicle is connected).
 
 #### Video Recording
 
+The Video Recording section is used to specify the file format and maximum allocated file storage for storing video. Videos are saved to a sub-directory ("Video") of the Application Load/Save Path.
+
 <img src="/images/reference/reference-qgc-application-settings-general-video-recording.png" class="img-responsive img-center" style="max-height:600px;">
+
+The settings are:
+* **Auto-Delete Files:** If checked, files are auto deleted when the specified amount of storage is used.
+    * **Max Storage Usage:** Maximum video file storage before video files are auto deleted.
+* **Video File Format:** File format for the saved video recording: mkv, mov, mp4.
 
 #### Brand Image
 
+This setting specifies the brand image used for indoor/outdoor colour schemes.
+The brand image is displayed in place of the default ArduSub logo in the top right corner of the toolbar. It is provided so that users can easily create screen/video captures that include a company logo/branding.
+
 <img src="/images/reference/reference-qgc-application-settings-general-brand-image.png" class="img-responsive img-center" style="max-height:600px;">
+
+The settings are:
+* **Indoor Image:** Brand image used in indoor color scheme
+* **Outdoor Image:** Brand image used in outdoor color scheme
+* **Reset Default Brand Image:** Reset the brand image back to default.
 
 ### Comm Links Page
 
