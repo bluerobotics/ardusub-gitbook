@@ -13,22 +13,20 @@ Available actions:
 * **Erase All**: Erases all log files on the vehicle.
 * **Cancel**: Cancels log file download.
 
-
 ## Geotag Images [Does not work for Ardusub]
 
+This feature is not available for ArduSub, PX4 only.
+
 ## Mavlink Console [Does not work for ArduSub]
+
+This feature is not available for ArduSub, PX4 only.
 
 ## Mavlink Inspector
 
 The MAVLink Inspector provides real-time information and charting of MAVLink traffic received by QGroundControl.
 
-The inspector lists all received messages for the current vehicle, along with their source component id and update frequency. You can drill down into individual messages to get the message id, source component id, and the values of all the individual fields. You can also chart field values in real time, selecting multiple fields from multiple messages to display on one of two charts.
+> **Note** This feature is intended primarily for **autopilot developers/vehicle creators**. Additional information on its use can be found [here](https://docs.qgroundcontrol.com/en/analyze_view/mavlink_inspector.html).
 
-To use the MAVLink Inspector:
-Select Analyze | MAVLink Inspector.
-The view will start populating with messages as they are received.
-Select a message to see its fields and their (dynamically updating) value:
-Add fields to charts by enabling the adjacent checkboxes (plot 1 is displayed below plot 2).
-Fields can be added to only one chart.
-A chart can have multiple fields, and fields from multiple messages (these are listed above each chart). Messages containing fields that are being charted are highlighted with an asterisk.
-The Scale and Range are set to sensible values, but can be modified if needed.
+<img src="/images/reference/reference-qgc-analyze-mavlink-inspector.png" class="img-responsive img-center" style="max-height:600px;">
+
+
