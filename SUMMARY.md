@@ -51,7 +51,7 @@
    
 ## Reference Documentation
 
-* [QGroundControl Features and Configuration](to do)
+* [QGroundControl Features and Configuration](/reference/qgc-configuration.md)
     * [Quick Start](/reference/qgroundcontrol/quick-start.md)
     * [Main Toolbar](/reference/qgroundcontrol/main-toolbar.md)
     * [Application Settings View](/reference/qgroundcontrol/application-settings-view.md)
@@ -62,7 +62,7 @@
     * [Analyze View](/reference/qgroundcontrol/analyze-view.md)
     * [Other Features](/reference/qgroundcontrol/other-features.md)
       * [Telemetry Text Overlay Recording](/reference/qgroundcontrol/other-features.md#video-overlay)
-* [ArduSub Configuration and Features](to do)
+* [ArduSub Configuration and Features](/reference/ardusub-configuration.md)
     * [Vehicle Setup View](/reference/qgroundcontrol/vehicle-setup-view.md)
       * [Summary Page](/reference/ardusub/summary-page.md)
       * [Joystick Setup Page](/reference/ardusub/joystick-setup-page.md)
