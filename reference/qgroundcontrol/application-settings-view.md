@@ -207,6 +207,19 @@ This section sets the MAVLink properties and behaviour of QGroundControl.
 * **Request start of MAVLink telemetry streams (ArduPilot only):** Enable QGroundControl requesting the standard-rate ArduPilot telemetry streams (Default: True). If non-standard rates are required (e.g. if the vehicle is connecting over a slow link) then you can disable starting the standard streams so that the vehicle can control streaming rates.
 * **Only accept MAVs with the same protocol version:** Set true to only connect to MAVLink 1 or to MAVLink 2 vehicles (Default: True).
 
+#### Telemetry Stream Rates
+
+This section sets the stream rates of the data coming from the vehicle.
+
+* **All Streams Controlled by Vehicle Settings:** Defaults to values set by _SR"X"__ parameters.
+* **Raw Sensors:**
+* **Extended Ststus:**
+* **RC Channel:**
+* **Position:**
+* **Extra 1:**
+* **Extra 2:**
+* **Extra 3:**
+
 #### Link Status
 
 This shows the status of MAVLink message transfer over the communications link. A high Loss rate may lead to protocol errors for things like parameter download or mission upload/download.
