@@ -58,7 +58,7 @@
     * [Vehicle Setup View](/reference/qgroundcontrol/vehicle-setup-view.md)
     * [Plan View](/reference/qgroundcontrol/plan-view.md)
     * [Fly View](/reference/qgroundcontrol/fly-view.md)
-      * [Recoding Video]
+      * [Recoding Video](/reference/qgroundcontrol/fly-view.md#video-stream)
     * [Analyze View](/reference/qgroundcontrol/analyze-view.md)
     * [Other Features](/reference/qgroundcontrol/other-features.md)
       * [Telemetry Text Overlay Recording](/reference/qgroundcontrol/other-features.md#video-overlay)
