@@ -4,4 +4,14 @@ QGroundControl (QGC) is the Graphical User Interface (GUI) for ArduSub, which pr
 
 QGC has been designed to configure and fly many different types of vehicles (copters, planes, rovers, boats, subs) and firmware types ([ArduPilot](https://ardupilot.org/ardupilot/index.html) and [PX4](https://px4.io/)).
 
+> **Note** When an autopilot board with ArduSub firmware is connected, the default QGC interface changes to a customized one for ArduSub vehicles. A few pages on the _Vehicle Setup View_ are different from other ArduPilot vehicle types and any setting or section labeled "PX4 Only" will not apply.
+
+QGC is organized with the following sections and views:
+
+* [Main Toolbar](/reference/qgroundcontrol/main-toolbar.md)
+* [Applications Settings View](/reference/qgroundcontrol/application-settings-view.md)
+* [Vehicle setup View](/reference/qgroundcontrol/vehicle-setup-view.md)
+* [Plan View](/reference/qgroundcontrol/plan-view.md)
+* [Fly View](/reference/qgroundcontrol/fly-view.md)
+* [Analyze View](/reference/qgroundcontrol/analyze-view.md)
 
