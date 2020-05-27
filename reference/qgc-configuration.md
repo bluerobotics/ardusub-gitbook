@@ -6,8 +6,6 @@ QGC has been designed to configure and fly many different types of vehicles (cop
 
 > **Note** When an autopilot board with ArduSub firmware is connected, the default QGC interface changes to a customized one for ArduSub vehicles. A few pages on the _Vehicle Setup View_ are different from other ArduPilot vehicle types and any setting or section labeled "PX4 Only" will not apply.
 
-<img src="/images/reference/reference-qgc-intro-annotated.png" class="img-responsive img-center" style="max-height:600px;">
-
 QGC is organized with the following sections and views:
 
 * [Main Toolbar](/reference/qgroundcontrol/main-toolbar.md)
@@ -16,4 +14,6 @@ QGC is organized with the following sections and views:
 * [Plan View](/reference/qgroundcontrol/plan-view.md)
 * [Fly View](/reference/qgroundcontrol/fly-view.md)
 * [Analyze View](/reference/qgroundcontrol/analyze-view.md)
+
+<img src="/images/reference/reference-qgc-intro-annotated.png" class="img-responsive img-center" style="max-height:600px;">
 
