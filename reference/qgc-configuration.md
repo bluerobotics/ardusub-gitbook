@@ -16,12 +16,12 @@ QGC has been designed to configure and fly many different types of vehicles (cop
 
 QGC is organized with the following sections and views:
 
-* [Main Toolbar](/reference/qgroundcontrol/main-toolbar.md)
-* [Applications Settings View](/reference/qgroundcontrol/application-settings-view.md)
-* [Vehicle Setup View](/reference/qgroundcontrol/vehicle-setup-view.md)
-* [Plan View](/reference/qgroundcontrol/plan-view.md)
-* [Fly View](/reference/qgroundcontrol/fly-view.md)
-* [Analyze View](/reference/qgroundcontrol/analyze-view.md)
+* **[Main Toolbar](/reference/qgroundcontrol/main-toolbar.md)**
+* **[Applications Settings View](/reference/qgroundcontrol/application-settings-view.md)**
+* **[Vehicle Setup View](/reference/qgroundcontrol/vehicle-setup-view.md)**
+* **[Plan View](/reference/qgroundcontrol/plan-view.md)**
+* **[Fly View](/reference/qgroundcontrol/fly-view.md)**
+* **[Analyze View](/reference/qgroundcontrol/analyze-view.md)**
 
 <img src="/images/reference/reference-qgc-intro-annotated.png" class="img-responsive img-center" style="max-height:600px;">
 
