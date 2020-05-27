@@ -6,6 +6,8 @@ QGC has been designed to configure and fly many different types of vehicles (cop
 
 > **Note** When an autopilot board with ArduSub firmware is connected, the default QGC interface changes to a customized one for ArduSub vehicles. A few pages on the _Vehicle Setup View_ are different from other ArduPilot vehicle types and any setting or section labeled "PX4 Only" will not apply.
 
+The [QGroundControl User Guide]()
+
 ## Quick Start
 
 1. [Download and install]() QGroundControl for your operating system.
