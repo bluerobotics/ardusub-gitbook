@@ -52,7 +52,6 @@
 ## Reference Documentation
 
 * [QGroundControl Features and Configuration](/reference/qgc-configuration.md)
-    * [Quick Start](/reference/qgroundcontrol/quick-start.md)
     * [Main Toolbar](/reference/qgroundcontrol/main-toolbar.md)
     * [Application Settings View](/reference/qgroundcontrol/application-settings-view.md)
     * [Vehicle Setup View](/reference/qgroundcontrol/vehicle-setup-view.md)
