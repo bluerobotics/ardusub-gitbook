@@ -10,7 +10,7 @@ QGC has been designed to configure and fly many different types of vehicles (cop
 
 1. [Download and install]() QGroundcontrol for your operating system.
 2. Start QGroundControl.
-3. Turn on and connect an ArduSub vehicle. If using a Companion Computer, the [Network Settings] will need to be configured. QGroundControl should detect the vehicle and connect to it automatically.
+3. Turn on and connect an ArduSub vehicle. If using a Companion Computer, the [Network Settings]() will need to be configured. QGroundControl should detect the vehicle and connect to it automatically.
 
 ## Organization
 
