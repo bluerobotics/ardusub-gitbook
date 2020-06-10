@@ -1,9 +1,18 @@
-# Import mavutil
-from pymavlink import mavutil
+"""
+Example of how to send MAV_DISTANCE_SENSOR messages to integrate a custom distance sensor
+to the autopilot using pymavlink
+"""
+
 import time
 
+# Import mavutil
+from pymavlink import mavutil
+
 # Wait for server connection
-def wait_conn(master):
+def wait_conn():
+    """
+    Sends a ping to the autopilot to stabilish the UDP connection and waits for a reply
+    """
     msg = None
     while not msg:
         master.mav.ping_send(
@@ -20,7 +29,7 @@ def wait_conn(master):
 master = mavutil.mavlink_connection('udpout:localhost:9000')
 
 # Send a ping to start connection and wait for any reply.
-wait_conn(master)
+wait_conn()
 
 # Configure the autopilot to use mavlink rangefinder, the autopilot
 # will need to be rebooted after this to use the updated setting
@@ -31,11 +40,11 @@ master.mav.param_set_send(
     10, # "MAVLink"
     mavutil.mavlink.MAV_PARAM_TYPE_INT8)
 
-min = 10 # minimum valid measurement that the autopilot should use
-max = 40 # maximum valid measurement that the autopilot should use
+min_measurement = 10 # minimum valid measurement that the autopilot should use
+max_measurement = 40 # maximum valid measurement that the autopilot should use
 distance = 20 # You will need to supply the distance measurement
-type = mavutil.mavlink.MAV_DISTANCE_SENSOR_UNKNOWN
-id = 1
+sensor_type = mavutil.mavlink.MAV_DISTANCE_SENSOR_UNKNOWN
+sensor_id = 1
 orientation = mavutil.mavlink.MAV_SENSOR_ROTATION_PITCH_270 # downward facing
 covariance = 0
 
@@ -44,10 +53,10 @@ while True:
     time.sleep(0.5)
     master.mav.distance_sensor_send(
         int((time.time() - tstart) * 1000),
-        min,
-        max,
+        min_measurement,
+        max_measurement,
         distance,
-        type,
-        id,
+        sensor_type,
+        sensor_id,
         orientation,
         covariance)
