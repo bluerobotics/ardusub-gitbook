@@ -27,7 +27,7 @@ wait_conn(master)
 master.mav.param_set_send(
     1,
     1,
-    "RNGFND_TYPE",
+    b"RNGFND_TYPE",
     10, # "MAVLink"
     mavutil.mavlink.MAV_PARAM_TYPE_INT8)
 
