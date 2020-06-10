@@ -1,3 +1,9 @@
+"""
+Example of how to send MANUAL_CONTROL messages to the autopilot using
+pymavlink.
+This message is able to fully replace the joystick inputs.
+"""
+
 # Import mavutil
 from pymavlink import mavutil
 
