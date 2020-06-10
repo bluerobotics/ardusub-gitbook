@@ -1,3 +1,7 @@
+"""
+Example of how to filter for specific mavlink messages coming from the
+autopilot using pymavlink
+"""
 # Import mavutil
 from pymavlink import mavutil
 
