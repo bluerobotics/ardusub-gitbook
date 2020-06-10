@@ -1,3 +1,7 @@
+"""
+Example of controlling a camera gimbal using pymavlink
+"""
+
 import time
 # Import mavutil
 from pymavlink import mavutil
@@ -27,11 +31,12 @@ def look_at(tilt, roll=0, pan=0):
         0, 0, 0,
         mavutil.mavlink.MAV_MOUNT_MODE_MAVLINK_TARGETING)
 
+
 # cycles the camera up and down
 while True:
-    for tilt in range(-50, 50):
-        look_at(tilt*100)
+    for angle in range(-50, 50):
+        look_at(angle*100)
         time.sleep(0.1)
-    for tilt in range(-50, 50):
-        look_at(-tilt*100)
+    for angle in range(-50, 50):
+        look_at(-angle*100)
         time.sleep(0.1)
