@@ -1,3 +1,8 @@
+"""
+Example of how to change flight modes using pymavlink
+"""
+
+import sys
 # Import mavutil
 from pymavlink import mavutil
 
@@ -13,7 +18,7 @@ mode = 'STABILIZE'
 if mode not in master.mode_mapping():
     print('Unknown mode : {}'.format(mode))
     print('Try:', list(master.mode_mapping().keys()))
-    exit(1)
+    sys.exit(1)
 
 # Get mode ID
 mode_id = master.mode_mapping()[mode]
@@ -28,9 +33,7 @@ master.mav.set_mode_send(
     mavutil.mavlink.MAV_MODE_FLAG_CUSTOM_MODE_ENABLED,
     mode_id)
 
-# Check ACK
-ack = False
-while not ack:
+while True:
     # Wait for ACK command
     ack_msg = master.recv_match(type='COMMAND_ACK', blocking=True)
     ack_msg = ack_msg.to_dict()
