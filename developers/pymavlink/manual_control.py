@@ -33,6 +33,6 @@ master.mav.manual_control_send(
     master.target_system,
     0,
     0,
-    0,
+    500, # 500 means neutral throttle
     0,
     buttons)
