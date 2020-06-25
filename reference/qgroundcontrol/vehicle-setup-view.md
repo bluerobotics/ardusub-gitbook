@@ -10,6 +10,8 @@ To the left of the screen are the set of available setup options. A setup button
 
 * **[Summary Page](/reference/ardusub/summary-page.md)**
 
+* **Firmware Page (Not used with the Companion Computer)**
+
 * **[Joystick Setup Page](/reference/ardusub/joystick-setup-page.md)**
 
 * **[Sensors Setup Page](/reference/ardusub/sensors-setup-page.md)**
