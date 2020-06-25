@@ -73,12 +73,18 @@ The vibration page shows current vibration levels and clip counts.
 
 ### Arm
 
-Arming a vehicle starts the motors in preparation for takeoff.
-To arm the vehicle, select Disarmed in the Fly Toolbar and then use the confirmation sider.
+Arming a vehicle unlocks the drive thrusters and allows for maneuvering.
+
+>**Note** It is recommended to only arm the vehicle when in the MANUAL flight mode to prevent inadvertent thruster activation. The vehicle will attempt to stabilize itself in other flight modes.
+
+The vehicle may be armed in two ways:
+1. Press an assigned [joystick button](/reference/ardusub/joystick-setup-page.md#button-assignment). 
+2. Select the DISARMED button in the Fly Toolbar and then use the confirmation sider.
 
 ### Disarm
 
-Disarming the vehicle stops the motors (making the vehicle safe). To disarm the vehicle select Armed in the Fly Toolbar when the vehicle is landed.
+Disarming the vehicle disengages the thrusters (making the vehicle safe to handle).
 
-## Replay Telemetry Data
-
+The vehicle may be disarmed in two ways:
+1. Press an assigned [joystick button](/reference/ardusub/joystick-setup-page.md#button-assignment).
+2. Select the ARMED button in the Fly Toolbar and then use the confirmation sider.
