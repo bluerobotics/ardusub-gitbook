@@ -31,8 +31,6 @@ The screenshot above shows the main elements of the fly view:
 
 * **Instrument Panel**: A multi-page widget that displays vehicle information including: telemetry, camera, video, system health, and vibration.
 
-* **Confirmation Slider**: Context sensitive slider to confirm requested actions. Slide to start operation. Press X to cancel.
-
 ## Instrument Panel
 
 The instrument panel is a multi-page widget that displays information about the current vehicle, including: telemetry, camera, video, system health, and vibration information.
