@@ -7,6 +7,7 @@ You can use it to:
 * Control the vehicle and accessories with a connected joystick.
 * Switch between a video view and map view (if an underwater positioning system is used).
 
+<img src="/images/reference/reference-qgc-fly-annotated.png" class="img-responsive img-center" style="max-height:600px;">
 
 ## UI Overview
 The screenshot above shows the main elements of the fly view:
