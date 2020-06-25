@@ -3,7 +3,7 @@
 The Fly View is used to control and monitor the vehicle when diving.
 
 You can use it to:
-* Display video, mission, telemetry, and other information for the current vehicle.
+* Display video, telemetry, and other information for the current vehicle.
 * Control the vehicle and accessories with a connected joystick.
 * Switch between a video view and map view (if an underwater positioning system is used).
 
