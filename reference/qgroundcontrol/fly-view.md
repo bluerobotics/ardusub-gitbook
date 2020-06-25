@@ -18,6 +18,7 @@ The screenshot above shows the main elements of the fly view:
     * Press the Armed/Disarmed text to toggle the armed state or press an assigned joystick button. A confirmation slider will appear.
 
 * **Video:** Displays live video from the vehicle when connected to the [Companion Computer](/introduction/hardware-options/required-hardware/companion-computer.md).
+    * Video can be recorded on the topside computer with the [Video Steam](/reference/qgroundcontrol/fly-view.md#video-stream) instrument page.
     * A [Telemetry Overlay](https://github.com/bluerobotics/ardusub-gitbook/blob/ArduSub-Docs-Overhaul/reference/qgroundcontrol/other-features.md#video-overlay) is automatically generated as a subtitle file when a video is recorded.
 
 * **Map/Switcher:** Displays the position of a connected vehicle when using an underwater positioning system.
