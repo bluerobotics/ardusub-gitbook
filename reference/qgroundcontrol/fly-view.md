@@ -13,9 +13,9 @@ You can use it to:
 The screenshot above shows the main elements of the fly view:
 
 * **[Fly Toolbar](/reference/qgroundcontrol/main-toolbar.md):** Key status information (warning messages, battery, joystick status), and vehicle state (Flight mode, Armed/Disarmed status).
-    * Select the sensor indicators to view more detail.
-    * Press the Flight mode text (e.g. "Manual") to select a new mode or press an assigned joystick button. Not every mode may be available.
-    * Press the Armed/Disarmed text to toggle the armed state or press an assigned joystick button.
+    * Select the sensor indicators (joystick, battery, etc.) to view more detail.
+    * Press the Flight Mode text (e.g. "Manual") to select a new mode or press an assigned joystick button. Not every mode may be available.
+    * Press the Armed/Disarmed text to toggle the armed state or press an assigned joystick button. A confirmation slider will appear.
 
 * **Video:** Displays live video from the vehicle when connected to the [Companion Computer](/introduction/hardware-options/required-hardware/companion-computer.md).
     * A [Telemetry Overlay](https://github.com/bluerobotics/ardusub-gitbook/blob/ArduSub-Docs-Overhaul/reference/qgroundcontrol/other-features.md#video-overlay) is automatically generated as a subtitle file when a video is recorded.
