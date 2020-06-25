@@ -1,6 +1,8 @@
 # Features While in Operation
 
-## Joystick Button Functions
+## Default Joystick Functions
+
+<img src="/reference/reference-operational-joystick-defaults.png" class="img-responsive img-center" style="max-height:600px;">
 
 ## Flight Modes
 ArduSub supports several different flight modes, some of which are only available when certain sensors are present. ArduSub always operates in exactly one flight mode at any given time. ArduSub always boots in Manual mode.
