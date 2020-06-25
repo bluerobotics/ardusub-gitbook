@@ -26,6 +26,8 @@ The screenshot above shows the main elements of the fly view:
     * The switcher can be hidden by clicking on the **"<<<"** icon.
     * The switcher can be expanded by clicking and dragging the upper right corner.
     * The switcher can be popped out by clicking on the upper left icon when video is in the secondary window element.
+    
+* **Attitude and Compass Indicators**: Visual instruments which show the vehicle's attitude (pitch and roll orientation) and compass heading.
 
 * **Instrument Panel**: A multi-page widget that displays vehicle information including: telemetry, camera, video, system health, and vibration.
 
