@@ -4,7 +4,7 @@ ArduSub is the firmware binary which resides on the flash memory of the autopilo
 
 It may be installed (or updated) in one of two ways:
 1. Connecting it to a Companion Computer and pressing the appropriate button.
-2. Directly connecting the board to a Topside Computer with QGroundControl
+2. Directly connecting the board to a Topside Computer with QGroundControl.
 
 ## With a Companion Computer (Automatic Installation)
 
