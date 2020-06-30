@@ -39,15 +39,15 @@
       * [Sonars](/introduction/hardware-options/additional-peripheral-devices/sonars.md)
         
 ## Quick Start
-* [Building a Vehicle Frame](to do)
-* [Connection Diagram](to do)
-* [Installing QGroundControl](to do)
-* [Installing Companion Software Image](to do)
-* [Network Setup](to do)
-* [Installing Autopilot Firmware](to do)
-* [Frame Selection](to do)
-* [Completing Calibrations](to do)
-* [First Dive](to do)
+* [Building a Vehicle Frame](/quick-start/vehicle-frame.md)
+    * [Connection Diagram](to do)
+* [Installing QGroundControl](/quick-start/installing-qgc.md)
+* [Installing Companion Software Image](/quick-start/installing-companion.md)
+    * [Network Setup](to do)
+* [Installing Autopilot Firmware](/quick-start/installing-ardusub.md)
+    * [Frame Selection](to do)
+    * [Completing Calibrations](to do)
+* [First Dive](/quick-start/first-dive.md)
    
 ## Reference Documentation
 
