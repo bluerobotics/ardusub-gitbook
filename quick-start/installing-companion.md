@@ -9,7 +9,7 @@ The operating system and supporting software is installed by writing a pre-confi
 <img src="/images/etcher.png" width="690" height="351">
 5. Eject the SD card, and insert it into the Raspberry Pi.
 
-## Network Setup
+# Network Setup
 
 The *Companion Computer* is assigned a static IP address of 192.168.2.2, and it expects the surface computer to have an IP address of 192.168.2.1. The network configuration on the surface computer needs to be set up before it can communicate with the ROV. Choose your operating system below to display the appropriate network setup instructions.
 
@@ -104,3 +104,5 @@ The *Companion Computer* is assigned a static IP address of 192.168.2.2, and it 
 	</ol>
 
 </div>
+
+# Software Update
