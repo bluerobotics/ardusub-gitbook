@@ -1,5 +1,3 @@
-
-## Supported Frames
 # Building a Vehicle Frame
 
 ## Frame Selection
