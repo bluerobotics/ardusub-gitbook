@@ -1,6 +1,6 @@
-# Installation
+# QGroundControl Installation
 
-## QGroundControl
+## Download
 
 Download and install QGroundControl using one of the links below.
 
@@ -8,5 +8,23 @@ Download and install QGroundControl using one of the links below.
 - [Mac](https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.dmg)
 - [Linux](https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage)
 
+>**Note** The Windows installer creates 3 shortcuts: QGroundControl, GPU Compatibility Mode, GPU Safe Mode. Use the first shortcut unless you experience startup or video rendering issues. For more information see QGC Install/Config Problems > Windows: UI Rendering/Video Driver Issues.
+
 >**Note** Linux needs additional GStreamer dependencies, see the [QGroundControl User Guide](https://docs.qgroundcontrol.com/en/getting_started/download_and_install.html#ubuntu) for details.
+
+## Folder Structure
+
+After running the installer, the following folders will be installed in the default location:
+
+**/Documents/QGroundControl/**
+* **CrashLogs:** Data files from QGC application crashes.
+* **Logs:** Downloaded vehicle logs. (.bin)
+* **Missions:** Downloaded mission plans. (.plan)
+* **Parameters:** Saved vehicle parameter files. (.params)
+* **Telemetry:** Saved telemetry files from vehicles. (.tlog)
+* **Video:** Recorded video subtitle files. (.mkv/.mov/.mp4 and .ass)
+
+## Running the Application
+
+
 
