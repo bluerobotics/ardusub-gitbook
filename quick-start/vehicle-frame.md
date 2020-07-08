@@ -39,6 +39,10 @@ Currently supported are:
 	</tr>
 </table>
 
+### Custom Frame
+
+If the vehicle thruster configuration a user wishes to build is not one of the pre-build frames, then a custom frame may be configured in using this documentation: [Making a Custom Configuration](http://www.ardusub.com/developers/developers.html#making-a-custom-configuration)
+
 ## Component Selection
 
 ## Assembly
