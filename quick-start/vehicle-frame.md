@@ -2,8 +2,11 @@
 
 ## Frame Selection
 
+The first step in building an ArduSub vehicle is to pick a vehicle "frame" from which to mount and orient thrusters. Some frames use less thrusters, while others have better manueverability (strafe, pitch/roll stability).
 
-ArduSub includes a high-level motor library that can configure motors in any configuration. This library is used to implement a number of supported frame configurations. All configurations are shown from **top-down view**. Green thrusters indicate counter-clockwise propellers and blue thrusters indicate clockwise propellers (or vice-versa). Currently supported are:
+ArduSub includes a high-level motor library that can configure motors in any configuration. This library is used to implement a number of supported frame configurations. All configurations are shown from **top-down view**. Green thrusters indicate counter-clockwise propellers and blue thrusters indicate clockwise propellers (or vice-versa). 
+
+Currently supported are:
 
 <table>
 	<tr>
@@ -36,3 +39,6 @@ ArduSub includes a high-level motor library that can configure motors in any con
 	</tr>
 </table>
 
+## Component Selection
+
+## Assembly
