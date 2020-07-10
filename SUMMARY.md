@@ -40,7 +40,6 @@
         
 ## Quick Start
 * [Building a Vehicle Frame](/quick-start/vehicle-frame.md)
-    * [Connection Diagram](to do)
 * [Installing QGroundControl](/quick-start/installing-qgc.md)
 * [Installing Companion Software Image](/quick-start/installing-companion.md)
     * [Network Setup](to do)
