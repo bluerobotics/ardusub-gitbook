@@ -42,7 +42,7 @@
 * [Building a Vehicle Frame](/quick-start/vehicle-frame.md)
 * [Installing QGroundControl](/quick-start/installing-qgc.md)
 * [Installing Companion Software Image](/quick-start/installing-companion.md)
-    * [Network Setup](to do)
+    * [Network Setup](/quick-start/installing-companion.md#network-setup)
 * [Installing Autopilot Firmware](/quick-start/installing-ardusub.md)
     * [Frame Selection](to do)
     * [Completing Calibrations](to do)
