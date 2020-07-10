@@ -8,6 +8,14 @@ It may be installed (or updated) in one of two ways:
 
 ## With a Companion Computer (Automatic Installation)
 
+To load ArduSub onto an autopilot board:
+
+1. Navigate to [192.168.2.2:2770/network](192.168.2.2:2770/network) and ensure that the ROV has an internet connection.
+
+2. Navigate to [192.168.2.2:2770/system](192.168.2.2:2770/system). Click the button under the 'Pixhawk Firmware Update' section that says 'Stable'.
+
+3. Wait for the update process to complete, and you are finished!
+
 
 ## Without a Companion Computer (Manual Installation)
 
