@@ -4,7 +4,9 @@
 
 The first step in building an ArduSub vehicle is to pick a vehicle "frame" from which to mount and orient thrusters. Some frames use less thrusters, while others have better manueverability (strafe, pitch/roll stability).
 
-ArduSub includes a high-level motor library that can configure motors in any configuration. This library is used to implement a number of supported frame configurations. All configurations are shown from **top-down view**. Green thrusters indicate counter-clockwise propellers and blue thrusters indicate clockwise propellers (or vice-versa). 
+ArduSub includes a high-level motor library that can configure motors in any configuration. This library is used to implement a number of supported frame configurations. 
+
+All configurations are shown from **top-down view**. Green thrusters indicate counter-clockwise propellers and blue thrusters indicate clockwise propellers (or vice-versa). The numbers next to each thruster correspond to the numbered main output on the [autopilot board](/introduction/hardware-options/required-hardware/autopilot.html) when the ESC signal wires are plugged in.
 
 Currently supported are:
 
