@@ -8,6 +8,8 @@ Download and install QGroundControl using one of the links below.
 - [Mac](https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.dmg)
 - [Linux](https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage)
 
+>**Note** The installers above are the latest stable versions of QGC that the ArduSub developers have tested and verified. Newer versions may exist, but have not been verified. Use newer versions from the main QGroundControl project at your own risk.
+
 >**Note** Linux needs additional GStreamer dependencies, see the [QGroundControl User Guide](https://docs.qgroundcontrol.com/en/getting_started/download_and_install.html#ubuntu) for details.
 
 ## Folder Structure
