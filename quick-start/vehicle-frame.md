@@ -45,4 +45,10 @@ If the vehicle thruster configuration a user wishes to build is not one of the p
 
 ## Component Selection
 
-## Assembly
+The minumum required electronic components can be found in the [Hardware Options: Required Hardware](/introduction/hardware-options/required-hardware.html) section of this documentation book.
+
+Vehicle frames are commonly built out of corrosion resitant material such as HDPE and aluminum.
+
+## Reference Frames
+
+If the idea of deciding on which components to use is too daunting for first time builders, Blue Robotics sells the [BlueROV2](https://bluerobotics.com/store/rov/bluerov2/) which may be used as a semi-complete "reference frame" from which to understand the ArduSub control system. Components can be reused and reconfigured for custom frame designs.
