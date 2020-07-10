@@ -43,6 +43,7 @@
 * [Installing QGroundControl](/quick-start/installing-qgc.md)
 * [Installing Companion Software Image](/quick-start/installing-companion.md)
     * [Network Setup](/quick-start/installing-companion.md#network-setup)
+    * [Software Update](/quick-start/installing-companion.md#software-update)
 * [Installing Autopilot Firmware](/quick-start/installing-ardusub.md)
     * [Frame Selection](to do)
     * [Completing Calibrations](to do)
