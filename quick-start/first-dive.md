@@ -48,41 +48,40 @@ Buttons may be reassigned though the following steps:
 * **Do not arm** until the vehicle is in the water and the launcher is clear of the vehicle.
 
 ## Boat Launch 
-Keep the vehicle and tether clear of the boat’s propellers or jets.
-Make sure that the captain of the boat knows that the ROV is about to be launched.
+* Keep the vehicle and tether clear of the boat’s propellers or jets.
+* Make sure that the captain of the boat knows that the ROV is about to be launched.
 
 ## Shore Launch 
-Do not launch the vehicle in heavy surf.
-The vehicle may need to be walked into the water to get to a point where the water is deep enough to drive the ROV.
+* Do not launch the vehicle in heavy surf.
+* The vehicle may need to be walked into the water to get to a point where the water is deep enough to drive the ROV.
 
 # Operation 
 
 ## Tether Management 
-When diving the BlueROV2 the tether will require some active management. Here are some guidelines for good tether management:
-
-Keep the tether away from propellers or jets if you are operating on a boat.
-Keep the tether and ROV away from other boats that are not aware that it is in the water.
-Keep the tether away from sharp objects such as coral, rocks, etc.
-Do not deploy too much tether. Excess tether in the water will add drag to the ROV and opportunity for the tether to get caught on something.
-Do not deploy the tether over sharp edges or rough ground.
-Do not step on the tether.
+When diving an ArduSub vehicle,  the tether will require some active management. Here are some guidelines for good tether management:
+* Keep the tether away from propellers or jets if you are operating on a boat.
+* Keep the tether and vehicle away from other boats that are not aware that it is in the water.
+* Keep the tether away from sharp objects such as coral, rocks, etc.
+* Do not deploy too much tether. Excess tether in the water will add drag to the vehicle and provide an opportunity for the tether to get caught on something.
+* Do not deploy the tether over sharp edges or rough ground.
+* Do not step on the tether.
 
 ## Driving Guidelines 
-Do not drive into a sandy bottom. If you do drive into a sandy bottom, stop driving the vehicle and allow it to float up to prevent sand from getting into the vertical thrusters.
-Drive smoothly and on low gain when possible to maximize battery life.
-Do not touch coral with the ROV to prevent damage to the coral.
-Avoid driving into seaweed when possible. Seaweed can get sucked into and stop the thrusters from spinning.
-When diving, it is helpful to follow down a chain or a line to give a frame of reference.
+* Do not drive into a sandy bottom. If you do drive into a sandy bottom, stop driving the vehicle and allow it to float up to prevent sand from getting into the vertical thrusters.
+* Drive smoothly and on low gain when possible to maximize battery life.
+* Do not touch coral with the ROV to prevent damage to the coral.
+* Avoid driving into seaweed when possible. Seaweed can get sucked into and stop the thrusters from spinning.
+* When diving, it is helpful to follow down a chain or a line to give a frame of reference.
 
 ## Battery Monitoring 
-Be sure to occasionally glance at the battery voltage in the instrument panel.
-It is recommended to recover the ROV once the battery reaches 12.5V to avoid discharging below 12.0V, which can permanently damage a 4S battery or shorten its lifespan.
+* Be sure to occasionally glance at the battery voltage in the instrument panel.
+* It is recommended to recover the vehicle once the battery reaches 12.5V to avoid discharging below 12.0V, which can permanently damage a 4S battery or shorten its lifespan.
 
 # Recovery 
-Disarm the BlueROV2 prior to attempting to recover it.
+Disarm the vehicle prior to attempting to recover it.
 
 ## Powered Recovery 
-Typically, you will be recovering the BlueROV2 when it is under power.
+Recoveries will typically be when the vehicle is under power.
 
 The ROV pilot should find the tether and follow it back to the launching area.
 While the pilot is driving back pull in the tether slack. Clean debris off of the tether and inspect for cuts or nicks while pulling in.
