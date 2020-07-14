@@ -21,7 +21,7 @@ To load ArduSub onto an autopilot board:
 
 ## Without a Companion Computer (Manual Installation)
 
-Open QGroundControl and navigate to the *Firmware* tab of the *Vehicle Setup* page.
+Open QGroundControl and navigate to the *Vehicle Setup View* then *Firmware* page.
 
 <img src="/images/qgc/firmware-1.png" class="img-responsive img-center" />
 
@@ -35,11 +35,19 @@ Press "OK" at the top right. The firmware will upload the Pixhawk and you'll see
 
 # Frame Selection
 
+1. Go to *Vehicle Setup View* then select the *[Frame Setup Page](/reference/ardusub/frame-setup-page.md)*.
+2. Click on the corresponding vehicle frame that was originally picked out in the "[Building a Vehicle Frame](/quick-start/vehicle-frame.md)" section of this documentation.
+3. Reboot the vehicle or autopilot for the frame selection to be saved and loded on the next start.
+
+<img src="/images/reference/reference-ardusub-frame.png" class="img-responsive img-center" style="max-height:600px;">
+
 # Completing Calibrations
+
+Before an ArduSub vehicle may be used, several calibration and setup steps must be completed for it to function correctly.
 
 ## Joystick/Gamepad Calibration
 
-Some joysticks require calibration before you can enable them for use with QGroundControl. If your joystick requires calibration, the <strong>Joystick</strong> tab on the <strong>Vehicle Settings</strong> page will be red, and you should follow these steps to calibrate your joystick. If your joystick does not require calibration, the <strong>Joystick</strong> tab will not be red, and you can skip this step!
+Some joysticks require calibration before they can be enabled for use with QGroundControl. If a joystick requires calibration, the *Joystick* tab on the *Vehicle Settings* page will be red, and these steps should be followed to calibrate the joystick. If the joystick does not require calibration, the *Joystick* tab will be green, and this step can be skipped!
 
 1. Go to the <strong>Vehicle Settings</strong> page in QGroundControl, then click on the red <strong>Joystick</strong> tab in the sidebar on the left.
 
