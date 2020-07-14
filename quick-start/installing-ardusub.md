@@ -47,26 +47,26 @@ Before an ArduSub vehicle may be used, several calibration and setup steps must 
 
 ## Joystick/Gamepad Calibration
 
-Some joysticks require calibration before they can be enabled for use with QGroundControl. If a joystick requires calibration, the *Joystick* tab on the *Vehicle Settings* page will be red, and these steps should be followed to calibrate the joystick. If the joystick does not require calibration, the *Joystick* tab will be green, and this step can be skipped!
+Some joysticks require calibration before they can be enabled for use with QGroundControl. If a joystick requires calibration, the **Joystick** tab on the **Vehicle Settings View** will be red, and these steps should be followed to calibrate the joystick. If the joystick does not require calibration, the **Joystick** tab will not be red, and this step can be skipped!
 
-1. Go to the *Vehicle Settings View* in QGroundControl, then click on the red *Joystick* tab in the sidebar on the left.
+1. Go to the **Vehicle Settings View** in QGroundControl, then click on the red **Joystick** tab in the sidebar on the left.
 2. Ensure the 'TX Mode' selection is set to 3.
 3. Click "Calibrate", then click "Next".
 4. Follow the step-by-step instructions, move the sticks as indicated in the diagram in QGroundControl.
 
-When completed, the *Joystick* tab will no longer be red, and the *Enabled* checkbox on the Joystick page should be checked.
+When completed, the **Joystick** tab will no longer be red, and the *Enabled* checkbox on the Joystick page should be checked.
 
 ## Button Setup
 
-<p>The default button setup for the BlueROV2 is as shown in the image below:</p>
+The default button setup for ArduSub is as shown in the image below:
 
 <img src="/images/reference/reference-operational-joystick-defaults.png" class="img-responsive img-center" style="max-height:600px;">
 
-<p>The button functions may be reconfigured in the *Joystick* page.</p>
+The button functions may be reconfigured in the **Joystick** page.
 
 ## Sensor Calibration
 
-<p>1. Go to the <strong>Vehicle Settings</strong> page (Gears icon) in QGroundControl and select the red <strong>Sensors</strong> tab in the sidebar on the left.</p>
+1. Go to the **Vehicle Settings View** and select the red **Sensors** tab in the sidebar on the left.</p>
 <p>2. Click on the <strong>Accelerometers</strong> and follow the instructions.</p>
 <ul>
 	<li>Choose <em>Roll90</em> for the <strong>Autopilot Orientation</strong> selection.</li>
