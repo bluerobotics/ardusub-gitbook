@@ -22,11 +22,13 @@ Make sure that the vehicle is in *Manual* mode.
 
 The flight controller attempts to stabilize the vehicle's attitude so that it is perfectly level. If the vehicle's attitude is off from level, even a fraction of a degree, the flight controller will spin the motors in an attempt to correct the error. If the vehicle is sitting on land, the error will not change, and the flight controller will spin the motors faster and faster as it tries harder and harder to correct the error. Testing the vehicle on land should be done in MANUAL mode, which just passes pilot inputs to the motors with no stabilization.
 
-## No Telemetry (No Autopilot Connection)
+## No Telemetry / "Waiting for Vehicle Connection" (No Autopilot Connection)
 
 #### Verify Network Configuration
 
-Verify that your [network settings](/getting-started/installation.html#network-setup) are correct. Verify your network configuration by entering the command `ipconfig` (Windows) or `ifconfig` (Mac/Linux) on the surface computer command line. The output should show that your Ethernet IP address is 192.168.2.1 and the subnet mask is 255.255.255.0.
+Verify that your [network settings](/getting-started/installation.html#network-setup) are correct. Verify your network configuration by entering the command `ipconfig` (Windows) or `ifconfig` (Mac/Linux) on the surface computer command line. The output should show that your Ethernet IP address is *_192.168.2.1_* and the subnet mask is *_255.255.255.0_*.
+
+*Carefully double check that you have entered these numbers correctly*. The Ethernet IP address should be _exactly_ *_192.168.2.1_* and the subnet mask should be _exactly_ *_255.255.255.0_*.
 
 You should be able to ping the companion computer from the surface computer. On the surface computer's command line enter:
 
