@@ -83,13 +83,13 @@ Disarm the vehicle prior to attempting to recover it.
 ## Powered Recovery 
 Recoveries will typically be when the vehicle is under power.
 
-The ROV pilot should find the tether and follow it back to the launching area.
-While the pilot is driving back pull in the tether slack. Clean debris off of the tether and inspect for cuts or nicks while pulling in.
-When the ROV arrives back to the launching location, disarm the ROV.
-Pick up the ROV directly if practical, or pull the ROV up using the tether. Avoid sharp or hard object while lifting the ROV by the tether; allow space for the ROV to swing.
-Remove the vent plug from the battery enclosure vent penetrator.
-Disconnect the battery.
-## Unpowered Recovery 
-If the ROV loses power or connection to QGroundControl while diving, you should do the following:
+* The pilot should find the tether and follow it back to the launching area.
+* While the pilot is driving back pull in the tether slack. Clean debris off of the tether and inspect for cuts or nicks while pulling in.
+* When the vehicle arrives back to the launching location, **disarm it**.
+* Pick up the vehicle directly if practical, or pull the it up using the tether. Avoid sharp or hard object while lifting by the tether; allow space for the vehicle to swing.
+* Disconnect the battery or shut the power supply off.
 
-Pull the tether in at a moderate pace. Don’t try to pull it in as fast as possible.
+## Unpowered Recovery 
+If the vehicle loses power or connection to QGroundControl while diving:
+
+* Pull the tether in at a moderate pace. Don’t try to pull it in as fast as possible.
