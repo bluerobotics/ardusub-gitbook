@@ -37,7 +37,7 @@ Press "OK" at the top right. The firmware will upload the Pixhawk and you'll see
 
 1. Go to *Vehicle Setup View* then select the *[Frame Setup Page](/reference/ardusub/frame-setup-page.md)*.
 2. Click on the corresponding vehicle frame that was originally picked out in the "[Building a Vehicle Frame](/quick-start/vehicle-frame.md)" section of this documentation.
-3. Reboot the vehicle or autopilot for the frame selection to be saved and loded on the next start.
+3. Reboot the vehicle or autopilot for the frame selection to be saved and loaded on the next start.
 
 <img src="/images/reference/reference-ardusub-frame.png" class="img-responsive img-center" style="max-height:600px;">
 
@@ -49,23 +49,20 @@ Before an ArduSub vehicle may be used, several calibration and setup steps must 
 
 Some joysticks require calibration before they can be enabled for use with QGroundControl. If a joystick requires calibration, the *Joystick* tab on the *Vehicle Settings* page will be red, and these steps should be followed to calibrate the joystick. If the joystick does not require calibration, the *Joystick* tab will be green, and this step can be skipped!
 
-1. Go to the <strong>Vehicle Settings</strong> page in QGroundControl, then click on the red <strong>Joystick</strong> tab in the sidebar on the left.
-
+1. Go to the *Vehicle Settings View* in QGroundControl, then click on the red *Joystick* tab in the sidebar on the left.
 2. Ensure the 'TX Mode' selection is set to 3.
-
 3. Click "Calibrate", then click "Next".
- 
 4. Follow the step-by-step instructions, move the sticks as indicated in the diagram in QGroundControl.
 
-When completed, the <strong>Joystick</strong> tab will no longer be red, and the <strong>Enabled</strong> checkbox on the Joystick page should be checked.
+When completed, the *Joystick* tab will no longer be red, and the *Enabled* checkbox on the Joystick page should be checked.
 
 ## Button Setup
 
 <p>The default button setup for the BlueROV2 is as shown in the image below:</p>
 
-[guide_image src="/wp-content/uploads/2019/03/joystick-defaults.png" caption=""]
+<img src="/images/reference/reference-operational-joystick-defaults.png" class="img-responsive img-center" style="max-height:600px;">
 
-<p>The button functions may be reconfigured in the <strong>Joystick</strong> tab on the <strong>Vehicle Settings</strong> page.</p>
+<p>The button functions may be reconfigured in the *Joystick* page.</p>
 
 ## Sensor Calibration
 
