@@ -18,6 +18,7 @@ Connect the following to the [Topside Computer](/introduction/hardware-options/r
 ## Controller Functions 
 The ArduSub firmware comes with the button setup shown below as a default:
 
+<img src="/images/reference/reference-operational-joystick-defaults.png" class="img-responsive img-center" style="max-height:600px;">
 
 Buttons may be reassigned though the following steps:
 1. Go to Vehicle Setup View then select “[Joystick](/reference/ardusub/joystick-setup-page.md)”.
