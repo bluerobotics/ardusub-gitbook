@@ -26,35 +26,37 @@ Buttons may be reassigned though the following steps:
 4. Select what you would like the button to do from the dropdown to the right of the button number.
 
 ### Dive Modes 
-In Manual Mode the BlueROV2 will only output motor controls based on the pilot input from the joysticks. There is no feedback stabilization, heading holding, or depth holding.
-In Stabilize Mode the BlueROV2 will stabilize roll to level and it will maintain heading when not commanded to turn. The vertical control is left entirely to the pilot.
-In Depth Hold Mode the BlueROV2 will hold depth unless you command it to dive/ascend. It will also stabilize roll to level and maintain heading when not commanded to turn.
-Pre-Dive Chec
+* In **Manual Mode** the vehicle will only output motor controls based on the pilot input from the joysticks. There is no feedback stabilization, heading holding, or depth holding.
+* In **Stabilize Mode** the vehicle will stabilize roll to level and it will maintain heading when not commanded to turn. The vertical control is left entirely to the pilot.
+* In **Depth Hold Mode** the vehicle will hold depth unless you command it to dive/ascend. It will also stabilize roll to level and maintain heading when not commanded to turn.
 
 # Pre-Dive Checklist
-Put the ROV on the ground and make sure that people are clear of the thrusters.
-Check to make sure the camera tilt function and lights work. If they do not, please see the [Troubleshooting](#troubleshooting) section.
-Put the ROV in Manual Mode.
-Arm the ROV.
-Press the forward/reverse stick forward to check that the vectored thrusters are spinning freely.
-Press the ascend/descend stick forward to check that the vertical thrusters are spinning freely.
-Disarm the ROV.
-Launch.
+* Put the vehicle on the ground and make sure that people are clear of the thrusters.
+* Check to make sure the camera tilt function and lights work. If they do not, please see the [Troubleshooting](/reference/troubleshooting.md) section.
+* Put the vehicle in **Manual Mode**.
+* Arm the ROV.
+* Press the forward/reverse stick forward to check that the vectored thrusters are spinning freely.
+* Press the ascend/descend stick forward to check that the vertical thrusters are spinning freely.
+* **Disarm the ROV.**
+* Launch.
 
 # All Launches 
-Do not launch the ROV near swimmers or divers.
-Do not release the ROV prior to it touching the water. If necessary, use the tether to lower it down. When lowereing the ROV, keep the dome away from any hard or sharp objects.
-Do not launch in water that is too shallow to freely drive the ROV.
-Keep the ROV away from boats that do not know that the ROV is in the water.
-Do not arm until the ROV is in the water and the launcher is clear of the ROV.
+* Do not launch the vehicle near swimmers or divers.
+* Do not release the vehicle prior to it touching the water. If necessary, use the tether to lower it down. When lowereing the vehicle, keep the dome away from any hard or sharp objects.
+* Do not launch in water that is too shallow to freely drive the vehicle.
+* Keep the vehicle away from boats that do not know that the vehicle is in the water.
+* **Do not arm** until the vehicle is in the water and the launcher is clear of the vehicle.
+
 ## Boat Launch 
-Keep the ROV and tether clear of the boat’s propellers or jets.
+Keep the vehicle and tether clear of the boat’s propellers or jets.
 Make sure that the captain of the boat knows that the ROV is about to be launched.
+
 ## Shore Launch 
-Do not launch the ROV in heavy surf.
-You may need to walk the ROV into the water to get to a point where the water is deep enough to drive the ROV.
+Do not launch the vehicle in heavy surf.
+The vehicle may need to be walked into the water to get to a point where the water is deep enough to drive the ROV.
 
 # Operation 
+
 ## Tether Management 
 When diving the BlueROV2 the tether will require some active management. Here are some guidelines for good tether management:
 
