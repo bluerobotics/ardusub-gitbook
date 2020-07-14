@@ -1,26 +1,28 @@
 # Getting Ready for Your First Dive 
-Before putting the BlueROV2 in the water, there are a few things that you need to do.
+Before putting the vehicle in the water, there are a few things which will need to be checked.
 
-Your first dive should be in a body of water that is shallow, still, and clear. We recommend a pool or a test tank. Testing in a more controlled environment will provide a good opportunity to check that the ROV is ballasted correctly. It will also allow you to confirm that your controller is set up correctly and your ROV is behaving how you expect it to.
+The first dive should be in a body of water that is shallow, still, and clear. A pool or a test tank is recommended. Testing in a more controlled environment will provide a good opportunity to check that the vehicle is ballasted correctly. It will also confirm that the controller is set up correctly and vehicle is behaving as expected.
 
-## Connecting Your Batteries 
-To get ready for your first dive, you need to start by connecting a charged battery using the same process as shown in the Swapping Batteries section.
+## Connecting Batteries/Power Supply
+To get ready for your first dive, the vehicle will need to be powered.
+
+Either:
+1. Plug a fully charged battery into the vehicle's power distribution system, or
+2. Turn the power supply ON after reading and understanding the manufacturers instructions.
 
 ## Setting up Your Topside Control 
-To set up your topside control follow the instructions on the Software Setup page.
+Connect the following to the [Topside Computer](/introduction/hardware-options/required-hardware/topside-computer.html):
+1. [Vehicle tether](/introduction/hardware-options/required-hardware/tether.html) (through the appropriate interface, if used)
+2. [Joystick](/introduction/hardware-options/required-hardware/joystick.html)
 
 ## Controller Functions 
-The BlueROV2 comes with the button setup shown below as a default:
+The ArduSub firmware comes with the button setup shown below as a default:
 
 
-If you do not like the button settings, you can change the button setup in QGroundControl.
-
-1. Go to Settings then select “Joystick”.
-
-2. Under “Button actions:” QGroundControl shows what all buttons are currently set to control.
-
+Buttons may be reassigned though the following steps:
+1. Go to Vehicle Setup View then select “[Joystick](/reference/ardusub/joystick-setup-page.md)”.
+2. The “[Button Assignment](/reference/ardusub/joystick-setup-page.md#button-assignment)” tab shows what all the buttons are currently set to control.
 3. Press the button that you are interested in changing. The button number will light up.
-
 4. Select what you would like the button to do from the dropdown to the right of the button number.
 
 ### Dive Modes 
