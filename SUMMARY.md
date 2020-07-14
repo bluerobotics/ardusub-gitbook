@@ -45,8 +45,8 @@
     * [Network Setup](/quick-start/installing-companion.md#network-setup)
     * [Software Update](/quick-start/installing-companion.md#software-update)
 * [Installing Autopilot Firmware](/quick-start/installing-ardusub.md)
-    * [Frame Selection](to do)
-    * [Completing Calibrations](to do)
+    * [Frame Selection](/quick-start/installing-ardusub.md#frame-selection)
+    * [Completing Calibrations](/quick-start/installing-ardusub.md#completing-calibrations)
 * [First Dive](/quick-start/first-dive.md)
    
 ## Reference Documentation
