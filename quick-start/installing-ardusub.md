@@ -80,9 +80,9 @@ When completed, the **Sensors** tab will no longer be red.
 
 To begin, navigate to the **Vehicle Settings View** and select the **Motors** tab in the sidebar on the left, then proceed with the **automatic** (recommended) or **manual** configuration.</p>
 
-[guide_warning]Be sure to keep all body parts and clothing clear of thrusters while the vehicle is armed.[/guide_warning]
+> **Warning** Be sure to keep all body parts and clothing clear of thrusters while the vehicle is armed.
 
-[guide_warning]**DO NOT** run thrusters for longer than 30 seconds in air or you will wear out the plastic bearings.[/guide_warning]
+> **Warning** **DO NOT** run thrusters for longer than 30 seconds in air or you will wear out the plastic bearings.
 
 ### Automatic Configuration
 
