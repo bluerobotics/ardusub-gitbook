@@ -10,11 +10,11 @@ It may be installed (or updated) in one of two ways:
 
 To load ArduSub onto an autopilot board:
 
-1. Plug a _fully charged_ battery into the vehicle and connect the tether to the topside computer.
+1. Plug a *fully charged* battery into the vehicle and connect the tether to the topside computer.
 
 2. Navigate to [192.168.2.2:2770/network](192.168.2.2:2770/network) in an internet browser (Chrome, Edge, Firefox, etc.) and ensure that the vehicle has access to a WiFi network. If you do not see a webpage at this address, verify the network settings are correct. Troubleshooting steps can be found [here](/troubleshooting/troubleshooting.html).
 
-3. Navigate to [192.168.2.2:2770/system](192.168.2.2:2770/system). Click the button under the 'Pixhawk Firmware Update' section that says 'Stable'.
+3. Navigate to [192.168.2.2:2770/system](192.168.2.2:2770/system). Click the button under the *Pixhawk Firmware Update* section that says **Stable**.
 
 4. Wait for the update process to complete, and you are finished!
 
@@ -72,40 +72,38 @@ The button functions may be reconfigured in the **Joystick** page.
 3. Click on **Compass** and follow the instructions.
 4. Click on **Calibrate Pressure** and wait for the calibration to complete.
 
-When completed, the **Sensors* tab will no longer be red.
-
-[guide_image src="/wp-content/uploads/2016/06/BlueROV2_Sensor_Calibration_Complete.png" caption=""]
+When completed, the **Sensors** tab will no longer be red.
 
 ## Configure Motor Directions
 
-<p><strong>The direction that the motors will spin depends on how the vehicle and motors were assembled, so each motor's forward/reverse direction must be configured in software.</strong></p>
+**The direction that the motors will spin depends on how the vehicle and motors were assembled, so each motor's forward/reverse direction must be configured in software.**
 
-<p>To begin, navigate to the Vehicle Settings page in QGroundControl and select the Motors tab in the sidebar on the left, then proceed with the <strong>automatic</strong> (recommended) or <strong>manual</strong> configuration.</p>
+To begin, navigate to the **Vehicle Settings View** and select the **Motors** tab in the sidebar on the left, then proceed with the **automatic** (recommended) or **manual** configuration.</p>
 
-[guide_warning]Be sure to keep all body parts and clothing clear of thrusters while the BlueROV2 is armed.[/guide_warning]
+[guide_warning]Be sure to keep all body parts and clothing clear of thrusters while the vehicle is armed.[/guide_warning]
 
-[guide_warning]<strong>DO NOT</strong> run thrusters for longer than 30 seconds in air or you will wear out the plastic bearings.[/guide_warning]
+[guide_warning]**DO NOT** run thrusters for longer than 30 seconds in air or you will wear out the plastic bearings.[/guide_warning]
 
 ### Automatic Configuration
 
-<p>1. Adjust the vehicle's buoyancy to be neutral or slightly <strong>positive</strong>.</p> 
+1. Adjust the vehicle's buoyancy to be neutral or slightly **positive**.
 
-<p>2. Place the vehicle in water with enough room for it to move around slightly without bumping into walls or the bottom. Make sure the vehicle has a bit of slack in the tether so that it can move freely.</p>
+2. Place the vehicle in water with enough room for it to move around slightly without bumping into walls or the bottom. Make sure the vehicle has a bit of slack in the tether so that it can move freely.
 
-<p>3. Click the <strong>Auto-Detect Directions</strong> button, and wait while the vehicle does it's motor direction detection routine.
+3. Click the <strong>Auto-Detect Directions</strong> button, and wait while the vehicle does it's motor direction detection routine.
 
-<p>4. The results of the routine will appear as the routine progresses, and success or failure will be indicated. If the routine failed, you may try again, or configure the motor directions <strong>manually</strong>.
+4. The results of the routine will appear as the routine progresses, and success or failure will be indicated. If the routine failed, you may try again, or configure the motor directions **manually**.
 
 [guide_image src="/wp-content/uploads/2016/06/autodetect-motors.png" caption=""]
 
 
 ### Manual Configuration
 
-<p>1. Go to the Vehicle Settings page in QGroundControl and select the <em>Motors</em> tab in the sidebar on the left.</p>
-<p>2. Read and understand the instructions on the setup page.</p>
-<p>3. Arm the BlueROV2 by clicking the switch on the page.</p>
-<p>4. One at a time, move each slider, and make sure that the motor that spins is pushing air as described in the instructions on the Motor Setup page. If a motor is spinning in the wrong direction, click the corresponding checkbox under the 'Reverse Motor Direction' section to correct the motor rotation.</p>
-<p>5. When you are finished with the setup, disarm the ROV by clicking the switch.</p>
+1. Go to the Vehicle Settings page in QGroundControl and select the <em>Motors</em> tab in the sidebar on the left.
+2. Read and understand the instructions on the setup page.
+3. Arm the BlueROV2 by clicking the switch on the page.
+4. One at a time, move each slider, and make sure that the motor that spins is pushing air as described in the instructions on the Motor Setup page. If a motor is spinning in the wrong direction, click the corresponding checkbox under the 'Reverse Motor Direction' section to correct the motor rotation.
+5. When you are finished with the setup, disarm the ROV by clicking the switch.
 
 [guide_image src="/wp-content/uploads/2019/03/brov2-standard-motor-directions.png" caption=""]
    
