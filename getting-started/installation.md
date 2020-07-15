@@ -12,6 +12,8 @@ Download and install QGroundControl using one of the links below.
 
 ## ArduSub
 
+>**Note** It is **highly recommended** to [save your parameters](/operators-manual/parameters.md#saving-and-loading) to a file before updating your firmware.
+
 Open QGroundControl and navigate to the *Firmware* tab of the *Vehicle Setup* page.
 
 <img src="/images/qgc/firmware-1.png" class="img-responsive img-center" />
