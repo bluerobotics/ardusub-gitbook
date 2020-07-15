@@ -35,7 +35,7 @@ Press "OK" at the top right. The firmware will upload the Pixhawk and you'll see
 
 # Frame Selection
 
-1. Go to *Vehicle Setup View* then select the *[Frame Setup Page](/reference/ardusub/frame-setup-page.md)*.
+1. Go to **Vehicle Setup View** then select the **[Frame Setup Page](/reference/ardusub/frame-setup-page.md)**.
 2. Click on the corresponding vehicle frame that was originally picked out in the "[Building a Vehicle Frame](/quick-start/vehicle-frame.md)" section of this documentation.
 3. Reboot the vehicle or autopilot for the frame selection to be saved and loaded on the next start.
 
@@ -74,6 +74,8 @@ The button functions may be reconfigured in the **Joystick** page.
 
 When completed, the **Sensors** tab will no longer be red.
 
+<img src="/images/quick-start/quick-start-sensor-calibration-complete.png" class="img-responsive img-center" style="max-height:600px;">
+
 ## Configure Motor Directions
 
 **The direction that the motors will spin depends on how the vehicle and motors were assembled, so each motor's forward/reverse direction must be configured in software.**
@@ -94,29 +96,27 @@ To begin, navigate to the **Vehicle Settings View** and select the **Motors** ta
 
 4. The results of the routine will appear as the routine progresses, and success or failure will be indicated. If the routine failed, you may try again, or configure the motor directions **manually**.
 
-[guide_image src="/wp-content/uploads/2016/06/autodetect-motors.png" caption=""]
+<img src="/images/quick-start/quick-start-autodetect-motors.png" class="img-responsive img-center" style="max-height:600px;">
 
 
 ### Manual Configuration
 
-1. Go to the Vehicle Settings page in QGroundControl and select the <em>Motors</em> tab in the sidebar on the left.
+1. Go to the Vehicle Settings page in QGroundControl and select the **Motors** tab in the sidebar on the left.
 2. Read and understand the instructions on the setup page.
 3. Arm the BlueROV2 by clicking the switch on the page.
 4. One at a time, move each slider, and make sure that the motor that spins is pushing air as described in the instructions on the Motor Setup page. If a motor is spinning in the wrong direction, click the corresponding checkbox under the 'Reverse Motor Direction' section to correct the motor rotation.
 5. When you are finished with the setup, disarm the ROV by clicking the switch.
 
-[guide_image src="/wp-content/uploads/2019/03/brov2-standard-motor-directions.png" caption=""]
+<img src="/images/quick-start/quick-start-manual-motor-directions.png" class="img-responsive img-center" style="max-height:600px;">
    
 ## Voltage and Current Measurement Setup
 
-<p>
-In the <strong>Power</strong> tab of the QGroundControl Vehicle Setup page, select “Blue Robotics Power Sense Module R2” for the Power Sensor.
-</p>
+In the **Power** tab of the QGroundControl Vehicle Setup page, select “Blue Robotics Power Sense Module R2” for the Power Sensor.
 
-<p><img src="/wp-content/uploads/2018/10/reference-ardusub-power-psmr2.png" width="800" class="img-responsive img-center" /></p>
+<img src="/images/reference/reference-ardusub-power-psmr2.png" class="img-responsive img-center" style="max-height:600px;">
 
 ## SOS Leak Sensor Setup
 
 <p>In the Safety tab, select "Pixhawk Aux6" as the leak detector pin, and set the Logic when dry to "Low."</p>
 
-[guide_image src="/wp-content/uploads/2016/11/SOS_Leak_Sensor_Setup_in_QGC_Edited.png" caption=""]
+<img src="/images/quick-start/quick-start-leak-sensor.png" class="img-responsive img-center" style="max-height:600px;">
