@@ -111,14 +111,14 @@ Before proceeding, it is recommended to check for the latest updates for the Com
 
 To perform a companion software update:
 
-1. Plug a _fully charged_ battery into the vehicle and connect the tether to the topside computer.
+1. Plug a *fully charged* battery into the vehicle and connect the tether to the topside computer.
 
-2. Navigate to [192.168.2.2:2770/network](192.168.2.2:2770/network) in an internet browser (Chrome, Edge, Firefox, etc.) and ensure that the vehicle has access to a WiFi network. If you do not see a webpage at this address, verify the network settings are correct. Troubleshooting steps can be found [here](/troubleshooting/troubleshooting.html).
+2. Navigate to [192.168.2.2:2770/network](192.168.2.2:2770/network) in an internet browser (Chrome, Edge, Firefox, etc.) and ensure that the vehicle has access to a WiFi network. If a webpage is not found at this address, verify the network settings are correct. Troubleshooting steps can be found [here](/troubleshooting/troubleshooting.html).
 
 3. Navigate to [192.168.2.2:2770/system](192.168.2.2:2770/system). Click the button that says 'Update Companion'. If you do not see this button, then the companion software is up to date.
 
 4. The update process will take between 5 and 20 minutes depending on the Internet connection speed. Wait for the update process to complete.
 
-5. When it completes, refresh your browser. The Companion version should be updated, and the update available message should no longer appear.
+5. When it completes, refresh the browser. The Companion version should be updated, and the update available message should no longer appear.
 
-6. If the update fails (usually due to a loss of internet connectivity), you will be warned that the vehicle will reboot and to leave the battery plugged in. At this point, once you are able to refresh the webpage, it is safe to either power down the vehicle or attempt the update again.
+6. If the update fails (usually due to a loss of internet connectivity), a warning will appear that the vehicle will reboot and to leave the battery plugged in. At this point, once, it is safe to either power down the vehicle or attempt the update again.
