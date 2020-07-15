@@ -66,15 +66,13 @@ The button functions may be reconfigured in the **Joystick** page.
 
 ## Sensor Calibration
 
-1. Go to the **Vehicle Settings View** and select the red **Sensors** tab in the sidebar on the left.</p>
-<p>2. Click on the <strong>Accelerometers</strong> and follow the instructions.</p>
-<ul>
-	<li>Choose <em>Roll90</em> for the <strong>Autopilot Orientation</strong> selection.</li>
-</ul>
-<p>3. Click on <strong>Compass</strong> and follow the instructions.</p>
-<p>4. Click on <strong>Calibrate Pressure</strong> and wait for the calibration to complete.</p>
+1. Go to the **Vehicle Settings View** and select the red **Sensors** tab in the sidebar on the left.
+2. Click on the **Accelerometers** and follow the instructions.
+* Choose <em>Roll90</em> for the **Autopilot Orientation** selection.
+3. Click on **Compass** and follow the instructions.
+4. Click on **Calibrate Pressure** and wait for the calibration to complete.
 
-<p>When completed, the <em>Sensors</em> tab will no longer be red.</p>
+When completed, the **Sensors* tab will no longer be red.
 
 [guide_image src="/wp-content/uploads/2016/06/BlueROV2_Sensor_Calibration_Complete.png" caption=""]
 
