@@ -30,15 +30,10 @@
         * [Grippers and Manipulators](/introduction/hardware-options/additional-peripheral-devices/grippers-and-manipulators.md)
         * [Underwater Positioning and GPS (SBL and USBL)](/introduction/hardware-options/additional-peripheral-devices/underwater-positioning.md)
         * [Sonars](/introduction/hardware-options/additional-peripheral-devices/sonars.md)
-
-## Software
-
-* [Components](software/components.md)
-* [ArduSub Firmware](software/ardusub-firmware.md)
-    * [Versioning](software/ardusub-firmware.md#versioning)
-    * [Release History](software/ardusub-firmware.md#release-history)
-    * [What Version is Installed?](software/ardusub-firmware.md#what-version-is-installed)
-    * [Updating](software/ardusub-firmware.md#updating)
+* [Required Software](/introduction/required-software.md)
+   * [ArduSub Autopilot Firmware](/introduction/required-software/ardusub-autopilot-firmware.md)
+   * [Companion Computer Software](/introduction/required-software/companion-computer-software.md)
+   * [QGroundControl Software](/introduction/required-software/qgroundcontrol-software.md)
 
 ## Getting Started
 
