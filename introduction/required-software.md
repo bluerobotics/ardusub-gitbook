@@ -10,7 +10,7 @@ The ArduSub control system is made up of three major software components:
 
 Here is a diagram of what software piece is loaded onto which hardware component and their basic connections:
 
-<img src="/images/introduction/software/software-overall.png" class="img-responsive img-center" style="max-height:600px;">
+<img src="/images/software/overall.png" class="img-responsive img-center" style="max-height:600px;">
 
 Here is a technical block diagram of the software components and their interactions:
 
