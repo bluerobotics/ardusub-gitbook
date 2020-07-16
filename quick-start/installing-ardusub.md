@@ -34,7 +34,7 @@ To load ArduSub onto an autopilot board:
 
 # Frame Selection
 
-1. Go to **Vehicle Setup View** then select the **[Frame Setup Page](/reference/ardusub/frame-setup-page.md)**.
+1. Go the **[Frame Setup](/reference/ardusub/frame-setup-page.md)** page.
 2. Click on the corresponding vehicle frame that was originally picked out in the "[Building a Vehicle Frame](/quick-start/vehicle-frame.md)" section of this documentation.
 3. Reboot the vehicle or autopilot for the frame selection to be saved and loaded on the next start.
 
@@ -48,9 +48,9 @@ Before an ArduSub vehicle may be used, several calibration and setup steps must 
 
 Some joysticks require calibration before they can be enabled for use with QGroundControl. If a joystick requires calibration, the **Joystick** tab on the **Vehicle Settings View** will be red, and these steps should be followed to calibrate the joystick. If the joystick does not require calibration, the **Joystick** tab will not be red, and this step can be skipped!
 
-1. Go to the **Vehicle Settings View** in QGroundControl, then click on the red **Joystick** tab in the sidebar on the left.
+1. Go to the **[Joystick](/reference/ardusub/joystick-setup-page.md)** page in the sidebar on the left.
 2. Ensure the 'TX Mode' selection is set to 3.
-3. Click "Calibrate", then click "Next".
+3. Click on the "Calibration" tab, then click "Next".
 4. Follow the step-by-step instructions, move the sticks as indicated in the diagram in QGroundControl.
 
 When completed, the **Joystick** tab will no longer be red, and the *Enabled* checkbox on the Joystick page should be checked.
@@ -65,9 +65,9 @@ The button functions may be reconfigured in the **Joystick** page.
 
 ## Sensor Calibration
 
-1. Go to the **Vehicle Settings View** and select the red **Sensors** tab in the sidebar on the left.
-2. Click on the **Accelerometers** and follow the instructions.
-* Choose <em>Roll90</em> for the **Autopilot Orientation** selection.
+1. Go to the **[Sensors](/reference/ardusub/sensors-setup-page.md)** tab in the sidebar on the left.
+2. Click on the **Accelerometers** tab and follow the instructions.
+* Choose **Roll90** for the **Autopilot Orientation** selection.
 3. Click on **Compass** and follow the instructions.
 4. Click on **Calibrate Pressure** and wait for the calibration to complete.
 
@@ -79,7 +79,7 @@ When completed, the **Sensors** tab will no longer be red.
 
 **The direction that the motors will spin depends on how the vehicle and motors were assembled, so each motor's forward/reverse direction must be configured in software.**
 
-To begin, navigate to the **Vehicle Settings View** and select the **Motors** tab in the sidebar on the left, then proceed with the **automatic** (recommended) or **manual** configuration.</p>
+To begin, navigate to the **[Motors](/reference/ardusub/motors-setup-page.md)** tab in the sidebar on the left, then proceed with the **automatic** (recommended) or **manual** configuration.
 
 > **Warning** Be sure to keep all body parts and clothing clear of thrusters while the vehicle is armed.
 
@@ -91,7 +91,7 @@ To begin, navigate to the **Vehicle Settings View** and select the **Motors** ta
 
 2. Place the vehicle in water with enough room for it to move around slightly without bumping into walls or the bottom. Make sure the vehicle has a bit of slack in the tether so that it can move freely.
 
-3. Click the <strong>Auto-Detect Directions</strong> button, and wait while the vehicle does it's motor direction detection routine.
+3. Click the **Auto-Detect Directions** button, and wait while the vehicle does it's motor direction detection routine.
 
 4. The results of the routine will appear as the routine progresses, and success or failure will be indicated. If the routine failed, you may try again, or configure the motor directions **manually**.
 
@@ -100,22 +100,24 @@ To begin, navigate to the **Vehicle Settings View** and select the **Motors** ta
 
 ### Manual Configuration
 
-1. Go to the Vehicle Settings page in QGroundControl and select the **Motors** tab in the sidebar on the left.
+1. Go to the **Motors** tab in the sidebar on the left.
 2. Read and understand the instructions on the setup page.
-3. Arm the BlueROV2 by clicking the switch on the page.
+3. Arm the vehicle by clicking the switch on the page.
 4. One at a time, move each slider, and make sure that the motor that spins is pushing air as described in the instructions on the Motor Setup page. If a motor is spinning in the wrong direction, click the corresponding checkbox under the 'Reverse Motor Direction' section to correct the motor rotation.
-5. When you are finished with the setup, disarm the ROV by clicking the switch.
+5. When you are finished with the setup, disarm the vehicle by clicking the switch.
 
 <img src="/images/quick-start/quick-start-manual-motor-directions.png" class="img-responsive img-center" style="max-height:600px;">
    
 ## Voltage and Current Measurement Setup
 
-In the **Power** tab of the QGroundControl Vehicle Setup page, select “Blue Robotics Power Sense Module R2” for the Power Sensor.
+In the **[Power](/reference/ardusub/power-setup-page.md)** tab , select **Analog Voltage and Current** and enter the values according to the manufacturers specifications.
+
+If using a [Blue Robotics Power Sense Module](https://bluerobotics.com/store/comm-control-power/elec-packages/psm-asm-r2-rp/), select the “Blue Robotics Power Sense Module R2” profile for the Power Sensor.
 
 <img src="/images/reference/reference-ardusub-power-psmr2.png" class="img-responsive img-center" style="max-height:600px;">
 
 ## SOS Leak Sensor Setup
 
-<p>In the Safety tab, select "Pixhawk Aux6" as the leak detector pin, and set the Logic when dry to "Low."</p>
+In the Safety tab, select "Pixhawk Aux6" as the leak detector pin, and set the Logic when dry to "Low."
 
 <img src="/images/quick-start/quick-start-leak-sensor.png" class="img-responsive img-center" style="max-height:600px;">
