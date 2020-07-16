@@ -21,15 +21,14 @@ To load ArduSub onto an autopilot board:
 
 ## Without a Companion Computer (Manual Installation)
 
-Open QGroundControl and navigate to the *Vehicle Setup View* then *Firmware* page.
-
-<img src="/images/qgc/firmware-1.png" class="img-responsive img-center" />
-
-Plug in the Pixhawk to the computer's USB port. Once detected, QGroundControl will show a firmware selection box on the right. Choose **"ArduPilot Flight Stack"**, then select **"ChibiOS"**, **"Sub"**, and (assuming you are using a Pixhawk) **"Pixhawk1"** from the dropdown list.
+1. Open QGroundControl and navigate **[Firmware](/reference/ardusub/firmware-page.md)** page.
+2. Plug in the Pixhawk to the computer's USB port. Once detected, QGroundControl will show a firmware selection box on the right. 
+3. Choose **"ArduPilot Flight Stack"**, then select **"ChibiOS"**, **"Sub"**, and (assuming you are using a Pixhawk) **"Pixhawk1"** from the dropdown list.
 
 <img src="/images/qgc/firmware-2.png" class="img-responsive img-center" />
 
-Press "OK" at the top right. The firmware will upload the Pixhawk and you'll see the following printout and success message. The Pixhawk should start running and get detected by QGroundControl right away.
+4. Press "OK" at the top right. 
+5. The firmware will upload the Pixhawk and you'll see the following printout and success message. The Pixhawk will reboot and then will automatically connect with QGroundControl.
 
 <img src="/images/qgc/firmware-3.png" class="img-responsive img-center" />
 
