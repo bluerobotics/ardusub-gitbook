@@ -51,6 +51,35 @@ The minumum required electronic components can be found in the [Hardware Options
 
 Vehicle frames are commonly built out of corrosion resitant material such as HDPE and aluminum.
 
+## Wiring and Connections
+
+The exact wiring configuration depends on the vehicle configuration and the hardware used. The following are the standard channel assignments. Please see the "Frame Selection" for standard thruster numbering.
+
+The MAIN and AUX output numbers reference the Pixhawk 1 PWM outputs.
+
+<img src="/images/quick-start/quick-start-pixhawk-outputs.png" class="img-responsive img-center" style="max-height:600px;">
+
+| PWM Channel | Connection  |
+|------------:|:------------|
+| MAIN OUT Channel 1   | Thruster #1 |
+| MAIN OUT Channel 2   | Thruster #2 |
+| MAIN OUT Channel 3   | Thruster #3 |
+| MAIN OUT Channel 4   | Thruster #4 (if used) |
+| MAIN OUT Channel 5   | Thruster #5 (if used) |
+| MAIN OUT Channel 6   | Thruster #6 (if used) |
+| MAIN OUT Channel 7   | Thruster #7 (if used) |
+| MAIN OUT Channel 8   | Thruster #8 (if used) |
+| User Configurable (MAIN or AUX) | LED Lights  |
+| User Configurable (MAIN or AUX) | Camera Tilt Servo |
+
+The hardware also has other input/output ports including I<sup>2</sup>C and serial ports. These are the recommended connections for those ports.
+
+| Port                    | Connection                             |
+|------------------------:|:---------------------------------------|
+| I<sup>2</sup>C          | Pressure sensor (MS58XX)               |
+| USB Serial Port         | Companion computer (if used)           |
+| Power Port              | Power Module                           |
+
 ## Reference Frames
 
 If the idea of deciding on which components to use is too daunting for first time builders, Blue Robotics sells the [BlueROV2](https://bluerobotics.com/store/rov/bluerov2/) which may be used as a semi-complete "reference frame" from which to understand the ArduSub control system. Components can be reused and reconfigured for custom frame designs.
