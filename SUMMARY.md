@@ -75,10 +75,7 @@
       * [Frame Setup Page](/reference/ardusub/frame-setup-page.md)
       * [Parameters Page](/reference/ardusub/parameters-page.md)
     * [Features While in Operation](/reference/ardusub/features-while-in-operation.md)
-* [Companion Web Interface Configuration and Features]
-    * [Quick Start](/reference/companion/quick-start.md)
-    * [Web UI](/reference/companion/web-ui.md)
-    * [Terminal Access + SSH](/reference/companion/web-ui.md)
+* [Companion Web Interface Configuration and Features](/reference/companion/web-ui.md)
 * [Peripheral Device Configurations]
     * [Leak Sensor]
     * [Lights]
