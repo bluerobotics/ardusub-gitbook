@@ -40,15 +40,17 @@ To load ArduSub onto an autopilot board:
 
 <img src="/images/reference/reference-ardusub-frame.png" class="img-responsive img-center" style="max-height:600px;">
 
+> **Note** Default parameters only exist for the BlueROV2 and BlueROV2 Heavy. If using another frame type, parameter settings will need to be manually configured in the following steps. 
+
 # Completing Calibrations
 
 Before an ArduSub vehicle may be used, several calibration and setup steps must be completed for it to function correctly.
 
 ## Joystick/Gamepad Calibration
 
-Some joysticks require calibration before they can be enabled for use with QGroundControl. If a joystick requires calibration, the **Joystick** tab on the **Vehicle Settings View** will be red, and these steps should be followed to calibrate the joystick. If the joystick does not require calibration, the **Joystick** tab will not be red, and this step can be skipped!
+Some joysticks require calibration before they can be enabled for use with QGroundControl. If a joystick requires calibration, the **[Joystick](https://github.com/bluerobotics/ardusub-gitbook/blob/ArduSub-Docs-Overhaul/reference/ardusub/joystick-setup-page.md)** tab will be red, and these steps should be followed to calibrate the joystick. If the joystick does not require calibration, the **Joystick** tab will not be red, and this step can be skipped!
 
-1. Go to the **[Joystick](/reference/ardusub/joystick-setup-page.md)** page in the sidebar on the left.
+1. Go to the **Joystick** page in the sidebar on the left.
 2. Ensure the 'TX Mode' selection is set to 3.
 3. Click on the "Calibration" tab, then click "Next".
 4. Follow the step-by-step instructions, move the sticks as indicated in the diagram in QGroundControl.
@@ -88,12 +90,10 @@ To begin, navigate to the **[Motors](/reference/ardusub/motors-setup-page.md)** 
 ### Automatic Configuration
 
 1. Adjust the vehicle's buoyancy to be neutral or slightly **positive**.
-
 2. Place the vehicle in water with enough room for it to move around slightly without bumping into walls or the bottom. Make sure the vehicle has a bit of slack in the tether so that it can move freely.
-
-3. Click the **Auto-Detect Directions** button, and wait while the vehicle does it's motor direction detection routine.
-
-4. The results of the routine will appear as the routine progresses, and success or failure will be indicated. If the routine failed, you may try again, or configure the motor directions **manually**.
+3. Go to the **Motors** tab in the sidebar on the left.
+4. Click the **Auto-Detect Directions** button, and wait while the vehicle does it's motor direction detection routine.
+5. The results of the routine will appear as the routine progresses, and success or failure will be indicated. If the routine failed, you may try again, or configure the motor directions **manually**.
 
 <img src="/images/quick-start/quick-start-autodetect-motors.png" class="img-responsive img-center" style="max-height:600px;">
 
@@ -118,13 +118,13 @@ If using a [Blue Robotics Power Sense Module](https://bluerobotics.com/store/com
 
 ## SOS Leak Sensor Setup
 
-In the Safety tab, select "Pixhawk Aux6" as the leak detector pin, and set the Logic when dry to "Low."
+In the **[Safety](/reference/ardusub/safety-setup-page.md)** tab, select the output channel that the leak detector in is plugged into, and set the Logic when dry to "Low."
 
 <img src="/images/quick-start/quick-start-leak-sensor.png" class="img-responsive img-center" style="max-height:600px;">
 
 ## Setup Low Voltage Failsafe
 
-On the *Safety* tab set the battery failsafe to Warning and the desired voltage or capacity to trigger the alarm. Remember you will need some power to go back home.
+On the **[Safety](/reference/ardusub/safety-setup-page.md)** tab set the battery failsafe to Warning and the desired voltage or capacity to trigger the alarm. Remember you will need some power to go back home.
 
 <img src="/images/qgc/failsafe.jpg" class="img-responsive img-center" />
 
@@ -132,16 +132,20 @@ On the *Safety* tab set the battery failsafe to Warning and the desired voltage 
 
 ## Camera Tilt Setup (if used)
 
-Select the *Camera* tab. The "Gimbal Tilt" settings are used for the camera tilt. Choose whichever channel the servo is plugged into for "Output channel" and *RC8* for "Input channel". Valid output channels are any of the unused motor outputs (RC1-RC8), and Aux outputs 1-4 (RC9-RC12). Select *Servo* for the "Type" under "Gimbal Settings" on the right.
+1. Select the **[Camera](/reference/ardusub/camera-mount-setup-page.md)** tab. 
+2. The "Gimbal Tilt" settings are used for the camera tilt. 
+3. Choose whichever channel the servo is plugged into for "Output channel". Valid output channels are any of the unused MAIN motor outputs (1-8), and AUX outputs 1-4 (9-12). 4. 4. Select *Servo* for the "Type" under "Gimbal Settings" at the bottom.
 
-<img src="/images/qgc/camera-tilt-setup-1.png" class="img-responsive img-center" />
+<img src="/images/reference/reference-ardusub-camera.png" class="img-responsive img-center" />
 
-Is desired, you can check the *Stabilize* box, which will enable auto-stabilization of the camera based on the vehicle pitch angle. We generally leave this unchecked.
+If desired, you can check the *Stabilize* box, which will enable auto-stabilization of the camera based on the vehicle pitch angle. We generally leave this unchecked.
 
 ## Lights Setup
 
-The output channel for the lights is configured in the *Lights* tab of the *Vehicle Setup* page. Select the output channel that you have plugged your lights into, as shown below.
+1. The output channel for the lights is configured in the **[Lights](/reference/ardusub/lights-setup-page.md)** tab. 
+
+2. Select the output channel that you have plugged your lights into, as shown below.
 
 > **Info** This setup only works with lights that are controllable with a servo PWM pulse, such as the Blue Robotics [*Lumen* Lights](http://www.bluerobotics.com/store/electronics/lumen-light-r1/).
 
-<img src="/images/qgc/lights-setup.png" class="img-responsive img-center" />
+<img src="/images/reference/reference-ardusub-lights.png" class="img-responsive img-center" />
