@@ -1,15 +1,15 @@
 # Firmware Page
 
-The Firmware Page allows ArduSub firmware to be downloaded from the internet and directly installed onto Pixhawk-family flight-controller boards. By default QGC will install the current stable version of the selected autopilot, but you can also choose to install beta builds, daily builds, or custom firmware files.
+The Firmware Page allows ArduSub firmware to be downloaded from the internet and directly installed onto Pixhawk-family flight-controller boards. By default QGC will install the current stable version, but you can also choose to install beta builds, daily builds, or custom firmware files.
 
-QGroundControl can also install the firmware for SiK Radios and PX4 Flow devices.
+## Connect Device for Firmware Update
+> **Note** Before you start installing Firmware all USB connections to you vehicle must be disconnected. The vehicle must **not** be powered by a battery.
 
-Loading Firmware is currently not available on tablet or phone versions of QGroundControl.
-
-Connect Device for Firmware Update
-Before you start installing Firmware all USB connections to you vehicle must be disconnected (both direct or through a telemetry radio). The vehicle must not be powered by a battery.
-
-2. Plug in the Pixhawk to the computer's USB port. Once detected, QGroundControl will show a firmware selection box on the right. 
+1. Plug in the Pixhawk to the computer's USB port. 
+2. Once recognized and the parameters have been loaded, go to the Firmware page.
+3. Follow the on-screen instructions to disconnect the autopilot board. 
+4. QGC will look for the board for about 30 seconds. Within this time, reconnect the board to the computer.
+2. Once detected, QGroundControl will show a firmware selection box on the right. 
 3. Choose **"ArduPilot Flight Stack"**, then select **"ChibiOS"**, **"Sub"**, and (assuming you are using a Pixhawk) **"Pixhawk1"** from the dropdown list.
 
 <img src="/images/qgc/firmware-2.png" class="img-responsive img-center" />
