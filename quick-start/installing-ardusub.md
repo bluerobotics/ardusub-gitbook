@@ -121,3 +121,27 @@ If using a [Blue Robotics Power Sense Module](https://bluerobotics.com/store/com
 In the Safety tab, select "Pixhawk Aux6" as the leak detector pin, and set the Logic when dry to "Low."
 
 <img src="/images/quick-start/quick-start-leak-sensor.png" class="img-responsive img-center" style="max-height:600px;">
+
+## Setup Low Voltage Failsafe
+
+On the *Safety* tab set the battery failsafe to Warning and the desired voltage or capacity to trigger the alarm. Remember you will need some power to go back home.
+
+<img src="/images/qgc/failsafe.jpg" class="img-responsive img-center" />
+
+> **Warning** Lithium Batteries should not be overdischarged, as it damages their internal chemistry. Do not let each cell's voltage get lower than 3.0 V.
+
+## Camera Tilt Setup (if used)
+
+Select the *Camera* tab. The "Gimbal Tilt" settings are used for the camera tilt. Choose whichever channel the servo is plugged into for "Output channel" and *RC8* for "Input channel". Valid output channels are any of the unused motor outputs (RC1-RC8), and Aux outputs 1-4 (RC9-RC12). Select *Servo* for the "Type" under "Gimbal Settings" on the right.
+
+<img src="/images/qgc/camera-tilt-setup-1.png" class="img-responsive img-center" />
+
+Is desired, you can check the *Stabilize* box, which will enable auto-stabilization of the camera based on the vehicle pitch angle. We generally leave this unchecked.
+
+## Lights Setup
+
+The output channel for the lights is configured in the *Lights* tab of the *Vehicle Setup* page. Select the output channel that you have plugged your lights into, as shown below.
+
+> **Info** This setup only works with lights that are controllable with a servo PWM pulse, such as the Blue Robotics [*Lumen* Lights](http://www.bluerobotics.com/store/electronics/lumen-light-r1/).
+
+<img src="/images/qgc/lights-setup.png" class="img-responsive img-center" />
