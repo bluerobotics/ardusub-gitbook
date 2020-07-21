@@ -2,7 +2,7 @@
 
 **The direction that the motors will spin depends on how the vehicle and motors were assembled, so each motor's forward/reverse direction must be configured in software.**
 
-To begin, navigate to the **[Motors](/reference/ardusub/motors-setup-page.md)** tab in the sidebar on the left, then proceed with the **automatic** (recommended) or **manual** configuration.
+To begin, navigate to the **Motors** tab in the sidebar on the left, then proceed with the **automatic** (recommended) or **manual** configuration.
 
 > **Warning** Be sure to keep all body parts and clothing clear of thrusters while the vehicle is armed.
 
