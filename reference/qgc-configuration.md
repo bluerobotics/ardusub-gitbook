@@ -10,7 +10,7 @@ The [QGroundControl User Guide](https://docs.qgroundcontrol.com/en/) is the offi
 
 ## Quick Start
 
-1. [Download and install]() QGroundControl for your operating system.
+1. [Download and install](/quick-start/installing-qgc.md) QGroundControl for your operating system.
 2. Start QGroundControl.
 3. Turn on and connect an ArduSub vehicle. If using a Companion Computer, the [Network Settings]() will need to be configured. QGroundControl should detect the vehicle and connect to it automatically.
 
