@@ -20,4 +20,5 @@ These settings allow for different types of gimbals to be used.
 <img src="/images/reference/reference-ardusub-camera-gimbal-settings.png" class="img-responsive img-center" style="max-height:600px;">
 
 **Type**: None | Servo (Default) | 3DR Solo | Alexmos Serial | SToRM32 MAVLink | SToRM32 Serial
+
 **Default Mode**: Retracted | Neutral | MAVLink Targeting | RC Targeting (Default) | GPS Point
