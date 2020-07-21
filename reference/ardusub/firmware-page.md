@@ -2,6 +2,8 @@
 
 The Firmware Page allows ArduSub firmware to be downloaded from the internet and directly installed onto Pixhawk-family flight-controller boards. By default QGC will install the current stable version, but you can also choose to install beta builds, daily builds, or custom firmware files.
 
+<img src="/images/reference/reference-ardusub-firmware.png" class="img-responsive img-center" />
+
 ## Connect Device for Firmware Update
 > **Note** Before you start installing Firmware all USB connections to you vehicle must be disconnected. The vehicle must **not** be powered by a battery.
 
