@@ -134,7 +134,8 @@ On the **[Safety](/reference/ardusub/safety-setup-page.md)** tab set the battery
 
 1. Select the **[Camera](/reference/ardusub/camera-mount-setup-page.md)** tab. 
 2. The "Gimbal Tilt" settings are used for the camera tilt. 
-3. Choose whichever channel the servo is plugged into for "Output channel". Valid output channels are any of the unused MAIN motor outputs (1-8), and AUX outputs 1-4 (9-12). 4. 4. Select *Servo* for the "Type" under "Gimbal Settings" at the bottom.
+3. Choose whichever channel the servo is plugged into for "Output channel". Valid output channels are any of the unused MAIN motor outputs (1-8), and AUX outputs 1-4 (9-12). 
+4. Select *Servo* for the "Type" under "Gimbal Settings" at the bottom.
 
 <img src="/images/reference/reference-ardusub-camera.png" class="img-responsive img-center" />
 
@@ -143,7 +144,6 @@ If desired, you can check the *Stabilize* box, which will enable auto-stabilizat
 ## Lights Setup
 
 1. The output channel for the lights is configured in the **[Lights](/reference/ardusub/lights-setup-page.md)** tab. 
-
 2. Select the output channel that you have plugged your lights into, as shown below.
 
 > **Info** This setup only works with lights that are controllable with a servo PWM pulse, such as the Blue Robotics [*Lumen* Lights](http://www.bluerobotics.com/store/electronics/lumen-light-r1/).
