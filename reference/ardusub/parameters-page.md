@@ -4,7 +4,7 @@ The Parameters page allows users to find and modify any of the parameters associ
 
 <img src="/images/reference/reference-ardusub-parameters.png" class="img-responsive img-center" style="max-height:600px;">
 
-A full parameters list with a description of what each parameter does is listed in the [Developers: Full Parameters List](/operators-manual/full-parameter-list.html).
+A list with a description of what each parameter does is listed in the [Developers: Full Parameters List](/operators-manual/full-parameter-list.html).
 
 ## Finding a Parameter
 The parameters are organized in groups. Select a group of parameters to view by clicking on the buttons to the left.
