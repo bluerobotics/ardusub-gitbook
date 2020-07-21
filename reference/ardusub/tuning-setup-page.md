@@ -6,7 +6,7 @@ This page allows changing the PID controller gains to better suit your vehicle a
 
 Adjust a parameter by moving the desired slider, or by clicking the increase/decrease buttons. There are three controllers that can be adjusted here:
 
-* **[Attitude Controller Parameters](operators-manual/full-parameter-list.html#atc-parameters)** are the parameters for the controller responsible for keeping the vehicle oriented as you want it, assuming your vehicle has ability (enough motors/DOF) to do so.
+* **Attitude Controller Parameters** are the parameters for the controller responsible for keeping the vehicle oriented as you want it, assuming your vehicle has ability (enough motors/DOF) to do so.
 
 * **Position Controller Parameters** are the parameters for the controller responsible for positioning the vehicle at a point in 3D space. The **Z** parameters control how the depth control works (eg in **Depth Hold** mode). The **XY** parameters affect how the vehicle controls the horizontal position in Position Enabled modes.
 
