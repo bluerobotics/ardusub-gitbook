@@ -82,4 +82,6 @@ The hardware also has other input/output ports including I<sup>2</sup>C and seri
 
 ## Reference Frames
 
-If the idea of deciding on which components to use is too daunting for first time builders, Blue Robotics sells the [BlueROV2](https://bluerobotics.com/store/rov/bluerov2/) which may be used as a semi-complete "reference frame" from which to understand the ArduSub control system. Components can be reused and reconfigured for custom frame designs.
+If deciding on which components to use is too daunting for first time builders, Blue Robotics sells the [BlueROV2](https://bluerobotics.com/store/rov/bluerov2/) which may be used as a semi-complete "reference frame" from which to understand the ArduSub control system. Components can be reused and reconfigured for custom frame designs.
+
+<img src="/images/quick-start/quick-start-br2-frames.png" class="img-responsive img-center" style="max-height:600px;">
