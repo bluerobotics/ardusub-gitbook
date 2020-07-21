@@ -74,12 +74,7 @@
       * [Lights Setup Page](/reference/ardusub/lights-setup-page.md)
       * [Frame Setup Page](/reference/ardusub/frame-setup-page.md)
       * [Parameters Page](/reference/ardusub/parameters-page.md)
-    * [Features While in Operation]
-      * [Joystick Button Functions]()
-      * [Flight Modes]()
-      * [Pilot Input Gain]()
-      * [Pitch/Roll Control]()
-      * [Notifications]()
+    * [Features While in Operation](/reference/ardusub/features-while-in-operation.md)
 * [Companion Web Interface Configuration and Features]
     * [Quick Start](/reference/companion/quick-start.md)
     * [Web UI](/reference/companion/web-ui.md)
