@@ -25,10 +25,7 @@ Refresh the parameter values by re-requesting all of them from the vehicle.
 Reset all parameters to their original default values.
 
 ### Load from file / Save to file
-Load parameters from an existing file or save your current parameter settings to a file.
-
-### Clear RC to Param
-This clears all associations between RC transmitter controls and parameters. For more information see: Radio Setup > Param Tuning Channels.
+Load parameters from an existing file or save your current parameter settings to a file on the topside computer.
 
 ### Reboot Vehicle
 Reboot the vehicle (required after changing some parameters).
