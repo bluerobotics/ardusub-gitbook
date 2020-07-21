@@ -18,8 +18,6 @@ To begin, navigate to the **[Motors](/reference/ardusub/motors-setup-page.md)** 
 4. One at a time, move each slider, and make sure that the motor that spins is pushing air as described in the instructions on the Motor Setup page. If a motor is spinning in the wrong direction, click the corresponding checkbox under the 'Reverse Motor Direction' section to correct the motor rotation.
 5. When you are finished with the setup, disarm the vehicle by clicking the switch.
 
-<img src="/images/quick-start/quick-start-manual-motor-directions.png" class="img-responsive img-center" style="max-height:600px;">
-
 ## Automatic Motor Direction Detection Setup
 
 1. Adjust the vehicle's buoyancy to be neutral or slightly **positive**.
