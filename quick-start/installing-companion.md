@@ -113,9 +113,9 @@ To perform a companion software update:
 
 1. Plug a *fully charged* battery into the vehicle and connect the tether to the topside computer.
 
-2. Navigate to [192.168.2.2:2770/network](http://192.168.2.2:2770/network) in an internet browser (Chrome, Edge, Firefox, etc.) and ensure that the vehicle has access to a WiFi network. If a webpage is not found at this address, verify the network settings are correct. Troubleshooting steps can be found [here](/reference/troubleshooting.md).
+2. Navigate to [192.168.2.2:2770/network](192.168.2.2:2770/network) in an internet browser (Chrome, Edge, Firefox, etc.) and ensure that the vehicle has access to a WiFi network. If a webpage is not found at this address, verify the network settings are correct. Troubleshooting steps can be found [here](/troubleshooting/troubleshooting.html).
 
-3. Navigate to [192.168.2.2:2770/system](http://192.168.2.2:2770/system). Click the button that says 'Update Companion'. If you do not see this button, then the companion software is up to date.
+3. Navigate to [192.168.2.2:2770/system](192.168.2.2:2770/system). Click the button that says 'Update Companion'. If you do not see this button, then the companion software is up to date.
 
 4. The update process will take between 5 and 20 minutes depending on the Internet connection speed. Wait for the update process to complete.
 
