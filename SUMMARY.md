@@ -61,12 +61,15 @@
 
 ## Developers
 
+* [RC Input and Output](/developers/rc-input-and-output.md)
+* [Full Parameter List](/developers/full-parameter-list.md)
 * [OpenCV](developers/opencv.md)
 * [Pymavlink](developers/pymavlink.md)
 * [SITL](developers/sitl.md)
+* [GPS Positioning](developers/gps-positioning.md)
+* [Wireless Topside](/developers/wireless-topside.md)
 * [Build ArduSub](developers/developers.md)
 * [Build this Documentation](developers/building-docs.md)
-* [GPS Positioning](developers/gps-positioning.md)
 
 ## Resources
 
