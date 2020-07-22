@@ -76,6 +76,16 @@
       * [Parameters Page](/reference/ardusub/parameters-page.md)
     * [Features While in Operation](/reference/ardusub/features-while-in-operation.md)
 * [Companion Web Interface Configuration and Features](/reference/companion/web-ui.md)
+    * [Network](/reference/companion/network.md)
+    * [System](/reference/companion/system.md)
+    * [Camera](/reference/companion/camera.md)
+    * [Routing](/reference/companion/routing.md)
+    * [MAVProxy](/reference/companion/mavproxy.md)
+    * [Git](/reference/companion/git.md)
+    * [Water Linked](/reference/companion/waterlinked.md)
+    * [Terminal Over Browser](/reference/companion/terminal-over-browser.md)
+    * [File System Access](/reference/companion/file-system.md)
+    * [MAVLink REST API](/reference/companion/mavlink-rest.md)
 * [Peripheral Device Configurations]
     * [Leak Sensor]
     * [Lights]
