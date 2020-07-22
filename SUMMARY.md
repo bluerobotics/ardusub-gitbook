@@ -69,7 +69,7 @@
       * [Frame Setup Page](/reference/ardusub/frame-setup-page.md)
       * [Parameters Page](/reference/ardusub/parameters-page.md)
     * [Features While in Operation](/reference/ardusub/features-while-in-operation.md)
-* [Companion Web Interface Configuration and Features](/reference/companion/web-ui.md)
+* [Companion Web Interface Configuration and Features](/reference/companion-web-ui.md)
     * [Network](/reference/companion/network.md)
     * [System](/reference/companion/system.md)
     * [Camera](/reference/companion/camera.md)
