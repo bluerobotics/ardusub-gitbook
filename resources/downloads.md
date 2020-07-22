@@ -1,27 +1,44 @@
 # Downloads
 
-## QGroundControl
-
-- [Windows](https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl-installer.exe)
-- [Mac](https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.dmg)
-- [Linux](https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage)
-
-Previous releases of QGroundControl can be found on our [github releases](https://github.com/bluerobotics/qgroundcontrol/releases) page.
-
 ## ArduSub Firmware Files
 
-**Stable Release for Pixhawk (Pixhawk1):** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub V4.0](https://firmware.ardupilot.org/Sub/stable/Pixhawk1/ardusub.apj)
+**Stable Release for Pixhawk (Pixhawk1):** 
 
-Firmware for other platforms can be downloaded from [firmware.ardupilot.org](https://firmware.ardupilot.org/). See [here](https://www.ardusub.com/getting-started/installation.html#ardusub) for instructions on how to flash the Pixhawk.
+<i class="fa fa-download" aria-hidden="true"></i> **[ArduSub v4.0.1](https://firmware.ardupilot.org/Sub/stable/Pixhawk1/ardusub.apj)** (.apj)
 
-## Raspberry Pi Images
+Firmware for other autopilot boards can be downloaded from [firmware.ardupilot.org](https://firmware.ardupilot.org/). See [here](/quick-start/installing-ardusub.md#without-a-companion-computer-manual-installation) for instructions on how to flash the Pixhawk.
 
-This is a fully configured image for the Raspberry Pi 3 computer to be used as a *companion computer* for the Pixhawk autopilot running ArduSub. See [here](https://www.ardusub.com/getting-started/installation.html#raspberry-pi) for instructions on how to flash the image to the SD card.
+### Previous Stable Firmware Releases
 
-<i class="fa fa-download" aria-hidden="true"></i> [Latest Ardusub-Raspbian Image](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/stable/ardusub-raspbian.img.zip)
+* **[v3.5.4](https://firmware.ardupilot.org/Sub/stable-3.5.4/PX4/ArduSub-v2.px4)**
+* **[v3.5.3](https://firmware.ardupilot.org/Sub/stable-3.5.3/PX4/ArduSub-v2.px4)**
 
-<p style="font-size:10px; text-align:center">
-Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.<br />
-<a href="https://github.com/bluerobotics/ardusub-gitbook/issues/">Submit a Documentation GitHub Issue here</a> to report any errors, suggestions, or missing information in this documentation.<br />
-<a href="https://github.com/ArduPilot/ardupilot/issues/">Submit an ArduSub GitHub Issue here</a> to report issues with the ArduSub software.
-</p>
+## Companion Computer Images
+
+This is a fully configured image for the Raspberry Pi 3B computer to be used as a **Companion Computer** for the Pixhawk1 autopilot running ArduSub. See [here](https://www.ardusub.com/getting-started/installation.html#raspberry-pi) for instructions on how to flash the image to the SD card.
+
+**Stable Release for Raspberry Pi 3B:**
+
+<i class="fa fa-download" aria-hidden="true"></i> [Latest Ardusub-Raspbian Image](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/stable/ardusub-raspbian.img.zip) (.img.zip)
+
+### Previous Stable Companion Releases
+
+* **[0.0.21](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/0.0.21/0.0.21.img.zip)**
+* **[0.0.20](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/0.0.20/0.0.20.img.zip)**
+* **[0.0.18](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/0.0.18/0.0.18.img.zip)**
+* **[0.0.17](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/0.0.17/0.0.17.img.zip)**
+* **[0.0.16](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/0.0.16/0.0.16.img.zip)**
+
+## QGroundControl
+
+<i class="fa fa-download" aria-hidden="true"></i> [Windows](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/latest/QGroundControl-installer.exe) (.exe)
+<i class="fa fa-download" aria-hidden="true"></i> [Mac](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/latest/QGroundControl.dmg) (.dmg)
+<i class="fa fa-download" aria-hidden="true"></i> [Linux](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/latest/QGroundControl.AppImage) (.AppImage)
+
+### Previous Stable QgroundControl Releases
+
+Previous releases of QGroundControl can be found on the [GitHub releases](https://github.com/mavlink/qgroundcontrol/releases) page.
+
+## Ping Echosounder Firmware Files
+
+<i class="fa fa-download" aria-hidden="true"></i> [Latest Firmware for Ping](https://github.com/bluerobotics/ping-firmware/blob/master/ping1d/Ping-V3.28_auto.hex) (.hex)
