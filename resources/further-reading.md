@@ -1,5 +1,7 @@
 # Further Reading
 
+The following websites and resources have more information on specific components or pieces of documentation. Some are just cool to keep tabs on like the blogs!
+
 ## Blue Robotics Blog
 
 [Blue Robotics Blog](https://bluerobotics.com/blog/)
@@ -19,6 +21,7 @@
 ## QGroundControl Docs
 
 [QGroundControl User Manual](https://docs.qgroundcontrol.com/en/)
+
 [QGroundControl Developer Guide](https://dev.qgroundcontrol.com/en/)
 
 ## MavLink Docs
