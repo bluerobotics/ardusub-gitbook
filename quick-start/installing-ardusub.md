@@ -12,9 +12,9 @@ To load ArduSub onto an autopilot board:
 
 1. Plug a *fully charged* battery into the vehicle and connect the tether to the topside computer.
 
-2. Navigate to [192.168.2.2:2770/network](192.168.2.2:2770/network) in an internet browser (Chrome, Edge, Firefox, etc.) and ensure that the vehicle has access to a WiFi network. If you do not see a webpage at this address, verify the network settings are correct. Troubleshooting steps can be found [here](/troubleshooting/troubleshooting.html).
+2. Navigate to [192.168.2.2:2770/network](http://192.168.2.2:2770/network) in an internet browser (Chrome, Edge, Firefox, etc.) and ensure that the vehicle has access to a WiFi network. If you do not see a webpage at this address, verify the network settings are correct. Troubleshooting steps can be found [here](/troubleshooting/troubleshooting.html).
 
-3. Navigate to [192.168.2.2:2770/system](192.168.2.2:2770/system). Click the button under the *Pixhawk Firmware Update* section that says **Stable**.
+3. Navigate to [192.168.2.2:2770/system](http://192.168.2.2:2770/system). Click the button under the *Pixhawk Firmware Update* section that says **Stable**.
 
 4. Wait for the update process to complete, and you are finished!
 
