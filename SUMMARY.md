@@ -35,16 +35,13 @@
    * [Companion Computer Software](/introduction/required-software/companion-computer-software.md)
    * [QGroundControl Software](/introduction/required-software/qgroundcontrol-software.md)
 
-## Quick Start
-* [Building a Vehicle Frame](/quick-start/vehicle-frame.md)
-* [Installing QGroundControl](/quick-start/installing-qgc.md)
-* [Installing Companion Software Image](/quick-start/installing-companion.md)
-    * [Network Setup](/quick-start/installing-companion.md#network-setup)
-    * [Software Update](/quick-start/installing-companion.md#software-update)
-* [Installing Autopilot Firmware](/quick-start/installing-ardusub.md)
-    * [Frame Selection](/quick-start/installing-ardusub.md#frame-selection)
-    * [Completing Calibrations](/quick-start/installing-ardusub.md#completing-calibrations)
-* [First Dive](/quick-start/first-dive.md)
+## Getting Started
+
+* [Installation](getting-started/installation.md)
+    * [QGroundControl](getting-started/installation.md#qgroundcontrol)
+    * [ArduSub](getting-started/installation.md#ardusub)
+    * [Raspberry Pi](getting-started/installation.md#raspberry-pi)
+* [Initial Setup](getting-started/initial-setup.md)
 
 ## Reference Documentation
 
