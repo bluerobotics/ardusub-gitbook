@@ -13,3 +13,7 @@ The [ArduPilot Forum](http://discuss.ardupilot.org/) is a community of ArduPilot
 The [Blue Robotics gitter](https://gitter.im/bluerobotics/discussion) is a chatroom to discuss Blue Robotics and Ardusub matters, we're happy to help anyone who drops by.
 
 The [ArduPilot gitter](https://gitter.im/ArduPilot/ardupilot) is a chatroom for ArduPilot developers, for technical discussions about pull requests and code changes.
+
+## Slack
+
+The [PX4 Slack (QGC)](https://slack.px4.io/) channel has an ongoing discussion about QGC development.
