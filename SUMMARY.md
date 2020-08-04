@@ -75,30 +75,7 @@
  * [Data Logging](/reference/data-logging.md)
  * [Troubleshooting](/reference/troubleshooting.md)
  
-## Operator's Manual
 
-* [Joystick Button Functions](operators-manual/button-functions.md)
-* [Arming Checks](operators-manual/arming-checks.md)
-* [Flight Modes](operators-manual/flight-modes.md)
-* [Failsafes](operators-manual/failsafes.md)
-* [Logging](operators-manual/logging.md)
-* [Parameters](operators-manual/parameters.md)
-* [Full Parameter List](operators-manual/full-parameter-list.md)
-* [Troubleshooting](troubleshooting/troubleshooting.md)
-* [RC Input and Output](operators-manual/rc-input-and-output.md)
-* [Controlling Outputs](operators-manual/outputs.md)
-* [Recording Video](operators-manual/recording-video.md)
-* [Companion Web Interface](operators-manual/companion-web.md)
-* [Updating Software](operators-manual/software-update.md)
-
-## Developers
-
-* [OpenCV](developers/opencv.md)
-* [Pymavlink](developers/pymavlink.md)
-* [SITL](developers/sitl.md)
-* [Build ArduSub](developers/developers.md)
-* [Build this Documentation](developers/building-docs.md)
-* [GPS Positioning](developers/gps-positioning.md)
 
 ## Resources
 
