@@ -45,8 +45,6 @@
     * [Frame Selection](/quick-start/installing-ardusub.md#frame-selection)
     * [Completing Calibrations](/quick-start/installing-ardusub.md#completing-calibrations)
 * [First Dive](/quick-start/first-dive.md)
-
-
 ## Developers
 
 * [RC Input and Output](/developers/rc-input-and-output.md)
