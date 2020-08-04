@@ -48,7 +48,7 @@
 
 ## Reference Documentation
 
-* [QGroundControl Features and Configuration](/reference/qgc-configuration.md)
+* [QGroundControl](/reference/qgc-configuration.md)
     * [Main Toolbar](/reference/qgroundcontrol/main-toolbar.md)
     * [Application Settings View](/reference/qgroundcontrol/application-settings-view.md)
     * [Vehicle Setup View](/reference/qgroundcontrol/vehicle-setup-view.md)
@@ -58,7 +58,7 @@
     * [Analyze View](/reference/qgroundcontrol/analyze-view.md)
     * [Other Features](/reference/qgroundcontrol/other-features.md)
       * [Telemetry Text Overlay Recording](/reference/qgroundcontrol/other-features.md#video-overlay)
-* [ArduSub Configuration and Features](/reference/ardusub-configuration.md)
+* [ArduSub](/reference/ardusub-configuration.md)
     * [Vehicle Setup View](/reference/qgroundcontrol/vehicle-setup-view.md)
       * [Summary Page](/reference/ardusub/summary-page.md)
       * [Joystick Setup Page](/reference/ardusub/joystick-setup-page.md)
@@ -72,7 +72,7 @@
       * [Frame Setup Page](/reference/ardusub/frame-setup-page.md)
       * [Parameters Page](/reference/ardusub/parameters-page.md)
     * [Features While in Operation](/reference/ardusub/features-while-in-operation.md)
-* [Companion Web Interface Configuration and Features](/reference/companion-web-ui.md)
+* [Companion Web Interface](/reference/companion-web-ui.md)
     * [Network](/reference/companion/network.md)
     * [System](/reference/companion/system.md)
     * [Camera](/reference/companion/camera.md)
