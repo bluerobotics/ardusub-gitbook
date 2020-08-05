@@ -85,7 +85,12 @@
     * [MAVLink REST API](/reference/companion/mavlink-rest.md)
 * [Data Logging](/reference/data-logging.md)
 * [Troubleshooting](/reference/troubleshooting.md)
-
+    * [Vehicle Control](/reference/troubleshooting.html#vehicle-control)
+    * [No Telemetry](/reference/troubleshooting.html#no-telemetry-no-autopilot-connection)
+    * [No Video](/reference/troubleshooting.html#no-video)
+    * [Poor Video Streaming](/reference/troubleshooting.html#poor-video-streaming-performance)
+    * [Miscellaneous](/reference/troubleshooting.html#miscellaneous)
+    
 ## Developers
 
 * [RC Input and Output](/developers/rc-input-and-output.md)
@@ -107,6 +112,3 @@
     * [Raspberry Pi Image](resources/downloads.md#raspberry-pi-images)
 * [Further Reading](resources/further-reading.md)
     
-## Miscellaneous
-
-* [Wireless Topside](miscellaneous/wireless-topside.md)
