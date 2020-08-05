@@ -83,8 +83,8 @@
     * [Terminal Over Browser](/reference/companion/terminal-over-browser.md)
     * [File System Access](/reference/companion/file-system.md)
     * [MAVLink REST API](/reference/companion/mavlink-rest.md)
- * [Data Logging](/reference/data-logging.md)
- * [Troubleshooting](/reference/troubleshooting.md)
+* [Data Logging](/reference/data-logging.md)
+* [Troubleshooting](/reference/troubleshooting.md)
 
 ## Developers
 
