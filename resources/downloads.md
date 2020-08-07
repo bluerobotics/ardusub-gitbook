@@ -23,6 +23,7 @@ This is a fully configured image for the Raspberry Pi 3B computer to be used as 
 
 ### Previous Stable Companion Releases
 
+* **[0.0.22](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/0.0.22/0.0.22.img.zip)**
 * **[0.0.21](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/0.0.21/0.0.21.img.zip)**
 * **[0.0.20](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/0.0.20/0.0.20.img.zip)**
 * **[0.0.18](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/0.0.18/0.0.18.img.zip)**
@@ -32,7 +33,9 @@ This is a fully configured image for the Raspberry Pi 3B computer to be used as 
 ## QGroundControl
 
 <i class="fa fa-download" aria-hidden="true"></i> [Windows](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/latest/QGroundControl-installer.exe) (.exe)
+
 <i class="fa fa-download" aria-hidden="true"></i> [Mac](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/latest/QGroundControl.dmg) (.dmg)
+
 <i class="fa fa-download" aria-hidden="true"></i> [Linux](https://s3.amazonaws.com/downloads.bluerobotics.com/QGC/latest/QGroundControl.AppImage) (.AppImage)
 
 ### Previous Stable QgroundControl Releases
