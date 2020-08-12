@@ -1,5 +1,7 @@
 # QGroundControl Installation
 
+>**Note** The latest recommended version of QGroundControl is **v4.0.5**. If your software is out of date, please uninstall the QGC application and download the latest version below.
+
 ## Download
 
 Download and install QGroundControl using one of the links below.
