@@ -1,5 +1,7 @@
 # Installing the Companion Computer Software Image
 
+>**Note** The current version of Companion is **v0.0.22**. If your syatem is out of date you can update by either installing a fresh image with the instructions below or connecting to Wi-Fi and performing a [Software Update](http://www.ardusub.com/quick-start/installing-companion.html#software-update).
+
 The operating system and supporting software is installed by writing a pre-configured `.img` file to an SD Card which is then inserted into the Companion Computer (Raspberry Pi). 
 
 1. Insert a microSD card with at least 4GB capacity into your topside computer with a card reader.
