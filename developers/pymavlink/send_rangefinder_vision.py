@@ -16,7 +16,7 @@ def wait_conn():
     msg = None
     while not msg:
         master.mav.ping_send(
-            int(time.time()), # Unix time
+            int(time.time() * 1e6 ), # Unix time in microseconds
             0, # Ping number
             0, # Request ping of all systems
             0 # Request ping of all components
