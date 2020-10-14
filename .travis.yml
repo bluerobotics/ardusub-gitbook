@@ -8,6 +8,7 @@ install:
 - npm install gitbook-cli -g
 - sudo pip3 install pymavlink
 - sudo pip3 install pylint
+- sudo pip3 install isort==4.3.21
 
 script:
 - gitbook install
