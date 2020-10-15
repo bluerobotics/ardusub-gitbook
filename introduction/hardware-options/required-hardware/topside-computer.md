@@ -10,7 +10,7 @@ QGroundControl has been tested and is supported on the following operating syste
 * macOS 10.20 or later
 * Ubuntu 18.04 or later
 
-The minimum recommended hardware for Windows and Linux computers are:
+The minimum recommended hardware for running QGroundControl is:
 
 * i5 processor or better
 * 8GB RAM
