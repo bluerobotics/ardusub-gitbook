@@ -6,14 +6,15 @@ The topside computer runs the QGroundControl application and is the device in wh
 
 QGroundControl has been tested and is supported on the following operating systems:
 
-* Windows 10
-* macOS 10.10 or later
-* Ubuntu 16.04 or later
+* Windows 10 - 64 bit
+* macOS 10.20 or later
+* Ubuntu 18.04 or later
 
-The minumum requirements recommended for Windows and Linux computers are:
+The minimum recommended hardware for Windows and Linux computers are:
 
-* i5 Processor
+* i5 processor or better
 * 8GB RAM
+* Solid-state hard drive (SSD)
 
 ## Consumer Level Computers
 
