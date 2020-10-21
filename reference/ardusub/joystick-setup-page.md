@@ -62,7 +62,7 @@ These button functions will command a switch to the corresponding flight mode. P
 
 [Presently](https://github.com/ArduPilot/ardupilot/issues/9808) (due to legacy/inheritance reasons), there is no convenient way to control the roll and pitch of and ArduSub vehicle with QGroundControl. The available solution is to use the roll_pitch_toggle joystick button function. When this button is pushed, the forward and lateral joystick axes toggle between controlling the forward and lateral motion of the vehicle and controlling the roll and pitch of the vehicle.
 
-The roll and pitch input behaves differently in different flight modes. See the [flight mode documentation](/operators-manual/flight-modes) for more information about how the different flight modes operate.
+The roll and pitch input behaves differently in different flight modes.
 
 - MANUAL: The roll and pitch input control the **rotation rate** of the vehicle. As long as the joystick input is deflected, the vehicle will continue to rotate. A centered joystick input commands a rotation rate of zero.
 - ACRO: This functions like MANUAL, but the rate of rotation is precisely controlled and stabilized.
