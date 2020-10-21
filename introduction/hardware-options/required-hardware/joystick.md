@@ -38,7 +38,7 @@ Below are some examples of custom joysticks created by ArduSub users.
 
 <img src="/images/hardware/joystick-rovsim.jpg" class="img-responsive img-center" style="max-height:600px;">
 
-* [BlueLink Professional ROV Hand Controller](https://blue-linked.com/bluerov2-store/ols/products/professional-rov-hand-controller-preorder)
+* [BlueLink Professional ROV Hand Controller](https://blue-linked.com/online-store/ols/products/professional-rov-hand-controller-preorder)
 
 <img src="/images/hardware/joystick-bluelink.png" class="img-responsive img-center" style="max-height:600px;">
 
