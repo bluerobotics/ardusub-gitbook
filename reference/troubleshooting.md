@@ -6,11 +6,11 @@ This page shares issues that users have run into and how they were resolved. Hop
 
 **Vehicle has telemetry but does not respond to joystick**
 
-Make sure you followed the instructions in [Joystick/Gamepad Calibration](/getting-started/initial-setup.md#joystickgamepad-calibration) and that the "Enable joystick input" checkbox is checked.
+Make sure you followed the instructions in [Joystick/Gamepad Calibration](/reference/ardusub/joystick-setup-page.md#calibration) and that the "Enable joystick input" checkbox is checked.
 
 **Vehicle flips itself over**
 
-Check that the motor directions are [configured correctly](/getting-started/initial-setup.md#configuring-motor-directions). Also check that the motors are connected to the correct motor outputs on the flight controller, according to the [supported frame diagrams](/introduction/features.md#supported-frames).
+Check that the motor directions are [configured correctly](/reference/ardusub/motors-setup-page.md). Also check that the motors are connected to the correct motor outputs on the flight controller, according to the [supported frame diagrams](/introduction/features.md#supported-frames).
 
 **Vehicle turns or moves even when not controlled to do so.**
 
@@ -26,7 +26,7 @@ The flight controller attempts to stabilize the vehicle's attitude so that it is
 
 #### Verify Network Configuration
 
-Verify that your [network settings](/getting-started/installation.html#network-setup) are correct. Verify your network configuration by entering the command `ipconfig` (Windows) or `ifconfig` (Mac/Linux) on the surface computer command line. The output should show that your Ethernet IP address is 192.168.2.1 and the subnet mask is 255.255.255.0.
+Verify that your [network settings](/reference/companion/network.md) are correct. Verify your network configuration by entering the command `ipconfig` (Windows) or `ifconfig` (Mac/Linux) on the surface computer command line. The output should show that your Ethernet IP address is 192.168.2.1 and the subnet mask is 255.255.255.0.
 
 You should be able to ping the companion computer from the surface computer. On the surface computer's command line enter:
 
@@ -55,7 +55,7 @@ Make sure that the QGroundControl is configured to automatically connect to UDP 
 #### Verify Autopilot USB Connection
 
 Check if the Autopilot is connected with following steps:
-1. Navigate to the [system page](/operators-manual/companion-web.md#system) in the Companion web interface
+1. Navigate to the [system page](/reference/companion/system.md) in the Companion web interface
 2. Check the list of detected serial devices for an entry that says `Pixhawk Autopilot`
 3. If you do not see an entry that says `Pixhawk Autopilot`, check the autopilot connection with the Companion computer.
     - You can test the autopilot and the usb cable by connecting the autopilot directly to your surface computer and checking the connection with QGroundControl.
@@ -72,9 +72,9 @@ If you do not see the system web page, make sure the companion computer is power
 
 If your network is configured correctly, but you still have no telemetry, we need to make sure that MAVProxy is running on the companion computer and that the autopilot and MAVProxy are communicating.
 
-To verify that MAVProxy is running, visit the [system page](/operators-manual/companion-web.md#system) in the companion web interface, and look for the `mavproxy` entry under the list of active services.
+To verify that MAVProxy is running, visit the [system page](/reference/companion/system.md) in the companion web interface, and look for the `mavproxy` entry under the list of active services.
 
-To verify that MAVProxy and the autopilot are communicating, log into the Companion computer via the [web terminal](/operators-manual/companion-web.html#terminal-over-browser), ssh, or PuTTY (user: pi, password: companion), and enter the command:
+To verify that MAVProxy and the autopilot are communicating, log into the Companion computer via the [web terminal](/reference/companion/terminal-over-browser.md), ssh, or PuTTY (user: pi, password: companion), and enter the command:
 
 	screen -r mavproxy
 
@@ -95,7 +95,7 @@ If you still do not have telemetry after all of these steps, please reboot the s
 
 If you do not have telemetry, please troubleshoot that first according to the above instructions.
 
-Begin by verifying that your [network settings](/getting-started/installation.html#network-setup) are correct, your Ethernet IP address should be 192.168.2.1 and the subnet mask should be 255.255.255.0.
+Begin by verifying that your [network settings](/reference/companion/network.md) are correct, your Ethernet IP address should be 192.168.2.1 and the subnet mask should be 255.255.255.0.
 
 If you have telemetry, but no video, make sure the video settings are correct in QGroundControl. The video settings are found in the General tab of the Application Settings (Q icon) view. The video source should be set to UDP video, and the port should be 5600. These are the default settings. If you change these settings, you will need to close and re-launch QGroundControl.
 
@@ -105,9 +105,9 @@ If you are using Linux, you must install a few dependencies for the video to wor
 
     apt install gstreamer1.0-x gstreamer1.0-libav gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
 
-Verify that your camera is detected by seeing it listed under the detected video devices section on the Companion [system webpage](/operators-manual/companion-web.md#system). If your camera is not detected, make sure that the camera supports H.264 video output, and make sure the cable is well-seated, or try another camera cable.
+Verify that your camera is detected by seeing it listed under the detected video devices section on the Companion [system webpage](/reference/companion/system.md). If your camera is not detected, make sure that the camera supports H.264 video output, and make sure the cable is well-seated, or try another camera cable.
 
-Verify that the video streaming service is active; it should be listed under the active services on the Companion [system webpage](/operators-manual/companion-web.md#system).
+Verify that the video streaming service is active; it should be listed under the active services on the Companion [system webpage](/reference/companion/system.md).
 
 #### If you are using a Windows computer:
 
@@ -162,9 +162,9 @@ Here are some tips for troubleshooting poor video performance:
 
 The output servo rail on the Pixhawk requires a separate 5V power supply. The power module and USB power inputs on the Pixhawk will not power the servo rail. Make sure you have a 5V input on the servo rail via an ESC BEC or standalone BEC.
 
-Check that input/output channels are [configured for camera tilt](/getting-started/initial-setup.md#camera-tilt-setup-if-used).
+Check that input/output channels are [configured for camera tilt](/reference/ardusub/camera-mount-setup-page.md).
 
-Check that joystick buttons [have been assigned](/getting-started/initial-setup.md#button-setup) to camera tilt functions.
+Check that joystick buttons [have been assigned](/reference/ardusub/joystick-setup-page.md#button-assignment) to camera tilt functions.
 
 ### "No io thread heartbeat" message constantly appears.
 
