@@ -1,0 +1,31 @@
+name: htmlProofer
+
+on: [push, pull_request]
+
+jobs:
+
+  test:
+    name: Test Links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - run: sudo npm install gitbook-cli -g
+
+      # fix polyfill issue in gitbook
+      - run: sudo sed -i "/fs.stat = statFix(fs.stat)/c\\" /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js
+      - run: sudo sed -i "/fs.fstat = statFix(fs.fstat)/c\\" /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js
+      - run: sudo sed -i "/fs.lstat = statFix(fs.lstat)/c\\" /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js
+
+      - run: gitbook install
+      - run: gitbook build
+
+      - name: Check HTML
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: "./_book"
+          # Ignore dell and te.com as they are returning error but have valid link
+          # Ignore http response 0 from bluelinked.com
+          arguments: --empty-alt-ignore true --url_ignore /http:\/\/192\.168\..\*/,/http(s?):\/\/(www\.)?dell\.com.*/,/https:\/\/www\.te\.com\/.*/ --http-status-ignore 0
