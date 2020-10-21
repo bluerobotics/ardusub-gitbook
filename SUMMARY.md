@@ -95,6 +95,7 @@
 
 * [RC Input and Output](/developers/rc-input-and-output.md)
 * [Full Parameter List](/developers/full-parameter-list.md)
+* [Software Components](/developers/software-components.md)
 * [OpenCV](developers/opencv.md)
 * [Pymavlink](developers/pymavlink.md)
 * [SITL](developers/sitl.md)
