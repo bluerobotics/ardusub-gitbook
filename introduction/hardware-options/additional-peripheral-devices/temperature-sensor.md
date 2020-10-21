@@ -11,6 +11,6 @@ ArduSub has a pre-installed driver for the following sensor type:
 
 <img src="/images/hardware/celsius.png" class="img-responsive img-center" style="max-height:600px;">
 
-The following sensor products may be directly connected to an [autopilot](/introduction/hardware-options/required-hardware/autopilot):
+The following sensor products may be directly connected to an [autopilot](/introduction/hardware-options/required-hardware/autopilot.md):
 * [Celsius Fast-Response, ±0.1°C Temperature Sensor (I2C)](https://bluerobotics.com/store/sensors-sonars-cameras/sensors/celsius-sensor-r1/)
 * [PCB for Celsius Fast-Response, ±0.1°C Temperature Sensor](https://bluerobotics.com/store/sensors-sonars-cameras/sensors/celsius-sensor-pcb-r1/)
