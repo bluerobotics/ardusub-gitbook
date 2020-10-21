@@ -20,7 +20,7 @@ Interface boards which use the [Homeplug AV](https://en.wikipedia.org/wiki/HomeP
 
 The following interface boards are supported:
 * [Blue Robotics Fathom-X Tether Interface Board Set](https://bluerobotics.com/store/comm-control-power/tether-interface/fathom-x-r1/)
-* [Blue Link Dual Ethernet Plus Serial Multiplexer (DEPS MUX)](https://blue-linked.com/bluerov2-store/ols/products/deps-mux)
+* [Blue Link Dual Ethernet Plus Serial Multiplexer (DEPS MUX)](https://blue-linked.com/online-store/ols/products/deps-mux)
 
 ## Interfaces for Fiber Optic Cable
 
