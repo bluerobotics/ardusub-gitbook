@@ -12,7 +12,7 @@ Below is an example of a Water Linked Underwater GPS System being used to locate
  </iframe>
 </div>
 
-> **Note** The [autopilot](introduction/hardware-options/required-hardware/autopilot.md) has the capability of utilizing an external positioning system to perform autonomous maneuvers like station keeping, 'click to go here', transects, and pre-planned waypoint missions, however this is IN DEVELOPMENT. The position-enabled flight modes are considered stable and **do not work** as of the latest firmware release. This page will be updated when functionality is added.
+> **Note** The [autopilot](/introduction/hardware-options/required-hardware/autopilot.md) has the capability of utilizing an external positioning system to perform autonomous maneuvers like station keeping, 'click to go here', transects, and pre-planned waypoint missions, however this is IN DEVELOPMENT. The position-enabled flight modes are considered stable and **do not work** as of the latest firmware release. This page will be updated when functionality is added.
 
 ## GPS Module
 
