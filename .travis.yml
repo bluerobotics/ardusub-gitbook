@@ -4,11 +4,13 @@ addons:
     packages:
       - python3-pip
       - python3-setuptools
+      - ruby-dev
 install:
 - npm install gitbook-cli -g
 - sudo pip3 install pymavlink
 - sudo pip3 install pylint
 - sudo pip3 install isort==4.3.21
+- gem install html-proofer
 
 script:
 - gitbook install
@@ -18,6 +20,7 @@ script:
 # - invalid-constant-name (because our variables are not supposed constants)
 # - duplicate-code (because some snippets have the same snippet duplicated)
 - pylint --disable=R0801 --disable=C0103 --disable=C0301 developers/pymavlink/*
+- htmlproofer ./_book --empty-alt-ignore true --check-external-hash true --http-status-ignore 503
 deploy:
  provider: pages
  skip_cleanup: true
