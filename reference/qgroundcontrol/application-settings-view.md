@@ -10,11 +10,11 @@ You can switch between the various pages by clicking the buttons in the left-sid
 
 The following pages are available for configuration:
 
-* **[General Settings](/reference/qgroundcontrol/application-settings-view.md#general-settings-page)**
-* **[Comm Links](/reference/qgroundcontrol/application-settings-view.md#comm-links-page)**
-* **[Offline Maps](/reference/qgroundcontrol/application-settings-view.md#offline-maps)**
-* **[Mavlink](/reference/qgroundcontrol/application-settings-view.md#mavlink)**
-* **[Console](l/reference/qgroundcontrol/application-settings-view.md#console)**
+* **[General Settings](#general-settings-page)**
+* **[Comm Links](#comm-links-page)**
+* **[Offline Maps](#offline-maps)**
+* **[Mavlink](#mavlink)**
+* **[Console](#console)**
 
 ### General Settings Page
 
