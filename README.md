@@ -1,6 +1,6 @@
 # Overview
 
-> **Note** The information in this guide applies to ArduSub V3.5 and up. If you are running an older version, you should [update](/getting-started/installation.md#ardusub).
+> **Note** The information in this guide applies to ArduSub V3.5 and up. If you are running an older version, you should [update](/quick-start/installing-ardusub.md).
 
 ## ArduSub and the ArduPilot Project
 
