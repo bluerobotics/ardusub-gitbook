@@ -50,7 +50,7 @@ You can configure what information is display by pressing the small gear icon on
 
 ### Camera
 
-This functionality is not built into ArduSub, please use [Companion's Camera Settings Page](/reference/companion/web-ui.md#camera) to change camera settings.
+This functionality is not built into ArduSub, please use [Companion's Camera Settings Page](/reference/companion/camera.md) to change camera settings.
 
 <img src="/images/reference/reference-qgc-fly-instruments-camera.png" class="img-responsive img-center" style="max-height:600px;">
 
