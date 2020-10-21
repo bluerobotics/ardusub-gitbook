@@ -1,0 +1,31 @@
+name: htmlProofer
+
+on: [push, pull_request]
+
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+    # Name the Job
+  test:
+    name: All
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - run: sudo npm install gitbook-cli -g
+
+      # fix polyfill...
+      - run: sudo sed -i "/fs.stat = statFix(fs.stat)/c\\" /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js
+      - run: sudo sed -i "/fs.fstat = statFix(fs.fstat)/c\\" /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js
+      - run: sudo sed -i "/fs.lstat = statFix(fs.lstat)/c\\" /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js
+
+      - run: gitbook install
+      - run: gitbook build
+
+      - name: Check HTML
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: "./_book"
