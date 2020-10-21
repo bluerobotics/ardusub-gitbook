@@ -22,6 +22,6 @@ These are the default channel mappings for RC input:
 
 ## RC Outputs
 
-On the Pixhawk, there are 8 main outputs and 6 auxiliary outputs. The main outputs are updated at 200Hz by default (configured via the [*RC_SPEED*](/operators-manual/full-parameter-list.md#rcspeed-esc-update-speed) parameter), and the auxiliary outputs are always updated at 50Hz. It is important not to connect analog servos to the main outputs, because the very fast update rate can cause the servo to burn itself out.
+On the Pixhawk, there are 8 main outputs and 6 auxiliary outputs. The main outputs are updated at 200Hz by default (configured via the [*RC_SPEED*](/developers/full-parameter-list.md#rcspeed-esc-update-speed) parameter), and the auxiliary outputs are always updated at 50Hz. It is important not to connect analog servos to the main outputs, because the very fast update rate can cause the servo to burn itself out.
 
-By default, aux outputs 5 and 6 (SERVO13 and SERVO14) are reserved as GPIO pins to be used for relays, and will not output a pwm signal for other functions. This is configured with the [*BRD_PWM_COUNT*](/operators-manual/full-parameter-list.md#brdpwmcount-auxiliary-pin-config) parameter, which determines how many of the auxiliary outputs to configure as PWM outputs (default is 4).
+By default, aux outputs 5 and 6 (SERVO13 and SERVO14) are reserved as GPIO pins to be used for relays, and will not output a pwm signal for other functions. This is configured with the [*BRD_PWM_COUNT*](/developers/full-parameter-list.md#brdpwmcount-auxiliary-pin-config) parameter, which determines how many of the auxiliary outputs to configure as PWM outputs (default is 4).
