@@ -100,6 +100,7 @@
 * [Pymavlink](developers/pymavlink.md)
 * [SITL](developers/sitl.md)
 * [GPS Positioning](developers/gps-positioning.md)
+* [DVL Integration](developers/dvl-integration.md)
 * [Wireless Topside](/developers/wireless-topside.md)
 * [Build ArduSub](developers/developers.md)
 * [Build this Documentation](developers/building-docs.md)
