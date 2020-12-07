@@ -58,7 +58,7 @@ Restarts the DVL service.
 
 **Set New Origin:**
 
-Used for dead reckoning, This makes the ROV show up in QGC at the selected location. This is likely to be not as good as the DVL's own dead reckoning.
+Used for dead reckoning; this makes the ROV show up in QGC at the selected location. The position displayed in QGC is calculated by the autopilot independently of the position showed in the Water Linked DVL web interface, which is calculated by the DVL itself.
 
 
 **Status:**
@@ -69,7 +69,6 @@ Shows the current Driver status, useful for troubleshooting.
 ## ArduSub Firmware
 
 The DVL data is sent by the VISUAL_ODOMETRY mavlink message. This message is supported in ArduSub 4.1-beta and onward. The ArduSub 4.1-beta firmware is recommended for testing with DVL.
-The Firmware **must** be downloaded from the ardupilot servers [here](https://firmware.ardupilot.org/Sub/beta/Pixhawk1/ardusub.apj)
 
 ## Installing the ArduSub beta firmware
 
