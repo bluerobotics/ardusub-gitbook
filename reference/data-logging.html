@@ -1,0 +1,1755 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Data Logging · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-richquotes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="troubleshooting.html" />
+    
+    
+    <link rel="prev" href="companion/mavlink-rest.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduction/features.html">
+            
+                <a href="../introduction/features.html">
+            
+                    
+                    Features
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../introduction/applications.html">
+            
+                <a href="../introduction/applications.html">
+            
+                    
+                    Applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../introduction/hardware-options.html">
+            
+                <a href="../introduction/hardware-options.html">
+            
+                    
+                    Hardware Options
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../introduction/hardware-options/connection-diagrams.html">
+            
+                <a href="../introduction/hardware-options/connection-diagrams.html">
+            
+                    
+                    Connection Diagrams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../introduction/hardware-options/required-hardware.html">
+            
+                <a href="../introduction/hardware-options/required-hardware.html">
+            
+                    
+                    Required Hardware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../introduction/hardware-options/required-hardware/autopilot.html">
+            
+                <a href="../introduction/hardware-options/required-hardware/autopilot.html">
+            
+                    
+                    Autopilot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../introduction/hardware-options/required-hardware/companion-computer.html">
+            
+                <a href="../introduction/hardware-options/required-hardware/companion-computer.html">
+            
+                    
+                    Companion Computer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../introduction/hardware-options/required-hardware/camera.html">
+            
+                <a href="../introduction/hardware-options/required-hardware/camera.html">
+            
+                    
+                    Camera
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../introduction/hardware-options/required-hardware/escs.html">
+            
+                <a href="../introduction/hardware-options/required-hardware/escs.html">
+            
+                    
+                    Electronic Speed Controls (ESCs)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../introduction/hardware-options/required-hardware/thrusters.html">
+            
+                <a href="../introduction/hardware-options/required-hardware/thrusters.html">
+            
+                    
+                    Thrusters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../introduction/hardware-options/required-hardware/power-sensing-module.html">
+            
+                <a href="../introduction/hardware-options/required-hardware/power-sensing-module.html">
+            
+                    
+                    Power Sensing Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../introduction/hardware-options/required-hardware/power-supply.html">
+            
+                <a href="../introduction/hardware-options/required-hardware/power-supply.html">
+            
+                    
+                    Power Supply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="../introduction/hardware-options/required-hardware/tether.html">
+            
+                <a href="../introduction/hardware-options/required-hardware/tether.html">
+            
+                    
+                    Tether
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.9" data-path="../introduction/hardware-options/required-hardware/topside-computer.html">
+            
+                <a href="../introduction/hardware-options/required-hardware/topside-computer.html">
+            
+                    
+                    Topside Computer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.10" data-path="../introduction/hardware-options/required-hardware/joystick.html">
+            
+                <a href="../introduction/hardware-options/required-hardware/joystick.html">
+            
+                    
+                    Joystick
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../introduction/hardware-options/recommended-extras.html">
+            
+                <a href="../introduction/hardware-options/recommended-extras.html">
+            
+                    
+                    Recommended Extras
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../introduction/hardware-options/recommended-extras/pressure-sensor.html">
+            
+                <a href="../introduction/hardware-options/recommended-extras/pressure-sensor.html">
+            
+                    
+                    Pressure Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../introduction/hardware-options/recommended-extras/camera-gimbal.html">
+            
+                <a href="../introduction/hardware-options/recommended-extras/camera-gimbal.html">
+            
+                    
+                    Camera Tilt Mount
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../introduction/hardware-options/recommended-extras/lights.html">
+            
+                <a href="../introduction/hardware-options/recommended-extras/lights.html">
+            
+                    
+                    Lights
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../introduction/hardware-options/additional-peripheral-devices.html">
+            
+                <a href="../introduction/hardware-options/additional-peripheral-devices.html">
+            
+                    
+                    Additional Peripheral Devices
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../introduction/hardware-options/additional-peripheral-devices/leak-sensor.html">
+            
+                <a href="../introduction/hardware-options/additional-peripheral-devices/leak-sensor.html">
+            
+                    
+                    Leak Sensors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../introduction/hardware-options/additional-peripheral-devices/temperature-sensor.html">
+            
+                <a href="../introduction/hardware-options/additional-peripheral-devices/temperature-sensor.html">
+            
+                    
+                    Temperature Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../introduction/hardware-options/additional-peripheral-devices/servos.html">
+            
+                <a href="../introduction/hardware-options/additional-peripheral-devices/servos.html">
+            
+                    
+                    Servos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../introduction/hardware-options/additional-peripheral-devices/relays.html">
+            
+                <a href="../introduction/hardware-options/additional-peripheral-devices/relays.html">
+            
+                    
+                    Relays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../introduction/hardware-options/additional-peripheral-devices/grippers-and-manipulators.html">
+            
+                <a href="../introduction/hardware-options/additional-peripheral-devices/grippers-and-manipulators.html">
+            
+                    
+                    Grippers and Manipulators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../introduction/hardware-options/additional-peripheral-devices/underwater-positioning.html">
+            
+                <a href="../introduction/hardware-options/additional-peripheral-devices/underwater-positioning.html">
+            
+                    
+                    Underwater Positioning and GPS (SBL and USBL)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../introduction/hardware-options/additional-peripheral-devices/sonars.html">
+            
+                <a href="../introduction/hardware-options/additional-peripheral-devices/sonars.html">
+            
+                    
+                    Sonars
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../introduction/required-software.html">
+            
+                <a href="../introduction/required-software.html">
+            
+                    
+                    Required Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../introduction/required-software/ardusub-autopilot-firmware.html">
+            
+                <a href="../introduction/required-software/ardusub-autopilot-firmware.html">
+            
+                    
+                    ArduSub Autopilot Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../introduction/required-software/companion-computer-software.html">
+            
+                <a href="../introduction/required-software/companion-computer-software.html">
+            
+                    
+                    Companion Computer Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../introduction/required-software/qgroundcontrol-software.html">
+            
+                <a href="../introduction/required-software/qgroundcontrol-software.html">
+            
+                    
+                    QGroundControl Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Quick Start</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../quick-start/vehicle-frame.html">
+            
+                <a href="../quick-start/vehicle-frame.html">
+            
+                    
+                    Building a Vehicle Frame
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../quick-start/installing-qgc.html">
+            
+                <a href="../quick-start/installing-qgc.html">
+            
+                    
+                    Installing QGroundControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../quick-start/installing-companion.html">
+            
+                <a href="../quick-start/installing-companion.html">
+            
+                    
+                    Installing Companion Software Image
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../quick-start/installing-companion.html">
+            
+                <a href="../quick-start/installing-companion.html#network-setup">
+            
+                    
+                    Network Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../quick-start/installing-companion.html">
+            
+                <a href="../quick-start/installing-companion.html#software-update">
+            
+                    
+                    Software Update
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../quick-start/installing-ardusub.html">
+            
+                <a href="../quick-start/installing-ardusub.html">
+            
+                    
+                    Installing Autopilot Firmware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../quick-start/installing-ardusub.html">
+            
+                <a href="../quick-start/installing-ardusub.html#frame-selection">
+            
+                    
+                    Frame Selection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../quick-start/installing-ardusub.html">
+            
+                <a href="../quick-start/installing-ardusub.html#completing-calibrations">
+            
+                    
+                    Completing Calibrations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../quick-start/first-dive.html">
+            
+                <a href="../quick-start/first-dive.html">
+            
+                    
+                    First Dive
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Reference Documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="qgc-configuration.html">
+            
+                <a href="qgc-configuration.html">
+            
+                    
+                    QGroundControl
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="qgroundcontrol/main-toolbar.html">
+            
+                <a href="qgroundcontrol/main-toolbar.html">
+            
+                    
+                    Main Toolbar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="qgroundcontrol/application-settings-view.html">
+            
+                <a href="qgroundcontrol/application-settings-view.html">
+            
+                    
+                    Application Settings View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="qgroundcontrol/vehicle-setup-view.html">
+            
+                <a href="qgroundcontrol/vehicle-setup-view.html">
+            
+                    
+                    Vehicle Setup View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="qgroundcontrol/plan-view.html">
+            
+                <a href="qgroundcontrol/plan-view.html">
+            
+                    
+                    Plan View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="qgroundcontrol/fly-view.html">
+            
+                <a href="qgroundcontrol/fly-view.html">
+            
+                    
+                    Fly View
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.5.1" data-path="qgroundcontrol/fly-view.html">
+            
+                <a href="qgroundcontrol/fly-view.html#video-stream">
+            
+                    
+                    Recoding Video
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="qgroundcontrol/analyze-view.html">
+            
+                <a href="qgroundcontrol/analyze-view.html">
+            
+                    
+                    Analyze View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="qgroundcontrol/other-features.html">
+            
+                <a href="qgroundcontrol/other-features.html">
+            
+                    
+                    Other Features
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.7.1" data-path="qgroundcontrol/other-features.html">
+            
+                <a href="qgroundcontrol/other-features.html#video-overlay">
+            
+                    
+                    Telemetry Text Overlay Recording
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="ardusub-configuration.html">
+            
+                <a href="ardusub-configuration.html">
+            
+                    
+                    ArduSub
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="qgroundcontrol/vehicle-setup-view.html">
+            
+                <a href="qgroundcontrol/vehicle-setup-view.html">
+            
+                    
+                    Vehicle Setup View
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1" data-path="ardusub/summary-page.html">
+            
+                <a href="ardusub/summary-page.html">
+            
+                    
+                    Summary Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.2" data-path="ardusub/joystick-setup-page.html">
+            
+                <a href="ardusub/joystick-setup-page.html">
+            
+                    
+                    Joystick Setup Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.3" data-path="ardusub/sensors-setup-page.html">
+            
+                <a href="ardusub/sensors-setup-page.html">
+            
+                    
+                    Sensors Setup Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.4" data-path="ardusub/power-setup-page.html">
+            
+                <a href="ardusub/power-setup-page.html">
+            
+                    
+                    Power Setup Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.5" data-path="ardusub/motors-setup-page.html">
+            
+                <a href="ardusub/motors-setup-page.html">
+            
+                    
+                    Motors Setup Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.6" data-path="ardusub/safety-setup-page.html">
+            
+                <a href="ardusub/safety-setup-page.html">
+            
+                    
+                    Safety Setup Page (Failsafes)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.7" data-path="ardusub/tuning-setup-page.html">
+            
+                <a href="ardusub/tuning-setup-page.html">
+            
+                    
+                    Tuning Setup Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.8" data-path="ardusub/camera-mount-setup-page.html">
+            
+                <a href="ardusub/camera-mount-setup-page.html">
+            
+                    
+                    Camera Mount Setup Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.9" data-path="ardusub/lights-setup-page.html">
+            
+                <a href="ardusub/lights-setup-page.html">
+            
+                    
+                    Lights Setup Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.10" data-path="ardusub/frame-setup-page.html">
+            
+                <a href="ardusub/frame-setup-page.html">
+            
+                    
+                    Frame Setup Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.11" data-path="ardusub/parameters-page.html">
+            
+                <a href="ardusub/parameters-page.html">
+            
+                    
+                    Parameters Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="ardusub/features-while-in-operation.html">
+            
+                <a href="ardusub/features-while-in-operation.html">
+            
+                    
+                    Features While in Operation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="companion-web-ui.html">
+            
+                <a href="companion-web-ui.html">
+            
+                    
+                    Companion Web Interface
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="companion/network.html">
+            
+                <a href="companion/network.html">
+            
+                    
+                    Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="companion/system.html">
+            
+                <a href="companion/system.html">
+            
+                    
+                    System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="companion/camera.html">
+            
+                <a href="companion/camera.html">
+            
+                    
+                    Camera
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="companion/routing.html">
+            
+                <a href="companion/routing.html">
+            
+                    
+                    Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="companion/mavproxy.html">
+            
+                <a href="companion/mavproxy.html">
+            
+                    
+                    MAVProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="companion/git.html">
+            
+                <a href="companion/git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="companion/waterlinked.html">
+            
+                <a href="companion/waterlinked.html">
+            
+                    
+                    Water Linked
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.8" data-path="companion/terminal-over-browser.html">
+            
+                <a href="companion/terminal-over-browser.html">
+            
+                    
+                    Terminal Over Browser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.9" data-path="companion/file-system.html">
+            
+                <a href="companion/file-system.html">
+            
+                    
+                    File System Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.10" data-path="companion/mavlink-rest.html">
+            
+                <a href="companion/mavlink-rest.html">
+            
+                    
+                    MAVLink REST API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4" data-path="data-logging.html">
+            
+                <a href="data-logging.html">
+            
+                    
+                    Data Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="troubleshooting.html">
+            
+                <a href="troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="troubleshooting.html">
+            
+                <span>
+            
+                    
+                    Vehicle Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="troubleshooting.html">
+            
+                <span>
+            
+                    
+                    No Telemetry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="troubleshooting.html">
+            
+                <span>
+            
+                    
+                    No Video
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.4" data-path="troubleshooting.html">
+            
+                <span>
+            
+                    
+                    Poor Video Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.5" data-path="troubleshooting.html">
+            
+                <span>
+            
+                    
+                    Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Developers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../developers/rc-input-and-output.html">
+            
+                <a href="../developers/rc-input-and-output.html">
+            
+                    
+                    RC Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../developers/full-parameter-list.html">
+            
+                <a href="../developers/full-parameter-list.html">
+            
+                    
+                    Full Parameter List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../developers/software-components.html">
+            
+                <a href="../developers/software-components.html">
+            
+                    
+                    Software Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../developers/opencv.html">
+            
+                <a href="../developers/opencv.html">
+            
+                    
+                    OpenCV
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../developers/pymavlink.html">
+            
+                <a href="../developers/pymavlink.html">
+            
+                    
+                    Pymavlink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../developers/sitl.html">
+            
+                <a href="../developers/sitl.html">
+            
+                    
+                    SITL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../developers/gps-positioning.html">
+            
+                <a href="../developers/gps-positioning.html">
+            
+                    
+                    GPS Positioning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../developers/wireless-topside.html">
+            
+                <a href="../developers/wireless-topside.html">
+            
+                    
+                    Wireless Topside
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../developers/developers.html">
+            
+                <a href="../developers/developers.html">
+            
+                    
+                    Build ArduSub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../developers/building-docs.html">
+            
+                <a href="../developers/building-docs.html">
+            
+                    
+                    Build this Documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../resources/community.html">
+            
+                <a href="../resources/community.html">
+            
+                    
+                    Community
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../resources/downloads.html">
+            
+                <a href="../resources/downloads.html">
+            
+                    
+                    Downloads
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../resources/downloads.html">
+            
+                <a href="../resources/downloads.html#qgroundcontrol">
+            
+                    
+                    QGroundControl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../resources/downloads.html">
+            
+                <a href="../resources/downloads.html#ardusub-firmware-files">
+            
+                    
+                    ArduSub Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../resources/downloads.html">
+            
+                <a href="../resources/downloads.html#companion-computer-images">
+            
+                    
+                    Raspberry Pi Image
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../resources/further-reading.html">
+            
+                <a href="../resources/further-reading.html">
+            
+                    
+                    Further Reading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Data Logging</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="logging">Logging</h1>
+<p>There are two types of logs that can be used to diagnose problems while running ArduSub, or to retrieve data for post-processing.</p>
+<h2 id="telemetry-logs">Telemetry logs</h2>
+<p>Ground Control Station (GCS) software will store all of the autopilot telemtry in a log. These telemetry logs contain all of the MAVLink messages received in their binary format. MAVProxy and QGroundControl save telemetry logs locally in a <strong>.tlog</strong> file. Telemetry logs are the preferred way of diagnosing most problems.</p>
+<p>Once connected to the autopilot, MAVProxy will save all telemetry to a file called &apos;mav.tlog&apos;. The mav.tlog file is saved under the same path from which MAVProxy was run. By default, QGroundControl only begins logging telemetry after the vehicle has been armed. QGroundControl can be configured to log telemetry while the autopilot is disarmed in the <em>General</em> tab of the <em>Vehicle Seup</em> menu (click the purple &apos;Q&apos; icon in the menu bar). Select the option to save logs &apos;even if vehicle was not armed&apos; in order to log telemetry while disarmed. QGroundControl saves the telemetry logs in the &apos;Telemetry&apos; directory under the &apos;Save Path&apos; that is specified in the <em>General</em> tab of the <em>Vehicle Seup</em> menu.</p>
+<p><img src="../images/log-disarmed-qgc.png" class="img-responsive img-center" style="max-height:400px;"></p>
+<h2 id="dataflash-logs">DataFlash logs</h2>
+<p>DataFlash logs are saved by the Autopilot directly to on-board memory (SD card in the case of the Pixhawk), regardless of a telemetry connection. These logs are saved in a <strong>.bin</strong> file. DataFlash logs are capable of logging data at a much faster rate than telemetry logs. The DataFlash logs are named and saved in ascending order. If GPS is available, the logs will be dated according to the GPS timestamp. DataFlash log files can be opened and inspected with MAVProxy, APM Planner 2 or Mission Planner.</p>
+<p>By default, a new dataflah log file is created when the vehicle is initially armed, and logging is performed only while the vehicle is armed. The <em>LOG_DISARMED</em> parameter can be set to &apos;Enabled&apos; in order to begin a DataFlash log as soon as the autopilot is booted, even before arming. With <em>LOG_DISARMED</em> enabled, logging will be performed whether the vehicle is armed or disarmed, until the vehicle is powered down.</p>
+<p><img src="../images/log-disarmed.png" class="img-responsive img-center" style="max-height:400px;"></p>
+<h2 id="downloading">Downloading</h2>
+<p>DataFlash logs can be retrieved in two ways:</p>
+<ol>
+<li><p>Remove the Micro SD card from the Pixhawk and plug it into your computer to view and transfer the logs using a file explorer like a regular USB drive.</p>
+</li>
+<li><p>Download the logs remotely via QGroundControl or MAVProxy.</p>
+<ul>
+<li><p>Log downloading via QGroundControl</p>
+<p>  Click the Analyze icon at the top of the window. The icon looks like a magnifying glass over a document.</p>
+<p>  Click the &apos;Refresh&apos; button to view available logs.</p>
+<p>  Select the log you would like to download, and click &apos;Download&apos;.</p>
+<p>  Multiple logs can be downloaded by highlighting the desired logs before clicking &apos;Download&apos;.</p>
+<p>  <img src="../images/log-download.png" class="img-responsive img-center" style="max-height:400px;"></p>
+</li>
+<li><p>Log downloading via MAVProxy</p>
+<p>  While connected to the autopilot via MAVProxy, type &apos;log list&apos; in the MAVProxy console to list the available DataFlash logs onboard the autopilot.</p>
+<p>  Type &apos;log download X&apos; to download log number X</p>
+<p>  While the log is downloading, you can type &apos;log status&apos; to view the status of the download, or &apos;log cancel&apos; to cancel the download.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="log-analysis">Log Analysis</h1>
+<p>Telemetry logs and dataflash logs are stored in different formats, and contain different (but in many cases overlapping) data. The log entries for telemetry logs are the MAVLink messages that are documented <a href="https://mavlink.io/en/messages/common.html" target="_blank">here</a> and <a href="https://mavlink.io/en/messages/ardupilotmega.html" target="_blank">here</a>. The log entries in dataflash logs are self-documented in their binary format, but the formats can also be determined by looking at the code <a href="https://github.com/ArduPilot/ardupilot/blob/master/ArduSub/Log.cpp" target="_blank">here</a>.</p>
+<p>Below is a brief description of some tools that are available for viewing and extracting data from logs.</p>
+<h2 id="mavexplorerpy">MAVExplorer.py</h2>
+<p>MAVExplorer is a command line/graphical tool used to plot log data. MAVExplorer supports both telemetry logs and dataflash logs, and is included as part of a MAVProxy installation. Please refer to the <a href="http://ardupilot.org/dev/docs/using-mavexplorer-for-log-analysis.html" target="_blank">MAVExplorer documentation</a> for more information. <strong>Note, the log file name should not contain any spaces when using this tool</strong></p>
+<h2 id="mavlogdumppy">mavlogdump.py</h2>
+<p>mavlogdump.py is a command line tool used to filter and export log data to plain-text files like .csv or .json. mavlogdump.py supports both telemetry logs and dataflash logs, and it is just one of many such log analysis tools included as part of a pymavlink installation (also installed with MAVProxy). <strong>Note, the log file name should not contain any spaces when using this tool</strong></p>
+<p>To install mavlogdump.py, install pymavlink from pip:</p>
+<p><code>pip install pymavlink</code></p>
+<p>To use mavlogdump.py, refer to the output of <code>mavlogdump.py --help</code>:</p>
+<pre><code>usage: mavlogdump.py [-h] [--no-timestamps] [--planner] [--robust] [-f]
+                     [--condition CONDITION] [-q] [-o OUTPUT] [-p]
+                     [--format FORMAT] [--csv_sep CSV_SEP] [--types TYPES]
+                     [--nottypes NOTTYPES] [--dialect DIALECT]
+                     [--zero-time-base] [--no-bad-data] [--show-source]
+                     [--show-seq] [--source-system SOURCE_SYSTEM]
+                     [--source-component SOURCE_COMPONENT] [--link LINK]
+                     LOG
+
+example program that dumps a Mavlink log file. The log file is assumed to be
+in the format that qgroundcontrol uses, which consists of a series of MAVLink
+packets, each with a 64 bit timestamp header. The timestamp is in microseconds
+since 1970 (unix epoch)
+
+positional arguments:
+  LOG
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --no-timestamps       Log doesn&apos;t have timestamps
+  --planner             use planner file format
+  --robust              Enable robust parsing (skip over bad data)
+  -f, --follow          keep waiting for more data at end of file
+  --condition CONDITION
+                        select packets by condition
+  -q, --quiet           don&apos;t display packets
+  -o OUTPUT, --output OUTPUT
+                        output matching packets to give file
+  -p, --parms           preserve parameters in output with -o
+  --format FORMAT       Change the output format between &apos;standard&apos;, &apos;json&apos;,
+                        and &apos;csv&apos;. For the CSV output, you must supply types
+                        that you want.
+  --csv_sep CSV_SEP     Select the delimiter between columns for the output
+                        CSV file. Use &apos;tab&apos; to specify tabs. Only applies when
+                        --format=csv
+  --types TYPES         types of messages (comma separated with wildcard)
+  --nottypes NOTTYPES   types of messages not to include (comma separated with
+                        wildcard)
+  --dialect DIALECT     MAVLink dialect
+  --zero-time-base      use Z time base for DF logs
+  --no-bad-data         Don&apos;t output corrupted messages
+  --show-source         Show source system ID and component ID
+  --show-seq            Show sequence numbers
+  --source-system SOURCE_SYSTEM
+                        filter by source system ID
+  --source-component SOURCE_COMPONENT
+                        filter by source component ID
+  --link LINK           filter by comms link ID
+</code></pre><h4 id="mavlogdumppy-examples">mavlogdump.py Examples</h4>
+<p>Print out all STATUSTEXT messages in the log file:</p>
+<pre><code>mavlogdump.py --types=STATUSTEXT test.tlog 
+2018-05-15 12:59:42.57: STATUSTEXT {severity : 6, text : ArduSub V3.5.3 (ad81760b)}
+2018-05-15 12:59:42.57: STATUSTEXT {severity : 6, text : PX4: 8d505a02 NuttX: 1a99ba58}
+2018-05-15 12:59:42.57: STATUSTEXT {severity : 6, text : PX4v2 00400027 32365109 36363331}
+2018-05-15 13:00:46.97: STATUSTEXT {severity : 4, text : Motor test timed out!}
+2018-05-15 13:00:47.87: STATUSTEXT {severity : 6, text : ArduSub V3.5.3 (ad81760b)}
+2018-05-15 13:00:47.88: STATUSTEXT {severity : 6, text : PX4: 8d505a02 NuttX: 1a99ba58}
+2018-05-15 13:00:47.88: STATUSTEXT {severity : 6, text : PX4v2 00400027 32365109 36363331}
+2018-05-15 13:00:49.05: STATUSTEXT {severity : 2, text : 10 second cool down required}
+2018-05-15 13:00:49.05: STATUSTEXT {severity : 4, text : Arm motors before testing motors.}
+2018-05-15 13:00:49.06: STATUSTEXT {severity : 4, text : motor test initialization failed!}
+</code></pre><p>The output can be filtered based on message type, and also based on conditions in the message fields.</p>
+<p>Export all ATTITUDE messages to a .csv file:</p>
+<pre><code>mavlogdump.py --types=ATTITUDE --format=csv test.tlog &gt; test.csv
+</code></pre><p>Export all SCALED_PRESSURE2 messages to a .csv file, filter by showing only messages while vehicle was armed</p>
+<pre><code>mavlogdump.py --types=SCALED_PRESSURE2 --condition HEARTBEAT.system_status==4 --format=csv test.tlog &gt; test.csv
+</code></pre><p>Export all messages to a human readable file, filter to discrete time span (only two seconds here)</p>
+<pre><code> mavlogdump.py --condition &apos;SYSTEM_TIME.time_unix_usec&gt;1526496245000000 and SYSTEM_TIME.time_unix_usec&lt;1526496247000000&apos; test.tlog &gt; test.log
+</code></pre><h2 id="mission-planner">Mission Planner</h2>
+<p>Mission Planner is a ground control station software like QGroundControl. Mission Planner does not have support for operating ArduSub, but the log files produced by ArduSub are compatible with the graphical analysis tools in Mission Planner. See the <a href="http://ardupilot.org/copter/docs/common-downloading-and-analyzing-data-logs-in-mission-planner.html" target="_blank">Mission Planner log analysis documentation</a> for more details.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="companion/mavlink-rest.html" class="navigation navigation-prev " aria-label="Previous page: MAVLink REST API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="troubleshooting.html" class="navigation navigation-next " aria-label="Next page: Troubleshooting">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Data Logging","level":"3.4","depth":1,"next":{"title":"Troubleshooting","level":"3.5","depth":1,"path":"reference/troubleshooting.md","ref":"reference/troubleshooting.md","articles":[{"title":"Vehicle Control","level":"3.5.1","depth":2,"anchor":"#vehicle-control","path":"reference/troubleshooting.html","ref":"reference/troubleshooting.html#vehicle-control","articles":[]},{"title":"No Telemetry","level":"3.5.2","depth":2,"anchor":"#no-telemetry-no-autopilot-connection","path":"reference/troubleshooting.html","ref":"reference/troubleshooting.html#no-telemetry-no-autopilot-connection","articles":[]},{"title":"No Video","level":"3.5.3","depth":2,"anchor":"#no-video","path":"reference/troubleshooting.html","ref":"reference/troubleshooting.html#no-video","articles":[]},{"title":"Poor Video Streaming","level":"3.5.4","depth":2,"anchor":"#poor-video-streaming-performance","path":"reference/troubleshooting.html","ref":"reference/troubleshooting.html#poor-video-streaming-performance","articles":[]},{"title":"Miscellaneous","level":"3.5.5","depth":2,"anchor":"#miscellaneous","path":"reference/troubleshooting.html","ref":"reference/troubleshooting.html#miscellaneous","articles":[]}]},"previous":{"title":"MAVLink REST API","level":"3.3.10","depth":2,"path":"reference/companion/mavlink-rest.md","ref":"reference/companion/mavlink-rest.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">= 3.2.2","theme":"default","variables":{},"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","-validate-links","include-codeblock"],"pluginsConfig":{"collapsible-menu":{},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"},"aerial":{"alert":"warning","picto":"fa-plane"},"gps":{"alert":"info","picto":"fa-map-marker"},"version":{"alert":"info","picto":"fa fa-refresh fa-spin fa-3x fa-fw"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/Ardupilot/ardupilot"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/edit/master/{{filepath_lang}}"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"reference/data-logging.md","mtime":"2020-12-07T14:54:18.298Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-07T14:55:32.007Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
