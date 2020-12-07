@@ -1,0 +1,43 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+
+      - name: Install and Build 🔧
+        run: |
+          sudo apt update
+          sudo apt install python3-pip python3-setuptools
+          sudo pip3 install pymavlink
+          sudo pip3 install pylint
+          sudo pip3 install isort==4.3.21
+          sudo npm install gitbook-cli -g
+          # fix polyfill issue in gitbook
+          sudo sed -i "/fs.stat = statFix(fs.stat)/c\\" /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js
+          sudo sed -i "/fs.fstat = statFix(fs.fstat)/c\\" /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js
+          sudo sed -i "/fs.lstat = statFix(fs.lstat)/c\\" /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js
+
+          sudo gitbook install
+          gitbook build
+          # Disables:
+          # - line-too-long (because of long output comments at the end)
+          # - invalid-constant-name (because our variables are not supposed constants)
+          # - duplicate-code (because some snippets have the same snippet duplicated)
+          pylint --disable=R0801 --disable=C0103 --disable=C0301 developers/pymavlink/*
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: _book
+          CLEAN: false # Don't Automatically remove deleted files from the deploy branch
