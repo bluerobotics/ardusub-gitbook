@@ -13,4 +13,4 @@ Other grippers often have their own control software and interface for assigning
 The following grippers have been used on ArduSub vehicles:
 
 * [Blue Robotics Newton Subsea Gripper](https://bluerobotics.com/store/rov/bluerov2-accessories/newton-gripper-asm-r1-rp/) (PWM output from autopilot)
-* [Blueprint Lab Series Grippers](https://blueprintlab.com/products/grabbers-pan-tilt/) (RS485 through the tether)
+* [Blueprint Lab Series Grippers](https://blueprintlab.com/products/grabbers/) (RS485 through the tether)
