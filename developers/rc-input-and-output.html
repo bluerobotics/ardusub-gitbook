@@ -1622,7 +1622,158 @@
 </table>
 <h2 id="rc-outputs">RC Outputs</h2>
 <p>On the Pixhawk, there are 8 main outputs and 6 auxiliary outputs. The main outputs are updated at 200Hz by default (configured via the <a href="full-parameter-list.html#rcspeed-esc-update-speed"><em>RC_SPEED</em></a> parameter), and the auxiliary outputs are always updated at 50Hz. It is important not to connect analog servos to the main outputs, because the very fast update rate can cause the servo to burn itself out.</p>
-<p>By default, aux outputs 5 and 6 (SERVO13 and SERVO14) are reserved as GPIO pins to be used for relays, and will not output a pwm signal for other functions. This is configured with the <a href="full-parameter-list.html#brdpwmcount-auxiliary-pin-config"><em>BRD_PWM_COUNT</em></a> parameter, which determines how many of the auxiliary outputs to configure as PWM outputs (default is 4).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Pixhawk Label</th>
+<th style="text-align:left">Servo Channel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">Main 1</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:right">Main 2</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:right">Main 3</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td style="text-align:right">Main 4</td>
+<td style="text-align:left">4</td>
+</tr>
+<tr>
+<td style="text-align:right">Main 5</td>
+<td style="text-align:left">5</td>
+</tr>
+<tr>
+<td style="text-align:right">Main 6</td>
+<td style="text-align:left">6</td>
+</tr>
+<tr>
+<td style="text-align:right">Main 7</td>
+<td style="text-align:left">7</td>
+</tr>
+<tr>
+<td style="text-align:right">Main 8</td>
+<td style="text-align:left">8</td>
+</tr>
+<tr>
+<td style="text-align:right">Aux 1</td>
+<td style="text-align:left">9</td>
+</tr>
+<tr>
+<td style="text-align:right">Aux 2</td>
+<td style="text-align:left">10</td>
+</tr>
+<tr>
+<td style="text-align:right">Aux 3</td>
+<td style="text-align:left">11</td>
+</tr>
+<tr>
+<td style="text-align:right">Aux 4</td>
+<td style="text-align:left">12</td>
+</tr>
+<tr>
+<td style="text-align:right">Aux 5</td>
+<td style="text-align:left">13</td>
+</tr>
+<tr>
+<td style="text-align:right">Aux 6</td>
+<td style="text-align:left">14</td>
+</tr>
+</tbody>
+</table>
+<p>The Pixhawk 6 &apos;auxiliary&apos; outputs can be configured as either general purpose input/output or PWM output.
+By default, aux outputs 5 and 6 (SERVO13 and SERVO14) are reserved as GPIO pins to be used for relays, and will not output a pwm signal for other functions. This is configured with the <a href="full-parameter-list.html#brdpwmcount-auxiliary-pin-config"><em>BRD_PWM_COUNT</em></a> parameter at boot, which determines how many of the auxiliary outputs to configure as PWM outputs (default is 4).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">BRD_PWM_COUNT </th><td colspan="6"> <b> Aux pin configuration
+</b></td></tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right"></td>
+<td style="text-align:left">1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td style="text-align:right">0</td>
+<td style="text-align:left">GPIO</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>GPIO</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:left">PWM</td>
+<td>PWM</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>GPIO</td>
+<td>GPIO</td>
+</tr>
+<tr>
+<td style="text-align:right"><strong>(default) 4</strong></td>
+<td style="text-align:left"><strong>PWM</strong></td>
+<td><strong>PWM</strong></td>
+<td><strong>PWM</strong></td>
+<td><strong>PWM</strong></td>
+<td><strong>GPIO</strong></td>
+<td><strong>GPIO</strong></td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:left">PWM</td>
+<td>PWM</td>
+<td>PWM</td>
+<td>PWM</td>
+<td>PWM</td>
+<td>PWM</td>
+</tr>
+</tbody>
+</table>
+<h1 id="controlling-servos">Controlling Servos</h1>
+<p>An output must be configured as PWM via the BRD_PWM_COUNT parameter to operate a servo.</p>
+<p>The servos can be operated via the mavlink command DO_SET_SERVO. This command can be used to set the output of any servo channel that is not configured as a motor output. This command can conflict with other functions operating on the servo channel like pan/tilt mounts or lights. In order to avoid conflicts, the corresponding <a href="full-parameter-list.html#servonfunction-servo-output-function">SERVOn_FUNCTION</a> parameter should be set to Disabled (0).</p>
+<p>Up to three servos can also be operated via <a href="full-parameter-list.html#btnn-parameters">joystick button functions</a>. The joystick button functions for *<em>_servo</em>_<strong>n</strong> will control the output on the Aux <strong>n</strong> pin (these cannot be remapped like the relay outputs).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Joystick button function</th>
+<th style="text-align:left">Aux channel operated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right"><em>servo_1</em></td>
+<td style="text-align:left">Aux 1</td>
+</tr>
+<tr>
+<td style="text-align:right"><em>servo_2</em></td>
+<td style="text-align:left">Aux 2</td>
+</tr>
+<tr>
+<td style="text-align:right"><em>servo_3</em></td>
+<td style="text-align:left">Aux 3</td>
+</tr>
+</tbody>
+</table>
+<h1 id="controlling-relays">Controlling Relays</h1>
+<p>ArduSub supports control of up to 4 relays. An output must be configured as GPIO via the <a href="full-parameter-list.html#brdpwmcount-auxiliary-pin-config"><em>BRD_PWM_COUNT</em></a> parameter to operate a relay. The output pin must also be selected for the corresponding <a href="full-parameter-list.html#relaypin-first-relay-pin">RELAY_PIN</a> parameter.</p>
+<p>The relays can be operated via the mavlink command DO_SET_RELAY.</p>
+<p>Up to three relays can also be operated via <a href="full-parameter-list.html#btnn-parameters">joystick button functions</a>.</p>
 
                                 
                                 </section>
@@ -1666,7 +1817,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"RC Input and Output","level":"4.1","depth":1,"next":{"title":"Full Parameter List","level":"4.2","depth":1,"path":"developers/full-parameter-list.md","ref":"developers/full-parameter-list.md","articles":[]},"previous":{"title":"Miscellaneous","level":"3.5.5","depth":2,"anchor":"#miscellaneous","path":"reference/troubleshooting.html","ref":"reference/troubleshooting.html#miscellaneous","articles":[]},"dir":"ltr"},"config":{"gitbook":">= 3.2.2","theme":"default","variables":{},"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","-validate-links","include-codeblock"],"pluginsConfig":{"collapsible-menu":{},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"},"aerial":{"alert":"warning","picto":"fa-plane"},"gps":{"alert":"info","picto":"fa-map-marker"},"version":{"alert":"info","picto":"fa fa-refresh fa-spin fa-3x fa-fw"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/Ardupilot/ardupilot"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/edit/master/{{filepath_lang}}"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"developers/rc-input-and-output.md","mtime":"2020-12-07T17:38:16.524Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-07T17:39:44.975Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"RC Input and Output","level":"4.1","depth":1,"next":{"title":"Full Parameter List","level":"4.2","depth":1,"path":"developers/full-parameter-list.md","ref":"developers/full-parameter-list.md","articles":[]},"previous":{"title":"Miscellaneous","level":"3.5.5","depth":2,"anchor":"#miscellaneous","path":"reference/troubleshooting.html","ref":"reference/troubleshooting.html#miscellaneous","articles":[]},"dir":"ltr"},"config":{"gitbook":">= 3.2.2","theme":"default","variables":{},"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","-validate-links","include-codeblock"],"pluginsConfig":{"collapsible-menu":{},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"},"aerial":{"alert":"warning","picto":"fa-plane"},"gps":{"alert":"info","picto":"fa-map-marker"},"version":{"alert":"info","picto":"fa fa-refresh fa-spin fa-3x fa-fw"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/Ardupilot/ardupilot"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/edit/master/{{filepath_lang}}"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"developers/rc-input-and-output.md","mtime":"2020-12-23T17:07:49.267Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-23T17:09:31.437Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
