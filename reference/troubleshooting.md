@@ -26,7 +26,7 @@ The flight controller attempts to stabilize the vehicle's attitude so that it is
 
 #### Verify Network Configuration
 
-Verify that your [network settings](/reference/companion/network.md) are correct. Verify your network configuration by entering the command `ipconfig` (Windows) or `ifconfig` (Mac/Linux) on the surface computer command line. The output should show that your Ethernet IP address is 192.168.2.1 and the subnet mask is 255.255.255.0.
+Verify that your [network settings](/quick-start/installing-companion.html#network-setup) are correct. Verify your network configuration by entering the command `ipconfig` (Windows) or `ifconfig` (Mac/Linux) on the surface computer command line. The output should show that your Ethernet IP address is 192.168.2.1 and the subnet mask is 255.255.255.0.
 
 You should be able to ping the companion computer from the surface computer. On the surface computer's command line enter:
 
