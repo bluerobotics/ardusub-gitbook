@@ -110,6 +110,10 @@ There are 3 types of udp connections for `mavlink_connection`:
 
 [include](pymavlink/filter_messages.py)
 
+##### Request message interval
+
+[include](pymavlink/request_message_interval.py)
+
 ##### Send rangefinder/computer vision distance measurement to the autopilot
 
 [include](pymavlink/send_rangefinder_vision.py)
