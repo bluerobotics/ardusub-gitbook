@@ -17,7 +17,7 @@ The following power sensing modules have been tested and recommended for use:
 
 The following modules have been tested and are **not** recommended for use:
 
-* [mRobotics Classic Power Module (BEC) 4S LIPOs](https://store.mrobotics.io/product-p/classic-bec10-mr.htm)
+* [mRobotics Classic Power Module (BEC) 4S LIPOs](https://store.mrobotics.io/product-p/m10018a.htm)
     * Issue: For unknown reasons, will short circuit and send 12V to the autopilot, damaging both the power module and autopilot.
 
 # Other Power Sensing Modules
