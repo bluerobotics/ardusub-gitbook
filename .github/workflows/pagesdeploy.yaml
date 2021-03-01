@@ -1,8 +1,6 @@
 name: Build and Deploy
-on:
-  push:
-    branches:
-      - master
+
+on: [push, pull_request]
 
 jobs:
   build-and-deploy:
@@ -36,6 +34,7 @@ jobs:
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
+        if: github.ref == 'refs/heads/master'
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
