@@ -44,6 +44,7 @@
 * [Installing Autopilot Firmware](/quick-start/installing-ardusub.md)
     * [Frame Selection](/quick-start/installing-ardusub.md#frame-selection)
     * [Completing Calibrations](/quick-start/installing-ardusub.md#completing-calibrations)
+    * [Formatting the SD Card](/quick-start/installing-ardusub.md#sd-card-formatting)
 * [First Dive](/quick-start/first-dive.md)
 
 ## Reference Documentation
