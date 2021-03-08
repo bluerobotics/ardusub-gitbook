@@ -151,3 +151,68 @@ If desired, you can check the *Stabilize* box, which will enable auto-stabilizat
 > **Info** This setup only works with lights that are controllable with a servo PWM pulse, such as the Blue Robotics [*Lumen* Lights](http://www.bluerobotics.com/store/electronics/lumen-light-r1/).
 
 <img src="/images/reference/reference-ardusub-lights.png" class="img-responsive img-center" />
+
+# SD Card Formatting
+
+The SD card inside of the autopilot (eg Pixhawk) is where ArduSub stores its [dataflash logs](reference/data-logging.html#dataflash-logs). It should be formatted as a FAT/exFAT/FAT32 partition. If it gets corrupted or has a different filesystem, you should format it.
+
+The following steps will help you format it:
+
+
+<div align="center">
+	<div style="display:inline-block" >
+	<button type="button" onclick="{ document.getElementById('windowsDiv').style.display = 'block'; document.getElementById('macDiv').style.display = 'none'; document.getElementById('linuxDiv').style.display = 'none'; }">Windows</a>
+	</div>
+	<!--
+	<div style="display:inline-block">
+	<button type="button" class="btn btn-primary" onclick="{ document.getElementById('macDiv').style.display = 'block'; document.getElementById('windowsDiv').style.display = 'none'; document.getElementById('linuxDiv').style.display = 'none'; }">Mac</a>
+	</div>
+	-->
+	<div style="display:inline-block">
+	<button type="button" class="btn btn-primary" onclick="{ document.getElementById('linuxDiv').style.display = 'block'; document.getElementById('macDiv').style.display = 'none'; document.getElementById('windowsDiv').style.display = 'none'; }">Linux</a>
+	</div>
+</div>
+
+<!-- Markdown doesn't load properly inside hidden divs, hence the img tags -->
+
+<div id="windowsDiv" style="display:none">
+
+ 1. Open "My Computer" and find the drive for your SD card (it will only be name "ArduSub" if you named it so in a previous formatting). Right click it and choose "Format".
+
+<p> <img src="../images/quick-start/formatting/windows-1.jpg" class="img-responsive img-center" style="max-width:800px"> </p>
+
+ 2. This GUI will open. Here you can pick a name for the Volume (this will only show when connected via an SD card reader to your PC). Pick the "exFAT" option and then click Start.
+
+<p> <img src="../images/quick-start/formatting/windows-2.jpg" class="img-responsive img-center" style="max-width:800px"> </p>
+
+ 3. Verify all the information and click "OK":
+
+<p> <img src="../images/quick-start/formatting/windows-3.jpg" class="img-responsive img-center" style="max-width:800px"> </p>
+
+ 4. The SD card will be formatted. Once the formatting is finished, click "OK", eject the SD card, and insert it into the autopilot.
+
+<p> <img src="../images/quick-start/formatting/windows-4.jpg" class="img-responsive img-center" style="max-width:800px"> </p>
+
+</div>
+<div id="macDiv" style="display:none">
+
+</div>
+<div id="linuxDiv" style="display:none">
+
+ 1. Open your file browser and find the SD card in the left bar. Right click it and chose "format".
+
+<p> <img src="../images/quick-start/formatting/ubuntu-1.png" class="img-responsive img-center" style="max-width:800px"> </p>
+
+ 2. This GUI will open. Here you can pick a name for the Volume (this will only show when connected via an SD card reader to your PC). Pick the "FAT" option and then click Next.
+
+<p> <img src="../images/quick-start/formatting/ubuntu-2.png" class="img-responsive img-center" style="max-width:800px"> </p>
+
+ 3. Verify all the information and click "Format":
+
+<p> <img src="../images/quick-start/formatting/ubuntu-3.png" class="img-responsive img-center" style="max-width:800px"> </p>
+
+ 4. After it is done, eject the SD card, disconnect it from your computer, and insert it into the autopilot.
+
+<p> <img src="../images/quick-start/formatting/ubuntu-4.png" class="img-responsive img-center" style="max-width:800px"> </p>
+
+</div>
