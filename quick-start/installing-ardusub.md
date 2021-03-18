@@ -154,7 +154,7 @@ If desired, you can check the *Stabilize* box, which will enable auto-stabilizat
 
 # SD Card Formatting
 
-The SD card inside of the autopilot (eg Pixhawk) is where ArduSub stores its [dataflash logs](reference/data-logging.html#dataflash-logs). It should be formatted as a FAT/exFAT/FAT32 partition. If it gets corrupted or has a different filesystem, you should format it.
+The SD card inside of the autopilot (eg Pixhawk) is where ArduSub stores its [dataflash logs](/reference/data-logging.html#dataflash-logs). It should be formatted as a FAT/exFAT/FAT32 partition. If it gets corrupted or has a different filesystem, you should format it.
 
 The following steps will help you format it:
 
