@@ -22,11 +22,13 @@ Make sure that the vehicle is in *Manual* mode.
 
 The flight controller attempts to stabilize the vehicle's attitude so that it is perfectly level. If the vehicle's attitude is off from level, even a fraction of a degree, the flight controller will spin the motors in an attempt to correct the error. If the vehicle is sitting on land, the error will not change, and the flight controller will spin the motors faster and faster as it tries harder and harder to correct the error. Testing the vehicle on land should be done in MANUAL mode, which just passes pilot inputs to the motors with no stabilization.
 
-## No Telemetry (No Autopilot Connection)
+## No Telemetry / "Waiting for Vehicle Connection" (No Autopilot Connection)
 
 #### Verify Network Configuration
 
 Verify that your [network settings](/quick-start/installing-companion.html#network-setup) are correct. Verify your network configuration by entering the command `ipconfig` (Windows) or `ifconfig` (Mac/Linux) on the surface computer command line. The output should show that your Ethernet IP address is 192.168.2.1 and the subnet mask is 255.255.255.0.
+
+*Carefully double check that you have entered these numbers correctly*. The Ethernet IP address should be _exactly_ ***192.168.2.1*** and the subnet mask should be _exactly_ ***255.255.255.0***.
 
 You should be able to ping the companion computer from the surface computer. On the surface computer's command line enter:
 
@@ -91,6 +93,10 @@ To return to the command line and keep the mavproxy process running, hit control
 
 If you still do not have telemetry after all of these steps, please reboot the surface computer and the companion computer, and try again. If it is still not working after rebooting, please leave a comment on discuss.bluerobotics.com with notes on your results of all of the above troubleshooting steps.
 
+#### Reset MavProxy Options
+
+Some updates require changes to the MavProxy options. To avoid overwriting user changes, those do not apply until you **Restore Default Options**. Navigate to [MavProxy page](/reference/companion/mavproxy.html) and click **Restore Default Options**. This will erase the current options, revert to the default for the current companion version, and reset the MavProxy service.
+
 ## No Video
 
 If you do not have telemetry, please troubleshoot that first according to the above instructions.
@@ -123,7 +129,7 @@ Here are some tips for troubleshooting poor video performance:
 
 #### In general:
 
-- Bandwidth - Test the bandwidth at [192.168.2.2:2770/network](http://192.168.2.2:2770/network). The maximum theoretical bandwidth on a Raspberry Pi 3 is 100Mbps, if the bandwidth tests achieve greater than 70Mbps, it is a very good connection. Systems with bandwidths below 40Mbps should be diagnosed for issues.
+- Bandwidth - Test the bandwidth at [192.168.2.2:2770/network](http://192.168.2.2:2770/network). The maximum theoretical bandwidth on a Raspberry Pi 3 is 100Mbps, if the bandwidth tests achieve greater than 70Mbps, it is a very good connection. Systems with bandwidths below 15Mbps should be diagnosed for issues.
 - Try another cable - Not all cables are created equal; some are really junk.
 - Update Software - Use the latest software to make sure you are getting the best performance.
 - Companion  computer  power supply - Most companion computers require a power supply capable of providing 5V at 2A. Smaller/weaker power supplies can severely affect performance of the companion computer.
