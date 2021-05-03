@@ -8,7 +8,7 @@ The [Waterlinked A50 DVL](https://waterlinked.com/product/dvl-a50/) is the only 
 
 ### A50 DVL configuration
 
-The DVL must be configured with a static IP address of 192.168.2.95. Follow Water Linked's instructions [here](https://waterlinked.github.io/docs/dvl/dvl-a50-details/#network-config).
+The DVL must be configured with a static IP address of 192.168.2.95. Follow Water Linked's instructions [here](https://waterlinked.github.io/dvl/dvl-a50-details/#network-configuration).
 
 ## Companion Software
 
