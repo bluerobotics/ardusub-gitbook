@@ -12,7 +12,7 @@ The following joysticks have been tested and are supported:
 
 * [Logitech F310](https://www.logitechg.com/en-us/products/gamepads/f310-gamepad.940-000110.html) (wired)
 * [Logitech F710](https://www.logitechg.com/en-us/products/gamepads/f710-wireless-gamepad.html) (wireless)
-* [Microsoft Xbox One controllers](https://www.xbox.com/en-US/accessories/controllers/xbox-black-wireless-controller) (wired and wireless)
+* [Microsoft Xbox One controllers](https://www.xbox.com/en-us/accessories/controllers/xbox-wireless-controller-usb-c) (wired and wireless)
 * [Sony PlayStation 4 controllers](https://www.playstation.com/en-us/explore/accessories/gaming-controllers/dualshock-4/) (wired only)
 
 # Custom Joysticks
