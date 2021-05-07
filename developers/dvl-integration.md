@@ -68,7 +68,7 @@ Shows the current Driver status, useful for troubleshooting.
 
 ## ArduSub Firmware
 
-The DVL data is sent by the VISUAL_ODOMETRY mavlink message. This message is supported in ArduSub 4.1-beta and onward. The ArduSub 4.1-beta firmware is recommended for testing with DVL.
+The DVL data is sent by the [VISION_POSITION_DELTA](https://mavlink.io/en/messages/ardupilotmega.html#VISION_POSITION_DELTA) mavlink message. This message is supported in ArduSub 4.1-beta and onward. The ArduSub 4.1-beta firmware is recommended for testing with DVL.
 
 ## Installing the ArduSub beta firmware
 
