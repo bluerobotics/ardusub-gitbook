@@ -28,4 +28,4 @@ jobs:
           directory: "./_book"
           # Ignore dell and te.com as they are returning error but have valid link
           # Ignore http response 0 from bluelinked.com
-          arguments: --empty-alt-ignore true --url_ignore /http:\/\/192\.168\..\*/,/http(s?):\/\/(www\.)?dell\.com.*/,/https:\/\/www\.te\.com\/.*/ --http-status-ignore 0
+          arguments: --empty-alt-ignore true --url_ignore /http:\/\/192\.168\..\*/,/http(s?):\/\/na.panasonic.com.*/,/http(s?):\/\/(www\.)?dell\.com.*/,/https:\/\/www\.te\.com\/.*/ --http-status-ignore 0
