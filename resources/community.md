@@ -16,4 +16,4 @@ The [ArduPilot gitter](https://gitter.im/ArduPilot/ardupilot) is a chatroom for 
 
 ## Slack
 
-The [PX4 Slack (QGC)](https://slack.px4.io/) channel has an ongoing discussion about QGC development.
+The [PX4 Slack (QGC)](https://px4.slack.com/) channel has an ongoing discussion about QGC development.
