@@ -1,7 +1,11 @@
 name: htmlProofer
 
-on: [push, pull_request]
-
+on:
+    pull_request:
+    push:
+    schedule:
+    # Run weekly to check for broken external links
+    - cron: '0 0 */7 * *'
 jobs:
 
   test:
