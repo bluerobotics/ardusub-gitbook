@@ -14,11 +14,18 @@ The DVL must be configured with a static IP address of 192.168.2.95. Follow Wate
 
 A beta version of the companion software is required to use the DVL integration.
 
-### Installing beta companion software
+### Installing beta Companion software
 
-Follow these steps to get the Experimental Companion version with the DVL driver:
+There are two ways to get the DVL support.
 
- - Start from companion 0.0.23
+**Option 1**
+
+Flash the [Custom build of Companion with DVL support](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/experimental/ardusubdvl.img.zip).
+
+**Option 2**
+
+Follow these instructions to set it up from an existing Companion installation:
+
  - Make sure the ROV is connected to the internet
  - Navigate to http://192.168.2.2:2770/git
  - Click "origin" -> "branches" -> "dvl"
