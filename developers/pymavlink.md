@@ -14,18 +14,23 @@ When the autopilot is being commanded to move via RC_CHANNELS_RAW or MANUAL_CONT
 
 ## Installation
 
-#### Ubuntu 16.04
+#### Ubuntu 20.04
 
 ```sh
 # Update list of available packages
-apt update
+sudo apt update
+sudo apt -y upgrade
 
 # Install some dependencies
-apt install python python-pip python-future
+sudo apt install -y python3-pip
 
 # Install mavproxy module and everything else needed
-pip install mavproxy
+pip3 install mavproxy
 ```
+
+#### Mac/Windows
+
+With Python and pip installed, run `pip install wheel mavproxy`.
 
 ##### Test installation
 You can test your installation with python interactive shell.
@@ -62,58 +67,76 @@ There are 3 types of udp connections for `mavlink_connection`:
 * **udpin**: Binds to a specific port in address:port (server), it's necessary to receive data from clients (**udpout**) before starting to send any data.
 * **udp**: Exists for legacy reasons, works as **udpin**.
 
-##### Autopilot \(E.g: Pixhawk\) connected to the computer via serial
+### Shortcut Links
+1. [Autopilot connected to the computer via serial](#autopilot-eg-pixhawk-connected-to-the-computer-via-serial)
+1. [Run pyMavlink on the surface computer](#run-pymavlink-on-the-surface-computer)
+1. [Run pyMavlink on the companion computer](#run-pymavlink-on-the-companion-computer)
+1. [Send Message to QGroundControl](#send-message-to-qgroundcontrol)
+1. [Arm/Disarm the vehicle](#armdisarm-the-vehicle)
+1. [Change flight mode](#change-flight-mode)
+1. [Send RC \(Joystick\)](#send-rc-joystick)
+1. [Send Manual Control](#send-manual-control)
+1. [Read all parameters](#read-all-parameters)
+1. [Read and write parameters](#read-and-write-parameters)
+1. [Receive data and filter by message type](#receive-data-and-filter-by-message-type)
+1. [Request message interval](#request-message-interval)
+1. [Control Camera Gimbal](#control-camera-gimbal)
+1. [Set Servo PWM](#set-servo-pwm)
+1. [Advanced Servo/Gripper Example](#advanced-servogripper-example)
+1. [Set Target Depth/Attitude](#set-target-depthattitude)
+1. [Send GPS position](#send-gps-position)
+1. [Send rangefinder/computer vision distance measurement to the autopilot](#send-rangefindercomputer-vision-distance-measurement-to-the-autopilot)
 
+#### Autopilot \(E.g: Pixhawk\) connected to the computer via serial
 [include](pymavlink/serial_connection.py)
 
-##### Run pyMavlink on the surface computer
-
+#### Run pyMavlink on the surface computer
 [include](pymavlink/udp_connection.py)
 
-##### Run pyMavlink on the companion computer
-
+#### Run pyMavlink on the companion computer
 [include](pymavlink/companion_computer.py)
 
-##### Change flight mode
+#### Send Message to QGroundControl
+[include](pymavlink/message_qgc.py)
 
-[include](pymavlink/change_flight_mode.py)
-
-##### Arm/Disarm the vehicle
-
+#### Arm/Disarm the vehicle
 [include](pymavlink/arm_disarm.py)
 
-##### Send RC \(Joystick\)
+#### Change flight mode
+[include](pymavlink/change_flight_mode.py)
 
+#### Send RC \(Joystick\)
 [include](pymavlink/rc_joystick.py)
 
 #### Send Manual Control
-
 [include](pymavlink/manual_control.py)
 
-#### Control Camera Gimbal
-
-[include](pymavlink/camera_gimbal.py)
-
 #### Read all parameters
-
 [include](pymavlink/read_params.py)
 
 #### Read and write parameters
-
 [include](pymavlink/read_write_params.py)
 
-#### Send GPS position
-
-[include](pymavlink/send_gps.py)
-
-##### Receive data and filter by message type
-
+#### Receive data and filter by message type
 [include](pymavlink/filter_messages.py)
 
-##### Request message interval
-
+#### Request message interval
 [include](pymavlink/request_message_interval.py)
 
-##### Send rangefinder/computer vision distance measurement to the autopilot
+#### Control Camera Gimbal
+[include](pymavlink/camera_gimbal.py)
 
+#### Set Servo PWM
+[include](pymavlink/set_servo.py)
+
+#### Advanced Servo/Gripper Example
+[include](pymavlink/advanced_servo_gripper.py)
+
+#### Set Target Depth/Attitude
+[include](pymavlink/set_target_depth_attitude.py)
+
+#### Send GPS position
+[include](pymavlink/send_gps.py)
+
+#### Send rangefinder/computer vision distance measurement to the autopilot
 [include](pymavlink/send_rangefinder_vision.py)
