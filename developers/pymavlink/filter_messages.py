@@ -1,6 +1,8 @@
 """
 Example of how to filter for specific mavlink messages coming from the
-autopilot using pymavlink
+autopilot using pymavlink.
+
+Can also filter within recv_match command - see "Read all parameters" example
 """
 # Import mavutil
 from pymavlink import mavutil

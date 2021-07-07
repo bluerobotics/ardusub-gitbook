@@ -1583,16 +1583,19 @@
 <p>All system components that communicate via MAVLink are expected to send a HEARTBEAT message at a constant rate of at least 1 Hz. If the autopilot does not receive a heartbeat from your application after this interval, it will trigger a <a href="../operators-manual/failsafes.html">failsafe</a>.</p>
 <p>When the autopilot is being commanded to move via RC_CHANNELS_RAW or MANUAL_CONTROL messages, the messages must be sent at a constant rate like the HEARTBEAT message. Otherwise, the autopilot will execute a failsafe if it has not received an updated command after a timeout period.</p>
 <h2 id="installation">Installation</h2>
-<h4 id="ubuntu-1604">Ubuntu 16.04</h4>
+<h4 id="ubuntu-2004">Ubuntu 20.04</h4>
 <pre><code class="lang-sh"><span class="hljs-comment"># Update list of available packages</span>
-apt update
+sudo apt update
+sudo apt -y upgrade
 
 <span class="hljs-comment"># Install some dependencies</span>
-apt install python python-pip python-future
+sudo apt install -y python3-pip
 
 <span class="hljs-comment"># Install mavproxy module and everything else needed</span>
-pip install mavproxy
+pip3 install mavproxy
 </code></pre>
+<h4 id="macwindows">Mac/Windows</h4>
+<p>With Python and pip installed, run <code>pip install wheel mavproxy</code>.</p>
 <h5 id="test-installation">Test installation</h5>
 <p>You can test your installation with python interactive shell.</p>
 <pre><code class="lang-bash">python
@@ -1623,7 +1626,28 @@ This is a record of this example running in python interactive shell:</p>
 <li><strong>udpin</strong>: Binds to a specific port in address:port (server), it&apos;s necessary to receive data from clients (<strong>udpout</strong>) before starting to send any data.</li>
 <li><strong>udp</strong>: Exists for legacy reasons, works as <strong>udpin</strong>.</li>
 </ul>
-<h5 id="autopilot-eg-pixhawk-connected-to-the-computer-via-serial">Autopilot (E.g: Pixhawk) connected to the computer via serial</h5>
+<h3 id="shortcut-links">Shortcut Links</h3>
+<ol>
+<li><a href="#autopilot-eg-pixhawk-connected-to-the-computer-via-serial">Autopilot connected to the computer via serial</a></li>
+<li><a href="#run-pymavlink-on-the-surface-computer">Run pyMavlink on the surface computer</a></li>
+<li><a href="#run-pymavlink-on-the-companion-computer">Run pyMavlink on the companion computer</a></li>
+<li><a href="#send-message-to-qgroundcontrol">Send Message to QGroundControl</a></li>
+<li><a href="#armdisarm-the-vehicle">Arm/Disarm the vehicle</a></li>
+<li><a href="#change-flight-mode">Change flight mode</a></li>
+<li><a href="#send-rc-joystick">Send RC (Joystick)</a></li>
+<li><a href="#send-manual-control">Send Manual Control</a></li>
+<li><a href="#read-all-parameters">Read all parameters</a></li>
+<li><a href="#read-and-write-parameters">Read and write parameters</a></li>
+<li><a href="#receive-data-and-filter-by-message-type">Receive data and filter by message type</a></li>
+<li><a href="#request-message-interval">Request message interval</a></li>
+<li><a href="#control-camera-gimbal">Control Camera Gimbal</a></li>
+<li><a href="#set-servo-pwm">Set Servo PWM</a></li>
+<li><a href="#advanced-servogripper-example">Advanced Servo/Gripper Example</a></li>
+<li><a href="#set-target-depthattitude">Set Target Depth/Attitude</a></li>
+<li><a href="#send-gps-position">Send GPS position</a></li>
+<li><a href="#send-rangefindercomputer-vision-distance-measurement-to-the-autopilot">Send rangefinder/computer vision distance measurement to the autopilot</a></li>
+</ol>
+<h4 id="autopilot-eg-pixhawk-connected-to-the-computer-via-serial">Autopilot (E.g: Pixhawk) connected to the computer via serial</h4>
 <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
 Example of connecting to an autopilot via serial communication using pymavlink
 &quot;&quot;&quot;</span>
@@ -1638,7 +1662,7 @@ master = mavutil.mavlink_connection(<span class="hljs-string">&quot;/dev/ttyACM0
 <span class="hljs-comment"># Restart the ArduSub board !</span>
 master.reboot_autopilot()
 </code></pre>
-<h5 id="run-pymavlink-on-the-surface-computer">Run pyMavlink on the surface computer</h5>
+<h4 id="run-pymavlink-on-the-surface-computer">Run pyMavlink on the surface computer</h4>
 <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
 Example of how to connect pymavlink to an autopilot via an UDP connection
 &quot;&quot;&quot;</span>
@@ -1662,6 +1686,9 @@ Example of how to connect pymavlink to an autopilot via an UDP connection
 <span class="hljs-comment">#  E.g: --out udpbcast:192.168.2.255:yourport</span>
 master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
 
+<span class="hljs-comment"># Make sure the connection is valid</span>
+master.wait_heartbeat()
+
 <span class="hljs-comment"># Get some information !</span>
 <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
     <span class="hljs-keyword">try</span>:
@@ -1676,7 +1703,7 @@ master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.
 <span class="hljs-comment"># {&apos;mavpackettype&apos;: &apos;VFR_HUD&apos;, &apos;airspeed&apos;: 0.0, &apos;groundspeed&apos;: 0.0, &apos;heading&apos;: 123, &apos;throttle&apos;: 0, &apos;alt&apos;: 3.129999876022339, &apos;climb&apos;: 3.2699999809265137}</span>
 <span class="hljs-comment"># {&apos;mavpackettype&apos;: &apos;AHRS&apos;, &apos;omegaIx&apos;: 0.0014122836291790009, &apos;omegaIy&apos;: -0.022567369043827057, &apos;omegaIz&apos;: 0.02394154854118824, &apos;accel_weight&apos;: 0.0, &apos;renorm_val&apos;: 0.0, &apos;error_rp&apos;: 0.08894175291061401, &apos;error_yaw&apos;: 0.0990816056728363}</span>
 </code></pre>
-<h5 id="run-pymavlink-on-the-companion-computer">Run pyMavlink on the companion computer</h5>
+<h4 id="run-pymavlink-on-the-companion-computer">Run pyMavlink on the companion computer</h4>
 <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
 Example of how to connect to the autopilot by using mavproxy&apos;s
 --udpin:0.0.0.0:9000 endpoint from the companion computer itself
@@ -1732,7 +1759,67 @@ wait_conn()
 <span class="hljs-comment"># {&apos;mavpackettype&apos;: &apos;VFR_HUD&apos;, &apos;airspeed&apos;: 0.0, &apos;groundspeed&apos;: 0.0, &apos;heading&apos;: 123, &apos;throttle&apos;: 0, &apos;alt&apos;: 3.129999876022339, &apos;climb&apos;: 3.2699999809265137}</span>
 <span class="hljs-comment"># {&apos;mavpackettype&apos;: &apos;AHRS&apos;, &apos;omegaIx&apos;: 0.0014122836291790009, &apos;omegaIy&apos;: -0.022567369043827057, &apos;omegaIz&apos;: 0.02394154854118824, &apos;accel_weight&apos;: 0.0, &apos;renorm_val&apos;: 0.0, &apos;error_rp&apos;: 0.08894175291061401, &apos;error_yaw&apos;: 0.0990816056728363}</span>
 </code></pre>
-<h5 id="change-flight-mode">Change flight mode</h5>
+<h4 id="send-message-to-qgroundcontrol">Send Message to QGroundControl</h4>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
+Example of sending a message to QGroundControl using pymavlink
+
+Full workflow of connecting and displaying readings from a custom sensor at:
+  https://discuss.bluerobotics.com/t/adding-a-sensor-to-mavlink-stream/7985/22
+
+&quot;&quot;&quot;</span>
+
+<span class="hljs-comment"># Import mavutil</span>
+<span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
+
+<span class="hljs-comment"># Create the connection to the top-side computer as companion computer/autopilot</span>
+master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpout:localhost:14550&apos;</span>, source_system=<span class="hljs-number">1</span>)
+
+<span class="hljs-comment"># Send a message for QGC to read out loud</span>
+<span class="hljs-comment">#  Severity from https://mavlink.io/en/messages/common.html#MAV_SEVERITY</span>
+master.mav.statustext_send(mavutil.mavlink.MAV_SEVERITY_NOTICE,
+                           <span class="hljs-string">&quot;QGC will read this&quot;</span>.encode())
+</code></pre>
+<h4 id="armdisarm-the-vehicle">Arm/Disarm the vehicle</h4>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
+Example of how to Arm and Disarm an Autopilot with pymavlink
+&quot;&quot;&quot;</span>
+<span class="hljs-comment"># Import mavutil</span>
+<span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
+
+<span class="hljs-comment"># Create the connection</span>
+master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
+<span class="hljs-comment"># Wait a heartbeat before sending commands</span>
+master.wait_heartbeat()
+
+<span class="hljs-comment"># https://mavlink.io/en/messages/common.html#MAV_CMD_COMPONENT_ARM_DISARM</span>
+
+<span class="hljs-comment"># Arm</span>
+<span class="hljs-comment"># master.arducopter_arm() or:</span>
+master.mav.command_long_send(
+    master.target_system,
+    master.target_component,
+    mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
+    <span class="hljs-number">0</span>,
+    <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+
+<span class="hljs-comment"># wait until arming confirmed (can manually check with master.motors_armed())</span>
+print(<span class="hljs-string">&quot;Waiting for the vehicle to arm&quot;</span>)
+master.motors_armed_wait()
+print(<span class="hljs-string">&apos;Armed!&apos;</span>)
+
+<span class="hljs-comment"># Disarm</span>
+<span class="hljs-comment"># master.arducopter_disarm() or:</span>
+master.mav.command_long_send(
+    master.target_system,
+    master.target_component,
+    mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
+    <span class="hljs-number">0</span>,
+    <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+
+<span class="hljs-comment"># wait until disarming confirmed</span>
+master.motors_disarmed_wait()
+</code></pre>
+<h4 id="change-flight-mode">Change flight mode</h4>
 <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
 Example of how to change flight modes using pymavlink
 &quot;&quot;&quot;</span>
@@ -1781,39 +1868,7 @@ master.mav.set_mode_send(
     print(mavutil.mavlink.enums[<span class="hljs-string">&apos;MAV_RESULT&apos;</span>][ack_msg[<span class="hljs-string">&apos;result&apos;</span>]].description)
     <span class="hljs-keyword">break</span>
 </code></pre>
-<h5 id="armdisarm-the-vehicle">Arm/Disarm the vehicle</h5>
-<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
-Example of how to Arm and Disarm an Autopilot with pymavlink
-&quot;&quot;&quot;</span>
-<span class="hljs-comment"># Import mavutil</span>
-<span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
-
-<span class="hljs-comment"># Create the connection</span>
-master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
-<span class="hljs-comment"># Wait a heartbeat before sending commands</span>
-master.wait_heartbeat()
-
-<span class="hljs-comment"># https://mavlink.io/en/messages/common.html#MAV_CMD_COMPONENT_ARM_DISARM</span>
-
-<span class="hljs-comment"># Arm</span>
-<span class="hljs-comment"># master.arducopter_arm() or:</span>
-master.mav.command_long_send(
-    master.target_system,
-    master.target_component,
-    mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
-    <span class="hljs-number">0</span>,
-    <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
-
-<span class="hljs-comment"># Disarm</span>
-<span class="hljs-comment"># master.arducopter_disarm() or:</span>
-master.mav.command_long_send(
-    master.target_system,
-    master.target_component,
-    mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
-    <span class="hljs-number">0</span>,
-    <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
-</code></pre>
-<h5 id="send-rc-joystick">Send RC (Joystick)</h5>
+<h4 id="send-rc-joystick">Send RC (Joystick)</h4>
 <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
 Example of how to use RC_CHANNEL_OVERRIDE messages to force input channels
 in Ardupilot. These effectively replace the input channels (from joystick
@@ -1907,50 +1962,6 @@ master.mav.manual_control_send(
     <span class="hljs-number">0</span>,
     buttons)
 </code></pre>
-<h4 id="control-camera-gimbal">Control Camera Gimbal</h4>
-<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
-Example of controlling a camera gimbal using pymavlink
-&quot;&quot;&quot;</span>
-
-<span class="hljs-keyword">import</span> time
-<span class="hljs-comment"># Import mavutil</span>
-<span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
-
-<span class="hljs-comment"># Create the connection</span>
-master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
-<span class="hljs-comment"># Wait a heartbeat before sending commands</span>
-master.wait_heartbeat()
-
-
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">look_at</span><span class="hljs-params">(tilt, roll=<span class="hljs-number">0</span>, pan=<span class="hljs-number">0</span>)</span>:</span>
-    <span class="hljs-string">&quot;&quot;&quot;
-    Moves gimbal to given position
-    Args:
-        tilt (float): tilt angle in centidegrees (0 is forward)
-        roll (float, optional): pan angle in centidegrees (0 is forward)
-        pan  (float, optional): pan angle in centidegrees (0 is forward)
-    &quot;&quot;&quot;</span>
-    master.mav.command_long_send(
-        master.target_system,
-        master.target_component,
-        mavutil.mavlink.MAV_CMD_DO_MOUNT_CONTROL,
-        <span class="hljs-number">1</span>,
-        tilt,
-        roll,
-        pan,
-        <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
-        mavutil.mavlink.MAV_MOUNT_MODE_MAVLINK_TARGETING)
-
-
-<span class="hljs-comment"># cycles the camera up and down</span>
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
-    <span class="hljs-keyword">for</span> angle <span class="hljs-keyword">in</span> range(<span class="hljs-number">-50</span>, <span class="hljs-number">50</span>):
-        look_at(angle*<span class="hljs-number">100</span>)
-        time.sleep(<span class="hljs-number">0.1</span>)
-    <span class="hljs-keyword">for</span> angle <span class="hljs-keyword">in</span> range(<span class="hljs-number">-50</span>, <span class="hljs-number">50</span>):
-        look_at(-angle*<span class="hljs-number">100</span>)
-        time.sleep(<span class="hljs-number">0.1</span>)
-</code></pre>
 <h4 id="read-all-parameters">Read all parameters</h4>
 <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
 Example of how to read all the parameters from the Autopilot with pymavlink
@@ -1967,7 +1978,7 @@ Example of how to read all the parameters from the Autopilot with pymavlink
 
 
 <span class="hljs-comment"># Create the connection</span>
-master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udp:0.0.0.0:14550&apos;</span>)
+master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
 <span class="hljs-comment"># Wait a heartbeat before sending commands</span>
 master.wait_heartbeat()
 
@@ -1995,7 +2006,7 @@ Example code of how to read and write vehicle parameters using pymavlink
 <span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
 
 <span class="hljs-comment"># Create the connection</span>
-master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udp:0.0.0.0:14550&apos;</span>)
+master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
 <span class="hljs-comment"># Wait a heartbeat before sending commands</span>
 master.wait_heartbeat()
 
@@ -2048,50 +2059,12 @@ message = master.recv_match(type=<span class="hljs-string">&apos;PARAM_VALUE&apo
 print(<span class="hljs-string">&apos;name: %s\tvalue: %d&apos;</span> %
       (message[<span class="hljs-string">&apos;param_id&apos;</span>].decode(<span class="hljs-string">&quot;utf-8&quot;</span>), message[<span class="hljs-string">&apos;param_value&apos;</span>]))
 </code></pre>
-<h4 id="send-gps-position">Send GPS position</h4>
-<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
-Example of how to send GPS_INPUT messages to autopilot
-&quot;&quot;&quot;</span>
-
-<span class="hljs-keyword">import</span> time
-<span class="hljs-comment"># Import mavutil</span>
-<span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
-
-<span class="hljs-comment"># Create the connection</span>
-master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
-<span class="hljs-comment"># Wait a heartbeat before sending commands</span>
-master.wait_heartbeat()
-
-<span class="hljs-comment"># GPS_TYPE need to be MAV</span>
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
-    time.sleep(<span class="hljs-number">0.2</span>)
-    master.mav.gps_input_send(
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># Timestamp (micros since boot or Unix epoch)</span>
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># ID of the GPS for multiple GPS inputs</span>
-        <span class="hljs-comment"># Flags indicating which fields to ignore (see GPS_INPUT_IGNORE_FLAGS enum).</span>
-        <span class="hljs-comment"># All other fields must be provided.</span>
-        <span class="hljs-number">8</span> | <span class="hljs-number">16</span> | <span class="hljs-number">32</span>,
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS time (milliseconds from start of GPS week)</span>
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS week number</span>
-        <span class="hljs-number">3</span>,  <span class="hljs-comment"># 0-1: no fix, 2: 2D fix, 3: 3D fix. 4: 3D with DGPS. 5: 3D with RTK</span>
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># Latitude (WGS84), in degrees * 1E7</span>
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># Longitude (WGS84), in degrees * 1E7</span>
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># Altitude (AMSL, not WGS84), in m (positive for up)</span>
-        <span class="hljs-number">1</span>,  <span class="hljs-comment"># GPS HDOP horizontal dilution of position in m</span>
-        <span class="hljs-number">1</span>,  <span class="hljs-comment"># GPS VDOP vertical dilution of position in m</span>
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS velocity in m/s in NORTH direction in earth-fixed NED frame</span>
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS velocity in m/s in EAST direction in earth-fixed NED frame</span>
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS velocity in m/s in DOWN direction in earth-fixed NED frame</span>
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS speed accuracy in m/s</span>
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS horizontal accuracy in m</span>
-        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS vertical accuracy in m</span>
-        <span class="hljs-number">7</span>   <span class="hljs-comment"># Number of satellites visible.</span>
-    )
-</code></pre>
-<h5 id="receive-data-and-filter-by-message-type">Receive data and filter by message type</h5>
+<h4 id="receive-data-and-filter-by-message-type">Receive data and filter by message type</h4>
 <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
 Example of how to filter for specific mavlink messages coming from the
-autopilot using pymavlink
+autopilot using pymavlink.
+
+Can also filter within recv_match command - see &quot;Read all parameters&quot; example
 &quot;&quot;&quot;</span>
 <span class="hljs-comment"># Import mavutil</span>
 <span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
@@ -2111,7 +2084,7 @@ master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.
         <span class="hljs-comment"># Armed = MAV_STATE_STANDBY (4), Disarmed = MAV_STATE_ACTIVE (3)</span>
         print(<span class="hljs-string">&quot;\nSystem status: %s&quot;</span> % msg.system_status)
 </code></pre>
-<h5 id="request-message-interval">Request message interval</h5>
+<h4 id="request-message-interval">Request message interval</h4>
 <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
 Example of how to request a message in a desired interval
 &quot;&quot;&quot;</span>
@@ -2160,7 +2133,376 @@ request_message_interval(mavutil.mavlink.MAVLINK_MSG_ID_ATTITUDE, <span class="h
         <span class="hljs-keyword">pass</span>
     time.sleep(<span class="hljs-number">0.1</span>)
 </code></pre>
-<h5 id="send-rangefindercomputer-vision-distance-measurement-to-the-autopilot">Send rangefinder/computer vision distance measurement to the autopilot</h5>
+<h4 id="control-camera-gimbal">Control Camera Gimbal</h4>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
+Example of controlling a camera gimbal using pymavlink
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">import</span> time
+<span class="hljs-comment"># Import mavutil</span>
+<span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
+
+<span class="hljs-comment"># Create the connection</span>
+master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
+<span class="hljs-comment"># Wait a heartbeat before sending commands</span>
+master.wait_heartbeat()
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">look_at</span><span class="hljs-params">(tilt, roll=<span class="hljs-number">0</span>, pan=<span class="hljs-number">0</span>)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    Moves gimbal to given position
+    Args:
+        tilt (float): tilt angle in centidegrees (0 is forward)
+        roll (float, optional): pan angle in centidegrees (0 is forward)
+        pan  (float, optional): pan angle in centidegrees (0 is forward)
+    &quot;&quot;&quot;</span>
+    master.mav.command_long_send(
+        master.target_system,
+        master.target_component,
+        mavutil.mavlink.MAV_CMD_DO_MOUNT_CONTROL,
+        <span class="hljs-number">1</span>,
+        tilt,
+        roll,
+        pan,
+        <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
+        mavutil.mavlink.MAV_MOUNT_MODE_MAVLINK_TARGETING)
+
+
+<span class="hljs-comment"># cycles the camera up and down</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    <span class="hljs-keyword">for</span> angle <span class="hljs-keyword">in</span> range(<span class="hljs-number">-50</span>, <span class="hljs-number">50</span>):
+        look_at(angle*<span class="hljs-number">100</span>)
+        time.sleep(<span class="hljs-number">0.1</span>)
+    <span class="hljs-keyword">for</span> angle <span class="hljs-keyword">in</span> range(<span class="hljs-number">-50</span>, <span class="hljs-number">50</span>):
+        look_at(-angle*<span class="hljs-number">100</span>)
+        time.sleep(<span class="hljs-number">0.1</span>)
+</code></pre>
+<h4 id="set-servo-pwm">Set Servo PWM</h4>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
+Example of how to directly control a Pixhawk servo output with pymavlink.
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">import</span> time
+<span class="hljs-comment"># Import mavutil</span>
+<span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_servo_pwm</span><span class="hljs-params">(servo_n, microseconds)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot; Sets AUX &apos;servo_n&apos; output PWM pulse-width.
+
+    Uses https://mavlink.io/en/messages/common.html#MAV_CMD_DO_SET_SERVO
+
+    &apos;servo_n&apos; is the AUX port to set (assumes port is configured as a servo).
+        Valid values are 1-3 in a normal BlueROV2 setup, but can go up to 8
+        depending on Pixhawk type and firmware.
+    &apos;microseconds&apos; is the PWM pulse-width to set the output to. Commonly
+        between 1100 and 1900 microseconds.
+
+    &quot;&quot;&quot;</span>
+    <span class="hljs-comment"># master.set_servo(servo_n+8, microseconds) or:</span>
+    master.mav.command_long_send(
+        master.target_system, master.target_component,
+        mavutil.mavlink.MAV_CMD_DO_SET_SERVO,
+        <span class="hljs-number">0</span>,            <span class="hljs-comment"># first transmission of this command</span>
+        servo_n + <span class="hljs-number">8</span>,  <span class="hljs-comment"># servo instance, offset by 8 MAIN outputs</span>
+        microseconds, <span class="hljs-comment"># PWM pulse-width</span>
+        <span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>     <span class="hljs-comment"># unused parameters</span>
+    )
+
+<span class="hljs-comment"># Create the connection</span>
+master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
+<span class="hljs-comment"># Wait a heartbeat before sending commands</span>
+master.wait_heartbeat()
+
+<span class="hljs-comment"># command servo_1 to go from min to max in steps of 50us, over 2 seconds</span>
+<span class="hljs-keyword">for</span> us <span class="hljs-keyword">in</span> range(<span class="hljs-number">1100</span>, <span class="hljs-number">1900</span>, <span class="hljs-number">50</span>):
+    set_servo_pwm(<span class="hljs-number">1</span>, us)
+    time.sleep(<span class="hljs-number">0.125</span>)
+</code></pre>
+<h4 id="advanced-servogripper-example">Advanced Servo/Gripper Example</h4>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
+Advanced example of how to control servo outputs with pymavlink.
+Includes extended example for controlling a Blue Robotics&apos; gripper.
+
+Requires Python 3.
+
+&quot;&quot;&quot;</span>
+
+<span class="hljs-comment"># Import mavutil</span>
+<span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RawServoOutput</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot; A class for commanding a mavlink-controlled servo output port. &quot;&quot;&quot;</span>
+    <span class="hljs-comment"># https://mavlink.io/en/messages/common.html#MAV_CMD_DO_SET_SERVO</span>
+    CMD_SET = mavutil.mavlink.MAV_CMD_DO_SET_SERVO
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, master, instance, pwm_limits=<span class="hljs-params">(<span class="hljs-number">1100</span>, <span class="hljs-number">1500</span>, <span class="hljs-number">1900</span>)</span>,
+                 set_default=True)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Initialise a RawServoOutput instance.
+
+        &apos;master&apos; is a mavlink connection
+        &apos;instance&apos; is the servo output (e.g. Pixhawk MAIN 1-8, AUX 9-16)
+        &apos;pwm_limits&apos; is a tuple of min, default, and max pwm pulse-widths
+            in microseconds (default (1100, 1500, 1900)).
+        &apos;set_default&apos; is a boolean specifying whether to command the output
+            to the specified default pulse-width (default True).
+
+        &quot;&quot;&quot;</span>
+        self.master     = master
+        self.instance   = instance
+        self.min_us, self._current, self.max_us = pwm_limits
+        self._diff      = self.max_us - self.min_us
+
+        <span class="hljs-keyword">if</span> set_default:
+            self.set_direct(self._current)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_direct</span><span class="hljs-params">(self, us)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Directly set the PWM pulse width.
+
+        &apos;us&apos; is the PWM pulse width in microseconds.
+            Must be between self.min_us and self.max_us.
+
+        &quot;&quot;&quot;</span>
+        <span class="hljs-keyword">assert</span> self.min_us &lt;= us &lt;= self.max_us, <span class="hljs-string">&quot;Invalid input value.&quot;</span>
+
+        <span class="hljs-comment"># self.master.set_servo(self.instance, us) or:</span>
+        self.master.mav.command_long_send(
+            self.master.target_system, self.master.target_component,
+            self.CMD_SET,
+            <span class="hljs-number">0</span>, <span class="hljs-comment"># first transmission of this command</span>
+            self.instance, us,
+            <span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span> <span class="hljs-comment"># unused parameters</span>
+        )
+        self._current = us
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_ratio</span><span class="hljs-params">(self, proportion)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Set the PWM pulse-width ratio (auto-scale between min and max).
+
+        &apos;proportion&apos; is a 0-1 value, where 0 corresponds to self.min_us, and
+            1 corresponds to self.max_us.
+
+        &quot;&quot;&quot;</span>
+        self.set_direct(proportion * self._diff + self.min_us)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inc</span><span class="hljs-params">(self, us=<span class="hljs-number">50</span>)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Increment the PWM pulse width by &apos;us&apos; microseconds. &quot;&quot;&quot;</span>
+        self.set_direct(max(self.max_us, self._current+us))
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dec</span><span class="hljs-params">(self, us=<span class="hljs-number">50</span>)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Decrement the PWM pulse width by &apos;us&apos; microseconds. &quot;&quot;&quot;</span>
+        self.set_direct(min(self.min_us, self._current-us))
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_min</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Set the PWM to self.min_us. &quot;&quot;&quot;</span>
+        self.set_ratio(<span class="hljs-number">0</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_max</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Set the PWM to self.max_us. &quot;&quot;&quot;</span>
+        self.set_ratio(<span class="hljs-number">1</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">center</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Set the PWM to half-way between self.min_us and self.max_us. &quot;&quot;&quot;</span>
+        self.set_ratio(<span class="hljs-number">0.5</span>)
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuxServoOutput</span><span class="hljs-params">(RawServoOutput)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot; A class representing a mavlink-controlled auxiliary servo output. &quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, master, servo_n, main_outputs=<span class="hljs-number">8</span>, **kwargs)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Initiliase a servo instance.
+
+        &apos;master&apos; is a mavlink connection.
+        &apos;servo_n&apos; is one of the auxiliary servo outputs, like the servo_n
+            outputs with QGroundControl joystick control.
+            Most likely a value between 1-3, but possibly up to 6 or 8
+            depending on setup.
+        &apos;main_outputs&apos; is the number of MAIN outputs are present on the
+            autopilot device (default 8).
+        **kwargs are passed to RawServoOutput.
+
+        &quot;&quot;&quot;</span>
+        super().__init__(master, servo_n+main_outputs, **kwargs)
+        self._main_outputs = main_outputs
+
+<span class="hljs-meta">    @property</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">servo_n</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Return the AUX servo number of this output. &quot;&quot;&quot;</span>
+        <span class="hljs-keyword">return</span> self.instance - self._main_outputs
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Gripper</span><span class="hljs-params">(AuxServoOutput)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot; A class representing a Blue Robotics&apos; gripper. &quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, master, servo_n, pwm_limits=<span class="hljs-params">(<span class="hljs-number">1100</span>, <span class="hljs-number">1100</span>, <span class="hljs-number">1500</span>)</span>,
+                 **kwargs)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Initialise a Gripper instance.
+
+        &apos;master&apos; is a mavlink connection.
+        &apos;servo_n&apos; is one of the auxiliary servo outputs, like the servo_n
+            outputs with QGroundControl joystick control.
+            Most likely a value between 1-3, but possibly up to 6 or 8
+            depending on setup.
+        &apos;pwm_limits&apos; is a tuple of min, default, and max pwm pulse-widths
+            in microseconds (default (1100, 1100, 1900)).
+        **kwargs are passed to AuxServoOutput.
+
+        &quot;&quot;&quot;</span>
+        super().__init__(master, servo_n, pwm_limits=pwm_limits, **kwargs)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">open</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Command the gripper to open. &quot;&quot;&quot;</span>
+        self.set_max()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">close</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot; Command the gripper to close. &quot;&quot;&quot;</span>
+        self.set_min()
+
+
+<span class="hljs-comment"># if running this file as a script:</span>
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    <span class="hljs-keyword">from</span> time <span class="hljs-keyword">import</span> sleep
+
+    <span class="hljs-comment"># Connect to the autopilot (pixhawk) from the surface computer,</span>
+    <span class="hljs-comment">#  via the companion.</span>
+    autopilot = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
+    <span class="hljs-comment"># Wait for a heartbeat from the autopilot before sending commands</span>
+    autopilot.wait_heartbeat()
+
+    <span class="hljs-comment"># create a gripper instance on servo_1 (AUX output 1)</span>
+    gripper = Gripper(autopilot, <span class="hljs-number">1</span>)
+
+    <span class="hljs-comment"># open and close the gripper a few times</span>
+    <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+        gripper.open()
+        sleep(<span class="hljs-number">2</span>)
+        gripper.close()
+        sleep(<span class="hljs-number">1</span>)
+</code></pre>
+<h4 id="set-target-depthattitude">Set Target Depth/Attitude</h4>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
+Example of how to set target depth in depth hold mode with pymavlink
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">import</span> math
+<span class="hljs-comment"># Import mavutil</span>
+<span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
+<span class="hljs-comment"># Imports for attitude</span>
+<span class="hljs-keyword">from</span> pymavlink.quaternion <span class="hljs-keyword">import</span> QuaternionBase
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_target_depth</span><span class="hljs-params">(depth)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot; Sets the target depth while in depth-hold mode.
+
+    Uses https://mavlink.io/en/messages/common.html#SET_POSITION_TARGET_GLOBAL_INT
+
+    &apos;depth&apos; is technically an altitude, so set as negative meters below the surface
+        -&gt; set_target_depth(-1.5) # sets target to 1.5m below the water surface.
+
+    &quot;&quot;&quot;</span>
+    master.mav.set_position_target_global_int_send(
+        int(<span class="hljs-number">1e3</span> * (time.time() - boot_time)), <span class="hljs-comment"># ms since boot</span>
+        master.target_system, master.target_component,
+        coordinate_frame=mavutil.mavlink.MAV_FRAME_GLOBAL_INT,
+        type_mask=<span class="hljs-number">0xdfe</span>,  <span class="hljs-comment"># ignore everything except z position</span>
+        lat_int=<span class="hljs-number">0</span>, long_int=<span class="hljs-number">0</span>, alt=depth, <span class="hljs-comment"># (x, y WGS84 frame pos - not used), z [m]</span>
+        vx=<span class="hljs-number">0</span>, vy=<span class="hljs-number">0</span>, vz=<span class="hljs-number">0</span>, <span class="hljs-comment"># velocities in NED frame [m/s] (not used)</span>
+        afx=<span class="hljs-number">0</span>, afy=<span class="hljs-number">0</span>, afz=<span class="hljs-number">0</span>, yaw=<span class="hljs-number">0</span>, yaw_rate=<span class="hljs-number">0</span>
+        <span class="hljs-comment"># accelerations in NED frame [N], yaw, yaw_rate</span>
+        <span class="hljs-comment">#  (all not supported yet, ignored in GCS Mavlink)</span>
+    )
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_target_attitude</span><span class="hljs-params">(roll, pitch, yaw)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot; Sets the target attitude while in depth-hold mode.
+
+    &apos;roll&apos;, &apos;pitch&apos;, and &apos;yaw&apos; are angles in degrees.
+
+    &quot;&quot;&quot;</span>
+    <span class="hljs-comment"># https://mavlink.io/en/messages/common.html#ATTITUDE_TARGET_TYPEMASK</span>
+    <span class="hljs-comment"># 1&lt;&lt;6 = THROTTLE_IGNORE -&gt; allow throttle to be controlled by depth_hold mode</span>
+    bitmask = <span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">6</span>
+
+    master.mav.set_attitude_target_send(
+        int(<span class="hljs-number">1e3</span> * (time.time() - boot_time)), <span class="hljs-comment"># ms since boot</span>
+        master.target_system, master.target_component,
+        bitmask,
+        <span class="hljs-comment"># -&gt; attitude quaternion (w, x, y, z | zero-rotation is 1, 0, 0, 0)</span>
+        QuaternionBase([math.radians(angle) <span class="hljs-keyword">for</span> angle <span class="hljs-keyword">in</span> (roll, pitch, yaw)]),
+        <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span> <span class="hljs-comment"># roll rate, pitch rate, yaw rate, thrust</span>
+    )
+
+<span class="hljs-comment"># Create the connection</span>
+master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
+boot_time = time.time()
+<span class="hljs-comment"># Wait a heartbeat before sending commands</span>
+master.wait_heartbeat()
+
+<span class="hljs-comment"># arm ArduSub autopilot and wait until confirmed</span>
+master.arducopter_arm()
+master.motors_armed_wait()
+
+<span class="hljs-comment"># set the desired operating mode</span>
+DEPTH_HOLD = <span class="hljs-string">&apos;ALT_HOLD&apos;</span>
+DEPTH_HOLD_MODE = master.mode_mapping()[DEPTH_HOLD]
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> master.wait_heartbeat().custom_mode == DEPTH_HOLD_MODE:
+    master.set_mode(DEPTH_HOLD)
+
+<span class="hljs-comment"># set a depth target</span>
+set_target_depth(<span class="hljs-number">-0.5</span>)
+
+<span class="hljs-comment"># go for a spin</span>
+<span class="hljs-comment"># (set target yaw from 0 to 500 degrees in steps of 10, one update per second)</span>
+roll_angle = pitch_angle = <span class="hljs-number">0</span>
+<span class="hljs-keyword">for</span> yaw_angle <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">500</span>, <span class="hljs-number">10</span>):
+    set_target_attitude(roll_angle, pitch_angle, yaw_angle)
+    time.sleep(<span class="hljs-number">1</span>) <span class="hljs-comment"># wait for a second</span>
+
+<span class="hljs-comment"># spin the other way with 3x larger steps</span>
+<span class="hljs-keyword">for</span> yaw_angle <span class="hljs-keyword">in</span> range(<span class="hljs-number">500</span>, <span class="hljs-number">0</span>, <span class="hljs-number">-30</span>):
+    set_target_attitude(roll_angle, pitch_angle, yaw_angle)
+    time.sleep(<span class="hljs-number">1</span>)
+
+<span class="hljs-comment"># clean up (disarm) at the end</span>
+master.arducopter_disarm()
+master.motors_disarmed_wait()
+</code></pre>
+<h4 id="send-gps-position">Send GPS position</h4>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
+Example of how to send GPS_INPUT messages to autopilot
+&quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">import</span> time
+<span class="hljs-comment"># Import mavutil</span>
+<span class="hljs-keyword">from</span> pymavlink <span class="hljs-keyword">import</span> mavutil
+
+<span class="hljs-comment"># Create the connection</span>
+master = mavutil.mavlink_connection(<span class="hljs-string">&apos;udpin:0.0.0.0:14550&apos;</span>)
+<span class="hljs-comment"># Wait a heartbeat before sending commands</span>
+master.wait_heartbeat()
+
+<span class="hljs-comment"># GPS_TYPE need to be MAV</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    time.sleep(<span class="hljs-number">0.2</span>)
+    master.mav.gps_input_send(
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># Timestamp (micros since boot or Unix epoch)</span>
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># ID of the GPS for multiple GPS inputs</span>
+        <span class="hljs-comment"># Flags indicating which fields to ignore (see GPS_INPUT_IGNORE_FLAGS enum).</span>
+        <span class="hljs-comment"># All other fields must be provided.</span>
+        <span class="hljs-number">8</span> | <span class="hljs-number">16</span> | <span class="hljs-number">32</span>,
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS time (milliseconds from start of GPS week)</span>
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS week number</span>
+        <span class="hljs-number">3</span>,  <span class="hljs-comment"># 0-1: no fix, 2: 2D fix, 3: 3D fix. 4: 3D with DGPS. 5: 3D with RTK</span>
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># Latitude (WGS84), in degrees * 1E7</span>
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># Longitude (WGS84), in degrees * 1E7</span>
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># Altitude (AMSL, not WGS84), in m (positive for up)</span>
+        <span class="hljs-number">1</span>,  <span class="hljs-comment"># GPS HDOP horizontal dilution of position in m</span>
+        <span class="hljs-number">1</span>,  <span class="hljs-comment"># GPS VDOP vertical dilution of position in m</span>
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS velocity in m/s in NORTH direction in earth-fixed NED frame</span>
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS velocity in m/s in EAST direction in earth-fixed NED frame</span>
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS velocity in m/s in DOWN direction in earth-fixed NED frame</span>
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS speed accuracy in m/s</span>
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS horizontal accuracy in m</span>
+        <span class="hljs-number">0</span>,  <span class="hljs-comment"># GPS vertical accuracy in m</span>
+        <span class="hljs-number">7</span>   <span class="hljs-comment"># Number of satellites visible.</span>
+    )
+</code></pre>
+<h4 id="send-rangefindercomputer-vision-distance-measurement-to-the-autopilot">Send rangefinder/computer vision distance measurement to the autopilot</h4>
 <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
 Example of how to send MAV_DISTANCE_SENSOR messages to integrate a custom distance sensor
 to the autopilot using pymavlink
@@ -2267,7 +2609,7 @@ tstart = time.time()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Pymavlink","level":"4.5","depth":1,"next":{"title":"SITL","level":"4.6","depth":1,"path":"developers/sitl.md","ref":"developers/sitl.md","articles":[]},"previous":{"title":"OpenCV","level":"4.4","depth":1,"path":"developers/opencv.md","ref":"developers/opencv.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">= 3.2.2","theme":"default","variables":{},"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","-validate-links","include-codeblock"],"pluginsConfig":{"collapsible-menu":{},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"},"aerial":{"alert":"warning","picto":"fa-plane"},"gps":{"alert":"info","picto":"fa-map-marker"},"version":{"alert":"info","picto":"fa fa-refresh fa-spin fa-3x fa-fw"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/Ardupilot/ardupilot"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/edit/master/{{filepath_lang}}"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"developers/pymavlink.md","mtime":"2021-06-11T18:52:34.333Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-11T18:54:44.165Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Pymavlink","level":"4.5","depth":1,"next":{"title":"SITL","level":"4.6","depth":1,"path":"developers/sitl.md","ref":"developers/sitl.md","articles":[]},"previous":{"title":"OpenCV","level":"4.4","depth":1,"path":"developers/opencv.md","ref":"developers/opencv.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">= 3.2.2","theme":"default","variables":{},"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","-validate-links","include-codeblock"],"pluginsConfig":{"collapsible-menu":{},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"},"aerial":{"alert":"warning","picto":"fa-plane"},"gps":{"alert":"info","picto":"fa-map-marker"},"version":{"alert":"info","picto":"fa fa-refresh fa-spin fa-3x fa-fw"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/Ardupilot/ardupilot"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/edit/master/{{filepath_lang}}"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"developers/pymavlink.md","mtime":"2021-07-07T13:05:02.883Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-07T13:07:01.763Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
