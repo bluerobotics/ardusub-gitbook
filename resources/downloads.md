@@ -4,12 +4,14 @@
 
 **Stable Release for Pixhawk (Pixhawk1):** 
 
-<i class="fa fa-download" aria-hidden="true"></i> **[ArduSub v4.0.1](https://firmware.ardupilot.org/Sub/stable/Pixhawk1/ardusub.apj)** (.apj)
+<i class="fa fa-download" aria-hidden="true"></i> **[ArduSub v4.0.3](https://firmware.ardupilot.org/Sub/stable/Pixhawk1/ardusub.apj)** (.apj)
 
 Firmware for other autopilot boards can be downloaded from [firmware.ardupilot.org](https://firmware.ardupilot.org/). See [here](/quick-start/installing-ardusub.md#without-a-companion-computer-manual-installation) for instructions on how to flash the Pixhawk.
 
 ### Previous Stable Firmware Releases
 
+* **[v4.0.2](https://firmware.ardupilot.org/Sub/stable-4.0.2/Pixhawk1/ardusub.apj)**
+* **[v4.0.1](https://firmware.ardupilot.org/Sub/stable-4.0.1/Pixhawk1/ardusub.apj)**
 * **[v3.5.4](https://firmware.ardupilot.org/Sub/stable-3.5.4/PX4/ArduSub-v2.px4)**
 * **[v3.5.3](https://firmware.ardupilot.org/Sub/stable-3.5.3/PX4/ArduSub-v2.px4)**
 
