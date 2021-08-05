@@ -1,6 +1,6 @@
 # Installing ArduSub
 
->**Note** The current Stable version of ArduSub is **v4.0.1**. If your firmware is out of date, it may be updated by following one of the methods below.
+>**Note** The current Stable version of ArduSub is **v4.0.3**. If your firmware is out of date, it may be updated by following one of the methods below.
 
 ArduSub is the firmware binary which resides on the flash memory of the autopilot board. 
 
