@@ -16,7 +16,7 @@ Brushless thrusters are a good choice for propulsion as they do not have brushes
 
 The following brushless thrusters have been test and recommended for use:
 
-* [Blue Robotics T200 Thruster](https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster/)
+* [Blue Robotics T200 Thruster](https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster-r2-rp/)
 
 # Brushed Thrusters
 
