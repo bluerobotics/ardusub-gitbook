@@ -10,7 +10,7 @@ For safety reasons, it is recommended to design an underwater vehicle to operate
 
 - **Voltage:** Lithium batteries often specify their nominal pack voltage as well as a corresponding **"S"** rating indicating the number of 3.7V cells in wired in **S**eries inside the battery. The voltage of your battery needs to be matched to the ratings of your ESCs and thrusters.
 
-    * For example, [Blue Robotics Basic ESCs](https://bluerobotics.com/store/thrusters/speed-controllers/besc30-r3/) support 2S through 6S (7-26V) batteries, however the [T200 Thruster](https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster/) is only rated for a maximum of 20V. Therefore, the the maximum recommended battery to use in this system is a 4S battery as a fully charged battery is 16.8V.
+    * For example, [Blue Robotics Basic ESCs](https://bluerobotics.com/store/thrusters/speed-controllers/besc30-r3/) support 2S through 6S (7-26V) batteries, however the [T200 Thruster](https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster-r2-rp/) is only rated for a maximum of 20V. Therefore, the the maximum recommended battery to use in this system is a 4S battery as a fully charged battery is 16.8V.
 
 - **Capacity** Batteries usually specify their capacity in units of mAh, the larger this number, the more energy the battery will store, and the longer you can run your ROV.
 
