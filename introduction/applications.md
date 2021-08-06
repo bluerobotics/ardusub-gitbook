@@ -14,7 +14,7 @@ ArduSub provides the functionality needed for a wide variety of applications fro
 
 ## ArduSub in Use
 
-These videos show ArduSub in use on the Blue Robotics [BlueROV1](https://bluerobotics.com/store/retired/bluerov-r1/) and [BlueROV2](https://bluerobotics.com/store/rov/bluerov2/). Keep in mind that *ArduSub* can be used on many different ROV designs from unique DIY configurations to professional vehicles.
+These videos show ArduSub in use on the Blue Robotics BlueROV1 and [BlueROV2](https://bluerobotics.com/store/rov/bluerov2/). Keep in mind that *ArduSub* can be used on many different ROV designs from unique DIY configurations to professional vehicles.
 
 <div class="row">
     <iframe width="300" height="225" src="https://www.youtube.com/embed/iK9AmuqVN4I" frameborder="0" allowfullscreen></iframe>
