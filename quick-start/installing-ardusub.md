@@ -148,7 +148,7 @@ If desired, you can check the *Stabilize* box, which will enable auto-stabilizat
 1. The output channel for the lights is configured in the **[Lights](/reference/ardusub/lights-setup-page.md)** tab. 
 2. Select the output channel that you have plugged your lights into, as shown below.
 
-> **Info** This setup only works with lights that are controllable with a servo PWM pulse, such as the Blue Robotics [*Lumen* Lights](http://www.bluerobotics.com/store/electronics/lumen-light-r1/).
+> **Info** This setup only works with lights that are controllable with a servo PWM pulse, such as the Blue Robotics [*Lumen* Lights](https://bluerobotics.com/store/thrusters/lights/lumen-r2-rp/).
 
 <img src="/images/reference/reference-ardusub-lights.png" class="img-responsive img-center" />
 
