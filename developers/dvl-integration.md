@@ -20,7 +20,7 @@ There are two ways to get the DVL support.
 
 **Option 1**
 
-Flash the [Custom build of Companion with DVL support](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/experimental/ardusubdvl.img.zip).
+Flash the [Custom build of Companion with DVL support](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/experimental/ardusubdvl-0.0.28.img.zip).
 
 **Option 2**
 
