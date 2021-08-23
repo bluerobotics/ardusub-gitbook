@@ -4,7 +4,7 @@ The DVL integration with ArduSub is in a BETA stage and is currently unsupported
 
 ## Supported DVLs
 
-The [Waterlinked A50 DVL](https://waterlinked.com/product/dvl-a50/) is the only supported DVL at the moment in the beta integration.
+The [Waterlinked A50 DVL](https://store.waterlinked.com/product/dvl-a50/) is the only supported DVL at the moment in the beta integration.
 
 ### A50 DVL configuration
 
