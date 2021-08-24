@@ -41,9 +41,9 @@ set_rc_channel_pwm(2, 1600)
 # Set some yaw
 set_rc_channel_pwm(4, 1600)
 
-# The camera pwm value is the servo speed
-# and not the servo position
-# Set camera tilt to 45º with full speed
+# The camera pwm value sets the servo speed of a sweep from the current angle to
+#  the min/max camera angle. It does not set the servo position.
+# Set camera tilt to 45º (max) with full speed
 set_rc_channel_pwm(8, 1900)
 
 # Set channel 12 to 1500us
