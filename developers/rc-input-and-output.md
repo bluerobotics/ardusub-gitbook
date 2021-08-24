@@ -15,10 +15,12 @@ These are the default channel mappings for RC input:
 | 5 | Forward |
 | 6 | Lateral |
 | 7 | Camera Pan |
-| 8 | Camera Tilt |
+| 8 | Camera Tilt* |
 | 9 | Lights 1 Level |
 | 10 | Lights 2 Level |
 | 11 | Video Switch |
+
+\****Note:*** RC Input Camera Tilt control is not standard servo-style control. Specifying a 'PWM' value sets the **speed for a sweep from the current tilt angle to the min/max camera angle**. The input difference from the midpoint (1500) sets the speed, e.g. a 1900 input sweeps to the max camera angle twice as fast as 1700.
 
 ## RC Outputs
 
