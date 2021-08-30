@@ -19,7 +19,9 @@ while True:
         0,  # ID of the GPS for multiple GPS inputs
         # Flags indicating which fields to ignore (see GPS_INPUT_IGNORE_FLAGS enum).
         # All other fields must be provided.
-        8 | 16 | 32,
+        (mavutil.mavlink.GPS_INPUT_IGNORE_FLAG_VEL_HORIZ |
+         mavutil.mavlink.GPS_INPUT_IGNORE_FLAG_VEL_VERT |
+         mavutil.mavlink.GPS_INPUT_IGNORE_FLAG_SPEED_ACCURACY),
         0,  # GPS time (milliseconds from start of GPS week)
         0,  # GPS week number
         3,  # 0-1: no fix, 2: 2D fix, 3: 3D fix. 4: 3D with DGPS. 5: 3D with RTK
