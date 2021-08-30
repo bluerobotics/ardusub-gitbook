@@ -22,8 +22,8 @@ def set_target_depth(depth):
         int(1e3 * (time.time() - boot_time)), # ms since boot
         master.target_system, master.target_component,
         coordinate_frame=mavutil.mavlink.MAV_FRAME_GLOBAL_INT,
-        type_mask=0xdfe,  # ignore everything except z position
-        lat_int=0, long_int=0, alt=depth, # (x, y WGS84 frame pos - not used), z [m]
+        type_mask=0b0000_1101_1111_1011,  # ignore everything except z position
+        lat_int=0, lon_int=0, alt=depth, # (x, y WGS84 frame pos - not used), z [m]
         vx=0, vy=0, vz=0, # velocities in NED frame [m/s] (not used)
         afx=0, afy=0, afz=0, yaw=0, yaw_rate=0
         # accelerations in NED frame [N], yaw, yaw_rate
