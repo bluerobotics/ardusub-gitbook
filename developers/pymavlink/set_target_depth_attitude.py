@@ -32,7 +32,7 @@ def set_target_depth(depth):
             mavutil.mavlink.POSITION_TARGET_TYPEMASK_AX_IGNORE |
             mavutil.mavlink.POSITION_TARGET_TYPEMASK_AY_IGNORE |
             mavutil.mavlink.POSITION_TARGET_TYPEMASK_AZ_IGNORE |
-            # DON'T mavutil.mavlink.POSITION_TARGET_TYPEMASK_FORCE_SET_IGNORE |
+            # DON'T mavutil.mavlink.POSITION_TARGET_TYPEMASK_FORCE_SET |
             mavutil.mavlink.POSITION_TARGET_TYPEMASK_YAW_IGNORE |
             mavutil.mavlink.POSITION_TARGET_TYPEMASK_YAW_RATE_IGNORE
         ), lat_int=0, lon_int=0, alt=depth, # (x, y WGS84 frame pos - not used), z [m]
