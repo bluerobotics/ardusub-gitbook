@@ -48,14 +48,11 @@ def set_target_attitude(roll, pitch, yaw):
     'roll', 'pitch', and 'yaw' are angles in degrees.
 
     """
-    # https://mavlink.io/en/messages/common.html#ATTITUDE_TARGET_TYPEMASK
-    # 1<<6 = THROTTLE_IGNORE -> allow throttle to be controlled by depth_hold mode
-    bitmask = 1<<6
-
     master.mav.set_attitude_target_send(
         int(1e3 * (time.time() - boot_time)), # ms since boot
         master.target_system, master.target_component,
-        bitmask,
+        # allow throttle to be controlled by depth_hold mode
+        mavutil.mavlink.ATTITUDE_TARGET_TYPEMASK_THROTTLE_IGNORE,
         # -> attitude quaternion (w, x, y, z | zero-rotation is 1, 0, 0, 0)
         QuaternionBase([math.radians(angle) for angle in (roll, pitch, yaw)]),
         0, 0, 0, 0 # roll rate, pitch rate, yaw rate, thrust
