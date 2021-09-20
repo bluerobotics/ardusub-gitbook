@@ -1,6 +1,6 @@
 # Grippers and Manipulators
 
-A gripper is a useful tool for picking up small objects, attaching recovery lines, or freeing a snagged tether.
+A gripper is a useful tool for picking up small objects, attaching recovery lines, or freeing a snagged tether. Other manipulators may be useful in cleaning, inspection, or repair tasks.
 
 Ardusub has the ability to natively control grippers through assigning joystick buttons and servo outputs for grippers that use Pulse Width Modulation (PWM) for control.
 
