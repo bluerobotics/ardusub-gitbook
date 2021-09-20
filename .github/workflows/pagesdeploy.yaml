@@ -30,7 +30,7 @@ jobs:
           # - line-too-long (because of long output comments at the end)
           # - invalid-constant-name (because our variables are not supposed constants)
           # - duplicate-code (because some snippets have the same snippet duplicated)
-          pylint --disable=R0801 --disable=C0103 --disable=C0301 developers/pymavlink/*
+          pylint --disable=R0801 --disable=C0103 --disable=C0301 --disable=C0209 developers/pymavlink/*
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
