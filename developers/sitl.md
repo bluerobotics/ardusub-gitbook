@@ -64,3 +64,5 @@ The console will start to display the output if the connection was successful.
     * Check again [add some directories to your search path](http://ardupilot.org/dev/docs/setting-up-sitl-on-linux.html#add-some-directories-to-your-search-path-facultative).
 4. Check if all `ardupilot/modules` folders are populated.
     * It's necessary to use git and update/sync all submodules after the first installation, check [cloning with the command line](http://ardupilot.org/dev/docs/setting-up-sitl-on-linux.html#cloning-with-the-command-line).
+5.  If using SITL's `--speedup` command you need to set MAVProxy's heartbeat output to match the speedup rate
+    * Example `set heartbeat 8`
