@@ -1,11 +1,11 @@
 # Installing the Companion Computer Software Image
 
->**Note** The current version of Companion is **v0.0.28**. If your system is out of date you can update by either installing a fresh image with the instructions below or connecting to Wi-Fi and performing a [Software Update](http://www.ardusub.com/quick-start/installing-companion.html#software-update).
+>**Note** The current version of Companion is **v0.0.29**. If your system is out of date you can update by either installing a fresh image with the instructions below or connecting to Wi-Fi and performing a [Software Update](#software-update).
 
 The operating system and supporting software is installed by writing a pre-configured `.img` file to an SD Card which is then inserted into the Companion Computer (Raspberry Pi). 
 
 1. Insert a microSD card with at least 4GB capacity into your topside computer with a card reader.
-2. Download the Companion image [here](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/stable/ardusub-raspbian.img.zip)
+2. Download the Companion image [here](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/stable/ardusub-raspbian.img.zip) (updated 2021-Oct-04)
 3. While the image downloads, download and install [Etcher](https://etcher.io/). Make sure you select the correct download for your Operating System!
 4. Open Etcher, select the image file (no need to extract beforehand) and your SD card, click 'Flash' and wait for it to complete.
 <img src="/images/etcher.png" width="690" height="351">
