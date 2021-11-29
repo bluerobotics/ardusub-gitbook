@@ -42,4 +42,4 @@ USBLs are more compact than SBL systems where are the receivers transducers are 
 
 ## Supported USBL Systems
 
-* [Cerulean Sonar ROV Locator](https://ceruleansonar.com/products/usbl-rov-locator?variant=16138964107330)
+* [Cerulean Sonar ROV Locator](https://ceruleansonar.com/products/rovl-mkii?variant=39414929915970)
