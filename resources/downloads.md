@@ -17,7 +17,7 @@ Firmware for other autopilot boards can be downloaded from [firmware.ardupilot.o
 
 ## Companion Computer Images
 
-This is a fully configured image for the Raspberry Pi 3B computer to be used as a **Companion Computer** for the Pixhawk1 autopilot running ArduSub. See [here](https://www.ardusub.com/getting-started/installation.html#raspberry-pi) for instructions on how to flash the image to the SD card.
+This is a fully configured image for the Raspberry Pi 3B computer to be used as a **Companion Computer** for the Pixhawk1 autopilot running ArduSub. See [here](/quick-start/installing-companion.md) for instructions on how to flash the image to the SD card.
 
 **Stable Release for Raspberry Pi 3B:**
 
