@@ -15,7 +15,7 @@ The first autopilot board recommended for ArduSub was the [Pixhawk 1](https://do
 <img src="/images/hardware/pixhawk.png" class="img-responsive img-center" style="max-height:600px;">
 
 The following list is the recommended autopilot boards for use with ArduSub:
-1. [Pixhawk 1](https://docs.px4.io/v1.10/en/flight_controller/pixhawk.html) sold by Blue Robotics
+1. The original [3DR (3D Robotics) Pixhawk 1](https://docs.px4.io/v1.10/en/flight_controller/pixhawk.html)
 2. [mRobotics (Mayan Robotics) Pixhawk 1](https://docs.px4.io/v1.10/en/flight_controller/mro_pixhawk.html)
 
 # Not Recommended Autopilots
