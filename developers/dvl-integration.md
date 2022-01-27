@@ -12,26 +12,13 @@ The DVL must be configured with a static IP address of 192.168.2.95. Follow Wate
 
 ## Companion Software
 
-A beta version of the companion software is required to use the DVL integration.
+A recent version of the companion software is required to use the DVL integration.
 
-### Installing beta Companion software
+### Installing Companion software
 
-There are two ways to get the DVL support.
+The DVL support is available from Companion 0.0.31, which can be [installed normally](/quick-start/installing-companion.md), or [updated to](/quick-start/installing-companion.md#software-update) from an earlier standard Companion version.
 
-**Option 1**
-
-Flash the [Custom build of Companion with DVL support](https://s3.amazonaws.com/downloads.bluerobotics.com/Pi/experimental/ardusubdvl-0.0.28.img.zip).
-
-**Option 2**
-
-Follow these instructions to set it up from an existing Companion installation:
-
- - Make sure the ROV is connected to the internet
- - Navigate to http://192.168.2.2:2770/git
- - Click "origin" -> "branches" -> "dvl"
- - Click "update"
- - Wait until the update is over and the companion reboots
- - Refresh the page and "Water Linked" should show up in the navbar
+Users with a previous version of the DVL functionality (installed via a custom branch) should access the new version by [flashing a clean install](/quick-start/installing-companion.md), rather than attempting to update directly from the custom branch.
 
 ### DVL configuration in Companion
 
