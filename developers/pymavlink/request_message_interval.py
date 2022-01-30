@@ -29,8 +29,9 @@ def request_message_interval(message_id: int, frequency_hz: float):
         mavutil.mavlink.MAV_CMD_SET_MESSAGE_INTERVAL, 0,
         message_id, # The MAVLink message ID
         1e6 / frequency_hz, # The interval between two messages in microseconds. Set to -1 to disable and 0 to request default rate.
+        0, 0, 0, 0, # Unused parameters
         0, # Target address of message stream (if message has target address fields). 0: Flight-stack default (recommended), 1: address of requestor, 2: broadcast.
-        0, 0, 0, 0)
+    )
 
 # Configure AHRS2 message to be sent at 1Hz
 request_message_interval(mavutil.mavlink.MAVLINK_MSG_ID_AHRS2, 1)
