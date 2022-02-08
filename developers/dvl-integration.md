@@ -87,9 +87,10 @@ Enable odometry support
 ```
 VISO_TYPE 1
 ```
-Disable external gps in ekf3
+Specify an external navigation source in ekf3
 ```
-EK3_GPS_TYPE 3
+EK3_SRC1_POSXY 6
+EK3_SRC1_VELXY 6
 ```
 Suggested gains
 ```
