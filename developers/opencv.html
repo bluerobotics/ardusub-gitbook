@@ -1582,15 +1582,15 @@ To perform any real-time image processing with the companion camera, we highly s
 <h2 id="recommendation">Recommendation</h2>
 <p>OpenCV support both Python 2 and Python 3, it&apos;s recommended to install it via your package manager.</p>
 <h2 id="installation">Installation</h2>
-<h4 id="ubuntu-1604">Ubuntu 16.04</h4>
+<h4 id="ubuntu-2004">Ubuntu 20.04</h4>
 <pre><code class="lang-sh"><span class="hljs-comment"># Update list of available packages</span>
 sudo apt update
 
 <span class="hljs-comment"># Install opencv and dependencies</span>
-sudo apt install python-numpy python-opencv libopencv-dev
+sudo apt install python3-numpy python3-opencv libopencv-dev
 
 <span class="hljs-comment"># Install gstreamer and plugins</span>
-sudo apt install python-gst-1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav
+sudo apt install python3-gst-1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav
 </code></pre>
 <h3 id="companion">Companion</h3>
 <pre><code class="lang-sh"><span class="hljs-comment"># Update list of available packages</span>
@@ -1635,6 +1635,7 @@ gi.require_version(<span class="hljs-string">&apos;Gst&apos;</span>, <span class
         video_sink (object): Gstreamer sink element
         video_sink_conf (string): Sink configuration
         video_source (string): Udp source ip and port
+        latest_frame (np.ndarray): Latest retrieved video frame
     &quot;&quot;&quot;</span>
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, port=<span class="hljs-number">5600</span>)</span>:</span>
@@ -1647,7 +1648,7 @@ gi.require_version(<span class="hljs-string">&apos;Gst&apos;</span>, <span class
         Gst.init(<span class="hljs-keyword">None</span>)
 
         self.port = port
-        self._frame = <span class="hljs-keyword">None</span>
+        self.latest_frame = self._new_frame = <span class="hljs-keyword">None</span>
 
         <span class="hljs-comment"># [Software component diagram](https://www.ardusub.com/software/components.html)</span>
         <span class="hljs-comment"># UDP video stream (:5600)</span>
@@ -1704,11 +1705,11 @@ gi.require_version(<span class="hljs-string">&apos;Gst&apos;</span>, <span class
             TYPE: Description
         &quot;&quot;&quot;</span>
         buf = sample.get_buffer()
-        caps = sample.get_caps()
+        caps_structure = sample.get_caps().get_structure(<span class="hljs-number">0</span>)
         array = np.ndarray(
             (
-                caps.get_structure(<span class="hljs-number">0</span>).get_value(<span class="hljs-string">&apos;height&apos;</span>),
-                caps.get_structure(<span class="hljs-number">0</span>).get_value(<span class="hljs-string">&apos;width&apos;</span>),
+                caps_structure.get_value(<span class="hljs-string">&apos;height&apos;</span>),
+                caps_structure.get_value(<span class="hljs-string">&apos;width&apos;</span>),
                 <span class="hljs-number">3</span>
             ),
             buffer=buf.extract_dup(<span class="hljs-number">0</span>, buf.get_size()), dtype=np.uint8)
@@ -1718,20 +1719,24 @@ gi.require_version(<span class="hljs-string">&apos;Gst&apos;</span>, <span class
         <span class="hljs-string">&quot;&quot;&quot; Get Frame
 
         Returns:
-            iterable: bool and image frame, cap.read() output
+            np.ndarray: latest retrieved image frame
         &quot;&quot;&quot;</span>
-        <span class="hljs-keyword">return</span> self._frame
+        <span class="hljs-keyword">if</span> self.frame_available:
+            self.latest_frame = self._new_frame
+            <span class="hljs-comment"># reset to indicate latest frame has been &apos;consumed&apos;</span>
+            self._new_frame = <span class="hljs-keyword">None</span>
+        <span class="hljs-keyword">return</span> self.latest_frame
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">frame_available</span><span class="hljs-params">(self)</span>:</span>
-        <span class="hljs-string">&quot;&quot;&quot;Check if frame is available
+        <span class="hljs-string">&quot;&quot;&quot;Check if a new frame is available
 
         Returns:
-            bool: true if frame is available
+            bool: true if a new frame is available
         &quot;&quot;&quot;</span>
-        <span class="hljs-keyword">return</span> type(self._frame) != type(<span class="hljs-keyword">None</span>)
+        <span class="hljs-keyword">return</span> self._new_frame <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run</span><span class="hljs-params">(self)</span>:</span>
-        <span class="hljs-string">&quot;&quot;&quot; Get frame to update _frame
+        <span class="hljs-string">&quot;&quot;&quot; Get frame to update _new_frame
         &quot;&quot;&quot;</span>
 
         self.start_gst(
@@ -1746,8 +1751,7 @@ gi.require_version(<span class="hljs-string">&apos;Gst&apos;</span>, <span class
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">callback</span><span class="hljs-params">(self, sink)</span>:</span>
         sample = sink.emit(<span class="hljs-string">&apos;pull-sample&apos;</span>)
-        new_frame = self.gst_to_opencv(sample)
-        self._frame = new_frame
+        self._new_frame = self.gst_to_opencv(sample)
 
         <span class="hljs-keyword">return</span> Gst.FlowReturn.OK
 
@@ -1757,13 +1761,21 @@ gi.require_version(<span class="hljs-string">&apos;Gst&apos;</span>, <span class
     <span class="hljs-comment"># Add port= if is necessary to use a different one</span>
     video = Video()
 
-    <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
-        <span class="hljs-comment"># Wait for the next frame</span>
-        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> video.frame_available():
-            <span class="hljs-keyword">continue</span>
+    print(<span class="hljs-string">&apos;Initialising stream...&apos;</span>)
+    waited = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> video.frame_available():
+        waited += <span class="hljs-number">1</span>
+        print(<span class="hljs-string">&apos;\r  Frame not available (x{})&apos;</span>.format(waited), end=<span class="hljs-string">&apos;&apos;</span>)
+        cv2.waitKey(<span class="hljs-number">30</span>)
+    print(<span class="hljs-string">&apos;\nSuccess!\nStarting streaming - press &quot;q&quot; to quit.&apos;</span>)
 
-        frame = video.frame()
-        cv2.imshow(<span class="hljs-string">&apos;frame&apos;</span>, frame)
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+        <span class="hljs-comment"># Wait for the next frame to become available</span>
+        <span class="hljs-keyword">if</span> video.frame_available():
+            <span class="hljs-comment"># Only retrieve and display a frame if it&apos;s new</span>
+            frame = video.frame()
+            cv2.imshow(<span class="hljs-string">&apos;frame&apos;</span>, frame)
+        <span class="hljs-comment"># Allow frame to display, and check if user wants to quit</span>
         <span class="hljs-keyword">if</span> cv2.waitKey(<span class="hljs-number">1</span>) &amp; <span class="hljs-number">0xFF</span> == ord(<span class="hljs-string">&apos;q&apos;</span>):
             <span class="hljs-keyword">break</span>
 </code></pre>
@@ -2017,7 +2029,7 @@ of the second output to 192.168.2.2.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"OpenCV","level":"4.4","depth":1,"next":{"title":"Pymavlink","level":"4.5","depth":1,"path":"developers/pymavlink.md","ref":"developers/pymavlink.md","articles":[]},"previous":{"title":"Software Components","level":"4.3","depth":1,"path":"developers/software-components.md","ref":"developers/software-components.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">= 3.2.2","theme":"default","variables":{},"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","-validate-links","include-codeblock"],"pluginsConfig":{"collapsible-menu":{},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"},"aerial":{"alert":"warning","picto":"fa-plane"},"gps":{"alert":"info","picto":"fa-map-marker"},"version":{"alert":"info","picto":"fa fa-refresh fa-spin fa-3x fa-fw"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/Ardupilot/ardupilot"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/edit/master/{{filepath_lang}}"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"developers/opencv.md","mtime":"2022-02-13T23:44:21.278Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-13T23:46:13.935Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"OpenCV","level":"4.4","depth":1,"next":{"title":"Pymavlink","level":"4.5","depth":1,"path":"developers/pymavlink.md","ref":"developers/pymavlink.md","articles":[]},"previous":{"title":"Software Components","level":"4.3","depth":1,"path":"developers/software-components.md","ref":"developers/software-components.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">= 3.2.2","theme":"default","variables":{},"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","-validate-links","include-codeblock"],"pluginsConfig":{"collapsible-menu":{},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"},"aerial":{"alert":"warning","picto":"fa-plane"},"gps":{"alert":"info","picto":"fa-map-marker"},"version":{"alert":"info","picto":"fa fa-refresh fa-spin fa-3x fa-fw"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/Ardupilot/ardupilot"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/edit/master/{{filepath_lang}}"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"developers/opencv.md","mtime":"2022-02-28T16:03:41.520Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-28T16:06:12.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
