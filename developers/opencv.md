@@ -11,16 +11,16 @@ OpenCV support both Python 2 and Python 3, it's recommended to install it via yo
 
 ## Installation
 
-#### Ubuntu 16.04
+#### Ubuntu 20.04
 ```sh
 # Update list of available packages
 sudo apt update
 
 # Install opencv and dependencies
-sudo apt install python-numpy python-opencv libopencv-dev
+sudo apt install python3-numpy python3-opencv libopencv-dev
 
 # Install gstreamer and plugins
-sudo apt install python-gst-1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav
+sudo apt install python3-gst-1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav
 ```
 
 ### Companion
@@ -73,6 +73,7 @@ class Video():
         video_sink (object): Gstreamer sink element
         video_sink_conf (string): Sink configuration
         video_source (string): Udp source ip and port
+        latest_frame (np.ndarray): Latest retrieved video frame
     """
 
     def __init__(self, port=5600):
@@ -85,7 +86,7 @@ class Video():
         Gst.init(None)
 
         self.port = port
-        self._frame = None
+        self.latest_frame = self._new_frame = None
 
         # [Software component diagram](https://www.ardusub.com/software/components.html)
         # UDP video stream (:5600)
@@ -142,11 +143,11 @@ class Video():
             TYPE: Description
         """
         buf = sample.get_buffer()
-        caps = sample.get_caps()
+        caps_structure = sample.get_caps().get_structure(0)
         array = np.ndarray(
             (
-                caps.get_structure(0).get_value('height'),
-                caps.get_structure(0).get_value('width'),
+                caps_structure.get_value('height'),
+                caps_structure.get_value('width'),
                 3
             ),
             buffer=buf.extract_dup(0, buf.get_size()), dtype=np.uint8)
@@ -156,20 +157,24 @@ class Video():
         """ Get Frame
 
         Returns:
-            iterable: bool and image frame, cap.read() output
+            np.ndarray: latest retrieved image frame
         """
-        return self._frame
+        if self.frame_available:
+            self.latest_frame = self._new_frame
+            # reset to indicate latest frame has been 'consumed'
+            self._new_frame = None
+        return self.latest_frame
 
     def frame_available(self):
-        """Check if frame is available
+        """Check if a new frame is available
 
         Returns:
-            bool: true if frame is available
+            bool: true if a new frame is available
         """
-        return type(self._frame) != type(None)
+        return self._new_frame is not None
 
     def run(self):
-        """ Get frame to update _frame
+        """ Get frame to update _new_frame
         """
 
         self.start_gst(
@@ -184,8 +189,7 @@ class Video():
 
     def callback(self, sink):
         sample = sink.emit('pull-sample')
-        new_frame = self.gst_to_opencv(sample)
-        self._frame = new_frame
+        self._new_frame = self.gst_to_opencv(sample)
 
         return Gst.FlowReturn.OK
 
@@ -194,14 +198,22 @@ if __name__ == '__main__':
     # Create the video object
     # Add port= if is necessary to use a different one
     video = Video()
+    
+    print('Initialising stream...')
+    waited = 0
+    while not video.frame_available():
+        waited += 1
+        print('\r  Frame not available (x{})'.format(waited), end='')
+        cv2.waitKey(30)
+    print('\nSuccess!\nStarting streaming - press "q" to quit.')
 
     while True:
-        # Wait for the next frame
-        if not video.frame_available():
-            continue
-
-        frame = video.frame()
-        cv2.imshow('frame', frame)
+        # Wait for the next frame to become available
+        if video.frame_available():
+            # Only retrieve and display a frame if it's new
+            frame = video.frame()
+            cv2.imshow('frame', frame)
+        # Allow frame to display, and check if user wants to quit
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 ```
