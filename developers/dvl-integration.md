@@ -66,7 +66,7 @@ The DVL data is sent by the [VISION_POSITION_DELTA](https://mavlink.io/en/messag
 
 ## Installing the ArduSub beta firmware
 
-Click **beta** under the update pixhawk section in the [System Page](http://localhost:4000/reference/companion/system.html).
+Click **beta** under the update pixhawk section in the [System Page](/reference/companion/system.html).
 
 ## PIDs and Other Important Parameters
 
