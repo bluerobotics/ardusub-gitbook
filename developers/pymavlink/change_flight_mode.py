@@ -35,11 +35,13 @@ master.mav.set_mode_send(
 
 while True:
     # Wait for ACK command
+    # Would be good to add mechanism to avoid endlessly blocking
+    # if the autopilot sends a NACK or never receives the message
     ack_msg = master.recv_match(type='COMMAND_ACK', blocking=True)
     ack_msg = ack_msg.to_dict()
 
-    # Check if command in the same in `set_mode`
-    if ack_msg['command'] != mavutil.mavlink.MAVLINK_MSG_ID_SET_MODE:
+    # Continue waiting if the acknowledged command is not `set_mode`
+    if ack_msg['command'] != mavutil.mavlink.MAV_CMD_DO_SET_MODE:
         continue
 
     # Print the ACK result !
