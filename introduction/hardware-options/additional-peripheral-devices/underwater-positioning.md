@@ -30,7 +30,7 @@ SBL systems can produce better positioning accuracy in highly reflective environ
 
 ## Supported SBL Systems
 
-* [Water Linked Underwater GPS Explorer Kit](https://store.waterlinked.com/underwater-gps/)
+* [Water Linked Underwater GPS Explorer Kit](https://waterlinked.com/underwater-gps/)
 
 # USBL Positioning Systems
 
