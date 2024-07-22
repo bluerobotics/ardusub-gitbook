@@ -226,17 +226,13 @@ if __name__ == '__main__':
  * BlueRov video capture example
  * Based on:
  * https://stackoverflow.com/questions/10403588/adding-opencv-processing-to-gstreamer-application
+ * Should be compiled with: g++ -g main.cpp `pkg-config --cflags --libs opencv4 gstreamer-1.0 gstreamer-app-1.0` -o example && ./example
  */
-
-// Include atomic std library
 #include <atomic>
-
-// Include gstreamer library
+#include <cstdio>
 #include <gst/gst.h>
 #include <gst/app/app.h>
-
-// Include OpenCV library
-#include <opencv.hpp>
+#include <opencv2/opencv.hpp>
 
 // Share frame between main loop and gstreamer callback
 std::atomic<cv::Mat*> atomicFrame;
@@ -341,7 +337,7 @@ int main(int argc, char *argv[]) {
     gchar *descr = g_strdup(
         "udpsrc port=5600 "
         "! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! avdec_h264 "
-        "! decodebin ! videoconvert ! video/x-raw,format=(string)BGR ! videoconvert "
+        "! videoconvert ! video/x-raw,format=(string)BGR ! videoconvert "
         "! appsink name=sink emit-signals=true sync=false max-buffers=1 drop=true"
     );
 
@@ -380,9 +376,9 @@ int main(int argc, char *argv[]) {
     while(1) {
         g_main_iteration(false);
 
-        cv::Mat* frame = atomicFrame.load();
+        const cv::Mat* frame = atomicFrame.exchange(nullptr);
         if(frame) {
-            cv::imshow("Frame", atomicFrame.load()[0]);
+            cv::imshow("Frame", *frame);
             cv::waitKey(30);
         }
     }
