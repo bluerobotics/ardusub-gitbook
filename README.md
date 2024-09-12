@@ -1,8 +1,10 @@
+> ⚠️ **Warning** ⚠️ The Companion onboard computer software is no longer being developed or supported. New projects and vehicles are recommended to use [BlueOS](https://blueos.cloud/docs/blueos/latest/) instead.
+
 # Overview
 
-> **Note** The information in this guide applies to ArduSub V3.5 and up. If you are running an older version, you should [update](/quick-start/installing-ardusub.md).
-
 ## ArduSub and the ArduPilot Project
+
+> **Note** The information in this guide applies to ArduSub V3.5 and up. If you are running an older version, you should [update](/quick-start/installing-ardusub.md).
 
 The ArduSub project is a fully-featured open-source solution for remotely operated underwater vehicles (ROVs) and autonomous underwater vehicles (AUVs). ArduSub is a part of the [ArduPilot project](http://ardupilot.org/), and was originally derived from the ArduCopter code. ArduSub has extensive capabilities out of the box including feedback stability control, depth and heading hold, and autonomous navigation.
 
