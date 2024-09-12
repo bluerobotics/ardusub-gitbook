@@ -1,5 +1,8 @@
+> **Warning** If you are using BlueOS, please follow the [new documentation](https://blueos.cloud/docs).
+
 # Installing the Companion Computer Software Image
 
+## SD card
 >**Note** The current version of Companion is **v0.0.31**. If your system is out of date you can update by either installing a fresh image with the instructions below or connecting to Wi-Fi and performing a [Software Update](#software-update).
 
 The operating system and supporting software is installed by writing a pre-configured `.img` file to an SD Card which is then inserted into the Companion Computer (Raspberry Pi). 
