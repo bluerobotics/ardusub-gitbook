@@ -1,3 +1,10 @@
+<meta http-equiv="refresh" content="0; URL=https://ardupilot.org/sub/docs/parameters-Sub-stable-V4.1.2.html" />
+
+# This documentation has been moved to [https://ardupilot.org/sub/docs/parameters.html](https://ardupilot.org/sub/docs/parameters.html).
+
+## You should be automatically redirected.
+
+---
 
 This is a complete list of the parameters which can be set via the MAVLink protocol in the EEPROM of your APM to control vehicle behaviour. This list is automatically generated from the latest ardupilot source code, and so may contain parameters which are not yet in the stable released versions of the code. Some parameters may only be available for developers, and are enabled at compile-time.
 
