@@ -1,3 +1,15 @@
+# ⚠️  ARCHIVE NOTICE ⚠️
+
+This documentation is being split up, and transferred to other sites:
+
+- ArduSub is being moved to the [ArduPilot wiki](https://ardupilot.org/sub) ([GitHub](https://github.com/ArduPilot/ardupilot_wiki/tree/master/sub))
+- The Blue Robotics Companion Software has been replaced by [BlueOS](https://blueos.cloud/docs) ([GitHub](https://github.com/bluerobotics/BlueOS-docs))
+- Control Station Software (GCS) documentation can be found at
+    - [QGroundControl](https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/) ([GitHub](https://github.com/mavlink/qgroundcontrol/tree/master/docs))
+    - [Cockpit](https://blueos.cloud/cockpit/docs/) ([GitHub](https://github.com/bluerobotics/Cockpit-docs))
+
+---
+
 # Overview
 
 > **Note** The information in this guide applies to ArduSub V3.5 and up. If you are running an older version, you should [update](/quick-start/installing-ardusub.md).
