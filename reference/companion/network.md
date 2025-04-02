@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Network
 
 The web interface by default opens at the [Network](http://192.168.2.2:2770/network) page. This page allows users to:

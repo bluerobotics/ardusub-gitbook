@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Required Software
 
 The ArduSub control system is made up of three major software components:

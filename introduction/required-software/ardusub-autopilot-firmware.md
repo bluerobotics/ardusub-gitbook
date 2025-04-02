@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # ArduSub Autopilot Firmware
 
 The ArduSub firmware is a binary file that is loaded on to the internal memory of a compatible [autopilot](/introduction/hardware-options/required-hardware/autopilot.md) board. The firmware contains the necessary logic processes to control the specified vehicle type, Sub in this case. Some autopilots (eg. Pixhawk) have an SD card that is used to store data logs. Note that the autopilot firmware is NOT located on the SD card.

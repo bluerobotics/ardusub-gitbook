@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Git
 
 [Git](http://192.168.2.2:2770/git) page is used for:

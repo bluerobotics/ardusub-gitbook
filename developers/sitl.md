@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # S.I.T.L (Software In The Loop)
 
 SITL is a simulator that allows you to run ArduSub without any hardware. It is a build of the autopilot code using an ordinary C++ compiler, giving you a native executable that allows you to test the behaviour of the vehicle.

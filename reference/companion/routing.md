@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Routing
 
 The [Routing](http://192.168.2.2:2770/routing) page can be used to route serial communications between serial devices and network ports. It can be used to create one-to-one, and one-to-many connections. The configuration on this page is persistent and loaded at boot. The configuration is stored in the file `~/routing.conf`.

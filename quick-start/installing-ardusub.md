@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Installing ArduSub
 
 >**Note** The current Stable version of ArduSub is **v4.0.3**. If your firmware is out of date, it may be updated by following one of the methods below.

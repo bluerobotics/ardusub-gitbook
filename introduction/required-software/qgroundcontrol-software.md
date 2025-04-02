@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # QGroundControl Software
 
 QGroundControl (QGC) is the Graphical User Interface (GUI) for ArduSub, which provides setup and control functionality. QGC runs on Windows, OS X, and Linux platforms.

@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # MAVProxy
 
 [MAVProxy](http://192.168.2.2:2770/mavproxy) page allows the user to:

@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Companion Web Interface
 
 The Companion computer([Install instructions](/quick-start/installing-companion.md)) hosts a useful web-interface with different pages for accessing parameters and functionalities associated with Companion. When a Companion computer is connected to a ground computer, a user can access the web-interface on [192.168.2.2:2770](http://192.168.2.2:2770). Users can access Network, System, Camera and Routing pages alongside a number of other user friendly options as described below.

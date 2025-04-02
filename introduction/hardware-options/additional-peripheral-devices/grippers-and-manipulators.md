@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Grippers and Manipulators
 
 A gripper is a useful tool for picking up small objects, attaching recovery lines, or freeing a snagged tether. Other manipulators may be useful in cleaning, inspection, or repair tasks.

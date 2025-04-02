@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Leak Sensor
 
 Leak sensors are an important addition for saving an electronics enclosure should a leak occur.

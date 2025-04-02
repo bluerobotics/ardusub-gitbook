@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Features While in Operation
 
 ## Joystick Button Functions

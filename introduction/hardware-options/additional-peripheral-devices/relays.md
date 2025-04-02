@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Relays
 
 Relays are useful for turning higher voltage (>5V DC) auxiliary equipment on and off. 

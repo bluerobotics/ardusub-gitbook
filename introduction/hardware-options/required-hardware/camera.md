@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Camera
 
 The Companion Computer software contains a series of drivers which will stream FHD video from the vehicle to the Ground Control Station (GCS) at the surface. Only one camera may be connected to the Companion at a time. Support for multiple camera streams is planned, but not implemented at this time.

@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Joystick
 
 A joystick (also known as a hand controller, gamepad, etc) when connected to the topside computer is how the user provides control inputs to the vehicle. These inputs may be in the form of movement (stick control) or action items (button presses).

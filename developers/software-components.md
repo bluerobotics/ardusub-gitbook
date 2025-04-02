@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Software Components
 
 There are three major software components involved in the operation of ArduSub:

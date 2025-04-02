@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Tether
 
 A tether is a length of cable which connects the [Companion Computer](/introduction/hardware-options/required-hardware/companion-computer.md) to the [Topside Computer](/introduction/hardware-options/required-hardware/topside-computer.md). Radio frequency (RF) waves do not travel far through water and acoustic modems have limited bandwidth, so a tether is a critical component to connect the vehicle to a surface computer.

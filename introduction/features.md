@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Features
 
 ArduSub has many features including:

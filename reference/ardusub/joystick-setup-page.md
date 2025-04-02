@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Joystick Setup Page
 
 When a compatible [joystick](/introduction/hardware-options/required-hardware/joystick.md) is plugged into the [topside computer](/introduction/hardware-options/required-hardware/topside-computer.md), the Joystick Setup page will become active and a small red icon will appear in the top toolbar. After the calibration process is complete and the joystick is enabled, this icon will turn white.

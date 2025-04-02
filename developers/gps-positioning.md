@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # GPS Positioning
 
 The ROV autopilot is capable of utilizing an external positioning system to perform autonomous maneuvers like station keeping, 'click to go here', transects, and pre-planned waypoint missions. All GPS/positioning functionality in ArduSub is IN DEVELOPMENT. The **position-enabled** flight modes are not considered stable. However, a positioning system may be integrated in order to display the position of the vehicle on the Ground Control Station map. This can be done without making use of the position-enabled flight modes, and this sort of operation is considered stable.

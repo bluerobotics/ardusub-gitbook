@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Pymavlink
 
 ArduSub communicates with a protocol called MAVLink. Pymavlink is a python implementation of the MAVLink protocol. With pymavlink, it is possible to create a python script to read sensor data and send commands to an ArduSub vehicle.

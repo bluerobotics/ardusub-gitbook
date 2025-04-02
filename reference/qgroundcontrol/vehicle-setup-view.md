@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Vehicle Setup View
 
 The Vehicle Setup View is used to configure a new ArduSub vehicle prior to first use and tune a configured vehicle.

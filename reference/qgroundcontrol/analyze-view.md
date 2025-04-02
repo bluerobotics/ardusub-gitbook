@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Analyze View
 
 ## Log Download Page

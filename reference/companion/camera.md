@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Camera
 
 The [Camera](http://192.168.2.2:2770/camera) page allows the user to view and make changes to:

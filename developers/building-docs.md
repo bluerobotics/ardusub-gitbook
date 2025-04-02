@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Serve Docs Locally
 
 ## Install npm

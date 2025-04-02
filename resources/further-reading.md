@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Further Reading
 
 The following websites and resources have more information on specific components or pieces of documentation. Some are just cool to keep tabs on like the blogs!

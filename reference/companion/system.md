@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # System
 
 The [System](http://192.168.2.2:2770/system) page provides the following functionalities and features:

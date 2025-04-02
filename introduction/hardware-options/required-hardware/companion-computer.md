@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Companion Computer
 
 Companion Computers are usually small single board computers (SBCs) which can be connected to an autopilot board and communicate using the [MAVLink protocol](https://ardupilot.org/dev/docs/mavlink-basics.html). A Companion Computer will take in MAVLink telemetry from the [autopilot](/introduction/hardware-options/required-hardware/autopilot.md) and can route or process the telemetry data. 

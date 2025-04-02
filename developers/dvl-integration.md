@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # DVL integration (BETA)
 
 The DVL integration with ArduSub is in a BETA stage and is currently unsupported for normal use. This document is provided to instruct beta testers and developers how to test the BETA stage integration. There is no guarantee that the DVL integration will work for any particular application.

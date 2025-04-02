@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Community
 
 ## Blue Robotics Forum

@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Application Settings View
 
 The _Application Settings View_ is used to configure the settings for the QGroundControl application (rather than a specific vehicle). You do not have to have a vehicle connected to change these values.

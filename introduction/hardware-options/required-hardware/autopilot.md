@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Autopilot
 
 In the ArduSub control system, the autopilot board (also known as a flight controller) is the component which the ArduSub firmware is loaded onto. The autopilot processes the pilot input and sensor data, and controls the motors, lights, servos, and relays on the vehicle.

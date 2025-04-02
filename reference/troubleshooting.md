@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Troubleshooting
 
 This page shares issues that users have run into and how they were resolved. Hopefully this will help to solves issues for others.
