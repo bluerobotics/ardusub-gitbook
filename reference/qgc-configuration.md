@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # QGroundControl Features and Configuration
 
 QGroundControl (QGC) is the Graphical User Interface (GUI) for ArduSub, which provides setup and control functionality. It is installed on the [Topside Computer](/introduction/hardware-options/required-hardware/topside-computer.md).

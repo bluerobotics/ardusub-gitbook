@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Power Supply
 
 A stable power supply and power distribution system is an integral part of any underwater vehicle. The power supply needs to be able to power all the onboard electronics and keep up with the current draw of the thrusters.

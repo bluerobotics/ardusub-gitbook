@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # MAVLink
 
 You can check the official website for more information about it [here](https://mavlink.io).

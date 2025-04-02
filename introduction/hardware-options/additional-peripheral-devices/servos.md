@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Servos
 
 Servos are a useful addition to any underwater vehicle build where a component needs to be actuated or rotated. Normal servos can be installed inside the watertight enclosures to rotate things such as cameras. Depth rated servos can be used outside of enclosures.

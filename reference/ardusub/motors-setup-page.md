@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Motors Setup Page
 
 **The direction that the motors will spin depends on how the vehicle and motors were assembled, so each motor's forward/reverse direction must be configured in software.**

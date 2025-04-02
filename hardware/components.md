@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Hardware Components
 
 We will divide the hardware required to run ArduSub into three categories:

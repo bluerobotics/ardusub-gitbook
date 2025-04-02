@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Fly View
 
 The Fly View is used to control and monitor the vehicle when diving.

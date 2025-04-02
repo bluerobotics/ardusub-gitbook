@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Initial Setup
 
 After the software is installed on the electronics, the electronics need to be wired and the software needs to be configured. mounting the controller to the vehicle, connecting it to the tether, power, and motors, and then performing initial configuration and calibration.

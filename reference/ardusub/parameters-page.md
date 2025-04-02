@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Parameters Page
 
 The Parameters page allows users to find and modify any of the parameters associated with the vehicle.

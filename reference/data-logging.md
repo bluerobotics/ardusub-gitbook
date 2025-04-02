@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Logging
 
 There are two types of logs that can be used to diagnose problems while running ArduSub, or to retrieve data for post-processing.

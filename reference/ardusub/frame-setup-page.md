@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Frame Setup Page
 
 The Frame Setup page configures the MAIN Outputs of the autopilot board to coincide with how many and in which orientation thrusters have been installed on a vehicle frame.

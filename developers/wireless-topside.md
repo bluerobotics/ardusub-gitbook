@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Wireless Topside Connection
 
 These instructions assume that you have already set up your ROV to the surface computer via the tether and static IP of 192.168.2.1 on the surface computer, according to the directions in the [Network Setup](/quick-start/installing-companion.md#network-setup) section. These instructions were compiled using the [TP-LINK TL-WR802N](http://www.tp-link.com/us/products/details/cat-5506_TL-WR802N.html) router.

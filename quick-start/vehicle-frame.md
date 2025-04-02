@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Building a Vehicle Frame
 
 ## Frame Selection

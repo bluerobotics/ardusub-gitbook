@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Recommended Extra Hardware
 
 The following components are **not** required to have a working control system, but are highly recommended to expand functionality and utility.

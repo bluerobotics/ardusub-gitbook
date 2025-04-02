@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Power Setup Page
 The Power Setup page is used to configure power sensing module parameters.
 

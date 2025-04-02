@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Thrusters
 
 Thrusters are necessary to maneuver an underwater vehicle around. The number and orientation of thrusters on a vehicle determines the number of degrees of freedom (DoF) it may maneuver in.

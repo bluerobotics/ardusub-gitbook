@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Safety Setup Page (Failsafes)
 
 The Safety Setup page allows you to configure the failsafe settings.

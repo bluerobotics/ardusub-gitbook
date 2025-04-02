@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Downloads
 
 ## ArduSub Firmware Files

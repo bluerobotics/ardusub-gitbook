@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # File System Access
 
 [File Manager](http://192.168.2.2:7777) page can be used to:

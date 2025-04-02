@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Water Linked
 
 [Waterlinked](http://192.168.2.2:2770/waterlinked) page can be used to: 

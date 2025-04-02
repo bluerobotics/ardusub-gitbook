@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # MAVLink REST API
 
 Starting from companion 0.0.19, a MAVLink REST API ([http://192.168.2.2:4777/mavlink](http://192.168.2.2:4777/mavlink)) endpoint is available.

@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Configuring Outputs
 
 The Pixhawk has 14 servo output channels which are configured via the [SERVOn_* parameters](/operators-manual/full-parameter-list.html#servon-parameters) and the [BRD_PWM_COUNT](/operators-manual/full-parameter-list.html#brdpwmcount-auxiliary-pin-config) parameter.

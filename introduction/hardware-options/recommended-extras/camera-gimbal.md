@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Camera Gimbal
 
 ArduSub supports control and attitude atabilization for up to 3-axis gimbals. The most common gimbal type for underwater vehicles is a 1-axis tilt mount, since the majority of standard ROV frames have control over the other Degrees of Freedom (DoF).

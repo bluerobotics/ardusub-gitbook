@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Getting Ready for Your First Dive 
 Before putting the vehicle in the water, there are a few things which will need to be checked.
 

@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Hardware Options
 
 The following sections detail all the available harware options for ArduSub. If a specific device or component is not mentioned, please ask in the [ArduSub category](https://discuss.bluerobotics.com/c/bluerov2-ardusub/ardusub/16) of the Blue Robotics forums.

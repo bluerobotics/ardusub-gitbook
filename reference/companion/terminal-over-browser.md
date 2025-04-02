@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Terminal over browser
 
 [Terminal](http://192.168.2.2:8088) page can be used to:

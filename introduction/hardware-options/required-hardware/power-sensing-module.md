@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Power Sensing Module
 
 A power sensing module provides analog current and voltage sensing to an autopilot onboard the vehicle. ArduSub supports various modules in the firmware and when properly set, QGroundControl will give visual indications of battery level and current consumption.

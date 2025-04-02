@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Other Features
 
 ## Video Overlay

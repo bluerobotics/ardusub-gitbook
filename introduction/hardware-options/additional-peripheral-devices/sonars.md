@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Sonars
 
 Sonars are useful pieces of equipment in situations where visibility is low. Sonars can help get ranges to surfaces or acoustically image targets to better understand their shape.

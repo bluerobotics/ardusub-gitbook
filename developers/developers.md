@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Developers
 
 ## How to Get the Code

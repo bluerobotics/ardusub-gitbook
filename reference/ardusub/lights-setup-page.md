@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Lights Setup Page
 
 ArduSub supports controlling up to two independent lights channels.

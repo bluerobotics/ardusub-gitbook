@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Required Hardware
 
 The following pages detail the minimum required hardware to have a functioning control system. Where applicable, alternate options are provided when they have been tested and confirmed to work. 

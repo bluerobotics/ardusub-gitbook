@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Firmware Page
 
 The Firmware Page allows ArduSub firmware to be downloaded from the internet and directly installed onto Pixhawk-family flight-controller boards. By default QGC will install the current stable version, but you can also choose to install beta builds, daily builds, or custom firmware files.

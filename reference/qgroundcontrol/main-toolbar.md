@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Main Toolbar
 
 The main menu/tool bar provides access to the different application views, and high level status information for the connected vehicle. The menu is the same in all views except for "Plan View" (which has a single icon to take you back to "Fly" view).

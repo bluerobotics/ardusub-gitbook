@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # Applications
 
 ArduSub provides the functionality needed for a wide variety of applications from simple observation-class ROVs to sophisticated research-class ROVs. Here's a short list of applications that ArduSub-powered ROVs can be used for:

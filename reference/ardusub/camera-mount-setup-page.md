@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Camera Mount Setup Page
 
 The Camera Mount Setup Page allows for the configuration of an installed camera pan/tilt/roll mount.

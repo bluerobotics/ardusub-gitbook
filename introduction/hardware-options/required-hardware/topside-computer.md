@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Topside Computer
 
 The topside computer runs the QGroundControl application and is the device in which the [Companion Computer](/introduction/hardware-options/required-hardware/companion-computer.md) on the vehicle is connected to. The topside computer is where the live video feed and telemetry information is observed. A [joystick](/introduction/hardware-options/required-hardware/joystick.md) must be plugged in for manual control.

@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 # OpenCV
 
 OpenCV (Open Source Computer Vision) is a library to help the development of computer vision software.

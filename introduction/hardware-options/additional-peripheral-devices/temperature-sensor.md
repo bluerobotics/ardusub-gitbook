@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Temperature Sensor
 
 An auxiliary external temperature sensor may be added for obtaining faster and more accurate readings than those from the integrated pressure sensors. Only one sensor may be connected at a time.

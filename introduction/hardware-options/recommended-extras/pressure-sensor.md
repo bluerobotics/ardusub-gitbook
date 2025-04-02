@@ -1,3 +1,5 @@
+{% include "../../../archive-notice.html" %}
+
 # Pressure Sensor
 
 An external pressure sensor is required for obtaining depth readings and enabling [Depth Hold](/reference/ardusub/features-while-in-operation.md#flight-modes) functionality. Only one sensor may be connected at a time.

@@ -1,3 +1,5 @@
+{% include "../archive-notice.html" %}
+
 <meta http-equiv="refresh" content="0; URL=https://ardupilot.org/sub/docs/parameters-Sub-stable-V4.1.2.html" />
 
 # This documentation has been moved to [https://ardupilot.org/sub/docs/parameters.html](https://ardupilot.org/sub/docs/parameters.html).

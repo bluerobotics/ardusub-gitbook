@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Connection Diagrams
 
 The following connection diagrams show how to connect devices to the ArduSub control system. 

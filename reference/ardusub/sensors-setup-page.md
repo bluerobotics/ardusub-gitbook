@@ -1,3 +1,5 @@
+{% include "../../archive-notice.html" %}
+
 # Sensors Setup Page
 
 The Sensors Setup page allows users to calibrate the vehicle's accelerometer, compass, pressure sensor.
