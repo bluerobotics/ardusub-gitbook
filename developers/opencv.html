@@ -1798,17 +1798,13 @@ gi.require_version(<span class="hljs-string">&apos;Gst&apos;</span>, <span class
  * BlueRov video capture example
  * Based on:
  * https://stackoverflow.com/questions/10403588/adding-opencv-processing-to-gstreamer-application
+ * Should be compiled with: g++ -g main.cpp `pkg-config --cflags --libs opencv4 gstreamer-1.0 gstreamer-app-1.0` -o example &amp;&amp; ./example
  */</span>
-
-<span class="hljs-comment">// Include atomic std library</span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;atomic&gt;</span></span>
-
-<span class="hljs-comment">// Include gstreamer library</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;gst/gst.h&gt;</span></span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;gst/app/app.h&gt;</span></span>
-
-<span class="hljs-comment">// Include OpenCV library</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;opencv.hpp&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;opencv2/opencv.hpp&gt;</span></span>
 
 <span class="hljs-comment">// Share frame between main loop and gstreamer callback</span>
 <span class="hljs-built_in">std</span>::atomic&lt;cv::Mat*&gt; atomicFrame;
@@ -1913,7 +1909,7 @@ gi.require_version(<span class="hljs-string">&apos;Gst&apos;</span>, <span class
     gchar *descr = g_strdup(
         <span class="hljs-string">&quot;udpsrc port=5600 &quot;</span>
         <span class="hljs-string">&quot;! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! avdec_h264 &quot;</span>
-        <span class="hljs-string">&quot;! decodebin ! videoconvert ! video/x-raw,format=(string)BGR ! videoconvert &quot;</span>
+        <span class="hljs-string">&quot;! videoconvert ! video/x-raw,format=(string)BGR ! videoconvert &quot;</span>
         <span class="hljs-string">&quot;! appsink name=sink emit-signals=true sync=false max-buffers=1 drop=true&quot;</span>
     );
 
@@ -1952,9 +1948,9 @@ gi.require_version(<span class="hljs-string">&apos;Gst&apos;</span>, <span class
     <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>) {
         g_main_iteration(<span class="hljs-literal">false</span>);
 
-        cv::Mat* frame = atomicFrame.load();
+        <span class="hljs-keyword">const</span> cv::Mat* frame = atomicFrame.exchange(<span class="hljs-literal">nullptr</span>);
         <span class="hljs-keyword">if</span>(frame) {
-            cv::imshow(<span class="hljs-string">&quot;Frame&quot;</span>, atomicFrame.load()[<span class="hljs-number">0</span>]);
+            cv::imshow(<span class="hljs-string">&quot;Frame&quot;</span>, *frame);
             cv::waitKey(<span class="hljs-number">30</span>);
         }
     }
@@ -2043,7 +2039,7 @@ of the second output to 192.168.2.2.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"OpenCV","level":"4.4","depth":1,"next":{"title":"Pymavlink","level":"4.5","depth":1,"path":"developers/pymavlink.md","ref":"developers/pymavlink.md","articles":[]},"previous":{"title":"Software Components","level":"4.3","depth":1,"path":"developers/software-components.md","ref":"developers/software-components.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">= 3.2.2","theme":"default","variables":{},"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","-validate-links","include-codeblock"],"pluginsConfig":{"collapsible-menu":{},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"},"aerial":{"alert":"warning","picto":"fa-plane"},"gps":{"alert":"info","picto":"fa-map-marker"},"version":{"alert":"info","picto":"fa fa-refresh fa-spin fa-3x fa-fw"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/Ardupilot/ardupilot"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/edit/master/{{filepath_lang}}"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"developers/opencv.md","mtime":"2025-04-07T16:40:29.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-07T16:41:49.064Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"OpenCV","level":"4.4","depth":1,"next":{"title":"Pymavlink","level":"4.5","depth":1,"path":"developers/pymavlink.md","ref":"developers/pymavlink.md","articles":[]},"previous":{"title":"Software Components","level":"4.3","depth":1,"path":"developers/software-components.md","ref":"developers/software-components.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">= 3.2.2","theme":"default","variables":{},"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","-validate-links","include-codeblock"],"pluginsConfig":{"collapsible-menu":{},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"},"aerial":{"alert":"warning","picto":"fa-plane"},"gps":{"alert":"info","picto":"fa-map-marker"},"version":{"alert":"info","picto":"fa fa-refresh fa-spin fa-3x fa-fw"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/Ardupilot/ardupilot"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/bluerobotics/ardusub-gitbook/edit/master/{{filepath_lang}}"}]},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"developers/opencv.md","mtime":"2025-04-08T13:56:23.744Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-08T13:57:51.291Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
