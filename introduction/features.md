@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://ardupilot.org/sub/docs/introduction.html" />
+
+# This documentation has been moved to [https://ardupilot.org/sub/docs/introduction.html](https://ardupilot.org/sub/docs/introduction.html).
+
+## You should be automatically redirected.
+
+---
+
 # Features
 
 ArduSub has many features including:
@@ -13,6 +21,8 @@ ArduSub has many features including:
 - **No Programming Required**
 
 ## Supported Frames
+
+### Moved to [https://ardupilot.org/sub/docs/sub-frames.html](https://ardupilot.org/sub/docs/sub-frames.html)
 
 ArduSub includes a high-level motor library that can configure motors in any configuration. This library is used to implement a number of supported frame configurations. All configurations are shown from **top-down view**. Green thrusters indicate counter-clockwise propellers and blue thrusters indicate clockwise propellers (or vice-versa). Currently supported are:
 
