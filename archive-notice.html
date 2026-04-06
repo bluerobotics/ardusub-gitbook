@@ -1,4 +1,4 @@
-<div style="position:fixed;margin-top:-50px;background-color:rgb(252, 248, 227);color:black;padding:10px;border-radius:5px;width:100%;max-width:770px;">
+<div id="archiveNotice" style="position:fixed;margin-top:-50px;background-color:rgb(252, 248, 227);color:black;padding:10px;border-radius:5px;width:100%;max-width:770px;">
   <h2 style="margin-top:5px;margin-bottom:5px;color:black;">⚠️  ARCHIVE NOTICE ⚠️  </h2>
   <h3 style="margin-top:0px;margin-bottom:5px;color:black;">This documentation is no longer being maintained!</h3>
   <ul>
@@ -6,7 +6,8 @@
     <li>The Companion Computer Software is also archived, and has been replaced by <a href="https://blueos.cloud/">BlueOS</a>.</li>
     <li>For Control Station Software, see <a href="https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/">QGroundControl</a> or <a href="https://blueos.cloud/cockpit/docs">Cockpit</a> (our new alternative).</li>
   </ul>
+  <div style = "display: flex; justify-content:flex-end"><button onclick="document.getElementById('archiveNotice').style.display='none';document.getElementById('noticeSpacer').style.display='none'">OK</button></div>
 </div>
-<hr style="margin-top:210px;"></hr>
+<hr id="noticeSpacer" style="margin-top:250px;"></hr>
 
 <div></div>
