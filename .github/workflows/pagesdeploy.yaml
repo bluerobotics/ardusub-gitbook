@@ -16,7 +16,7 @@ jobs:
           sudo apt update
           sudo apt install python3-pip python3-setuptools
           sudo pip3 install pymavlink
-          sudo pip3 install pylint
+          sudo pip3 install pylint==3.3.9
           sudo pip3 install isort==4.3.21
           sudo npm install gitbook-cli -g
           # fix polyfill issue in gitbook
