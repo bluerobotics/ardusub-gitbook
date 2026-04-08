@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://ardupilot.org/sub/docs/common-use-cases-and-applications.html" />
+
+# This documentation has been moved to [https://ardupilot.org/sub/docs/common-use-cases-and-applications.html](https://ardupilot.org/sub/docs/common-use-cases-and-applications.html).
+
+## You should be automatically redirected.
+
+---
+
 # Applications
 
 ArduSub provides the functionality needed for a wide variety of applications from simple observation-class ROVs to sophisticated research-class ROVs. Here's a short list of applications that ArduSub-powered ROVs can be used for:
