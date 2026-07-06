@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://blueos.cloud/docs/stable/usage/installation/" />
+
+# The old Blue Robotics Companion software is no longer maintained. [Install BlueOS](https://blueos.cloud/docs/stable/usage/installation/) instead!
+
+## You should be automatically redirected.
+
+---
+
 # Installing the Companion Computer Software Image
 
 >**Note** The current version of Companion is **v0.0.31**. If your system is out of date you can update by either installing a fresh image with the instructions below or connecting to Wi-Fi and performing a [Software Update](#software-update).

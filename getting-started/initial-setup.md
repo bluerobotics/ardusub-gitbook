@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://ardupilot.org/sub/docs/ardusub-setup.html" />
+
+# This documentation has been moved to [https://ardupilot.org/sub/docs/ardusub-setup.html](https://ardupilot.org/sub/docs/ardusub-setup.html).
+
+## You should be automatically redirected.
+
+---
+
 # Initial Setup
 
 After the software is installed on the electronics, the electronics need to be wired and the software needs to be configured. mounting the controller to the vehicle, connecting it to the tether, power, and motors, and then performing initial configuration and calibration.

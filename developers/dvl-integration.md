@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://ardupilot.org/dev/docs/building-the-code.html" />
+
+# ArduPilot firmware building instructions can be found at [https://ardupilot.org/dev/docs/building-the-code.html](https://ardupilot.org/dev/docs/building-the-code.html).
+
+## You should be automatically redirected.
+
+---
+
 # DVL integration (BETA)
 
 The DVL integration with ArduSub is in a BETA stage and is currently unsupported for normal use. This document is provided to instruct beta testers and developers how to test the BETA stage integration. There is no guarantee that the DVL integration will work for any particular application.

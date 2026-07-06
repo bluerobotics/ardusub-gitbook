@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://ardupilot.org/sub/docs/sub-frames.html" />
+
+# This documentation has been moved to [https://ardupilot.org/sub/docs/sub-frames.html](https://ardupilot.org/sub/docs/sub-frames.html).
+
+## You should be automatically redirected.
+
+---
+
 # Building a Vehicle Frame
 
 ## Frame Selection

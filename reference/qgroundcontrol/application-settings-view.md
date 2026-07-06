@@ -1,5 +1,13 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/settings_view/settings_view.html" />
+
+# This documentation has been moved to [https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/settings_view/settings_view.html](https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/settings_view/settings_view.html).
+
+## You should be automatically redirected.
+
+---
+
 # Application Settings View
 
 The _Application Settings View_ is used to configure the settings for the QGroundControl application (rather than a specific vehicle). You do not have to have a vehicle connected to change these values.

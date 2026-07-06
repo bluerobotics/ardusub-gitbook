@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://blueos.cloud/cockpit/docs/stable/usage/installation/" />
+
+# Blue Robotics no longer maintains subsea functionality in QGroundControl. [Install Cockpit](https://blueos.cloud/cockpit/docs/stable/usage/installation/) instead!
+
+## You should be automatically redirected.
+
+---
+
 # QGroundControl Features and Configuration
 
 QGroundControl (QGC) is the Graphical User Interface (GUI) for ArduSub, which provides setup and control functionality. It is installed on the [Topside Computer](/introduction/hardware-options/required-hardware/topside-computer.md).

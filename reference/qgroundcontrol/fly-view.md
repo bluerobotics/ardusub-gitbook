@@ -1,5 +1,13 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/fly_view/fly_view.html" />
+
+# This documentation has been moved to [https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/fly_view/fly_view.html](https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/fly_view/fly_view.html).
+
+## You should be automatically redirected.
+
+---
+
 # Fly View
 
 The Fly View is used to control and monitor the vehicle when diving.

@@ -1,5 +1,13 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/plan_view/plan_view.html" />
+
+# This documentation has been moved to [https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/plan_view/plan_view.html](https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/plan_view/plan_view.html).
+
+## You should be automatically redirected.
+
+---
+
 # Plan View
 
 The Plan View is used to plan autonomous missions for your vehicle, and upload them to the vehicle. Once the mission is planned and sent to the vehicle, you switch to the [Fly View]() to run the mission.

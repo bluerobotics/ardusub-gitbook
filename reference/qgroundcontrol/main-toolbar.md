@@ -1,5 +1,13 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/toolbar/toolbar.html" />
+
+# This documentation has been moved to [https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/toolbar/toolbar.html](https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/toolbar/toolbar.html).
+
+## You should be automatically redirected.
+
+---
+
 # Main Toolbar
 
 The main menu/tool bar provides access to the different application views, and high level status information for the connected vehicle. The menu is the same in all views except for "Plan View" (which has a single icon to take you back to "Fly" view).

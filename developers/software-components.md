@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://blueos.cloud/docs/stable/usage/overview/#what-s-in-a-blueos-vehicle" />
+
+# This documentation has been moved to [https://blueos.cloud/docs/stable/usage/overview/#what-s-in-a-blueos-vehicle](https://blueos.cloud/docs/stable/usage/overview/#what-s-in-a-blueos-vehicle).
+
+## You should be automatically redirected.
+
+---
+
 # Software Components
 
 There are three major software components involved in the operation of ArduSub:

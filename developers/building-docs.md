@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://ardupilot.org/dev/docs/common-wiki_editing_guide.html" />
+
+# ArduPilot documentation editing instructions can be found at [https://ardupilot.org/dev/docs/common-wiki_editing_guide.html](https://ardupilot.org/dev/docs/common-wiki_editing_guide.html).
+
+## You should be automatically redirected.
+
+---
+
 # Serve Docs Locally
 
 ## Install npm

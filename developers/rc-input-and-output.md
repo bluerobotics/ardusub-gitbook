@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://ardupilot.org/sub/docs/rc-setup.html" />
+
+# This documentation has been moved to [https://ardupilot.org/sub/docs/rc-setup.html](https://ardupilot.org/sub/docs/rc-setup.html).
+
+## You should be automatically redirected.
+
+---
+
 # RC input and output
 
 ArduSub is designed around two independent concepts of *RC Input* and *RC Output*. RC Input is an array of control channels representing pilot inputs like forward and yaw commands. RC Output is an array of channels representing the pulse widths to write to individual servo output pins. Although ArduSub does not support the use of RC receivers, the logic is the same and is applied to joystick inputs instead. Joystick input and RC Input are synonymous in ArduSub.

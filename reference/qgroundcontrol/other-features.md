@@ -1,5 +1,13 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/fly_view/video_overlay.html" />
+
+# This documentation has been moved to [https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/fly_view/video_overlay.html](https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/fly_view/video_overlay.html).
+
+## You should be automatically redirected.
+
+---
+
 # Other Features
 
 ## Video Overlay

@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://ardupilot.org/dev/docs/building-the-code.html" />
+
+# ArduPilot firmware building instructions can be found at [https://ardupilot.org/dev/docs/building-the-code.html](https://ardupilot.org/dev/docs/building-the-code.html).
+
+## You should be automatically redirected.
+
+---
+
 # Developers
 
 ## How to Get the Code

@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://bluerobotics.com/learn/bluerov2-software-setup/#choose-your-operating-system" />
+
+# This documentation has been moved to [https://bluerobotics.com/learn/bluerov2-software-setup/#choose-your-operating-system](https://bluerobotics.com/learn/bluerov2-software-setup/#choose-your-operating-system).
+
+## You should be automatically redirected.
+
+---
+
 # Installation
 
 ## QGroundControl

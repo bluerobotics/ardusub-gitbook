@@ -1,5 +1,14 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://blueos.cloud/docs/stable/usage/advanced/#mavlink-endpoints" />
+
+# The old Blue Robotics Companion software is no longer maintained. 
+
+## Redirecting to [the replacement BlueOS feature](https://blueos.cloud/docs/stable/usage/advanced/#mavlink-endpoints)...
+
+---
+
+
 # MAVLink REST API
 
 Starting from companion 0.0.19, a MAVLink REST API ([http://192.168.2.2:4777/mavlink](http://192.168.2.2:4777/mavlink)) endpoint is available.

@@ -1,5 +1,13 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/analyze_view/" />
+
+# This documentation has been moved to [https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/analyze_view/](https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/analyze_view/).
+
+## You should be automatically redirected.
+
+---
+
 # Analyze View
 
 ## Log Download Page

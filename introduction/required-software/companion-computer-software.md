@@ -1,5 +1,13 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://blueos.cloud/docs/" />
+
+# The old Blue Robotics Companion software is no longer maintained. We recommend [BlueOS](https://blueos.cloud/docs/) instead!
+
+## You should be automatically redirected.
+
+---
+
 # Companion Computer Software
 
 The Companion Computer software image is a modified version of [Raspbian](https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit) that is written onto a microSD card and installed in the [Companion Computer](/introduction/hardware-options/required-hardware/companion-computer.md). 

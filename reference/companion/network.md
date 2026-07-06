@@ -1,5 +1,13 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://blueos.cloud/docs/stable/usage/getting-started/#connect-internet" />
+
+# The old Blue Robotics Companion software is no longer maintained. 
+
+## Redirecting to [the replacement BlueOS feature](https://blueos.cloud/docs/stable/usage/getting-started/#connect-internet)...
+
+---
+
 # Network
 
 The web interface by default opens at the [Network](http://192.168.2.2:2770/network) page. This page allows users to:

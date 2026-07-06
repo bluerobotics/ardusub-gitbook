@@ -1,5 +1,13 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/setup_view/setup_view.html" />
+
+# This documentation has been moved to [https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/setup_view/setup_view.html](https://docs.qgroundcontrol.com/Stable_V4.3/en/qgc-user-guide/setup_view/setup_view.html).
+
+## You should be automatically redirected.
+
+---
+
 # Vehicle Setup View
 
 The Vehicle Setup View is used to configure a new ArduSub vehicle prior to first use and tune a configured vehicle.
