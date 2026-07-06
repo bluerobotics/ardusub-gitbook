@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://blueos.cloud/docs/stable/usage/overview/#what-s-in-a-blueos-vehicle" />
+
+# This documentation has been moved to [https://blueos.cloud/docs/stable/usage/overview/#what-s-in-a-blueos-vehicle](https://blueos.cloud/docs/stable/usage/overview/#what-s-in-a-blueos-vehicle).
+
+## You should be automatically redirected.
+
+---
+
 # Required Software
 
 The ArduSub control system is made up of three major software components:

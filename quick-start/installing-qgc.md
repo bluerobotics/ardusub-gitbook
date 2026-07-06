@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://blueos.cloud/cockpit/docs/stable/usage/installation/" />
+
+# Blue Robotics no longer maintains subsea functionality in QGroundControl. [Install Cockpit](https://blueos.cloud/cockpit/docs/stable/usage/installation/) instead!
+
+## You should be automatically redirected.
+
+---
+
 # QGroundControl Installation
 
 >**Note** The latest recommended version of QGroundControl is **v4.2.3**. If your software is out of date, please uninstall the QGC application and download the latest version below.

@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://ardupilot.org/sub/docs/common-logs.html" />
+
+# This documentation has been moved to [https://ardupilot.org/sub/docs/common-logs.html](https://ardupilot.org/sub/docs/common-logs.html).
+
+## You should be automatically redirected.
+
+---
+
 # Logging
 
 There are two types of logs that can be used to diagnose problems while running ArduSub, or to retrieve data for post-processing.

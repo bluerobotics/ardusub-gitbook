@@ -1,5 +1,13 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://blueos.cloud/docs/stable/usage/advanced/#interface-overview" />
+
+# The old Blue Robotics Companion software is no longer maintained. 
+
+## Redirecting to [the replacement BlueOS feature](https://blueos.cloud/docs/stable/usage/advanced/#interface-overview)...
+
+---
+
 # Companion Web Interface
 
 The Companion computer([Install instructions](/getting-started/installation.md#raspberry-pi)) hosts a useful web-interface with different pages for accessing parameters and functionalities associated with Companion. When a Companion computer is connected to a ground computer, a user can access the web-interface on [192.168.2.2:2770](http://192.168.2.2:2770). Users can access Network, System, Camera and Routing pages alongside a number of other user friendly options as described below.

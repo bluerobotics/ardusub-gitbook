@@ -1,5 +1,13 @@
 {% include "../../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://blueos.cloud/docs/stable/usage/advanced/#video-streams" />
+
+# The old Blue Robotics Companion software is no longer maintained. 
+
+## Redirecting to [the replacement BlueOS feature](https://blueos.cloud/docs/stable/usage/advanced/#video-streams)...
+
+---
+
 # Camera
 
 The [Camera](http://192.168.2.2:2770/camera) page allows the user to view and make changes to:

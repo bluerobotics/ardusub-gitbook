@@ -1,5 +1,13 @@
 {% include "../archive-notice.html" %}
 
+<meta http-equiv="refresh" content="0; URL=https://blueos.cloud/docs/stable/usage/advanced/#autopilot-firmware" />
+
+# ArduSub can be installed via the BlueOS [Autopilot Firmware page](https://blueos.cloud/docs/stable/usage/advanced/#autopilot-firmware). Make sure to visit the [Vehicle Setup](https://blueos.cloud/docs/stable/usage/advanced/#vehicle-setup) page afterwards!
+
+## You should be automatically redirected.
+
+---
+
 # Installing ArduSub
 
 >**Note** The current Stable version of ArduSub is **v4.0.3**. If your firmware is out of date, it may be updated by following one of the methods below.
